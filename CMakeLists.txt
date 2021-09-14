@@ -14,4 +14,5 @@ link_libraries(glfw ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES})
 add_executable(MatPhyJV-Sephiroth
     # All .cpp files here
     src/main.cpp
+    src/Matrix.hpp
 )

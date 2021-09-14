@@ -25,3 +25,18 @@ sudo apt install xorg-dev
 
 Pour les autres systèmes, voir [ici](https://www.glfw.org/docs/3.3/compile.html).
 
+## 3 - Télécharger le projet, le compiler, l'exécuter
+Ouvrir un invité de commande dans le dossier où faire le téléchargement, puis :
+```
+git clone https://github.com/J-Vernay/matphy-JV/
+cd matphy-JV
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
+Les deux commandes `cmake` servent respectivement à configurer la compilation, puis à compiler.
+
+Sous Windows avec Visual Studio d'installer, un projet Visual Studio a été créé dans le dossier "build"
+et peut être ouvert et utilisé pour éditer/compiler/débugger le projet.
+
