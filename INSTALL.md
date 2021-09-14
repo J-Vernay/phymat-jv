@@ -28,7 +28,7 @@ Pour les autres systèmes, voir [ici](https://www.glfw.org/docs/3.3/compile.html
 ## 3 - Télécharger le projet, le compiler, l'exécuter
 Ouvrir un invité de commande dans le dossier où faire le téléchargement, puis :
 ```
-git clone https://github.com/J-Vernay/matphy-JV/
+git clone https://github.com/J-Vernay/matphy-JV/ --recursive
 cd matphy-JV
 mkdir build
 cd build
