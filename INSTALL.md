@@ -37,6 +37,6 @@ cmake --build .
 ```
 Les deux commandes `cmake` servent respectivement à configurer la compilation, puis à compiler.
 
-Sous Windows avec Visual Studio d'installer, un projet Visual Studio a été créé dans le dossier "build"
+Sous Windows avec Visual Studio d'installé, un projet Visual Studio a été créé dans le dossier "build"
 et peut être ouvert et utilisé pour éditer/compiler/débugger le projet.
 
