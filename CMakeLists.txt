@@ -15,4 +15,6 @@ add_executable(phymat-jv
     # All source files here
     src/main.cpp
     src/Matrix.hpp
+    src/Particle.hpp
+    src/Vector.hpp
 )
