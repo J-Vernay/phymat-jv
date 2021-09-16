@@ -22,4 +22,5 @@ add_executable(phymat-jv
     src/Vector.hpp
     src/Graphics.hpp
     src/Graphics.cpp
+    src/Particle.hpp
 )
