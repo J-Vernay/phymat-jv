@@ -66,48 +66,48 @@ float Vector3::getz(){
 
 //Operator overload
 Vector3 Vector3::operator+(const Vector3 v){
-    Vector3 V = Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
-    return V;
+    Vector3 v = Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
+    return v;
 }
 
 Vector3 Vector3::operator-(const Vector3 v){
-    Vector3 V = Vector3(this->x-v.x,this->y-v.y,this->z-v.z);
-    return V;
+    Vector3 v = Vector3(this->x-v.x,this->y-v.y,this->z-v.z);
+    return v;
 }
 
 Vector3 Vector3::operator*(const float k){
-    Vector3 V = Vector3(this->x*k,this->y*k,this->z*k);
-    return V;
+    Vector3 v = Vector3(this->x*k,this->y*k,this->z*k);
+    return v;
 }
 
-Vector3 operator*(const double k, Vector3 V1){
-    Vector3 V2 = Vector3(V1.getx()*k,V1.gety()*k,V1.getz()*k);
-    return V2;
+Vector3 operator*(const double k, Vector3 v1){
+    Vector3 v2 = Vector3(v1.getx()*k,v1.gety()*k,v1.getz()*k);
+    return v2;
 }
 
 Vector3 Vector3::operator/(const float k){
-    Vector3 V = Vector3(this->x/k,this->y/k,this->z/k);
-    return V;
+    Vector3 v = Vector3(this->x/k,this->y/k,this->z/k);
+    return v;
 }
 
-Vector3 operator/(const double k, Vector3 V1){
-    Vector3 V2 = Vector3(k/V1.getx(),k/V1.gety(),k/V1.getz());
-    return V2;
+Vector3 operator/(const double k, Vector3 v1){
+    Vector3 v2 = Vector3(k/v1.getx(),k/v1.gety(),k/v1.getz());
+    return v2;
 }
 
-ostream& operator<<(ostream& os, const Vector3& V){
-    os << "x : " << V.x << "\n" << "y : " << V.y << "\n" << "z : " << V.z << "\n";
+ostream& operator<<(ostream& os, const Vector3& v){
+    os << "x : " << v.x << "\n" << "y : " << v.y << "\n" << "z : " << v.z << "\n";
     return os;
 }
 
 
 //Useful Methods
-Vector3 Vector3::vectorialProduct(Vector3 V){
-    return Vector3(y*V.getz()-z*V.gety(), z*V.getx()-x*V.getz(), x*V.gety()-y*V.getx());
+Vector3 Vector3::vectorialProduct(Vector3 v){
+    return Vector3(y*v.getz()-z*v.gety(), z*v.getx()-x*v.getz(), x*v.gety()-y*v.getx());
 }
 
-float Vector3::scalarProduct(Vector3 V){
-    return x*V.getx() + y*V.gety() + z*V.getz();
+float Vector3::scalarProduct(Vector3 v){
+    return x*v.getx() + y*v.gety() + z*v.getz();
 }
 
 float Vector3::norm(){

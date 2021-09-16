@@ -10,7 +10,7 @@ class Particle {
         float inverseMass;    // 1/mass of the particle
         Vector3 position;
         Vector3 velocity;
-        float damping;        // Damping : Percentage of damping of the particle
+        float damping;        // Damping : Percentage of damping of the particle = percentage of velocity kept from one frame to another
 
     public:       //Public attributes of Particle
         Vector3 acceleration;
@@ -19,6 +19,8 @@ class Particle {
         Particle(float, Vector3, Vector3, Vector3, float); 
 
         //Getter & Setter :
+        void setPosition(Vector3);
+        void setVelocity(Vector3);
         void setAcceleration(Vector3);
         Vector3 getAcceleration();
         Vector3 getPosition();
@@ -62,6 +64,14 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
 }
 
 //Getter & Setters :
+void Particle::setPosition(Vector3 newPosition){
+    position = newPosition;
+}
+
+void Particle::setVelocity(Vector3 newVelocity){
+    velocity = newVelocity;
+}
+
 void Particle::setAcceleration(Vector3 newAcceleration){
     this->acceleration = newAcceleration;
 }
