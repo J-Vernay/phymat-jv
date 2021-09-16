@@ -1,78 +1,61 @@
 #include <iostream>
 
 #include "Matrix.hpp"
-
-#include <GLFW/glfw3.h>
+#include "Graphics.hpp"
 
 int main() {
-    // Example of code using Matrixes...
-    auto a = Mat22{1,2,  3,4};
+    Window window;
+    Camera camera;
 
-    std::cout << a * 4 << " " << Matrix<1,2>{3,5} << '\n';
 
-    for (auto& line : Matrix<3,2>{1,3,  3,5,  0,0}) {
-        for (auto& value : line) {
-            std::cout << value << " ";
+    // Main loop.
+    while (!window.should_close()) {
+        glClearColor(0.3, 0.7, 0.9, 1);
+
+        window.begin_frame();
+        use_camera_gl(camera);
+
+
+        const int FloorSize = 20;
+
+        // Draw floor.
+        glBegin(GL_TRIANGLE_FAN);
+        glColor3f(0.5, 0.8, 0.5);
+        glVertex3f(-FloorSize, -FloorSize, 0);
+        glVertex3f(-FloorSize, +FloorSize, 0);
+        glVertex3f(+FloorSize, +FloorSize, 0);
+        glVertex3f(+FloorSize, -FloorSize, 0);
+        glEnd();
+
+
+        // Draw grid.
+        glBegin(GL_LINES);
+        glColor3f(0.2, 0.6, 0.2);
+        for (int i = -FloorSize; i <= FloorSize; ++i) {
+            glVertex3f(-FloorSize, i, 0.01);
+            glVertex3f(+FloorSize, i, 0.01);
+            glVertex3f(i, -FloorSize, 0.01);
+            glVertex3f(i, +FloorSize, 0.01);
         }
-        std::cout << "\n";
-    }
+        glEnd();
 
-    // Example of code using GLFW to open a window...
-    if (!glfwInit())
-        throw std::runtime_error("Could not initialize GLFW");
-
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Projet Sephiroth", NULL, NULL);
-    if (!window) {
-        glfwTerminate();
-        throw std::runtime_error("Could not open GLFW window");
-    }
-
-    // This will be called for each keyboard event.
-    glfwSetKeyCallback(window, [](GLFWwindow* window, int key, int scancode, int action, int mods){
-        // If we pressed SPACE, close window.
-        if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
-            glfwSetWindowShouldClose(window, GL_TRUE);
-    });
-
-    glfwMakeContextCurrent(window);
-
-    // Main loop, taken from https://www.glfw.org/docs/3.0/quick.html
-    while (!glfwWindowShouldClose(window)) {
-        int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-        float ratio = width / (float) height;
-
-        glViewport(0, 0, width, height);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Set the projection to orthographic between [-1,-1] to [1,1]
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glOrtho(-ratio, ratio, -1, 1, 1, -1);
-        
         // Making an animated rotation.
-        glMatrixMode(GL_MODELVIEW);
-        glLoadIdentity();
         glRotatef((float)glfwGetTime() * 50, 0, 0, 1);
 
         // Draw a triangle.
         glBegin(GL_TRIANGLES);
-        glColor3f(1.f, 0.f, 0.f);
-        glVertex3f(-0.6f, -0.4f, 0.f);
-        glColor3f(0.f, 1.f, 0.f);
-        glVertex3f(0.6f, -0.4f, 0.f);
-        glColor3f(0.f, 0.f, 1.f);
-        glVertex3f(0.f, 0.6f, 0.f);
+        glColor3f(1, 0, 0.1);
+        glVertex3f(-0.6, -0.4, 0.02);
+        glColor3f(0, 0, 1);
+        glVertex3f(0, 0.6, 0.02);
+        glColor3f(0, 1, 0);
+        glVertex3f(0.6, -0.4, 0.02);
         glEnd();
         
-        // Show the result to screen.
-        glfwSwapBuffers(window);
-        // React to events.
-        glfwPollEvents();
+        ask_camera_ui(camera);
+        window.end_frame();
     }
 
-    glfwDestroyWindow(window);
-    glfwTerminate();
 
     return 0;
 }
