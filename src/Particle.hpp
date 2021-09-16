@@ -13,6 +13,7 @@ class Particle {
     public:
         Vector3 acceleration;
         Particle(float, Vector3, Vector3, Vector3, float);
+        
 
 };
 
