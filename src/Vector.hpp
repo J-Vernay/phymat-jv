@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 //TO DO : add exceptions
-// - add norm?
 // - overload operators for scalar and vectorial product
 
 class Vector3 {
@@ -29,8 +29,7 @@ class Vector3 {
         //Check if well placed
         Vector3 vectorialProduct(Vector3);
         float scalarProduct(Vector3);
-        //float norm();
-        //void normalise();
+        float norm();
 
     private:
         float x;
@@ -109,4 +108,8 @@ Vector3 Vector3::vectorialProduct(Vector3 V){
 
 float Vector3::scalarProduct(Vector3 V){
     return x*V.getx() + y*V.gety() + z*V.getz();
+}
+
+float Vector3::norm(){
+    return pow(pow(x,2)+pow(y,2)+pow(z,2),0.5);
 }
