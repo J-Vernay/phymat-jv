@@ -17,7 +17,7 @@ class Particle {
 
 };
 
-Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping){
+inline Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping){
     if(mass == 0){
         //inverseMass = inf
     }
