@@ -6,6 +6,8 @@
 #include "Vector.hpp"
 #include "Particle.hpp"
 
+#include "ExceptionsForIntegrator.hpp"
+
 using namespace std;
 
 //TO DO acceleration update
@@ -34,13 +36,14 @@ class Integrator {
 
     //Useful functions
         void addParticle(Particle);
-        //void addParticleAtIndex(Particle, int);
-        //void deleteParticle(int);
+        void addParticleAtIndex(Particle, int);
+        void deleteParticleAt(int);
         void deleteLastParticle();
         float scalarProduct(Vector3, Vector3);
         Vector3 vectorialProduct(Vector3, Vector3);
         float norm(Vector3);
         void updatePosition();
+        void updateFastPosition();
         void updateVelocity();
 };
 
@@ -79,7 +82,13 @@ void Integrator::setParticleList(vector<Particle> newParticleList){
     particleList = newParticleList;
 }
 void Integrator::setFrameRate(double newFrameRate){
-    frameRate = newFrameRate;
+    if(frameRate > 0){
+        frameRate = newFrameRate;
+    }
+    else {
+        throw ExceptionNegativOrNullFramerate;
+    }
+
 }
 
 //Useful Functions
@@ -87,21 +96,31 @@ void Integrator::addParticle(Particle p){
     particleList.push_back(p);
 }
 
-// void Integrator::addParticleAtIndex(Particle P, int idx){
-//     if(idx < particleList.size() && idx >= 0){
+void Integrator::addParticleAtIndex(Particle P, int idx){
+     if(idx < particleList.size() && idx >= 0){
+         particleList.insert(particleList.begin() + idx, P);
+     }
+     else{
+         particleList.push_back(P);
+     }
+}
 
-//     }
-//     else{
-//         particleList.push_back(P);
-//     }
-//}
-
-// void Integrator::deleteParticle(int idx){
-
-// }
+void Integrator::deleteParticleAt(int idx){
+    if(idx < particleList.size() && idx >= 0){
+         particleList.erase(particleList.begin() + idx);
+    }
+    else {
+        throw ExceptionDeleteIndexOutOfRange;
+    }
+}
 
 void Integrator::deleteLastParticle(){
-    particleList.pop_back();
+    if(particleList.size() > 0){
+        particleList.pop_back();
+    }
+    else {
+        throw ExceptionDeleteIndexOutOfRange;
+    }
 }
 
 float Integrator::scalarProduct(Vector3 v1, Vector3 v2){
@@ -126,6 +145,15 @@ void Integrator::updatePosition(){
     }
 }
 
+//p1 = p0 + v0*t car a0*(t^2)/2 << p0 + v0*t
+void Integrator::updateFastPosition(){
+    for(auto p : particleList){
+        float newX = p.getPosition().getx() + p.getVelocity().getx()*time;
+        float newY = p.getPosition().gety() + p.getVelocity().gety()*time;
+        float newZ = p.getPosition().getz() + p.getVelocity().getz()*time;
+        p.setPosition(Vector3(newX, newY, newZ));
+    }
+}
 
 //v1 = v0*d^t + a0*t
 void Integrator::updateVelocity(){
