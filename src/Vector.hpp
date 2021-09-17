@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <math.h>
+#include "ExceptionForVector.hpp"
+
 using namespace std;
 
 //TO DO : add exceptions
@@ -66,33 +68,36 @@ float Vector3::getz(){
 
 //Operator overload
 Vector3 Vector3::operator+(const Vector3 v){
-    Vector3 v = Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
-    return v;
+    //Vector3 v = 
+    return Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
 }
 
 Vector3 Vector3::operator-(const Vector3 v){
-    Vector3 v = Vector3(this->x-v.x,this->y-v.y,this->z-v.z);
-    return v;
+    return Vector3(this->x-v.x,this->y-v.y,this->z-v.z);  
 }
 
 Vector3 Vector3::operator*(const float k){
-    Vector3 v = Vector3(this->x*k,this->y*k,this->z*k);
-    return v;
+    return Vector3(this->x*k,this->y*k,this->z*k);
 }
 
 Vector3 operator*(const double k, Vector3 v1){
-    Vector3 v2 = Vector3(v1.getx()*k,v1.gety()*k,v1.getz()*k);
-    return v2;
+    return Vector3(v1.getx()*k,v1.gety()*k,v1.getz()*k);
 }
 
 Vector3 Vector3::operator/(const float k){
-    Vector3 v = Vector3(this->x/k,this->y/k,this->z/k);
-    return v;
+    if(k == 0){
+        throw ExceptionDivideByNullScalar;
+    }
+    else {
+        return Vector3(this->x/k,this->y/k,this->z/k);
+    }
 }
 
 Vector3 operator/(const double k, Vector3 v1){
-    Vector3 v2 = Vector3(k/v1.getx(),k/v1.gety(),k/v1.getz());
-    return v2;
+    if(v1.getx() == 0 || v1.gety() == 0 || v1.getz() == 0){
+        throw ExceptionDivideByNullComponent;
+    }
+    return Vector3(k/v1.getx(),k/v1.gety(),k/v1.getz());
 }
 
 ostream& operator<<(ostream& os, const Vector3& v){
