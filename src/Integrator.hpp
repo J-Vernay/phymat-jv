@@ -26,7 +26,7 @@ class Integrator {
 
     //Getters
         double getGravity();
-        vector<Particle> getParticleListe();
+        vector<Particle> getParticleList();
         double getFrameRate();
 
     //Setters
@@ -45,6 +45,10 @@ class Integrator {
         void updatePosition();
         void updateFastPosition();
         void updateVelocity();
+
+    //Display
+        friend ostream& operator<<(ostream& os, const Integrator&);
+
 };
 
 //Constructor
@@ -65,7 +69,7 @@ double Integrator::getGravity(){
     return gravity;
 }
 
-vector<Particle> Integrator::getParticleListe(){
+vector<Particle> Integrator::getParticleList(){
     return particleList;
 }
 
@@ -97,17 +101,17 @@ void Integrator::addParticle(Particle p){
 }
 
 void Integrator::addParticleAtIndex(Particle P, int idx){
-     if(idx < particleList.size() && idx >= 0){
-         particleList.insert(particleList.begin() + idx, P);
-     }
-     else{
-         particleList.push_back(P);
-     }
+    if(idx < particleList.size() && idx >= 0){
+        particleList.insert(particleList.begin() + idx, P);
+    }
+    else{
+        particleList.push_back(P);
+    }
 }
 
 void Integrator::deleteParticleAt(int idx){
     if(idx < particleList.size() && idx >= 0){
-         particleList.erase(particleList.begin() + idx);
+        particleList.erase(particleList.begin() + idx);
     }
     else {
         throw ExceptionDeleteIndexOutOfRange;
@@ -163,4 +167,15 @@ void Integrator::updateVelocity(){
         float newZ = p.getVelocity().getz()*pow(p.getDamping(),time) + p.getAcceleration().getz()*time;
         p.setVelocity(Vector3(newX, newY, newZ));
     }
+}
+
+//Overload of << 
+ostream& operator<<(ostream& os, const Integrator& I){
+    os << "======== Integrator ========\n" << "Framerate : " << I.frameRate << "\nGravity : " << I.gravity << "\nList of Particles : \n" <<  endl;
+    for(auto P : I.particleList){
+        os << P << endl;
+    }
+    
+
+    return os;
 }
