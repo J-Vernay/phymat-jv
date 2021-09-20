@@ -10,12 +10,9 @@
 
 using namespace std;
 
-//TO DO acceleration update
-
-
 class Integrator {
     private :
-        double gravity;
+        Vector3 gravity;
         vector<Particle> particleList = {};
         double frameRate; //in fps
         double time; //in s
@@ -25,12 +22,12 @@ class Integrator {
         Integrator();
 
     //Getters
-        double getGravity();
+        Vector3 getGravity();
         vector<Particle> getParticleList();
         double getFrameRate();
 
     //Setters
-        void setGravity(double);
+        void setGravity(Vector3);
         void setParticleList(vector<Particle>);
         void setFrameRate(double);
 
@@ -45,8 +42,10 @@ class Integrator {
         void updatePosition();
         void updateFastPosition();
         void updateVelocity();
+        void updateAcceleration();
+        void clearParticleList();
 
-    //Display
+    //Operator Overload
         friend ostream& operator<<(ostream& os, const Integrator&);
 
 };
@@ -54,7 +53,7 @@ class Integrator {
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
 Integrator::Integrator(){
-    gravity = 10;
+    gravity = Vector3(0,0,-10);
     frameRate = 60;
     if (frameRate == 0){
         time = 1;
@@ -65,7 +64,7 @@ Integrator::Integrator(){
 }
 
 //Getters
-double Integrator::getGravity(){
+Vector3 Integrator::getGravity(){
     return gravity;
 }
 
@@ -79,7 +78,7 @@ double Integrator::getFrameRate(){
 
 
 //Setters
-void Integrator::setGravity(double newGravity){
+void Integrator::setGravity(Vector3 newGravity){
     gravity = newGravity;
 }
 void Integrator::setParticleList(vector<Particle> newParticleList){
@@ -169,13 +168,37 @@ void Integrator::updateVelocity(){
     }
 }
 
+//Update acceleration with gravity
+//If particle hits the ground, acceleration is 0 (the ground z is 0)
+void Integrator::updateAcceleration(){
+    for(auto p : particleList){
+        p.acceleration = p.acceleration + gravity*time;
+    }
+}
+
+//Delete particle if is under the ground
+void Integrator::clearParticleList(){
+    vector<int> idxParticleToClear;
+    //find every particle to clear and store the index
+    for(int idx = 0; idx < particleList.size(); idx++){
+        if (particleList[idx].getPosition().getz() <= 0){
+            idxParticleToClear.push_back(idx);
+        }
+    }
+
+    //Clear the particle list
+    int counterOfCleared = 0;
+    for (int i : idxParticleToClear){
+        deleteParticleAt(i-counterOfCleared);
+        counterOfCleared++;
+    }
+}
+
 //Overload of << 
 ostream& operator<<(ostream& os, const Integrator& I){
     os << "======== Integrator ========\n" << "Framerate : " << I.frameRate << "\nGravity : " << I.gravity << "\nList of Particles : \n" <<  endl;
     for(auto P : I.particleList){
         os << P << endl;
     }
-    
-
     return os;
 }
