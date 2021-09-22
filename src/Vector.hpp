@@ -25,7 +25,6 @@ class Vector3 {
         Vector3 operator+(const Vector3);
         Vector3 operator-(const Vector3);
         Vector3 operator*(const float);
-        float operator*(Vector3);
         Vector3 operator/(const float);
         Vector3 operator^(Vector3);
         friend ostream& operator<<(ostream& os, const Vector3&);
@@ -50,5 +49,3 @@ float norm(Vector3);
 Vector3 operator*(const double k, Vector3 v1);
 
 float operator*(Vector3 k, Vector3 v1);
-
-Vector3 operator^(Vector3, Vector3);

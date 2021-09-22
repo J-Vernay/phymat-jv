@@ -41,11 +41,6 @@ Vector3 Vector3::operator*(const float k){
     return Vector3(this->x*k,this->y*k,this->z*k);
 }
 
-//scalar product
-float Vector3::operator*(Vector3 v){
-    return x*v.getx() + y*v.gety() + z*v.getz();
-}
-
 Vector3 operator*(const double k, Vector3 v1){
     return Vector3(v1.getx()*k,v1.gety()*k,v1.getz()*k);
 }
@@ -64,11 +59,7 @@ Vector3 Vector3::operator/(const float k){
 }
 
 Vector3 Vector3::operator^(Vector3 v){
-    return Vector3(y*v.getz()-z*v.gety(), z*v.getx()-x*v.getz(), x*v.gety()-y*v.getx());
-}
-
-Vector3 operator^(Vector3 v1,Vector3 v2){
-    return vectorialProduct(v1,v2);
+   return Vector3(y*v.getz()-z*v.gety(), z*v.getx()-x*v.getz(), x*v.gety()-y*v.getx());
 }
 
 Vector3 operator/(const double k, Vector3 v1){
