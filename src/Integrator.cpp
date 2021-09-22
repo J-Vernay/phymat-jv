@@ -40,7 +40,7 @@ void Integrator::setFrameRate(double newFrameRate){
         frameRate = newFrameRate;
     }
     else {
-        throw ExceptionNegativOrNullFramerate;
+        throw ExceptionNegativOrNullFramerate();
     }
 
 }
@@ -64,7 +64,7 @@ void Integrator::deleteParticleAt(int idx){
         particleList.erase(particleList.begin() + idx);
     }
     else {
-        throw ExceptionDeleteIndexOutOfRange;
+        throw ExceptionDeleteIndexOutOfRange();
     }
 }
 
@@ -73,7 +73,7 @@ void Integrator::deleteLastParticle(){
         particleList.pop_back();
     }
     else {
-        throw ExceptionDeleteIndexOutOfRange;
+        throw ExceptionDeleteIndexOutOfRange();
     }
 }
 
@@ -83,6 +83,8 @@ void Integrator::updatePosition(){
         float newX = p.getPosition().getx() + p.getVelocity().getx()*time + p.getAcceleration().getx()*pow(time, 2)/2;
         float newY = p.getPosition().gety() + p.getVelocity().gety()*time + p.getAcceleration().gety()*pow(time, 2)/2;
         float newZ = p.getPosition().getz() + p.getVelocity().getz()*time + p.getAcceleration().getz()*pow(time, 2)/2;
+        cout << "x : " << newX << "y : " << newY << "z : " << newZ << endl;
+
         p.setPosition(Vector3(newX, newY, newZ));
     }
 }
@@ -111,7 +113,7 @@ void Integrator::updateVelocity(){
 //If particle hits the ground, acceleration is 0 (the ground z is 0)
 void Integrator::updateAcceleration(){
     for(auto p : particleList){
-        p.acceleration = p.acceleration + gravity*time;
+        p.acceleration = (p.acceleration + gravity*time)*p.getInverseMass();
     }
 }
 
@@ -130,6 +132,15 @@ void Integrator::clearParticleList(){
     for (int i : idxParticleToClear){
         deleteParticleAt(i-counterOfCleared);
         counterOfCleared++;
+    }
+}
+
+Particle Integrator::getParticleAt(int index){
+    if(index < this->getParticleList().size()){
+            return this->getParticleList()[index];
+    }
+    else {
+        throw ExceptionDeleteIndexOutOfRange();
     }
 }
 

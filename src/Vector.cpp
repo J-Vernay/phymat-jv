@@ -56,7 +56,7 @@ float operator*(Vector3 v1, Vector3 v2){
 
 Vector3 Vector3::operator/(const float k){
     if(k == 0){
-        throw ExceptionDivideByNullScalar;
+        throw ExceptionDivideByNullScalar();
     }
     else {
         return Vector3(this->x/k,this->y/k,this->z/k);
@@ -73,7 +73,7 @@ Vector3 operator^(Vector3 v1,Vector3 v2){
 
 Vector3 operator/(const double k, Vector3 v1){
     if(v1.getx() == 0 || v1.gety() == 0 || v1.getz() == 0){
-        throw ExceptionDivideByNullComponent;
+        throw ExceptionDivideByNullComponent();
     }
     return Vector3(k/v1.getx(),k/v1.gety(),k/v1.getz());
 }

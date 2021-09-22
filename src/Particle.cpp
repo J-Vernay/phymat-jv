@@ -4,14 +4,14 @@
 Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping){
     if(mass == 0){
         //inverseMass = inf
-        throw ExceptionInverseMassInf;
+        throw ExceptionInverseMassInf();
     }
     else if(mass == -1){ // Lets say -1 <=> infinity
         this->inverseMass = 0;
     }
     else if (mass < 0 && mass != -1){
         //mass cannot be negativ
-        throw ExceptionNegativMass;
+        throw ExceptionNegativMass();
     }
     else {
         this->inverseMass = 1 / mass;
@@ -22,7 +22,7 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
 
     if(damping > 1 || damping < 0){
         //error damping is not a pourcentage
-        throw ExceptionDampingNotPercentage;
+        throw ExceptionDampingNotPercentage();
     }
     else {
         this->damping = damping;
