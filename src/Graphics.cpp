@@ -9,7 +9,11 @@ Window::Window() {
     if (!glfwInit())
         throw std::runtime_error("Could not initialize GLFW");
 
-    _window = glfwCreateWindow(800, 600, "Projet Sephiroth", NULL, NULL);
+    _width = 800;
+    _height = 800;
+    _window = glfwCreateWindow(_width, _height, "Projet Sephiroth", NULL, NULL);
+
+
     if (!_window) {
         glfwTerminate();
         throw std::runtime_error("Could not open GLFW window");
@@ -22,6 +26,14 @@ Window::Window() {
     ImGui_ImplOpenGL2_Init();
 
     glEnable(GL_DEPTH_TEST);
+
+    glfwSetWindowUserPointer(_window, this);
+
+    glfwSetWindowSizeCallback(_window, [] (GLFWwindow* window, int x, int y) {
+        Window* w = (Window*)glfwGetWindowUserPointer(window);
+        w->_width = x;
+        w->_height = y;
+    });
 }
 
 void Window::begin_frame() {
@@ -71,10 +83,11 @@ void ask_camera_ui(Camera& camera) {
     ImGui::End();
 }
 
-void use_camera_gl(Camera const& camera) {
+void use_camera_gl(Window const& window, Camera const& camera) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(camera.fieldOfView, 1, 0.1, 50);
+    auto [w,h] = window.size();
+    gluPerspective(camera.fieldOfView, (float)(w)/h, 0.1, 50);
     
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

@@ -13,7 +13,7 @@ int main() {
         glClearColor(0.3, 0.7, 0.9, 1);
 
         window.begin_frame();
-        use_camera_gl(camera);
+        use_camera_gl(window, camera);
 
 
         const int FloorSize = 20;
