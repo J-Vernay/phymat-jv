@@ -14,11 +14,13 @@ void Spawner::ask_ui() {
     if (ImGui::Begin("Projectiles", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
 
         ImGui::SliderInt("Type", &_type, 0, 3); // 4 different types
+        ImGui::SliderFloat3("Accélération", (float*)&_accel, 0, 10);
         if (ImGui::Button("Créer"))
             spawn_projectile();
         
         ImGui::SliderFloat("Délai auto", &_delay_s, 0.1, 2, "%.2f secondes");
         ImGui::Checkbox("Auto-créer", &_autofire);
+
     }
     ImGui::End();
 }
