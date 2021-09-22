@@ -73,7 +73,9 @@ float sind(float deg) { return std::sin(deg * (M_PI / 180)); }
 
 
 void ask_camera_ui(Camera& camera) {
-    if (ImGui::Begin("Camera")) {
+    ImGui::SetNextWindowPos({50,50}, ImGuiCond_Once);
+    
+    if (ImGui::Begin("Camera", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
         ImGui::SliderFloat3("Cible", camera.target, -20, 20);
         ImGui::SliderFloat("Distance", &camera.distance, 0, 10);
         ImGui::SliderFloat("Angle Horiz.", &camera.angle[0], -180, 180);

@@ -27,4 +27,6 @@ add_executable(phymat-jv
     src/Particle.cpp
     src/Integrator.hpp
     src/Integrator.cpp
+    src/Spawner.cpp
+    src/Spawner.hpp
 )

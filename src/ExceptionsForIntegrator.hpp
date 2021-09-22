@@ -8,15 +8,7 @@ class ExceptionDeleteIndexOutOfRange: public exception
   {
     return "You cannot delete a particle which does not exist";
   }
-} ;
-
-class ExceptionIndexOutOfRange: public exception
-{
-  inline virtual const char* what() const throw()
-  {
-    return "Particle does not exist, index out of range";
-  }
-} ;
+};
 
 class ExceptionNegativOrNullFramerate: public exception
 {
@@ -24,6 +16,6 @@ class ExceptionNegativOrNullFramerate: public exception
   {
     return "FrameRate must be positive and not null";
   }
-} ;
+};
 
 

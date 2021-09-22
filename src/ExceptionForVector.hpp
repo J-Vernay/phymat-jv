@@ -9,7 +9,7 @@ class ExceptionDivideByNullComponent: public exception
   {
     return "One of the component denominator's vector is 0 : you cannot divide by 0";
   }
-} ;
+};
 
 class ExceptionDivideByNullScalar: public exception
 {
@@ -17,4 +17,4 @@ class ExceptionDivideByNullScalar: public exception
   {
     return "You cannot divide the component of your vector by 0";
   }
-} ;
+};
