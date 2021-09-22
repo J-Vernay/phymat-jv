@@ -81,14 +81,11 @@ void Integrator::deleteLastParticle(){
 void Integrator::updatePosition(){
     int i = 0;
     for(auto &p : particleList){
-        cout << "Calculation : " <<  p.getPosition().getx() << " + " << p.getVelocity().getx() << " * " << time <<  " + " << p.getAcceleration().getx() << " * pow(" << time << "^2)/2" << endl;
         float newX = p.getPosition().getx() + p.getVelocity().getx()*time + p.getAcceleration().getx()*pow(time, 2)/2;
         float newY = p.getPosition().gety() + p.getVelocity().gety()*time + p.getAcceleration().gety()*pow(time, 2)/2;
         float newZ = p.getPosition().getz() + p.getVelocity().getz()*time + p.getAcceleration().getz()*pow(time, 2)/2;
 
         p.setPosition(Vector3(newX, newY, newZ));
-        cout << p.getPosition() << endl;
-        cout << this->getParticleAt(i) << endl;
     }
 
 }
