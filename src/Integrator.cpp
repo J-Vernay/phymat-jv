@@ -79,19 +79,23 @@ void Integrator::deleteLastParticle(){
 
 //p1 = p0 + v0*t + a0*(t^2)/2
 void Integrator::updatePosition(){
-    for(auto p : particleList){
+    int i = 0;
+    for(auto &p : particleList){
+        cout << "Calculation : " <<  p.getPosition().getx() << " + " << p.getVelocity().getx() << " * " << time <<  " + " << p.getAcceleration().getx() << " * pow(" << time << "^2)/2" << endl;
         float newX = p.getPosition().getx() + p.getVelocity().getx()*time + p.getAcceleration().getx()*pow(time, 2)/2;
         float newY = p.getPosition().gety() + p.getVelocity().gety()*time + p.getAcceleration().gety()*pow(time, 2)/2;
         float newZ = p.getPosition().getz() + p.getVelocity().getz()*time + p.getAcceleration().getz()*pow(time, 2)/2;
-        cout << "x : " << newX << "y : " << newY << "z : " << newZ << endl;
 
         p.setPosition(Vector3(newX, newY, newZ));
+        cout << p.getPosition() << endl;
+        cout << this->getParticleAt(i) << endl;
     }
+
 }
 
 //p1 = p0 + v0*t car a0*(t^2)/2 << p0 + v0*t
 void Integrator::updateFastPosition(){
-    for(auto p : particleList){
+    for(auto &p : particleList){
         float newX = p.getPosition().getx() + p.getVelocity().getx()*time;
         float newY = p.getPosition().gety() + p.getVelocity().gety()*time;
         float newZ = p.getPosition().getz() + p.getVelocity().getz()*time;
@@ -101,7 +105,7 @@ void Integrator::updateFastPosition(){
 
 //v1 = v0*d^t + a0*t
 void Integrator::updateVelocity(){
-    for(auto p : particleList){
+    for(auto &p : particleList){
         float newX = p.getVelocity().getx()*pow(p.getDamping(),time) + p.getAcceleration().getx()*time;
         float newY = p.getVelocity().gety()*pow(p.getDamping(),time) + p.getAcceleration().gety()*time;
         float newZ = p.getVelocity().getz()*pow(p.getDamping(),time) + p.getAcceleration().getz()*time;
@@ -112,7 +116,7 @@ void Integrator::updateVelocity(){
 //Update acceleration with gravity
 //If particle hits the ground, acceleration is 0 (the ground z is 0)
 void Integrator::updateAcceleration(){
-    for(auto p : particleList){
+    for(auto &p : particleList){
         p.acceleration = (p.acceleration + gravity*time)*p.getInverseMass();
     }
 }
@@ -147,7 +151,7 @@ Particle Integrator::getParticleAt(int index){
 //Overload of << 
 ostream& operator<<(ostream& os, const Integrator& I){
     os << "======== Integrator ========\n" << "Framerate : " << I.frameRate << "\nGravity : " << I.gravity << "\nList of Particles : \n" <<  endl;
-    for(auto P : I.particleList){
+    for(auto &P : I.particleList){
         os << P << endl;
     }
     return os;
