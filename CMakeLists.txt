@@ -20,7 +20,11 @@ add_executable(phymat-jv
     src/main.cpp
     src/Matrix.hpp
     src/Vector.hpp
+    src/Vector.cpp
     src/Graphics.hpp
     src/Graphics.cpp
     src/Particle.hpp
+    src/Particle.cpp
+    src/Integrator.hpp
+    src/Integrator.cpp
 )
