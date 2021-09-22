@@ -42,6 +42,8 @@ class Integrator {
         void updateAcceleration();
         void clearParticleList();
         Particle getParticleAt(int);
+        void updateAll();
+        void updateAllFast();
 
     //Operator Overload
         friend ostream& operator<<(ostream& os, const Integrator&);

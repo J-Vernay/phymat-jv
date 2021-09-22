@@ -118,6 +118,22 @@ void Integrator::updateAcceleration(){
     }
 }
 
+//Update position, velocity and acceleration + clear all out the map particles
+void Integrator::updateAll(){
+    updatePosition();
+    updateVelocity();
+    updateAcceleration();
+    clearParticleList();
+}
+
+//Update position, velocity and acceleration + clear all out the map particles
+void Integrator::updateAllFast(){
+    updateFastPosition();
+    updateVelocity();
+    updateAcceleration();
+    clearParticleList();
+}
+
 //Delete particle if is under the ground
 void Integrator::clearParticleList(){
     vector<int> idxParticleToClear;
