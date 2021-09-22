@@ -8,7 +8,7 @@ class ExceptionInverseMassInf: public exception
   {
     return "You cannot have an infinite inverse mass";
   }
-} ;
+};
 
 class ExceptionNegativMass: public exception
 {
@@ -16,7 +16,7 @@ class ExceptionNegativMass: public exception
   {
     return "You cannot have a negative mass";
   }
-} ;
+};
 
 class ExceptionDampingNotPercentage: public exception
 {
@@ -24,4 +24,4 @@ class ExceptionDampingNotPercentage: public exception
   {
     return "Damping must be a percentage";
   }
-} ;
+};

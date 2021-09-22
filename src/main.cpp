@@ -2,14 +2,22 @@
 
 #include "Matrix.hpp"
 #include "Graphics.hpp"
+#include "Spawner.hpp"
+#include "Integrator.hpp"
 
 int main() {
+
     Window window;
     Camera camera;
+    Integrator integrator;
+    Spawner spawner(integrator);
 
-
+    ImGui::GetIO().IniFilename = nullptr;
+    
     // Main loop.
     while (!window.should_close()) {
+        spawner.update(glfwGetTime());
+
         glClearColor(0.3, 0.7, 0.9, 1);
 
         window.begin_frame();
@@ -53,6 +61,9 @@ int main() {
         glEnd();
         
         ask_camera_ui(camera);
+        spawner.ask_ui();
+
+
         window.end_frame();
     }
 
