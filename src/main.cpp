@@ -2,18 +2,26 @@
 
 #include "Matrix.hpp"
 #include "Graphics.hpp"
+#include "Spawner.hpp"
+#include "Integrator.hpp"
 
 int main() {
+
     Window window;
     Camera camera;
+    Integrator integrator;
+    Spawner spawner(integrator);
 
+    ImGui::GetIO().IniFilename = nullptr;
 
     // Main loop.
     while (!window.should_close()) {
+        spawner.update(glfwGetTime());
+
         glClearColor(0.3, 0.7, 0.9, 1);
 
         window.begin_frame();
-        use_camera_gl(camera);
+        use_camera_gl(window, camera);
 
 
         const int FloorSize = 20;
@@ -42,21 +50,20 @@ int main() {
         // Making an animated rotation.
         glRotatef((float)glfwGetTime() * 50, 0, 0, 1);
 
-        // Draw a triangle.
-        glBegin(GL_TRIANGLES);
-        glColor3f(1, 0, 0.1);
-        glVertex3f(-0.6, -0.4, 0.02);
-        glColor3f(0, 0, 1);
-        glVertex3f(0, 0.6, 0.02);
-        glColor3f(0, 1, 0);
-        glVertex3f(0.6, -0.4, 0.02);
-        glEnd();
-        
+        // Draw a projectile.
+        glPushMatrix();
+        glTranslatef(0, 0, 1);
+        Projectile* bullet = new Projectile();
+        bullet->draw(2);
+        glPopMatrix();
+
         ask_camera_ui(camera);
+        spawner.ask_ui();
+
+
         window.end_frame();
     }
 
 
     return 0;
 }
-

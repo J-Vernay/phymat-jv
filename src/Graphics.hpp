@@ -34,3 +34,13 @@ void ask_camera_ui(Camera& camera);
 
 /// Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera.
 void use_camera_gl(Camera const& infos);
+
+///  Class responsible for the projectile management
+class Projectile {
+public:
+    Projectile();
+    ~Projectile();
+    void draw(int type);
+private:
+    GLUquadric* projectileQuadric_ = nullptr;
+};
