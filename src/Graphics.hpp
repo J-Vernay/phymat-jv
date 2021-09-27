@@ -1,5 +1,7 @@
 #pragma once
 
+#include <utility>
+
 #include "GLFW/glfw3.h"
 #include "imgui/imgui.h"
 
@@ -16,9 +18,12 @@ public:
     /// Finish frame and swap to screen. 
     void end_frame();
 
+    std::pair<int, int> size() const { return { _width, _height }; }
+
     bool should_close() const noexcept { return glfwWindowShouldClose(_window); }
 private:
     GLFWwindow* _window;
+    int _width, _height;
 };
 
 /// Structure holding all informations needed for camera.

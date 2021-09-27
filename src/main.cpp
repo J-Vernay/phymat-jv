@@ -12,6 +12,7 @@ int main() {
     Integrator integrator;
     Spawner spawner(integrator);
 
+
     ImGui::GetIO().IniFilename = nullptr;
 
     // Main loop.
