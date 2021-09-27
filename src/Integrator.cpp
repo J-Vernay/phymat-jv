@@ -50,15 +50,17 @@ void Integrator::addParticle(Particle p){
     particleList.push_back(p);
 }
 
+// Add a particle at the index given
 void Integrator::addParticleAtIndex(Particle P, int idx){
     if(idx < particleList.size() && idx >= 0){
         particleList.insert(particleList.begin() + idx, P);
     }
-    else{
+    else{ // If the index is superior at the particle list size, add the particle at the end
         particleList.push_back(P);
     }
 }
 
+// Delete the particle at the index given
 void Integrator::deleteParticleAt(int idx){
     if(idx < particleList.size() && idx >= 0){
         particleList.erase(particleList.begin() + idx);
@@ -68,6 +70,7 @@ void Integrator::deleteParticleAt(int idx){
     }
 }
 
+// Delete the last particle of the list
 void Integrator::deleteLastParticle(){
     if(particleList.size() > 0){
         particleList.pop_back();
@@ -152,6 +155,7 @@ void Integrator::clearParticleList(){
     }
 }
 
+//Get Particle at the index given
 Particle Integrator::getParticleAt(int index){
     if(index < this->getParticleList().size()){
             return this->getParticleList()[index];
