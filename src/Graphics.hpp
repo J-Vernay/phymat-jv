@@ -38,7 +38,7 @@ struct Camera {
 void ask_camera_ui(Camera& camera);
 
 /// Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera.
-void use_camera_gl(Camera const& infos);
+void use_camera_gl(Window const& window, Camera const& camera);
 
 ///  Class responsible for the projectile management
 class Projectile {

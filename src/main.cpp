@@ -17,12 +17,14 @@ int main() {
 
     // Main loop.
     while (!window.should_close()) {
-        spawner.update(glfwGetTime());
+        spawner.update(glfwGetTime()); 
+        //std::cout<<integrator.getParticleList().size()<<std::endl;
+        integrator.updateAll();
 
         glClearColor(0.3, 0.7, 0.9, 1);
 
         window.begin_frame();
-        use_camera_gl(window, camera);
+        use_camera_gl(window,camera);
 
 
         const int FloorSize = 20;
@@ -52,11 +54,20 @@ int main() {
         glRotatef((float)glfwGetTime() * 50, 0, 0, 1);
 
         // Draw a projectile.
-        glPushMatrix();
-        glTranslatef(0, 0, 1);
-        Projectile* bullet = new Projectile();
-        bullet->draw(2);
-        glPopMatrix();
+        // glPushMatrix();
+        // glTranslatef(0, 0, 1);
+        // Projectile* bullet = new Projectile();
+        // bullet->draw(2);
+        // glPopMatrix();
+        for(auto &p : integrator.getParticleList()){
+            std::cout<<p<<std::endl;
+            glPushMatrix();
+            Projectile* bullet = new Projectile();
+            bullet->draw(0);
+            //glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
+            glTranslatef(1,1,1);
+            glPopMatrix();
+        }
 
         ask_camera_ui(camera);
         spawner.ask_ui();

@@ -1,14 +1,13 @@
 #pragma once
 
 #include "Vector.hpp"
-
-class Integrator;
+#include "Integrator.hpp"
 
 class Spawner {
 public:
     Spawner(Integrator& integrator) : _integrator(integrator) {}
 
-    void spawn_projectile();
+    void spawn_projectile(float mass,Vector3 initPos, Vector3 initVel, float damp);
 
     void ask_ui();
 
