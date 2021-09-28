@@ -1,7 +1,7 @@
 #include "Particle.hpp"
 
 //Constructor
-Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping){
+Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping, int type){
     if(mass == 0){
         //inverseMass = inf
         throw ExceptionInverseMassInf();
@@ -27,6 +27,8 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
     else {
         this->damping = damping;
     }
+
+    this->type = type;
 }
 
 //Getter & Setters :
@@ -40,6 +42,10 @@ void Particle::setVelocity(Vector3 newVelocity){
 
 void Particle::setAcceleration(Vector3 newAcceleration){
     this->acceleration = newAcceleration;
+}
+
+void Particle::setType(int newType){
+    this->type = newType;
 }
 
 Vector3 Particle::getAcceleration(){
@@ -67,6 +73,10 @@ float Particle::getMass(){
         return -1;
     }
     else return 1/this->inverseMass;
+}
+
+int Particle::getType(){
+    return type;
 }
 
 //Overload of << 

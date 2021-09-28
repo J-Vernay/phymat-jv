@@ -4,7 +4,7 @@
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
 Integrator::Integrator(){
-    gravity = Vector3(0,0,-10);
+    gravity = Vector3(0,0,-0.5);
     frameRate = 60;
     if (frameRate == 0){
         time = 1;

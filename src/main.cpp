@@ -17,8 +17,9 @@ int main() {
 
     // Main loop.
     while (!window.should_close()) {
+        
+
         spawner.update(glfwGetTime()); 
-        //std::cout<<integrator.getParticleList().size()<<std::endl;
         integrator.updateAll();
 
         glClearColor(0.3, 0.7, 0.9, 1);
@@ -50,22 +51,14 @@ int main() {
         }
         glEnd();
 
-        // Making an animated rotation.
-        glRotatef((float)glfwGetTime() * 50, 0, 0, 1);
-
-        // Draw a projectile.
-        // glPushMatrix();
-        // glTranslatef(0, 0, 1);
-        // Projectile* bullet = new Projectile();
-        // bullet->draw(2);
-        // glPopMatrix();
+        
         for(auto &p : integrator.getParticleList()){
+            std::printf("\033c");
             std::cout<<p<<std::endl;
             glPushMatrix();
+            glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
             Projectile* bullet = new Projectile();
-            bullet->draw(0);
-            //glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
-            glTranslatef(1,1,1);
+            bullet->draw(p.getType());
             glPopMatrix();
         }
 
