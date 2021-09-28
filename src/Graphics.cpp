@@ -12,51 +12,53 @@ Window::Window() {
     if (!glfwInit())
         throw std::runtime_error("Could not initialize GLFW");
 
+    // Create window.
     _width = 800;
     _height = 800;
     _window = glfwCreateWindow(_width, _height, "Projet Sephiroth", NULL, NULL);
-
-
     if (!_window) {
         glfwTerminate();
         throw std::runtime_error("Could not open GLFW window");
     }
 
+    // Initializes ImGui.
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(_window, true);
     ImGui_ImplOpenGL2_Init();
 
+    // OpenGL initial setup.
     glEnable(GL_DEPTH_TEST);
 
+    // Event handling.
     glfwSetWindowUserPointer(_window, this);
-
     glfwSetWindowSizeCallback(_window, [](GLFWwindow* window, int x, int y) {
         Window* w = (Window*)glfwGetWindowUserPointer(window);
         w->_width = x;
         w->_height = y;
-        });
+    });
 }
 
 void Window::begin_frame() {
+    // Before starting a new frame, check events.
     glfwPollEvents();
 
-    int width, height;
-    glfwGetFramebufferSize(_window, &width, &height);
-
-    glViewport(0, 0, width, height);
+    // Setup OpenGL for new frame.
+    glViewport(0, 0, _width, _height);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    // Setup ImGui for new frame.
     ImGui_ImplOpenGL2_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 }
 
 void Window::end_frame() {
+    // Push ImGui state to OpenGL.
     ImGui::Render();
-
     ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
+    // Show drawings to current window.
     glfwMakeContextCurrent(_window);
     glfwSwapBuffers(_window);
 
@@ -71,11 +73,12 @@ Window::~Window() noexcept {
 
 #include <cmath>
 
+// Trigonometric functions working in degrees.
 float cosd(float deg) { return std::cos(deg * (M_PI / 180)); }
 float sind(float deg) { return std::sin(deg * (M_PI / 180)); }
 
-
 void ask_camera_ui(Camera& camera) {
+    // Positionning window manually for the first frame.
     ImGui::SetNextWindowPos({ 50,50 }, ImGuiCond_Once);
 
     if (ImGui::Begin("Camera", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
@@ -89,11 +92,13 @@ void ask_camera_ui(Camera& camera) {
 }
 
 void use_camera_gl(Window const& window, Camera const& camera) {
+    // Apply perspective matrix.
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     auto [w, h] = window.size();
-    gluPerspective(camera.fieldOfView, (float)(w) / h, 0.1, 50);
+    gluPerspective(camera.fieldOfView, (float)(w) / h, 1, 50);
 
+    // Apply camera matrix.
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     float cospitch = cosd(camera.angle[1]);
@@ -110,7 +115,7 @@ Projectile::Projectile() {
     projectileQuadric_ = gluNewQuadric();
     gluQuadricDrawStyle(projectileQuadric_, GLU_FILL);
     gluQuadricNormals(projectileQuadric_, GLU_SMOOTH);
-    gluQuadricTexture(projectileQuadric_, GL_TRUE);
+    gluQuadricTexture(projectileQuadric_, GL_FALSE);
 }
 
 // Destructor of the projectile object
@@ -121,7 +126,7 @@ Projectile::~Projectile() {
 // Method to draw a specific kind of projectile
 void Projectile::draw(int type) {
     switch (type) {
-        // The projectile is a heavy ball
+    // The projectile is a heavy ball
     case 0: {
         // Apply some material to add depth to the ball
         GLfloat ambient[] = { 0.05,0.05,0.05,1. };
@@ -137,7 +142,7 @@ void Projectile::draw(int type) {
         gluSphere(projectileQuadric_, 1, 20, 20);
         break;
     }
-          // The projectile is a bullet
+    // The projectile is a bullet
     case 1: {
         // Apply some material to add depth to the bullet
         GLfloat ambient[] = { 0.25,0.25,0.25,1. };
@@ -153,9 +158,11 @@ void Projectile::draw(int type) {
         gluSphere(projectileQuadric_, 0.2, 20, 20);
         break;
     }
-          // The projectile is a fireball
+    // The projectile is a fireball
     case 2:
     {
+        /* TODO: texture should work
+
         // Apply a specific texture to the fireball        
         GLuint tex;
         GLUquadric* sphere;
@@ -174,6 +181,7 @@ void Projectile::draw(int type) {
         gluQuadricNormals(projectileQuadric_, GLU_SMOOTH);
         gluSphere(projectileQuadric_, 0.8, 20, 20);
         break;
+        */
     }
     }
 }

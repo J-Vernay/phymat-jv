@@ -51,7 +51,7 @@ int main(){
     Vector3 v = Vector3(0,0,0);
     //Vector3 o = Vector3(0.f,1.f,1.f);
  
-    Particle P = Particle(1.0f,p,v,a,0);
+    Particle P = Particle(1.0f,p,v,a,0,0);
     cout << P << endl;
     //end creation
  
