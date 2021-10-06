@@ -18,7 +18,6 @@ link_libraries(imgui)
 add_executable(phymat-jv
     # All source files here
     src/main.cpp
-    src/Matrix.hpp
     src/Vector.hpp
     src/Vector.cpp
     src/Graphics.hpp

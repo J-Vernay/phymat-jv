@@ -3,10 +3,10 @@
 
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
-Integrator::Integrator(){
-    gravity = Vector3(0,0,-0.5);
+Integrator::Integrator() {
+    gravity = Vector3(0,0,-10);
     frameRate = 60;
-    if (frameRate == 0){
+    if (frameRate == 0) {
         time = 1;
     }
     else{
@@ -117,7 +117,7 @@ void Integrator::updateVelocity(){
 //If particle hits the ground, acceleration is 0 (the ground z is 0)
 void Integrator::updateAcceleration(){
     for(auto &p : particleList){
-        p.acceleration = (p.acceleration + gravity*time)*p.getInverseMass();
+        p.acceleration = gravity;
     }
 }
 

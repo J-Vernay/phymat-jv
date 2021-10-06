@@ -9,6 +9,7 @@
 /// Class responsible for GLFW, OpenGL and ImGui management.
 class Window {
 public:
+    // The constructor will initialize GLFW, OpenGL and ImGui.
     Window();
     Window(Window const&) = delete; // No copy allowed.
     ~Window() noexcept;
@@ -18,6 +19,7 @@ public:
     /// Finish frame and swap to screen. 
     void end_frame();
 
+    /// Return dimensions of window.
     std::pair<int, int> size() const { return { _width, _height }; }
 
     bool should_close() const noexcept { return glfwWindowShouldClose(_window); }
@@ -30,8 +32,8 @@ private:
 struct Camera {
     float target[3] = {0,0,0};
     float distance = 5;
-    float fieldOfView = 70; // degrees
-    float angle[2] = {0,30}; // degrees
+    float fieldOfView = 70;   // degrees
+    float angle[2] = {0,30};  // degrees
 };
 
 /// Shows the ImGui UI for controlling camera.
@@ -40,7 +42,7 @@ void ask_camera_ui(Camera& camera);
 /// Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera.
 void use_camera_gl(Window const& window, Camera const& camera);
 
-///  Class responsible for the projectile management
+///  Class responsible for the projectile management.
 class Projectile {
 public:
     Projectile();
