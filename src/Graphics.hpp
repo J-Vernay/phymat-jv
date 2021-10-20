@@ -16,6 +16,10 @@ public:
 
     /// Setup OpenGL and ImGui for a new frame.
     void begin_frame();
+    /// Setup ImGui for a new frame.
+    void begin_ui();
+    /// Finish ImGui.
+    void end_ui();
     /// Finish frame and swap to screen. 
     void end_frame();
 
@@ -23,6 +27,7 @@ public:
     std::pair<int, int> size() const { return { _width, _height }; }
 
     bool should_close() const noexcept { return glfwWindowShouldClose(_window); }
+    
 private:
     GLFWwindow* _window;
     int _width, _height;

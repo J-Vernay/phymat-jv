@@ -32,6 +32,8 @@ class Particle {
         float getMass();
         int getType();
 
+        void integrate(float time);
+
         //Overload of operators
         friend ostream& operator<<(ostream& os, const Particle&);
 };
