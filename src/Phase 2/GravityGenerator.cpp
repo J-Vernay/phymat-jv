@@ -18,6 +18,7 @@ GravityGenerator::GravityGenerator(float gravityConstant){
 //Update the force for gravity
 void GravityGenerator::updateForces(Particle *particle, float duration){
     Vector3 gravityForce = this->gravity * particle->getMass();
+    //Add force to register
 }
 
 //Getter for gravity member
