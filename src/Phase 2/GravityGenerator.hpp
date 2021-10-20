@@ -8,7 +8,7 @@ private:
 public:
     //CONSTRUCTORS
     GravityGenerator(Vector3 gravity);
-    GravityGenerator(float gravity);
+    GravityGenerator(float gravityConstant);
     GravityGenerator(); //(0,0,-10) by default
 
     void updateForces(Particle *particle, float duration);
