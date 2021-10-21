@@ -5,13 +5,14 @@ class GravityGenerator : public ParticleForceGenerator
 {
 private:
     Vector3 gravity;
+    Particle * particle;
 public:
     //CONSTRUCTORS
-    GravityGenerator(Vector3 gravity);
-    GravityGenerator(float gravityConstant);
-    GravityGenerator(); //(0,0,-10) by default
+    GravityGenerator(Particle * particle, Vector3 gravity);
+    GravityGenerator(Particle * particle, float gravityConstant);
+    GravityGenerator(Particle * particle); //Gravity set to (0,0,-10) by default
 
-    void updateForces(Particle *particle, float duration);
+    void updateForces(float duration);
     
     //GETTERS & SETTERS
     Vector3 getGravity();

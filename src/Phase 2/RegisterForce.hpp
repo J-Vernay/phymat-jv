@@ -6,12 +6,7 @@
 using namespace std;
 
 class RegisterForces {
-    struct RecordingForces
-    {
-        Particle *particle;
-        ParticleForceGenerator *pfg;
-    };
-    
-    vector<RecordingForces> Register;
+
+    vector<ParticleForceGenerator*> Register;
 
 };

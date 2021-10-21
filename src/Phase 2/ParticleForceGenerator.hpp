@@ -6,5 +6,5 @@ using namespace std;
 class ParticleForceGenerator {       
     
     public:       //Public attributes of Particle
-        virtual void updateForces(Particle *particle, float duration) = 0;
+        virtual void updateForces(float duration) = 0;
 };

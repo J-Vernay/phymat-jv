@@ -1,23 +1,26 @@
 #include "GravityGenerator.hpp"
 
 //Construct a generator with the graivty put to (0,0,-10) by default
-GravityGenerator::GravityGenerator(){
+GravityGenerator::GravityGenerator(Particle *particle){
+    this->particle = particle;
     this->gravity = Vector3(0,0,-10);
 }
 
 //Construct a generator with the gravity worth to the inut gravity vector
-GravityGenerator::GravityGenerator(Vector3 gravity){
+GravityGenerator::GravityGenerator(Particle * particle, Vector3 gravity){
+    this->particle = particle;
     this->gravity = gravity;
 }
 
 //Construct a generator with a gravity equal to a vector null but in z which is worth the gravityConstant input
-GravityGenerator::GravityGenerator(float gravityConstant){
+GravityGenerator::GravityGenerator(Particle *particle, float gravityConstant){
+    this->particle = particle;
     this->gravity = Vector3(0,0,gravityConstant);
 }
 
 //Update the force for gravity
-void GravityGenerator::updateForces(Particle *particle, float duration){
-    Vector3 gravityForce = this->gravity * particle->getMass();
+void GravityGenerator::updateForces(float duration){
+    Vector3 gravityForce = this->gravity * this->particle->getMass();
     //Add force to register
 }
 

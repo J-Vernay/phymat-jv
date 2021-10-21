@@ -4,14 +4,15 @@
 class DragGenerator : public ParticleForceGenerator
 {
 private:
+    Particle* particle;
     float k1;
     float k2;
 public:
     //CONSTRUCTORS
-    DragGenerator(float k1, float k2);
-    DragGenerator(); //k1 = 1, k2 = 2 by default
+    DragGenerator(Particle *particle, float k1, float k2);
+    DragGenerator(Particle* particle); //k1 = 1, k2 = 2 by default
 
-    void updateForces(Particle *particle, float duration);
+    void updateForces(float duration);
     
     //GETTERS & SETTERS
     float getK1();
