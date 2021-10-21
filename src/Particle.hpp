@@ -15,6 +15,7 @@ class Particle {
 
     public:       //Public attributes of Particle
         Vector3 acceleration;
+        Vector3 accumulationOfForces; //Accumulation of all forces
 
         //-----FUNCTIONS--------//
         Particle(float, Vector3, Vector3, Vector3, float, int); 
@@ -31,6 +32,8 @@ class Particle {
         float getInverseMass();
         float getMass();
         int getType();
+
+        void resetAccumulationForces(); //To reset the forces applied to the particle
 
         //Overload of operators
         friend ostream& operator<<(ostream& os, const Particle&);

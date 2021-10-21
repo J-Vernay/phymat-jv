@@ -29,6 +29,8 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
     }
 
     this->type = type;
+
+    this->accumulationOfForces = Vector3(0, 0, 0);
 }
 
 //Getter & Setters :
@@ -77,6 +79,10 @@ float Particle::getMass(){
 
 int Particle::getType(){
     return type;
+}
+
+void Particle::resetAccumulationForces() {//To reset the forces applied to the particle
+    this->accumulationOfForces = Vector3(0, 0, 0);
 }
 
 //Overload of << 

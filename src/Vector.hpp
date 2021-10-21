@@ -23,6 +23,7 @@ class Vector3 {
 
         //Operator overload
         Vector3 operator+(const Vector3);
+        Vector3 operator+=(const Vector3);
         Vector3 operator-(const Vector3);
         Vector3 operator*(const float);
         Vector3 operator/(const float);
