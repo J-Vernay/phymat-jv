@@ -2,9 +2,9 @@
 
 //Conctructors
 Vector3::Vector3(){
-    this->x = 1;
-    this->y = 1;
-    this->z = 1;
+    this->x = 0;
+    this->y = 0;
+    this->z = 0;
 }
 
 Vector3::Vector3(float a, float b, float c){
@@ -91,13 +91,13 @@ float Vector3::scalarProduct(Vector3 v){
 }
 
 float Vector3::norm(){
-    return pow(pow(x,2)+pow(y,2)+pow(z,2),0.5);
+    return sqrt(scalarProduct(*this));
 }
 
 //Other useful methods
 
 float scalarProduct(Vector3 v1, Vector3 v2){
-    return v1.getx()*v2.getx() + v1.gety()*v2.gety() + v1.getz()*v2.getz();
+    return v1.scalarProduct(v2);
 }
 
 Vector3 vectorialProduct(Vector3 v1, Vector3 v2){
@@ -105,5 +105,5 @@ Vector3 vectorialProduct(Vector3 v1, Vector3 v2){
 }
 
 float norm(Vector3 v){
-    return pow(pow(v.getx(),2)+pow(v.gety(),2)+pow(v.getz(),2),0.5);
+    return v.norm();
 }

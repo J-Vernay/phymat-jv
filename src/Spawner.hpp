@@ -21,7 +21,7 @@ private:
     Integrator& _integrator;
     double _next_time = 0;
     // v  User choices storage
-    bool   _autofire = false;
+    bool   _autofire = true;
     float  _delay_s = 0.3;
     int    _type = 0;
     float   _mass = 10;

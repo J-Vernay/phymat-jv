@@ -43,23 +43,29 @@ Window::Window() {
 void Window::begin_frame() {
     // Before starting a new frame, check events.
     glfwPollEvents();
+    glfwMakeContextCurrent(_window);
 
     // Setup OpenGL for new frame.
     glViewport(0, 0, _width, _height);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+}
+
+void Window::begin_ui() {
     // Setup ImGui for new frame.
     ImGui_ImplOpenGL2_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 }
 
-void Window::end_frame() {
+void Window::end_ui() {
     // Push ImGui state to OpenGL.
     ImGui::Render();
     ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
+}
+
+void Window::end_frame() {
     // Show drawings to current window.
-    glfwMakeContextCurrent(_window);
     glfwSwapBuffers(_window);
 
 }
