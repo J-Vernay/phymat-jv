@@ -1,6 +1,5 @@
 #include "Integrator.hpp"
 
-
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
 Integrator::Integrator() {
@@ -117,6 +116,18 @@ Particle Integrator::getParticleAt(int index){
     else {
         throw ExceptionDeleteIndexOutOfRange();
     }
+}
+
+//Main function to update all forces to all particles
+void Integrator::integrate(){
+    for(auto &p : particleList){ //add gravity force to each particle
+        GravityGenerator(&p).updateForces(1/this->frameRate);
+    }
+    for(ParticleForceGenerator &force : registerOfForces){ //add all the other forces contained in the register
+        force.updateForces(1/this->frameRate); 
+    }
+    this->updateAll(); //update the position of each particle
+
 }
 
 //Overload of << 

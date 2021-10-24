@@ -5,6 +5,9 @@
 
 #include "Vector.hpp"
 #include "Particle.hpp"
+//#include "./Phase 2/RegisterForce.hpp" NOT USED
+#include "./Phase 2/GravityGenerator.hpp"
+#include "./Phase 2/ParticleForceGenerator.hpp"
 
 #include "ExceptionsForIntegrator.hpp"
 
@@ -16,6 +19,7 @@ class Integrator {
         vector<Particle> particleList = {};
         double frameRate; //in fps
         double time; //in s
+        vector<ParticleForceGenerator> registerOfForces; // /!\ RegisterForce class not used cause only one attribute and need to for auto
 
     public :
     //Constructor
@@ -44,6 +48,9 @@ class Integrator {
         Particle getParticleAt(int);
         void updateAll();
         void updateAllFast();
+  
+        //Main function to update all forces to all particles
+        void integrate();
 
     //Operator Overload
         friend ostream& operator<<(ostream& os, const Integrator&);
