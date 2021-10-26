@@ -20,4 +20,6 @@ public:
     float getRelaxedLength();
     void setElasticity(float k);
     void setRelaxedLength(float l0);
+
+    pair<Particle*,Particle*> getParticles() const { return { particleA, particleB }; }
 };

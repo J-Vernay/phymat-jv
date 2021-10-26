@@ -1,7 +1,9 @@
 #include "Particle.hpp"
 
 //Constructor
-Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, float damping, int type){
+Particle::Particle(float mass, Vector3 initialPosition, Vector3 color, float radius, float damping) :
+    color(color), radius(radius)
+{
     if(mass == 0){
         //inverseMass = inf
         throw ExceptionInverseMassInf();
@@ -17,7 +19,6 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
         this->inverseMass = 1 / mass;
     }
     this->position = initialPosition;
-    this->velocity = initialVelocity;
 
     if(damping > 1 || damping < 0){
         //error damping is not a pourcentage
@@ -26,50 +27,6 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
     else {
         this->damping = damping;
     }
-
-    this->type = type;
-
-    this->accumulationOfForces = Vector3(0, 0, 0);
-}
-
-//Getter & Setters :
-void Particle::setPosition(Vector3 newPosition){
-    position = newPosition;
-}
-
-void Particle::setVelocity(Vector3 newVelocity){
-    velocity = newVelocity;
-}
-
-void Particle::setType(int newType){
-    this->type = newType;
-}
-
-Vector3 Particle::getPosition() const {
-    return this->position;
-}
-
-Vector3 Particle::getVelocity() const {
-    return this->velocity;
-}
-
-float Particle::getDamping() const {
-    return this->damping;
-}
-
-float Particle::getInverseMass() const {
-    return this->inverseMass;
-}
-
-float Particle::getMass() const {
-    if(this->inverseMass == 0){
-        return -1;
-    }
-    else return 1/this->inverseMass;
-}
-
-int Particle::getType() const {
-    return type;
 }
 
 void Particle::resetAccumulationForces() {

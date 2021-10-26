@@ -2,7 +2,7 @@
 
 class ParticleLink : public ParticleContactGenerator
 {
-private :
+protected:
 	Particle* particle[2];
 public:
 	float currentLength() const;

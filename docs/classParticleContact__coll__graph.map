@@ -1,7 +1,7 @@
 <map id="ParticleContact" name="ParticleContact">
-<area shape="rect" id="node1" title=" " alt="" coords="14,335,134,361"/>
-<area shape="rect" id="node2" title=" " alt="" coords="70,5,121,32"/>
-<area shape="rect" id="node3" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="209,245,280,272"/>
-<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="60,125,131,152"/>
-<area shape="rect" id="node4" title=" " alt="" coords="271,125,309,152"/>
+<area shape="rect" id="node1" title=" " alt="" coords="22,335,142,361"/>
+<area shape="rect" id="node2" title=" " alt="" coords="78,5,129,32"/>
+<area shape="rect" id="node3" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="217,245,288,272"/>
+<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="68,125,139,152"/>
+<area shape="rect" id="node4" title=" " alt="" coords="279,125,317,152"/>
 </map>

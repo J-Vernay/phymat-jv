@@ -2,6 +2,8 @@
 
 using namespace std;
 
+/// Class representing an abstract relation betweens particles
+/// which may cause collisions = contacts.
 class ParticleContactGenerator {
 
 public:

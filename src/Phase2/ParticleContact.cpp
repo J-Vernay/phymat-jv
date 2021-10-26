@@ -9,25 +9,10 @@ ParticleContact::ParticleContact(Particle* particles[2], float restit, Vector3 n
 
     // First particle characteristics
     Vector3 posA=particle[0]->getPosition();
-    int typeA=particle[0]->getType();
-    float RA; // Ray of the sphere
-    if (typeA == 1) {
-        RA = 1;
-    }
-    else {
-        RA = 0.2;
-    }
-    // Second particle characteristics
+    float RA = particle[0]->getRadius();
     Vector3 posB=particle[1]->getPosition();
-    int typeB=particle[1]->getType();
-    float RB; // Ray of the sphere
-    if (typeA == 1) {
-        RB = 1;
-    }
-    else{
-        RB = 0.2;
-    }
-    
+    float RB = particle[1]->getRadius();
+
     float distance = (posB - posA) * normale; // Center to center distance
     float raysSum = RA + RB; // Distance if the spheres are touching each other with no penetration
     
@@ -44,20 +29,20 @@ ParticleContact::~ParticleContact()
 }
 
 //Resolve One contact
-void ParticleContact::resolve(float frameDuration){
+void ParticleContact::resolve(float frameDuration) const {
     resolveInterpenetration();
     resolveVelocity(frameDuration);
 }
 
 //Calculate separation speed and returns it
-float ParticleContact::vsCalculation(){
+float ParticleContact::vsCalculation() const {
     
     //vs = (Va - Vb) * n
     return ((particle[0]->getVelocity() - particle[1]->getVelocity())*normale);
 }
 
 //TO DO stationnary particle problem
-void ParticleContact::resolveVelocity(float frameDuration){
+void ParticleContact::resolveVelocity(float frameDuration) const {
     float mass = 1/particle[0]->getInverseMass() + 1/particle[1]->getInverseMass();
     float vs1,vs2;
     vs1 = vsCalculation();
@@ -73,7 +58,7 @@ void ParticleContact::resolveVelocity(float frameDuration){
 
 //Resolve Interpenetration in case the 2objects are penetrating each other
 //To add when the particles are not particles anymore but objects
-void ParticleContact::resolveInterpenetration(){
+void ParticleContact::resolveInterpenetration() const {
     float ma,mb;
     ma = 1/particle[0]->getInverseMass();
     mb = 1/particle[1]->getInverseMass();

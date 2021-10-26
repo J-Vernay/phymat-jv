@@ -1,5 +1,3 @@
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
 
 #include "Graphics.hpp"
 
@@ -117,77 +115,29 @@ void use_camera_gl(Window const& window, Camera const& camera) {
 }
 
 // Constructor of the projectile object
-Projectile::Projectile() {
-    projectileQuadric_ = gluNewQuadric();
-    gluQuadricDrawStyle(projectileQuadric_, GLU_FILL);
-    gluQuadricNormals(projectileQuadric_, GLU_SMOOTH);
-    gluQuadricTexture(projectileQuadric_, GL_FALSE);
+ParticleRenderer::ParticleRenderer() {
+    _quadric = gluNewQuadric();
+    gluQuadricDrawStyle(_quadric, GLU_FILL);
+    gluQuadricNormals(_quadric, GLU_SMOOTH);
+    gluQuadricTexture(_quadric, GL_FALSE);
+    // Apply some material to add depth to the ball
+    GLfloat ambient[] = { 0.05,0.05,0.05,1. };
+    GLfloat diffuse[] = { 0.15,0.15,0.15 };
+    GLfloat specular[] = { 0.4,0.4,0.4 };
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
+    glMaterialf(GL_FRONT, GL_SHININESS, 50);
 }
 
 // Destructor of the projectile object
-Projectile::~Projectile() {
-    gluDeleteQuadric(projectileQuadric_);
+ParticleRenderer::~ParticleRenderer() {
+    gluDeleteQuadric(_quadric);
 }
 
 // Method to draw a specific kind of projectile
-void Projectile::draw(int type) {
-    switch (type) {
-    // The projectile is a heavy ball
-    case 0: {
-        // Apply some material to add depth to the ball
-        GLfloat ambient[] = { 0.05,0.05,0.05,1. };
-        GLfloat diffuse[] = { 0.15,0.15,0.15 };
-        GLfloat specular[] = { 0.4,0.4,0.4 };
-        glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
-        glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
-        glMaterialf(GL_FRONT, GL_SHININESS, 50);
-        // Apply some color to the ball
-        glColor3f(.2f, .2f, .2f);
-        // Draw the ball
-        gluSphere(projectileQuadric_, 1, 20, 20);
-        break;
-    }
-    // The projectile is a bullet
-    case 1: {
-        // Apply some material to add depth to the bullet
-        GLfloat ambient[] = { 0.25,0.25,0.25,1. };
-        GLfloat diffuse[] = { 0.65,0.65,0.65 };
-        GLfloat specular[] = { 0.8,0.8,0.8 };
-        glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
-        glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
-        glMaterialf(GL_FRONT, GL_SHININESS, 50);
-        // Apply some color to the bullet
-        glColor3f(.7f, .7f, .7f);
-        // Draw the bullet
-        gluSphere(projectileQuadric_, 0.2, 20, 20);
-        break;
-    }
-    // The projectile is a fireball
-    case 2:
-    {
-        /* TODO: texture should work
-
-        // Apply a specific texture to the fireball        
-        GLuint tex;
-        GLUquadric* sphere;
-        glEnable(GL_DEPTH_TEST);
-        int x, y, n;
-        unsigned char* data = stbi_load("fireball.jpg", &x, &y, &n, 4);
-        glGenTextures(1, &tex);
-        glBindTexture(GL_TEXTURE_2D, tex);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, x, y, 0, GL_RGBA, GL_UNSIGNED_BYTE, (const GLvoid*)data);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glEnable(GL_TEXTURE_2D);
-        glColor3f(1.0, 1.0, 1.0);
-        glBindTexture(GL_TEXTURE_2D, tex);
-        gluQuadricTexture(projectileQuadric_, GL_TRUE);
-        gluQuadricNormals(projectileQuadric_, GLU_SMOOTH);
-        gluSphere(projectileQuadric_, 0.8, 20, 20);
-        break;
-        */
-    }
-    }
+void ParticleRenderer::draw(Particle const& p) {
+    Vector3 color = p.getColor();
+    glColor3f(color.getx(), color.gety(), color.getz());
+    gluSphere(_quadric, p.getRadius(), 20, 20);
 }

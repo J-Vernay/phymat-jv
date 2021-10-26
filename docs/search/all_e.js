@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['particle_102',['Particle',['../classParticle.html',1,'']]],
-  ['particle_103',['particle',['../classParticleContact.html#a569b99a6ab2f90e23ca5d1743d267f5a',1,'ParticleContact::particle()'],['../classGravityGenerator.html#a42e8fe91b81a2b76071dcce2ff1ee9be',1,'GravityGenerator::particle()'],['../classFlotationForceGenerator.html#adcf1509e1c0b8e99afb826cf51e38456',1,'FlotationForceGenerator::particle()']]],
-  ['particle_104',['Particle',['../classParticle.html#a869d3fbb9dce3cf08e16aee3b9a18777',1,'Particle']]],
-  ['particle_105',['particle',['../classDragGenerator.html#a37e0fa00688847e79e5b59bee175fd55',1,'DragGenerator']]],
-  ['particle_2ecpp_106',['Particle.cpp',['../Particle_8cpp.html',1,'']]],
-  ['particle_2ehpp_107',['Particle.hpp',['../Particle_8hpp.html',1,'']]],
-  ['particlea_108',['particleA',['../classSpringForceGenerator.html#aa3456258b5cb8222cf0fbe9361090972',1,'SpringForceGenerator::particleA()'],['../classBungeeCordForceGenerator.html#ad9a56c1d55fc846fa485dfff2f2b982e',1,'BungeeCordForceGenerator::particleA()']]],
-  ['particleb_109',['particleB',['../classSpringForceGenerator.html#a9b15bfa27f7f330d8d7bfdb81f3813d9',1,'SpringForceGenerator::particleB()'],['../classBungeeCordForceGenerator.html#acaab43e96a71602e9ede532887916580',1,'BungeeCordForceGenerator::particleB()']]],
-  ['particlecontact_110',['ParticleContact',['../classParticleContact.html',1,'ParticleContact'],['../classParticleContact.html#a9aadeb2a081f79d033eff23fb90616a6',1,'ParticleContact::ParticleContact()'],['../classParticleContactResolver.html#adb10f65a8a1d378ac906462504d90309',1,'ParticleContactResolver::ParticleContact()']]],
-  ['particlecontact_2ecpp_111',['ParticleContact.cpp',['../ParticleContact_8cpp.html',1,'']]],
-  ['particlecontact_2ehpp_112',['ParticleContact.hpp',['../ParticleContact_8hpp.html',1,'']]],
-  ['particlecontactresolver_113',['ParticleContactResolver',['../classParticleContactResolver.html',1,'ParticleContactResolver'],['../classParticleContact.html#ab2e3f4c3dc9b46966c6ec90e0fe88b6c',1,'ParticleContact::ParticleContactResolver()'],['../classParticleContactResolver.html#ab64c924fa12797a400be47029a950e5f',1,'ParticleContactResolver::ParticleContactResolver()']]],
-  ['particlecontactresolver_2ecpp_114',['ParticleContactResolver.cpp',['../ParticleContactResolver_8cpp.html',1,'']]],
-  ['particlecontactresolver_2ehpp_115',['ParticleContactResolver.hpp',['../ParticleContactResolver_8hpp.html',1,'']]],
-  ['particleforcegenerator_116',['ParticleForceGenerator',['../classParticleForceGenerator.html',1,'']]],
-  ['particleforcegenerator_2ecpp_117',['ParticleForceGenerator.cpp',['../ParticleForceGenerator_8cpp.html',1,'']]],
-  ['particleforcegenerator_2ehpp_118',['ParticleForceGenerator.hpp',['../ParticleForceGenerator_8hpp.html',1,'']]],
-  ['particlelist_119',['particleList',['../classIntegrator.html#af9c82de05666e1db8eb9d5d87ced7295',1,'Integrator']]],
-  ['pi_120',['PI',['../FlotationForceGenerator_8cpp.html#a598a3330b3c21701223ee0ca14316eca',1,'FlotationForceGenerator.cpp']]],
-  ['position_121',['position',['../classParticle.html#a9a107d625b41314ac787887ab61b2da6',1,'Particle']]],
-  ['projectile_122',['Projectile',['../classProjectile.html',1,'Projectile'],['../classProjectile.html#ac536ed2aad56af866a2078b9a85aa16d',1,'Projectile::Projectile()']]],
-  ['projectilequadric_5f_123',['projectileQuadric_',['../classProjectile.html#a39308651550cb2aa1873a235d7531175',1,'Projectile']]]
+  ['operator_2a_99',['operator*',['../classVector3.html#a67fd9d02db1b76b214b4acd0666eddd3',1,'Vector3::operator*()'],['../Vector_8cpp.html#aa2c8f5957d890151f1965670100f38a5',1,'operator*(const double k, Vector3 v1):&#160;Vector.cpp'],['../Vector_8cpp.html#aa3d1e24dd06a983996e0957686702fb5',1,'operator*(Vector3 v1, Vector3 v2):&#160;Vector.cpp'],['../Vector_8hpp.html#aa2c8f5957d890151f1965670100f38a5',1,'operator*(const double k, Vector3 v1):&#160;Vector.cpp'],['../Vector_8hpp.html#a8d4bb2022719b29e237a5549a4f6933a',1,'operator*(Vector3 k, Vector3 v1):&#160;Vector.cpp']]],
+  ['operator_2b_100',['operator+',['../classVector3.html#a04ffa93ac1d2241e50046b0a390ae321',1,'Vector3']]],
+  ['operator_2b_3d_101',['operator+=',['../classVector3.html#a6eeb6ebe7c7f696953a6ac2646cb8963',1,'Vector3']]],
+  ['operator_2d_102',['operator-',['../classVector3.html#a871e330eb07daa0fe0d60c784af96167',1,'Vector3']]],
+  ['operator_2f_103',['operator/',['../classVector3.html#a370ad993b25602258c528aca4f544627',1,'Vector3::operator/()'],['../Vector_8cpp.html#a96d1b6066114cc91c1e6ceb513e30b73',1,'operator/(const double k, Vector3 v1):&#160;Vector.cpp']]],
+  ['operator_3c_3c_104',['operator&lt;&lt;',['../Vector_8cpp.html#a65e5f13676d3db35731e8c3eda2f8612',1,'operator&lt;&lt;(ostream &amp;os, const Vector3 &amp;v):&#160;Vector.cpp'],['../Particle_8cpp.html#ad47516a6f2a8fd213babdce4918424f3',1,'operator&lt;&lt;(ostream &amp;os, const Particle &amp;P):&#160;Particle.cpp'],['../Integrator_8cpp.html#a36943f3ec433f47bfdba36ddb9e00961',1,'operator&lt;&lt;(ostream &amp;os, const Integrator &amp;I):&#160;Integrator.cpp'],['../classVector3.html#a9516d51228929fc05e381ff6385c77d5',1,'Vector3::operator&lt;&lt;()'],['../classParticle.html#a8bdf8a0956f538394a07851f83b2598c',1,'Particle::operator&lt;&lt;()'],['../classIntegrator.html#a3d36158efe163f39985b57a67a2c7717',1,'Integrator::operator&lt;&lt;()']]],
+  ['operator_5e_105',['operator^',['../classVector3.html#ab2d6dc671f59e826e4e039fa6e47d90e',1,'Vector3']]]
 ];

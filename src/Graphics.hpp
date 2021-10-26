@@ -5,6 +5,8 @@
 #include "GLFW/glfw3.h"
 #include "imgui.h"
 
+#include "Particle.hpp"
+
 
 /// Class responsible for GLFW, OpenGL and ImGui management.
 class Window {
@@ -47,12 +49,14 @@ void ask_camera_ui(Camera& camera);
 /// Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera.
 void use_camera_gl(Window const& window, Camera const& camera);
 
-/// Class responsible for the projectile management.
-class Projectile {
+/// Class responsible to render a particle into OpenGL.
+class ParticleRenderer {
 public:
-    Projectile();
-    ~Projectile();
-    void draw(int type);
+    ParticleRenderer();
+    ~ParticleRenderer();
+
+    void draw(Particle const& p);
+
 private:
-    GLUquadric* projectileQuadric_ = nullptr;
+    GLUquadric* _quadric;
 };

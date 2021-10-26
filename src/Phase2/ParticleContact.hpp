@@ -21,10 +21,10 @@ public:
     ParticleContact(Particle*[], float, Vector3);
     ~ParticleContact();
 
-    void resolve(float);
-    float vsCalculation();
-    void resolveVelocity(float);
-    void resolveInterpenetration();
+    void resolve(float) const;
+    float vsCalculation() const;
+    void resolveVelocity(float) const;
+    void resolveInterpenetration() const;
 };
 
 

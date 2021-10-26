@@ -17,15 +17,9 @@ FlotationForceGenerator::FlotationForceGenerator(Particle *particle){ //By defau
 FlotationForceGenerator::FlotationForceGenerator(Particle *particle, float maxDepth, float densityEnvironment, float heightEnvironment){
     this->particle = particle;
     this->maxDepth = maxDepth;  //maxDepth of the environment
-    if (particle->getType() == 1){ //radius = 1
-        this->volume = 4/3 * PI; //volume of the particle
-    }
-    else if (particle->getType() == 2){ //radius = 0.2 => r³ = 0.008
-        this->volume = 4/3 * PI * 0.008;
-    }
-    else { //radius = 0.8 => r³ = 0.512
-        this->volume = 4/3 * PI * 0.512;
-    }
+    
+    float r = particle->getRadius();
+    this->volume = PI * r * r * r * 4.f / 3;
     
     this->densityEnvironment = densityEnvironment; //Density of the environment
     this->heightEnvironment = heightEnvironment; //Level of water most of the time

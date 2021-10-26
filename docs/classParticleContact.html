@@ -78,18 +78,18 @@ Collaboration diagram for ParticleContact:</div>
 <div class="dyncontent">
 <div class="center"><img src="classParticleContact__coll__graph.png" border="0" usemap="#aParticleContact_coll__map" alt="Collaboration graph"/></div>
 <map name="aParticleContact_coll__map" id="aParticleContact_coll__map">
-<area shape="rect" title=" " alt="" coords="14,335,134,361"/>
-<area shape="rect" title=" " alt="" coords="70,5,121,32"/>
-<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="209,245,280,272"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="60,125,131,152"/>
-<area shape="rect" title=" " alt="" coords="271,125,309,152"/>
+<area shape="rect" title=" " alt="" coords="22,335,142,361"/>
+<area shape="rect" title=" " alt="" coords="78,5,129,32"/>
+<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="217,245,288,272"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="68,125,139,152"/>
+<area shape="rect" title=" " alt="" coords="279,125,317,152"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9aadeb2a081f79d033eff23fb90616a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#a9aadeb2a081f79d033eff23fb90616a6">ParticleContact</a> ()</td></tr>
-<tr class="separator:a9aadeb2a081f79d033eff23fb90616a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80f5cffe6c67abcfd20d6aab04c2dea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#ab80f5cffe6c67abcfd20d6aab04c2dea">ParticleContact</a> (<a class="el" href="classParticle.html">Particle</a> *[], float, <a class="el" href="classVector3.html">Vector3</a>)</td></tr>
+<tr class="separator:ab80f5cffe6c67abcfd20d6aab04c2dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a584513dc30aad490602e74198a836a27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#a584513dc30aad490602e74198a836a27">~ParticleContact</a> ()</td></tr>
 <tr class="separator:a584513dc30aad490602e74198a836a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabfd996ce1820e2ad41553a9f0b42533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#aabfd996ce1820e2ad41553a9f0b42533">resolve</a> (float)</td></tr>
@@ -109,6 +109,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac8b640d4290d901e3ca8f31143a1ab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1efa4c975919b4722af7b5b416a31fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#a1efa4c975919b4722af7b5b416a31fb9">normale</a></td></tr>
 <tr class="separator:a1efa4c975919b4722af7b5b416a31fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5576d4b6df0bd29d2d77ae7a7ae6817"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParticleContact.html#ab5576d4b6df0bd29d2d77ae7a7ae6817">penetration</a></td></tr>
+<tr class="separator:ab5576d4b6df0bd29d2d77ae7a7ae6817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -116,8 +118,8 @@ Friends</h2></td></tr>
 <tr class="separator:ab2e3f4c3dc9b46966c6ec90e0fe88b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9aadeb2a081f79d033eff23fb90616a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aadeb2a081f79d033eff23fb90616a6">&#9670;&nbsp;</a></span>ParticleContact()</h2>
+<a id="ab80f5cffe6c67abcfd20d6aab04c2dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80f5cffe6c67abcfd20d6aab04c2dea">&#9670;&nbsp;</a></span>ParticleContact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,11 +127,38 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">ParticleContact::ParticleContact </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classParticle.html">Particle</a> *&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classParticleContact_ab80f5cffe6c67abcfd20d6aab04c2dea_cgraph.png" border="0" usemap="#aclassParticleContact_ab80f5cffe6c67abcfd20d6aab04c2dea_cgraph" alt=""/></div>
+<map name="aclassParticleContact_ab80f5cffe6c67abcfd20d6aab04c2dea_cgraph" id="aclassParticleContact_ab80f5cffe6c67abcfd20d6aab04c2dea_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,181,65"/>
+<area shape="rect" href="classParticle.html#a889225014a4821e28590358d0b522c49" title=" " alt="" coords="229,5,380,32"/>
+<area shape="rect" href="classParticle.html#a806c077af237adf8b34dd0661cf92e5f" title=" " alt="" coords="240,56,369,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -171,19 +200,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classParticleContact_aabfd996ce1820e2ad41553a9f0b42533_cgraph.png" border="0" usemap="#aclassParticleContact_aabfd996ce1820e2ad41553a9f0b42533_cgraph" alt=""/></div>
 <map name="aclassParticleContact_aabfd996ce1820e2ad41553a9f0b42533_cgraph" id="aclassParticleContact_aabfd996ce1820e2ad41553a9f0b42533_cgraph">
-<area shape="rect" title=" " alt="" coords="5,107,181,133"/>
-<area shape="rect" href="classParticleContact.html#af2a16faef44f0adabd96a7977004c037" title=" " alt="" coords="229,49,405,90"/>
-<area shape="rect" href="classParticleContact.html#aa8b5817733673ffb5cb354961eff46e4" title=" " alt="" coords="229,131,405,173"/>
-<area shape="rect" href="classParticle.html#a889225014a4821e28590358d0b522c49" title=" " alt="" coords="486,5,637,32"/>
-<area shape="rect" href="Vector_8cpp.html#ae0901ad37d7c06ad28ad80b8d6cff01e" title=" " alt="" coords="533,56,589,83"/>
-<area shape="rect" href="classVector3.html#a086030e0473de303c58d43d6d1f5c98c" title=" " alt="" coords="717,56,831,83"/>
-<area shape="rect" href="classVector3.html#abf87eeaad0b10f2b09042187591876e3" title=" " alt="" coords="879,56,1045,83"/>
-<area shape="rect" href="classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="1093,5,1201,32"/>
-<area shape="rect" href="classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="1093,56,1201,83"/>
-<area shape="rect" href="classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="1094,107,1201,133"/>
-<area shape="rect" href="classParticle.html#a0760ad1578d005316711fffffb775ccc" title=" " alt="" coords="471,107,652,133"/>
-<area shape="rect" href="classParticle.html#ad08287d7c9600cb299720b8d61d0696a" title=" " alt="" coords="486,157,637,184"/>
-<area shape="rect" href="classParticleContact.html#aa60f411c8f592e4050cb9c4da047964a" title=" " alt="" coords="453,208,669,235"/>
+<area shape="rect" title=" " alt="" coords="5,75,181,101"/>
+<area shape="rect" href="classParticleContact.html#af2a16faef44f0adabd96a7977004c037" title=" " alt="" coords="229,34,405,75"/>
+<area shape="rect" href="classParticleContact.html#aa8b5817733673ffb5cb354961eff46e4" title=" " alt="" coords="229,99,405,141"/>
+<area shape="rect" href="classParticle.html#a0760ad1578d005316711fffffb775ccc" title=" " alt="" coords="471,56,652,83"/>
+<area shape="rect" href="classParticle.html#a596c5571d0fa5e4424da5b7f78b88a89" title=" " alt="" coords="486,5,637,32"/>
+<area shape="rect" href="classParticle.html#ad08287d7c9600cb299720b8d61d0696a" title=" " alt="" coords="486,107,637,133"/>
+<area shape="rect" href="classParticleContact.html#aa60f411c8f592e4050cb9c4da047964a" title=" " alt="" coords="453,157,669,184"/>
 </map>
 </div>
 
@@ -209,13 +232,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classParticleContact_af2a16faef44f0adabd96a7977004c037_cgraph.png" border="0" usemap="#aclassParticleContact_af2a16faef44f0adabd96a7977004c037_cgraph" alt=""/></div>
 <map name="aclassParticleContact_af2a16faef44f0adabd96a7977004c037_cgraph" id="aclassParticleContact_af2a16faef44f0adabd96a7977004c037_cgraph">
 <area shape="rect" title=" " alt="" coords="5,23,181,65"/>
-<area shape="rect" href="classParticle.html#a889225014a4821e28590358d0b522c49" title=" " alt="" coords="229,5,380,32"/>
-<area shape="rect" href="Vector_8cpp.html#ae0901ad37d7c06ad28ad80b8d6cff01e" title=" " alt="" coords="277,56,333,83"/>
-<area shape="rect" href="classVector3.html#a086030e0473de303c58d43d6d1f5c98c" title=" " alt="" coords="428,56,541,83"/>
-<area shape="rect" href="classVector3.html#abf87eeaad0b10f2b09042187591876e3" title=" " alt="" coords="589,56,756,83"/>
-<area shape="rect" href="classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="804,5,912,32"/>
-<area shape="rect" href="classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="804,56,912,83"/>
-<area shape="rect" href="classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="805,107,911,133"/>
+<area shape="rect" href="classParticle.html#a0760ad1578d005316711fffffb775ccc" title=" " alt="" coords="229,5,411,32"/>
+<area shape="rect" href="classParticle.html#a596c5571d0fa5e4424da5b7f78b88a89" title=" " alt="" coords="245,56,395,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -352,6 +370,28 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classParticle.html">Particle</a>* ParticleContact::particle[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5576d4b6df0bd29d2d77ae7a7ae6817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5576d4b6df0bd29d2d77ae7a7ae6817">&#9670;&nbsp;</a></span>penetration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ParticleContact::penetration</td>
         </tr>
       </table>
   </td>

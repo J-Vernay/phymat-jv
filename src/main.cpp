@@ -1,9 +1,12 @@
 
+#include <GL/gl.h>
+#include <cmath>
 #include <iostream>
 
 #include "Graphics.hpp"
 #include "Spawner.hpp"
-#include "Integrator.hpp"
+#include "World.hpp"
+#include "Blob.hpp"
 
 void draw_floor() {
     const int FloorSize = 20;
@@ -32,10 +35,11 @@ int main() {
 
     Window window;
     Camera camera;
-    Integrator integrator;
-    Spawner spawner(integrator);
+    World world;
+    Spawner spawner(world);
+    ParticleRenderer particleRenderer;
 
-    Projectile projectile;
+    Blob b(world, Vector3{0,0,0.2}, 1, 20, +INFINITY);
 
     // Disable use of configuration file.
     ImGui::GetIO().IniFilename = nullptr;
@@ -43,7 +47,7 @@ int main() {
     // Main loop.
     while (!window.should_close()) {
         spawner.update(glfwGetTime()); 
-        integrator.integrate();
+        world.integrate();
 
 
         // Start drawing for this frame.
@@ -54,11 +58,23 @@ int main() {
         // World drawings.
         use_camera_gl(window,camera);
         draw_floor();
-        for(auto &p : integrator.getParticleList()) {
+
+        for (auto* f : world.registerOfForces) {
+            if (auto* spring = dynamic_cast<SpringForceGenerator*>(f)) {
+                auto [pA,pB] = spring->getParticles();
+                Vector3 posA = pA->getPosition(), posB = pB->getPosition();
+                glBegin(GL_LINES);
+                glVertex3f(posA.getx(), posA.gety(), posA.getz());
+                glVertex3f(posB.getx(), posB.gety(), posB.getz());
+                glEnd();
+            }
+        }
+
+        for(auto &p : world.particleList) {
             // Draw each particle according to its type.
             glPushMatrix();
-            glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
-            projectile.draw(p.getType());
+            glTranslatef(p->getPosition().getx(),p->getPosition().gety(),p->getPosition().getz());
+            particleRenderer.draw(*p);
             glPopMatrix();
         }
 
