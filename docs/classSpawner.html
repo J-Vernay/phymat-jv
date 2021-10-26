@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classSpawner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Spawner Class Reference</div>  </div>
@@ -80,23 +81,24 @@ Collaboration diagram for Spawner:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawner__coll__graph.png" border="0" usemap="#aSpawner_coll__map" alt="Collaboration graph"/></div>
 <map name="aSpawner_coll__map" id="aSpawner_coll__map">
-<area shape="rect" title="Class responsible for creating new particles in the world." alt="" coords="488,332,567,359"/>
-<area shape="rect" title=" " alt="" coords="49,124,116,151"/>
-<area shape="rect" href="classIntegrator.html" title=" " alt="" coords="324,243,411,269"/>
-<area shape="rect" title=" " alt="" coords="8,5,58,32"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="571,124,642,151"/>
-<area shape="rect" title=" " alt="" coords="306,124,547,151"/>
-<area shape="rect" title=" " alt="" coords="140,124,281,151"/>
-<area shape="rect" title=" " alt="" coords="670,243,708,269"/>
-<area shape="rect" title=" " alt="" coords="734,243,785,269"/>
+<area shape="rect" title="Class responsible for creating new particles in the world." alt="" coords="346,347,425,373"/>
+<area shape="rect" title=" " alt="" coords="5,257,152,284"/>
+<area shape="rect" title=" " alt="" coords="227,131,293,158"/>
+<area shape="rect" href="classWorld.html" title=" " alt="" coords="384,257,443,284"/>
+<area shape="rect" title=" " alt="" coords="185,5,236,32"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="783,131,854,158"/>
+<area shape="rect" title=" " alt="" coords="467,257,517,284"/>
+<area shape="rect" title=" " alt="" coords="541,257,683,284"/>
+<area shape="rect" title=" " alt="" coords="317,124,531,165"/>
+<area shape="rect" title=" " alt="" coords="555,131,759,158"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae77f4099068a322852f186bcd4a74e24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ae77f4099068a322852f186bcd4a74e24">Spawner</a> (<a class="el" href="classIntegrator.html">Integrator</a> &amp;integrator)</td></tr>
-<tr class="memdesc:ae77f4099068a322852f186bcd4a74e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spawner to spawn particles in given integrator.  <a href="classSpawner.html#ae77f4099068a322852f186bcd4a74e24">More...</a><br /></td></tr>
-<tr class="separator:ae77f4099068a322852f186bcd4a74e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3843ed062c40f17531ee89326acb882"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#af3843ed062c40f17531ee89326acb882">Spawner</a> (<a class="el" href="classWorld.html">World</a> &amp;integrator)</td></tr>
+<tr class="memdesc:af3843ed062c40f17531ee89326acb882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spawner to spawn particles in given integrator.  <a href="classSpawner.html#af3843ed062c40f17531ee89326acb882">More...</a><br /></td></tr>
+<tr class="separator:af3843ed062c40f17531ee89326acb882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d0d5c188904285fd1320ba445f6e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20">spawn_particle</a> ()</td></tr>
 <tr class="memdesc:ac8d0d5c188904285fd1320ba445f6e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a particle according to user choices.  <a href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20">More...</a><br /></td></tr>
 <tr class="separator:ac8d0d5c188904285fd1320ba445f6e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,9 +111,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a295cc0e93bf064c94cf8390effc1c5cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIntegrator.html">Integrator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a295cc0e93bf064c94cf8390effc1c5cf">_integrator</a></td></tr>
-<tr class="memdesc:a295cc0e93bf064c94cf8390effc1c5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classIntegrator.html">Integrator</a> to spawn particles in.  <a href="classSpawner.html#a295cc0e93bf064c94cf8390effc1c5cf">More...</a><br /></td></tr>
-<tr class="separator:a295cc0e93bf064c94cf8390effc1c5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8a91d4f147af90b56d544da0e5eabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">_integrator</a></td></tr>
+<tr class="memdesc:a2d8a91d4f147af90b56d544da0e5eabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrator to spawn particles in.  <a href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">More...</a><br /></td></tr>
+<tr class="separator:a2d8a91d4f147af90b56d544da0e5eabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4046c557ebb84aa8195a24eac41f2e1"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classParticle.html">Particle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">_particles</a></td></tr>
+<tr class="memdesc:ac4046c557ebb84aa8195a24eac41f2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">All living particles spawned.  <a href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">More...</a><br /></td></tr>
+<tr class="separator:ac4046c557ebb84aa8195a24eac41f2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34db0ac8586d2cc291c95e0f05637920"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">_next_time</a> = 0</td></tr>
 <tr class="memdesc:a34db0ac8586d2cc291c95e0f05637920"><td class="mdescLeft">&#160;</td><td class="mdescRight">When to spawn next particle.  <a href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">More...</a><br /></td></tr>
 <tr class="separator:a34db0ac8586d2cc291c95e0f05637920"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +126,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">_delay_s</a> = 0.3</td></tr>
 <tr class="memdesc:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay between consecutive particles.  <a href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">More...</a><br /></td></tr>
 <tr class="separator:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac28daaf26a0b36c9b7d695f774b6dbc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ac28daaf26a0b36c9b7d695f774b6dbc3">_type</a> = 0</td></tr>
-<tr class="memdesc:ac28daaf26a0b36c9b7d695f774b6dbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the particle to be spawned.  <a href="classSpawner.html#ac28daaf26a0b36c9b7d695f774b6dbc3">More...</a><br /></td></tr>
-<tr class="separator:ac28daaf26a0b36c9b7d695f774b6dbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c04755763c4afb751af602d76be14d9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">_mass</a> = 10</td></tr>
 <tr class="memdesc:a7c04755763c4afb751af602d76be14d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass of the particle to be spawned.  <a href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">More...</a><br /></td></tr>
 <tr class="separator:a7c04755763c4afb751af602d76be14d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,12 +135,17 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">_velocity</a> = {0,0,0}</td></tr>
 <tr class="memdesc:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity of the particle to be spawned.  <a href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">More...</a><br /></td></tr>
 <tr class="separator:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:acb1a37a2f5a9328c9e7476762ba660c5"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#acb1a37a2f5a9328c9e7476762ba660c5">MaxParticles</a> = 100</td></tr>
+<tr class="separator:acb1a37a2f5a9328c9e7476762ba660c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for creating new particles in the world. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae77f4099068a322852f186bcd4a74e24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae77f4099068a322852f186bcd4a74e24">&#9670;&nbsp;</a></span>Spawner()</h2>
+<a id="af3843ed062c40f17531ee89326acb882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3843ed062c40f17531ee89326acb882">&#9670;&nbsp;</a></span>Spawner()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +156,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Spawner::Spawner </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classIntegrator.html">Integrator</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td>
           <td class="paramname"><em>integrator</em></td><td>)</td>
           <td></td>
         </tr>
@@ -189,7 +196,6 @@ Here is the call graph for this function:</div>
 <map name="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph" id="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph">
 <area shape="rect" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="5,5,133,32"/>
 <area shape="rect" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="181,5,365,32"/>
-<area shape="rect" href="classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41" title=" " alt="" coords="413,5,580,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -220,15 +226,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Spawn a particle according to user choices. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSpawner_ac8d0d5c188904285fd1320ba445f6e20_cgraph.png" border="0" usemap="#aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_cgraph" alt=""/></div>
-<map name="aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_cgraph" id="aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_cgraph">
-<area shape="rect" title="Spawn a particle according to user choices." alt="" coords="5,5,189,32"/>
-<area shape="rect" href="classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41" title=" " alt="" coords="237,5,404,32"/>
-</map>
-</div>
+<p>Cannot spawn particle, already full.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -267,7 +265,6 @@ Here is the call graph for this function:</div>
 <map name="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph" id="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph">
 <area shape="rect" title="Check if a particle should spawn now." alt="" coords="5,5,136,32"/>
 <area shape="rect" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="184,5,368,32"/>
-<area shape="rect" href="classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41" title=" " alt="" coords="416,5,583,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -355,8 +352,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a295cc0e93bf064c94cf8390effc1c5cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a295cc0e93bf064c94cf8390effc1c5cf">&#9670;&nbsp;</a></span>_integrator</h2>
+<a id="a2d8a91d4f147af90b56d544da0e5eabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8a91d4f147af90b56d544da0e5eabd">&#9670;&nbsp;</a></span>_integrator</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +362,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classIntegrator.html">Integrator</a>&amp; Spawner::_integrator</td>
+          <td class="memname"><a class="el" href="classWorld.html">World</a>&amp; Spawner::_integrator</td>
         </tr>
       </table>
   </td>
@@ -375,7 +372,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classIntegrator.html">Integrator</a> to spawn particles in. </p>
+<p>Integrator to spawn particles in. </p>
 
 </div>
 </div>
@@ -427,8 +424,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac28daaf26a0b36c9b7d695f774b6dbc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac28daaf26a0b36c9b7d695f774b6dbc3">&#9670;&nbsp;</a></span>_type</h2>
+<a id="ac4046c557ebb84aa8195a24eac41f2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4046c557ebb84aa8195a24eac41f2e1">&#9670;&nbsp;</a></span>_particles</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,7 +434,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Spawner::_type = 0</td>
+          <td class="memname">vector&lt;<a class="el" href="classParticle.html">Particle</a>&gt; Spawner::_particles</td>
         </tr>
       </table>
   </td>
@@ -447,7 +444,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Type of the particle to be spawned. </p>
+<p>All living particles spawned. </p>
 
 </div>
 </div>
@@ -472,6 +469,29 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Velocity of the particle to be spawned. </p>
+
+</div>
+</div>
+<a id="acb1a37a2f5a9328c9e7476762ba660c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1a37a2f5a9328c9e7476762ba660c5">&#9670;&nbsp;</a></span>MaxParticles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int Spawner::MaxParticles = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Max particles in system. Important to ensure '_particles' never grows after constructor, which would cause reallocation and pointer invalidation. </p>
 
 </div>
 </div>

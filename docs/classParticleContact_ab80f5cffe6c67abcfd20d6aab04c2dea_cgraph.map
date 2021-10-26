@@ -1,5 +1,5 @@
 <map id="ParticleContact::ParticleContact" name="ParticleContact::ParticleContact">
 <area shape="rect" id="node1" title=" " alt="" coords="5,23,181,65"/>
-<area shape="rect" id="node2" href="$classParticle.html#a889225014a4821e28590358d0b522c49" title=" " alt="" coords="229,5,380,32"/>
-<area shape="rect" id="node3" href="$classParticle.html#a806c077af237adf8b34dd0661cf92e5f" title=" " alt="" coords="240,56,369,83"/>
+<area shape="rect" id="node2" href="$classParticle.html#a889225014a4821e28590358d0b522c49" title="Get position." alt="" coords="229,5,380,32"/>
+<area shape="rect" id="node3" href="$classParticle.html#af89fe5aefd4e8e7b38cf1aae2230ddd5" title="Get radius." alt="" coords="233,56,376,83"/>
 </map>

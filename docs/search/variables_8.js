@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['k1_487',['k1',['../classDragGenerator.html#a8b4c2797de80275546db6596f4c4c2a3',1,'DragGenerator']]],
-  ['k2_488',['k2',['../classDragGenerator.html#a9ae4aa4da5bae1bd8d19b4925f6d244b',1,'DragGenerator']]]
+  ['inversemass_367',['inverseMass',['../classParticle.html#a6b8cd31d41129765d7e6daa895188a88',1,'Particle']]]
 ];

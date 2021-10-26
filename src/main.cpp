@@ -71,11 +71,7 @@ int main() {
         }
 
         for(auto &p : world.particleList) {
-            // Draw each particle according to its type.
-            glPushMatrix();
-            glTranslatef(p->getPosition().getx(),p->getPosition().gety(),p->getPosition().getz());
             particleRenderer.draw(*p);
-            glPopMatrix();
         }
 
 

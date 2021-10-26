@@ -4,6 +4,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl2.h"
 
+#include <GL/gl.h>
 #include <stdexcept>
 
 Window::Window() {
@@ -137,7 +138,10 @@ ParticleRenderer::~ParticleRenderer() {
 
 // Method to draw a specific kind of projectile
 void ParticleRenderer::draw(Particle const& p) {
+    glPushMatrix();
+    glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
     Vector3 color = p.getColor();
     glColor3f(color.getx(), color.gety(), color.getz());
     gluSphere(_quadric, p.getRadius(), 20, 20);
+    glPopMatrix();
 }

@@ -78,7 +78,7 @@ $(function() {
 : <a class="el" href="classWindow.html#aa68001bc905c217d9a82bbcced22b585">Window</a>
 </li>
 <li>_integrator
-: <a class="el" href="classSpawner.html#a295cc0e93bf064c94cf8390effc1c5cf">Spawner</a>
+: <a class="el" href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">Spawner</a>
 </li>
 <li>_mass
 : <a class="el" href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">Spawner</a>
@@ -86,8 +86,15 @@ $(function() {
 <li>_next_time
 : <a class="el" href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">Spawner</a>
 </li>
-<li>_type
-: <a class="el" href="classSpawner.html#ac28daaf26a0b36c9b7d695f774b6dbc3">Spawner</a>
+<li>_particles
+: <a class="el" href="classBlob.html#a3ddf3729b3c3a8c2eb923c183f71d13f">Blob</a>
+, <a class="el" href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">Spawner</a>
+</li>
+<li>_quadric
+: <a class="el" href="classParticleRenderer.html#ae36a9df019cc6028281258252688f9b8">ParticleRenderer</a>
+</li>
+<li>_springs
+: <a class="el" href="classBlob.html#a25a4197ab775225fd91a57c786644845">Blob</a>
 </li>
 <li>_velocity
 : <a class="el" href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">Spawner</a>
@@ -97,6 +104,9 @@ $(function() {
 </li>
 <li>_window
 : <a class="el" href="classWindow.html#ad46f7d2b73772b479eaac49b267c2141">Window</a>
+</li>
+<li>_world
+: <a class="el" href="classBlob.html#adb0e72e1fe1fe545abe26aaca78c1778">Blob</a>
 </li>
 </ul>
 
@@ -109,12 +119,6 @@ $(function() {
 : <a class="el" href="classParticleCable.html#ab9e9451938d605da8d5ff5f882e7dd1b">ParticleCable</a>
 , <a class="el" href="classParticleContactGenerator.html#a0b682388fd97bc6830b3e5f7f215d5f2">ParticleContactGenerator</a>
 , <a class="el" href="classParticleRod.html#a024d691df1df4c12f863db4e7332f28d">ParticleRod</a>
-</li>
-<li>addParticle()
-: <a class="el" href="classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41">Integrator</a>
-</li>
-<li>addParticleAtIndex()
-: <a class="el" href="classIntegrator.html#a43b84b371c74903d5754fb0ebc441547">Integrator</a>
 </li>
 <li>angle
 : <a class="el" href="structCamera.html#a02990c2c581654a5dc12c281fc829c28">Camera</a>
@@ -132,6 +136,9 @@ $(function() {
 <li>begin_ui()
 : <a class="el" href="classWindow.html#a26704980ee45f27b98b5f4a14f3a6d4a">Window</a>
 </li>
+<li>Blob()
+: <a class="el" href="classBlob.html#a96ae9e85e7abde8b68d62318bedea43c">Blob</a>
+</li>
 <li>BungeeCordForceGenerator()
 : <a class="el" href="classBungeeCordForceGenerator.html#ad1ab9734bd4dc29e6fe78798acbdd810">BungeeCordForceGenerator</a>
 </li>
@@ -139,8 +146,11 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
-<li>clearParticleList()
-: <a class="el" href="classIntegrator.html#af1a6a30a4922b364bb24561a3f65ee9f">Integrator</a>
+<li>center()
+: <a class="el" href="classBlob.html#a8de0753ee636012125937459218762b6">Blob</a>
+</li>
+<li>color
+: <a class="el" href="classParticle.html#aadb2cf5d98249d6c3ed59aaa191b35bb">Particle</a>
 </li>
 <li>currentLength()
 : <a class="el" href="classParticleLink.html#ab93855d53089ed7c88d0176b305b63a0">ParticleLink</a>
@@ -152,14 +162,8 @@ $(function() {
 <li>damping
 : <a class="el" href="classParticle.html#adfb1c1f8a3d6a1844daa076081a7cc9f">Particle</a>
 </li>
-<li>deleteLastParticle()
-: <a class="el" href="classIntegrator.html#af3b8059a2424330f20bc733970c5f0a4">Integrator</a>
-</li>
-<li>deleteParticleAt()
-: <a class="el" href="classIntegrator.html#a3a981bc0f08d8dd5c279e9e6de1d0458">Integrator</a>
-</li>
 <li>deltaTime
-: <a class="el" href="classIntegrator.html#a1054f82a4254cd12f24f570b2822e7e0">Integrator</a>
+: <a class="el" href="classWorld.html#a139e3d1e395e221d953fe4bcb04cd1dd">World</a>
 </li>
 <li>densityEnvironment
 : <a class="el" href="classFlotationForceGenerator.html#a46f734654a5891b35c0a14ddd22b8823">FlotationForceGenerator</a>
@@ -171,7 +175,7 @@ $(function() {
 : <a class="el" href="classDragGenerator.html#a13e06eaa02acf740ccc43faf6d7dd69f">DragGenerator</a>
 </li>
 <li>draw()
-: <a class="el" href="classProjectile.html#ace766dc9f2e8565906a99d6a8c560668">Projectile</a>
+: <a class="el" href="classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c">ParticleRenderer</a>
 </li>
 </ul>
 
@@ -187,9 +191,6 @@ $(function() {
 <li>end_ui()
 : <a class="el" href="classWindow.html#af36fc0cbd614b0d309756d268d36afa6">Window</a>
 </li>
-<li>eof
-: <a class="el" href="structstbi__io__callbacks.html#a319639db2f76e715eed7a7a974136832">stbi_io_callbacks</a>
-</li>
 </ul>
 
 
@@ -204,6 +205,9 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>getColor()
+: <a class="el" href="classParticle.html#a72ad0acaca6c9310123777004252ac6b">Particle</a>
+</li>
 <li>getDamping()
 : <a class="el" href="classParticle.html#a7ba8ad49fde356dc2cb393005774ee7d">Particle</a>
 </li>
@@ -215,11 +219,11 @@ $(function() {
 , <a class="el" href="classSpringForceGenerator.html#a1e821dae2533468cd10a116338eddc76">SpringForceGenerator</a>
 </li>
 <li>getFrameRate()
-: <a class="el" href="classIntegrator.html#af6f0a77425bb725d8e6f0e9237afcb57">Integrator</a>
+: <a class="el" href="classWorld.html#a99d18356afcabd329f0f48aa3f7ef3f1">World</a>
 </li>
 <li>getGravity()
 : <a class="el" href="classGravityGenerator.html#a0f8c6e25f368540288961ae7fdfe3876">GravityGenerator</a>
-, <a class="el" href="classIntegrator.html#adbe44fc2e754b64ba53281e517b35ac2">Integrator</a>
+, <a class="el" href="classWorld.html#a95c092ec2371e64abb0173ba3d24559d">World</a>
 </li>
 <li>getHeightEnvironment()
 : <a class="el" href="classFlotationForceGenerator.html#a241727f2a286573ad612bfc5f2d5002a">FlotationForceGenerator</a>
@@ -239,21 +243,18 @@ $(function() {
 <li>getMaxDepth()
 : <a class="el" href="classFlotationForceGenerator.html#abe456ebf4a08cbb09611a747840cd648">FlotationForceGenerator</a>
 </li>
-<li>getParticleAt()
-: <a class="el" href="classIntegrator.html#afaf2d383b4a1ee54e8c1b69c4e6ed0f6">Integrator</a>
-</li>
-<li>getParticleList()
-: <a class="el" href="classIntegrator.html#aeac304043202fba8ff7b0745ab54c2c2">Integrator</a>
+<li>getParticles()
+: <a class="el" href="classSpringForceGenerator.html#a311efcc6d9725b621ec2da1e0afbc13c">SpringForceGenerator</a>
 </li>
 <li>getPosition()
 : <a class="el" href="classParticle.html#a889225014a4821e28590358d0b522c49">Particle</a>
 </li>
+<li>getRadius()
+: <a class="el" href="classParticle.html#af89fe5aefd4e8e7b38cf1aae2230ddd5">Particle</a>
+</li>
 <li>getRelaxedLength()
 : <a class="el" href="classBungeeCordForceGenerator.html#a25ca77776f8e47a1a06ad83858d6ddfa">BungeeCordForceGenerator</a>
 , <a class="el" href="classSpringForceGenerator.html#af4a3417b33f2752424ac54ac183eb604">SpringForceGenerator</a>
-</li>
-<li>getType()
-: <a class="el" href="classParticle.html#a806c077af237adf8b34dd0661cf92e5f">Particle</a>
 </li>
 <li>getVelocity()
 : <a class="el" href="classParticle.html#aec7d58198862fce18314521b0ba4e328">Particle</a>
@@ -269,7 +270,7 @@ $(function() {
 </li>
 <li>gravity
 : <a class="el" href="classGravityGenerator.html#af0363ebba7c2991fba045bab8bc6081d">GravityGenerator</a>
-, <a class="el" href="classIntegrator.html#a967d2206c337101876e6d2ebc1505edc">Integrator</a>
+, <a class="el" href="classWorld.html#aa53d15934463dddd6290b467ce65f4c3">World</a>
 </li>
 <li>GravityGenerator()
 : <a class="el" href="classGravityGenerator.html#aaef5a40f87e7e98ab4e1ff9dc16a59b0">GravityGenerator</a>
@@ -286,17 +287,11 @@ $(function() {
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>integrate()
-: <a class="el" href="classIntegrator.html#a1e10f7d63f4ec97fd0f3931240db7567">Integrator</a>
-, <a class="el" href="classParticle.html#a97cc470324450f781d1a0268f576c6ee">Particle</a>
-</li>
-<li>Integrator()
-: <a class="el" href="classIntegrator.html#a91fdfba81971dfa13ba22521d11b7c46">Integrator</a>
+: <a class="el" href="classParticle.html#a97cc470324450f781d1a0268f576c6ee">Particle</a>
+, <a class="el" href="classWorld.html#a4b7bda799ba842fa079d3d21cd965762">World</a>
 </li>
 <li>inverseMass
 : <a class="el" href="classParticle.html#a6b8cd31d41129765d7e6daa895188a88">Particle</a>
-</li>
-<li>iteration
-: <a class="el" href="classParticleContactResolver.html#a2f4a83d0539295848a92badd911fd648">ParticleContactResolver</a>
 </li>
 </ul>
 
@@ -324,6 +319,9 @@ $(function() {
 </li>
 <li>maxLength
 : <a class="el" href="classParticleCable.html#a38d141cd3276f7812a86f7c443745ce5">ParticleCable</a>
+</li>
+<li>MaxParticles
+: <a class="el" href="classSpawner.html#acb1a37a2f5a9328c9e7476762ba660c5">Spawner</a>
 </li>
 </ul>
 
@@ -355,9 +353,9 @@ $(function() {
 : <a class="el" href="classVector3.html#a370ad993b25602258c528aca4f544627">Vector3</a>
 </li>
 <li>operator&lt;&lt;
-: <a class="el" href="classIntegrator.html#a3d36158efe163f39985b57a67a2c7717">Integrator</a>
-, <a class="el" href="classParticle.html#a8bdf8a0956f538394a07851f83b2598c">Particle</a>
+: <a class="el" href="classParticle.html#a8bdf8a0956f538394a07851f83b2598c">Particle</a>
 , <a class="el" href="classVector3.html#a9516d51228929fc05e381ff6385c77d5">Vector3</a>
+, <a class="el" href="classWorld.html#ad68ba3380dc2d6abfca5db5c28ec609e">World</a>
 </li>
 <li>operator^()
 : <a class="el" href="classVector3.html#ab2d6dc671f59e826e4e039fa6e47d90e">Vector3</a>
@@ -372,7 +370,7 @@ $(function() {
 , <a class="el" href="classGravityGenerator.html#a42e8fe91b81a2b76071dcce2ff1ee9be">GravityGenerator</a>
 </li>
 <li>Particle()
-: <a class="el" href="classParticle.html#a869d3fbb9dce3cf08e16aee3b9a18777">Particle</a>
+: <a class="el" href="classParticle.html#a4e727c0062f6c9d4e4651d33448028d9">Particle</a>
 </li>
 <li>particle
 : <a class="el" href="classParticleContact.html#a569b99a6ab2f90e23ca5d1743d267f5a">ParticleContact</a>
@@ -388,14 +386,15 @@ $(function() {
 </li>
 <li>ParticleContact()
 : <a class="el" href="classParticleContact.html#ab80f5cffe6c67abcfd20d6aab04c2dea">ParticleContact</a>
-, <a class="el" href="classParticleContactResolver.html#adb10f65a8a1d378ac906462504d90309">ParticleContactResolver</a>
 </li>
 <li>ParticleContactResolver
 : <a class="el" href="classParticleContact.html#ab2e3f4c3dc9b46966c6ec90e0fe88b6c">ParticleContact</a>
-, <a class="el" href="classParticleContactResolver.html#ab64c924fa12797a400be47029a950e5f">ParticleContactResolver</a>
 </li>
 <li>particleList
-: <a class="el" href="classIntegrator.html#af9c82de05666e1db8eb9d5d87ced7295">Integrator</a>
+: <a class="el" href="classWorld.html#aa856f9511d8376b2a76f5848db4823a1">World</a>
+</li>
+<li>ParticleRenderer()
+: <a class="el" href="classParticleRenderer.html#a1718484686c2e6db488cc88c433d03cc">ParticleRenderer</a>
 </li>
 <li>penetration
 : <a class="el" href="classParticleContact.html#ab5576d4b6df0bd29d2d77ae7a7ae6817">ParticleContact</a>
@@ -403,24 +402,15 @@ $(function() {
 <li>position
 : <a class="el" href="classParticle.html#a9a107d625b41314ac787887ab61b2da6">Particle</a>
 </li>
-<li>Projectile()
-: <a class="el" href="classProjectile.html#ac536ed2aad56af866a2078b9a85aa16d">Projectile</a>
-</li>
-<li>projectileQuadric_
-: <a class="el" href="classProjectile.html#a39308651550cb2aa1873a235d7531175">Projectile</a>
-</li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>read
-: <a class="el" href="structstbi__io__callbacks.html#a623e46b3a2a019611601409926283a88">stbi_io_callbacks</a>
-</li>
-<li>Register
-: <a class="el" href="classRegisterForces.html#a26468baad33ed69333cd79141b2434bc">RegisterForces</a>
+<li>radius
+: <a class="el" href="classParticle.html#a3a9c8ec502deee9e17355867563e55dc">Particle</a>
 </li>
 <li>registerOfForces
-: <a class="el" href="classIntegrator.html#a3ee1e55098e37581a785cda338b4ee87">Integrator</a>
+: <a class="el" href="classWorld.html#af92a3d3ba08a9b7a36607b0b9ea8ec9e">World</a>
 </li>
 <li>relaxedLength
 : <a class="el" href="classBungeeCordForceGenerator.html#a177bf4592e4daa06068f73ad79d3b861">BungeeCordForceGenerator</a>
@@ -430,16 +420,16 @@ $(function() {
 : <a class="el" href="classParticle.html#a3363688f45c23760c8b676f958c7cabd">Particle</a>
 </li>
 <li>resolve()
-: <a class="el" href="classParticleContact.html#aabfd996ce1820e2ad41553a9f0b42533">ParticleContact</a>
+: <a class="el" href="classParticleContact.html#a80cb57974d82d2cd378a3733a540d6b3">ParticleContact</a>
 </li>
-<li>resolveContact()
-: <a class="el" href="classParticleContactResolver.html#ac6607e66c6cd8403a38446dd24885024">ParticleContactResolver</a>
+<li>resolveContacts()
+: <a class="el" href="classWorld.html#a79643199cd7cce63b90f4072ae93ff74">World</a>
 </li>
 <li>resolveInterpenetration()
-: <a class="el" href="classParticleContact.html#af2a16faef44f0adabd96a7977004c037">ParticleContact</a>
+: <a class="el" href="classParticleContact.html#ad599acdf510b8b7d0ee2df3c444f665d">ParticleContact</a>
 </li>
 <li>resolveVelocity()
-: <a class="el" href="classParticleContact.html#aa8b5817733673ffb5cb354961eff46e4">ParticleContact</a>
+: <a class="el" href="classParticleContact.html#a0e4791c02fc15b4e71a8ac3f440f9325">ParticleContact</a>
 </li>
 <li>restitution
 : <a class="el" href="classParticleCable.html#a64e3bec30bf57bd09e201ccce8878b3b">ParticleCable</a>
@@ -463,17 +453,14 @@ $(function() {
 , <a class="el" href="classSpringForceGenerator.html#a7e3a4ada4b268da610d02fecb5248984">SpringForceGenerator</a>
 </li>
 <li>setFrameRate()
-: <a class="el" href="classIntegrator.html#a7090e4b914ac0216a6bed32ed74df3d5">Integrator</a>
+: <a class="el" href="classWorld.html#a3d0f055f4b7b3978fade102a823c76b3">World</a>
 </li>
 <li>setGravity()
 : <a class="el" href="classGravityGenerator.html#a5d4f89584d42a1dba530d5052466916d">GravityGenerator</a>
-, <a class="el" href="classIntegrator.html#a46e77e54c6aa9275b0967a25318d2d6f">Integrator</a>
+, <a class="el" href="classWorld.html#a6c55edbf08fa97bd171dfdccd4fd4218">World</a>
 </li>
 <li>setHeightEnvironment()
 : <a class="el" href="classFlotationForceGenerator.html#a593c3402467f6be3bb34c1738c0bb6ad">FlotationForceGenerator</a>
-</li>
-<li>setIteration()
-: <a class="el" href="classParticleContactResolver.html#abcf49f80ebb40b3b046079d294dc738f">ParticleContactResolver</a>
 </li>
 <li>setK1()
 : <a class="el" href="classDragGenerator.html#a4ffbb8aaf6989faa3cd90272115ca2e6">DragGenerator</a>
@@ -484,21 +471,15 @@ $(function() {
 <li>setMaxDepth()
 : <a class="el" href="classFlotationForceGenerator.html#a7c9a018f1c62df3dd4a5a82d291fcdcf">FlotationForceGenerator</a>
 </li>
-<li>setParticleList()
-: <a class="el" href="classIntegrator.html#a6ea26b51d672d1c6963b0dd110aa14a1">Integrator</a>
-</li>
 <li>setPosition()
-: <a class="el" href="classParticle.html#a596c5571d0fa5e4424da5b7f78b88a89">Particle</a>
+: <a class="el" href="classParticle.html#accdad2d6e3029da73e89ece089e5112b">Particle</a>
 </li>
 <li>setRelaxedLength()
 : <a class="el" href="classBungeeCordForceGenerator.html#aabb973358d7d02771b0d681155842ea2">BungeeCordForceGenerator</a>
 , <a class="el" href="classSpringForceGenerator.html#ad8516d15b1591f1fb78f3622b864db09">SpringForceGenerator</a>
 </li>
-<li>setType()
-: <a class="el" href="classParticle.html#acd8ee4d9feb799f6f4e6cf8d55e4ac45">Particle</a>
-</li>
 <li>setVelocity()
-: <a class="el" href="classParticle.html#ad08287d7c9600cb299720b8d61d0696a">Particle</a>
+: <a class="el" href="classParticle.html#ad8ec6922c0a184710f3a150704185415">Particle</a>
 </li>
 <li>should_close()
 : <a class="el" href="classWindow.html#a08c360aa2a2fe06bbf42cd2890743dde">Window</a>
@@ -506,14 +487,11 @@ $(function() {
 <li>size()
 : <a class="el" href="classWindow.html#ac364d01115b87f2b53af634111a98ef4">Window</a>
 </li>
-<li>skip
-: <a class="el" href="structstbi__io__callbacks.html#a257aac5480a90a6c4b8fbe86c1b01068">stbi_io_callbacks</a>
-</li>
 <li>spawn_particle()
 : <a class="el" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20">Spawner</a>
 </li>
 <li>Spawner()
-: <a class="el" href="classSpawner.html#ae77f4099068a322852f186bcd4a74e24">Spawner</a>
+: <a class="el" href="classSpawner.html#af3843ed062c40f17531ee89326acb882">Spawner</a>
 </li>
 <li>SpringForceGenerator()
 : <a class="el" href="classSpringForceGenerator.html#a20a2099b8030bd988321332877a0738c">SpringForceGenerator</a>
@@ -524,9 +502,6 @@ $(function() {
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>target
 : <a class="el" href="structCamera.html#ab0079c202a689fb29eabec3502b78311">Camera</a>
-</li>
-<li>type
-: <a class="el" href="classParticle.html#a2b73dd42bcd56ba2e7ffeb0a5515a866">Particle</a>
 </li>
 </ul>
 
@@ -542,9 +517,6 @@ $(function() {
 , <a class="el" href="classGravityGenerator.html#a806d2076a6d9091cba81fe335854d539">GravityGenerator</a>
 , <a class="el" href="classParticleForceGenerator.html#a381e9ed5bbd1fe090126843931375efa">ParticleForceGenerator</a>
 , <a class="el" href="classSpringForceGenerator.html#a60f116f80c6bd94b1ee5e34d6784c5c5">SpringForceGenerator</a>
-</li>
-<li>usedIteration
-: <a class="el" href="classParticleContactResolver.html#aee48ab2737bc304f616fc2aa08bdb848">ParticleContactResolver</a>
 </li>
 </ul>
 
@@ -563,7 +535,7 @@ $(function() {
 : <a class="el" href="classFlotationForceGenerator.html#a9d830b8fa806119bc15b6a31e62cc035">FlotationForceGenerator</a>
 </li>
 <li>vsCalculation()
-: <a class="el" href="classParticleContact.html#aa60f411c8f592e4050cb9c4da047964a">ParticleContact</a>
+: <a class="el" href="classParticleContact.html#a689235322b0242aa9a6317ed66f66b7e">ParticleContact</a>
 </li>
 </ul>
 
@@ -580,6 +552,9 @@ $(function() {
 </li>
 <li>Window()
 : <a class="el" href="classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c">Window</a>
+</li>
+<li>World()
+: <a class="el" href="classWorld.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a>
 </li>
 </ul>
 
@@ -606,14 +581,17 @@ $(function() {
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~Blob()
+: <a class="el" href="classBlob.html#a8a8d34c9112cb907fdffcb5dbd2dd244">Blob</a>
+</li>
+<li>~Particle()
+: <a class="el" href="classParticle.html#a058b1abe765620e5c5bad2aad654e6bc">Particle</a>
+</li>
 <li>~ParticleContact()
 : <a class="el" href="classParticleContact.html#a584513dc30aad490602e74198a836a27">ParticleContact</a>
 </li>
-<li>~ParticleContactResolver()
-: <a class="el" href="classParticleContactResolver.html#a155d517cfff3c13d38c557b3244a5364">ParticleContactResolver</a>
-</li>
-<li>~Projectile()
-: <a class="el" href="classProjectile.html#a94903e021fa2edab60ba3836ca0b937d">Projectile</a>
+<li>~ParticleRenderer()
+: <a class="el" href="classParticleRenderer.html#a281be31ad850fead012460fb6675db98">ParticleRenderer</a>
 </li>
 <li>~Window()
 : <a class="el" href="classWindow.html#ae6b4e3e731f32506a8ae77790b08584e">Window</a>

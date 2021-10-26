@@ -77,6 +77,7 @@ var menudata={children:[
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"_",url:"functions_vars.html#index__5F"},
 {text:"a",url:"functions_vars.html#index_a"},
+{text:"c",url:"functions_vars.html#index_c"},
 {text:"d",url:"functions_vars.html#index_d"},
 {text:"e",url:"functions_vars.html#index_e"},
 {text:"f",url:"functions_vars.html#index_f"},
@@ -89,9 +90,7 @@ var menudata={children:[
 {text:"n",url:"functions_vars.html#index_n"},
 {text:"p",url:"functions_vars.html#index_p"},
 {text:"r",url:"functions_vars.html#index_r"},
-{text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"},
-{text:"u",url:"functions_vars.html#index_u"},
 {text:"v",url:"functions_vars.html#index_v"},
 {text:"x",url:"functions_vars.html#index_x"},
 {text:"y",url:"functions_vars.html#index_y"},
@@ -100,27 +99,6 @@ var menudata={children:[
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
-{text:"d",url:"globals.html#index_d"},
-{text:"m",url:"globals.html#index_m"},
-{text:"n",url:"globals.html#index_n"},
-{text:"o",url:"globals.html#index_o"},
-{text:"p",url:"globals.html#index_p"},
-{text:"s",url:"globals.html#index_s"},
-{text:"u",url:"globals.html#index_u"},
-{text:"v",url:"globals.html#index_v"}]},
-{text:"Functions",url:"globals_func.html",children:[
-{text:"a",url:"globals_func.html#index_a"},
-{text:"c",url:"globals_func.html#index_c"},
-{text:"d",url:"globals_func.html#index_d"},
-{text:"m",url:"globals_func.html#index_m"},
-{text:"n",url:"globals_func.html#index_n"},
-{text:"o",url:"globals_func.html#index_o"},
-{text:"s",url:"globals_func.html#index_s"},
-{text:"u",url:"globals_func.html#index_u"},
-{text:"v",url:"globals_func.html#index_v"}]},
-{text:"Typedefs",url:"globals_type.html"},
-{text:"Enumerator",url:"globals_eval.html"},
+{text:"All",url:"globals.html"},
+{text:"Functions",url:"globals_func.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}
