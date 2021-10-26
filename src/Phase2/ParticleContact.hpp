@@ -12,12 +12,13 @@ private:
     Particle* particle[2];
     float restitution;
     Vector3 normale;
+    float penetration;
     friend class ParticleContactResolver;
 
     
 
 public:
-    ParticleContact(/* args */);
+    ParticleContact(Particle*[], float, Vector3);
     ~ParticleContact();
 
     void resolve(float);

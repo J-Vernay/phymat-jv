@@ -1,7 +1,42 @@
 #include "ParticleContact.hpp"
 
-ParticleContact::ParticleContact(/* args */)
+ParticleContact::ParticleContact(Particle* particles[2], float restit, Vector3 normal)
 {
+    restitution = restit;
+    normale = normal;
+    particle[0] = particles[0];
+    particle[1] = particles[1];
+
+    // First particle characteristics
+    Vector3 posA=particle[0]->getPosition();
+    int typeA=particle[0]->getType();
+    float RA; // Ray of the sphere
+    if (typeA == 1) {
+        RA = 1;
+    }
+    else {
+        RA = 0.2;
+    }
+    // Second particle characteristics
+    Vector3 posB=particle[1]->getPosition();
+    int typeB=particle[1]->getType();
+    float RB; // Ray of the sphere
+    if (typeA == 1) {
+        RB = 1;
+    }
+    else{
+        RB = 0.2;
+    }
+    
+    float distance = (posB - posA) * normale; // Center to center distance
+    float raysSum = RA + RB; // Distance if the spheres are touching each other with no penetration
+    
+    if (distance >= raysSum) { // No penetration at all
+        penetration = 0;
+    }
+    else { 
+        penetration = (raysSum - distance) ; // Penetration distance
+    }
 }
 
 ParticleContact::~ParticleContact()
@@ -39,16 +74,10 @@ void ParticleContact::resolveVelocity(float frameDuration){
 //Resolve Interpenetration in case the 2objects are penetrating each other
 //To add when the particles are not particles anymore but objects
 void ParticleContact::resolveInterpenetration(){
-    //get distance between the two objects
-    float distance = (particle[0]->getPosition()-particle[1]->getPosition()).norm();
-    //Code to add when not particles anymore :
-    //Check if the particles are penetrating each other
-    // if(distance < particle[0]->getRadius()+particle[1]->getRadius()){
-    //     float ma,mb;
-    //     ma = 1/particle[0]->getInverseMass();
-    //     mb = 1/particle[1]->getInverseMass();
-    //     //move objects away from each other depending on their mass
-    //     particle[0]->setPosition(particle[0]->getPosition()+(distance*mb/(ma+mb))*normale);
-    //     particle[1]->setPosition(particle[1]->getPosition()-(distance-distance*mb/(ma+mb))*normale);
-    // }
+    float ma,mb;
+    ma = 1/particle[0]->getInverseMass();
+    mb = 1/particle[1]->getInverseMass();
+    //move objects away from each other depending on their mass
+    particle[0]->setPosition(particle[0]->getPosition()+(penetration*mb/(ma+mb))*normale);
+    particle[1]->setPosition(particle[1]->getPosition()-(penetration-penetration*mb/(ma+mb))*normale);
 }
