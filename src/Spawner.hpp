@@ -21,7 +21,7 @@ public:
 private:
     Integrator& _integrator;     ///< Integrator to spawn particles in.
     double _next_time = 0;       ///< When to spawn next particle.
-    bool   _autofire = true;     ///< Should particles be spawned without user action.
+    bool   _autofire = false;    ///< Should particles be spawned without user action.
     float  _delay_s = 0.3;       ///< Delay between consecutive particles.
     int    _type = 0;            ///< Type of the particle to be spawned.
     float   _mass = 10;          ///< Mass of the particle to be spawned.

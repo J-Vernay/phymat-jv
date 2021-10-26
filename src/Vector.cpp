@@ -29,14 +29,12 @@ float Vector3::getz(){
 
 //Operator overload
 Vector3 Vector3::operator+(const Vector3 v){
-    //Vector3 v = 
     return Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
 }
 
 //Operator overload
-Vector3 Vector3::operator+=(const Vector3 v){
-    //Vector3 v = 
-    return Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
+Vector3& Vector3::operator+=(const Vector3 v){
+    return *this = Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
 }
 
 Vector3 Vector3::operator-(const Vector3 v){

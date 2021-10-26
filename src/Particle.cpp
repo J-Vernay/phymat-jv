@@ -72,7 +72,6 @@ int Particle::getType() const {
     return type;
 }
 
-
 void Particle::resetAccumulationForces() {
     accumulationOfForces = Vector3(0, 0, 0);
 }

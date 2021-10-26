@@ -1,4 +1,5 @@
 #include "Integrator.hpp"
+#include "Phase2/GravityGenerator.hpp"
 
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
@@ -103,7 +104,7 @@ Particle Integrator::getParticleAt(int index){
 
 void Integrator::integrate() {
     // Initialize all particles, and apply gravity.
-    for(auto &p : particleList) {
+    for(auto& p : particleList) {
         p.resetAccumulationForces();
         GravityGenerator(&p).updateForces(deltaTime);
     }
