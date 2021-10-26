@@ -4,38 +4,45 @@
 
 using namespace std;
 
-
+/// Class representing a single particle of the world (mass + point).
 class Particle {       
-    private:   //Private attributes of Particle     
-        float inverseMass;    // 1/mass of the particle
+    private: 
+        /// 1 / mass of the particle, 0 for infinite mass = static object.  
+        float inverseMass;
+        /// Position of the particle.
         Vector3 position;
+        /// Velocity of the particle.
         Vector3 velocity;
+        /// Type of particle, determining how it is rendered.
         int type;
-        float damping;        // Damping : Percentage of damping of the particle = percentage of velocity kept from one frame to another
+        /// Damping used for this particle: amount of velocity kept each frame, simulating friction.
+        float damping;
 
-    public:       //Public attributes of Particle
-        Vector3 acceleration;
-        Vector3 accumulationOfForces; //Accumulation of all forces
+    public:
+        /// Accumulator of forces for the current frame, which is modified
+        /// by force generators each frame.
+        Vector3 accumulationOfForces;
 
-        //-----FUNCTIONS--------//
-        Particle(float, Vector3, Vector3, Vector3, float, int); 
+        /// Constructs a particle given its initial properties.
+        Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, float damping, int type); 
 
         //Getter & Setter :
         void setPosition(Vector3);
+        Vector3 getPosition() const;
         void setVelocity(Vector3);
-        void setAcceleration(Vector3);
-        void setType(int);
-        Vector3 getAcceleration();
-        Vector3 getPosition();
-        Vector3 getVelocity();
-        float getDamping();
-        float getInverseMass();
-        float getMass();
-        int getType();
+        Vector3 getVelocity() const;
 
-        void resetAccumulationForces(); //To reset the forces applied to the particle
+        void setType(int);
+        int getType() const;
+        float getDamping() const;
+        float getInverseMass() const;
+        float getMass() const;
+
+        /// Reset the accumulation forces to zero, should be called at beginning of each frame.
+        void resetAccumulationForces();
+        /// Integrate the state of the particle, deriving its acceleration from the accumulated forces.
 	    void integrate(float time);
 
-        //Overload of operators
+        /// Output textual representation of particle.
         friend ostream& operator<<(ostream& os, const Particle&);
 };

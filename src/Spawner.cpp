@@ -1,9 +1,9 @@
 #include "Spawner.hpp"
-#include "imgui/imgui.h"
+#include "imgui.h"
 
 void Spawner::spawn_particle() {
     // Initial position is (0,0,2).
-    _integrator.addParticle(Particle(_mass, Vector3(0,0,2), _velocity, Vector3(0,0,0), _damp, _type));
+    _integrator.addParticle(Particle(_mass, Vector3(0,0,2), _velocity, _damp, _type));
 }
 
 void Spawner::ask_ui() {

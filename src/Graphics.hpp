@@ -3,7 +3,7 @@
 #include <utility>
 
 #include "GLFW/glfw3.h"
-#include "imgui/imgui.h"
+#include "imgui.h"
 
 
 /// Class responsible for GLFW, OpenGL and ImGui management.
@@ -35,10 +35,10 @@ private:
 
 /// Structure holding all informations needed for camera.
 struct Camera {
-    float target[3] = {0,0,0};
-    float distance = 5;
-    float fieldOfView = 70;   // degrees
-    float angle[2] = {0,30};  // degrees
+    float target[3] = {0,0,0}; ///< Where the camera is looking at.
+    float distance = 5;        ///< How far is the camera from the target.
+    float fieldOfView = 70;    ///< Field of view in degrees.
+    float angle[2] = {0,30};   ///< Horizontal and vertical angles in degrees.
 };
 
 /// Shows the ImGui UI for controlling camera.
@@ -47,7 +47,7 @@ void ask_camera_ui(Camera& camera);
 /// Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera.
 void use_camera_gl(Window const& window, Camera const& camera);
 
-///  Class responsible for the projectile management.
+/// Class responsible for the projectile management.
 class Projectile {
 public:
     Projectile();

@@ -5,13 +5,9 @@
 
 using namespace std;
 
-//TO DO : add exceptions
-// - overload operators for scalar and vectorial product
-
+/// Class representing a 3D vector with utility methods and operator overloading.
 class Vector3 {
     public:
-        
-
         //Constructors
         Vector3();
         Vector3(float, float, float);

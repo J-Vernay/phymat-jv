@@ -1,0 +1,7 @@
+<map id="Integrator::addParticle" name="Integrator::addParticle">
+<area shape="rect" id="node1" title=" " alt="" coords="519,31,685,57"/>
+<area shape="rect" id="node2" href="$classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="287,31,471,57"/>
+<area shape="rect" id="node3" href="$classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="109,5,237,32"/>
+<area shape="rect" id="node5" href="$classSpawner.html#a945f0550c27a3edcb2e81a6c7bc2a181" title="Check if a particle should spawn now." alt="" coords="108,56,239,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
+</map>

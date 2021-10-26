@@ -43,7 +43,7 @@ int main() {
     // Main loop.
     while (!window.should_close()) {
         spawner.update(glfwGetTime()); 
-        integrator.updateAll();
+        integrator.integrate();
 
 
         // Start drawing for this frame.

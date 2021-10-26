@@ -1,0 +1,5 @@
+<map id="Spawner::ask_ui" name="Spawner::ask_ui">
+<area shape="rect" id="node1" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="181,5,365,32"/>
+<area shape="rect" id="node3" href="$classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41" title=" " alt="" coords="413,5,580,32"/>
+</map>

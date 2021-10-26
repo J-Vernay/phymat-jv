@@ -1,0 +1,4 @@
+<map id="Spawner::spawn_particle" name="Spawner::spawn_particle">
+<area shape="rect" id="node1" title="Spawn a particle according to user choices." alt="" coords="5,5,189,32"/>
+<area shape="rect" id="node2" href="$classIntegrator.html#af1d6b2c5660f3a56485977eb766e5f41" title=" " alt="" coords="237,5,404,32"/>
+</map>

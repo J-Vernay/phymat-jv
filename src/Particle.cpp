@@ -1,7 +1,7 @@
 #include "Particle.hpp"
 
 //Constructor
-Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, Vector3 initialAcceleration, float damping, int type){
+Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity, float damping, int type){
     if(mass == 0){
         //inverseMass = inf
         throw ExceptionInverseMassInf();
@@ -18,7 +18,6 @@ Particle::Particle(float mass, Vector3 initialPosition, Vector3 initialVelocity,
     }
     this->position = initialPosition;
     this->velocity = initialVelocity;
-    this->acceleration = initialAcceleration;
 
     if(damping > 1 || damping < 0){
         //error damping is not a pourcentage
@@ -42,50 +41,43 @@ void Particle::setVelocity(Vector3 newVelocity){
     velocity = newVelocity;
 }
 
-void Particle::setAcceleration(Vector3 newAcceleration){
-    this->acceleration = newAcceleration;
-}
-
 void Particle::setType(int newType){
     this->type = newType;
 }
 
-Vector3 Particle::getAcceleration(){
-    return this->acceleration;
-}
-
-Vector3 Particle::getPosition(){
+Vector3 Particle::getPosition() const {
     return this->position;
 }
 
-Vector3 Particle::getVelocity(){
+Vector3 Particle::getVelocity() const {
     return this->velocity;
 }
 
-float Particle::getDamping(){
+float Particle::getDamping() const {
     return this->damping;
 }
 
-float Particle::getInverseMass(){
+float Particle::getInverseMass() const {
     return this->inverseMass;
 }
 
-float Particle::getMass(){
+float Particle::getMass() const {
     if(this->inverseMass == 0){
         return -1;
     }
     else return 1/this->inverseMass;
 }
 
-int Particle::getType(){
+int Particle::getType() const {
     return type;
 }
 
 
-void Particle::resetAccumulationForces() {//To reset the forces applied to the particle
-    this->accumulationOfForces = Vector3(0, 0, 0);
+void Particle::resetAccumulationForces() {
+    accumulationOfForces = Vector3(0, 0, 0);
 }
 void Particle::integrate(float time) {
+    Vector3 acceleration = accumulationOfForces * inverseMass;
     position = (position + velocity * time + acceleration * time * time / 2);
     velocity = velocity + acceleration * time;
 }
@@ -93,6 +85,6 @@ void Particle::integrate(float time) {
 
 //Overload of << 
 ostream& operator<<(ostream& os, const Particle& P){
-    os << "======== Particle ========\n" << "Mass : " << 1/P.inverseMass << "\nPosition : \n" << P.position << "\nVelocity : \n" << P.velocity << "\nAcceleration :\n" << P.acceleration << "\nDamping : " << P.damping << endl;
+    os << "======== Particle ========\n" << "Mass : " << 1/P.inverseMass << "\nPosition : \n" << P.position << "\nVelocity : \n" << P.velocity << "\nDamping : " << P.damping << endl;
     return os;
 }

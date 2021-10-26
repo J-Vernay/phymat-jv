@@ -1,0 +1,11 @@
+<map id="Spawner" name="Spawner">
+<area shape="rect" id="node1" title="Class responsible for creating new particles in the world." alt="" coords="488,332,567,359"/>
+<area shape="rect" id="node2" title=" " alt="" coords="49,124,116,151"/>
+<area shape="rect" id="node4" href="$classIntegrator.html" title=" " alt="" coords="324,243,411,269"/>
+<area shape="rect" id="node3" title=" " alt="" coords="8,5,58,32"/>
+<area shape="rect" id="node6" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="571,124,642,151"/>
+<area shape="rect" id="node5" title=" " alt="" coords="306,124,547,151"/>
+<area shape="rect" id="node7" title=" " alt="" coords="140,124,281,151"/>
+<area shape="rect" id="node8" title=" " alt="" coords="670,243,708,269"/>
+<area shape="rect" id="node9" title=" " alt="" coords="734,243,785,269"/>
+</map>

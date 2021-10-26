@@ -4,26 +4,20 @@
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
 Integrator::Integrator() {
     gravity = Vector3(0,0,-10);
-    frameRate = 60;
-    if (frameRate == 0) {
-        time = 1;
-    }
-    else{
-        time = 1/abs(frameRate);
-    }
+    deltaTime = 1/60.f;
 }
 
 //Getters
-Vector3 Integrator::getGravity(){
+Vector3 Integrator::getGravity() const {
     return gravity;
 }
 
-vector<Particle> Integrator::getParticleList(){
+vector<Particle> Integrator::getParticleList() const {
     return particleList;
 }
 
-double Integrator::getFrameRate(){
-    return frameRate;
+double Integrator::getFrameRate() const {
+    return 1/deltaTime;
 }
 
 
@@ -35,8 +29,8 @@ void Integrator::setParticleList(vector<Particle> newParticleList){
     particleList = newParticleList;
 }
 void Integrator::setFrameRate(double newFrameRate){
-    if(frameRate > 0){
-        frameRate = newFrameRate;
+    if(newFrameRate > 0){
+        deltaTime = 1/newFrameRate;
     }
     else {
         throw ExceptionNegativOrNullFramerate();
@@ -79,17 +73,6 @@ void Integrator::deleteLastParticle(){
     }
 }
 
-
-//Update position, velocity and acceleration + clear all out the map particles
-void Integrator::updateAll(){
-    for(auto &p : particleList){
-        p.acceleration = gravity;
-        p.integrate(time);
-    }
-    clearParticleList();
-}
-
-
 //Delete particle if is under the ground
 void Integrator::clearParticleList(){
     vector<int> idxParticleToClear;
@@ -118,21 +101,25 @@ Particle Integrator::getParticleAt(int index){
     }
 }
 
-//Main function to update all forces to all particles
-void Integrator::integrate(){
-    for(auto &p : particleList){ //add gravity force to each particle
-        GravityGenerator(&p).updateForces(1/this->frameRate);
+void Integrator::integrate() {
+    // Initialize all particles, and apply gravity.
+    for(auto &p : particleList) {
+        p.resetAccumulationForces();
+        GravityGenerator(&p).updateForces(deltaTime);
     }
-    for(ParticleForceGenerator &force : registerOfForces){ //add all the other forces contained in the register
-        force.updateForces(1/this->frameRate); 
+    // Apply all registed forces to their respective particles.
+    for(ParticleForceGenerator &force : registerOfForces) {
+        force.updateForces(deltaTime); 
     }
-    this->updateAll(); //update the position of each particle
-
+    // Update acceleration, velocity and position according to accumulated forces.
+    for (auto&p : particleList) {
+        p.integrate(deltaTime);
+    }
 }
 
 //Overload of << 
 ostream& operator<<(ostream& os, const Integrator& I){
-    os << "======== Integrator ========\n" << "Framerate : " << I.frameRate << "\nGravity : " << I.gravity << "\nList of Particles : \n" <<  endl;
+    os << "======== Integrator ========\n" << "Framerate : " << I.getFrameRate() << "\nGravity : " << I.gravity << "\nList of Particles : \n" <<  endl;
     for(auto &P : I.particleList){
         os << P << endl;
     }

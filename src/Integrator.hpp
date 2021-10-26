@@ -5,7 +5,6 @@
 
 #include "Vector.hpp"
 #include "Particle.hpp"
-//#include "./Phase 2/RegisterForce.hpp" NOT USED
 #include "./Phase2/GravityGenerator.hpp"
 #include "./Phase2/ParticleForceGenerator.hpp"
 
@@ -13,46 +12,47 @@
 
 using namespace std;
 
+/// Class responsible for storing particles and moving them,
+/// applying forces and acceleration upon them.
 class Integrator {
     private :
+        /// Static gravity applied for all objects whose mass is finite.
         Vector3 gravity;
+        /// List of all particles managed by the Integrator.
         vector<Particle> particleList = {};
-        double frameRate; //in fps
-        double time; //in s
-        vector<ParticleForceGenerator> registerOfForces; // /!\ RegisterForce class not used cause only one attribute and need to for auto
+        /// Time between each frame, in second.
+        double deltaTime;
+        /// All force generators are stored here. A seperate class was not used
+        /// because it would have only one member, and vector provides neat syntax.
+        vector<ParticleForceGenerator> registerOfForces;
 
     public :
-    //Constructor
+        /// Constructs an empty Integrator (with no particles and no force generators).
         Integrator();
 
-    //Getters
-        Vector3 getGravity();
-        vector<Particle> getParticleList();
-        double getFrameRate();
+    // Getters
+        Vector3 getGravity() const;
+        vector<Particle> getParticleList() const;
+        double getFrameRate() const;
 
-    //Setters
+    // Setters
         void setGravity(Vector3);
         void setParticleList(vector<Particle>);
         void setFrameRate(double);
 
-    //Useful functions
+    // Utility function for particle manipulation.
         void addParticle(Particle);
         void addParticleAtIndex(Particle, int);
         void deleteParticleAt(int);
         void deleteLastParticle();
-        void updatePosition();
-        void updateFastPosition();
-        void updateVelocity();
-        void updateAcceleration();
         void clearParticleList();
         Particle getParticleAt(int);
-        void updateAll();
-        void updateAllFast();
-  
-        //Main function to update all forces to all particles
+
+        /// Main function to apply all forces to all particles
+        /// and move them according to them.
         void integrate();
 
-    //Operator Overload
+        /// Output textual representation of Integrator.
         friend ostream& operator<<(ostream& os, const Integrator&);
 
 };

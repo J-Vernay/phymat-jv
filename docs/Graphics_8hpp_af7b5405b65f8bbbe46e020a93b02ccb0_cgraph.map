@@ -1,0 +1,6 @@
+<map id="use_camera_gl" name="use_camera_gl">
+<area shape="rect" id="node1" title="Setup matrixes for GL_PROJECTION and GL_MODELVIEW appropriate for the given camera." alt="" coords="5,56,125,83"/>
+<area shape="rect" id="node2" href="$Graphics_8cpp.html#affb4a5ee1bf3e94426db2234de7998c2" title=" " alt="" coords="201,5,253,32"/>
+<area shape="rect" id="node3" href="$Graphics_8cpp.html#a83bb28b5288e5e282efa0d44dabaf3f9" title=" " alt="" coords="202,56,251,83"/>
+<area shape="rect" id="node4" href="$classWindow.html#ac364d01115b87f2b53af634111a98ef4" title="Return dimensions of window." alt="" coords="173,107,280,133"/>
+</map>
