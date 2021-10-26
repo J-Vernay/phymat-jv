@@ -1,46 +1,4 @@
-#if 0
-#include "Graphics.hpp"
 
-int main() {
-    glfwInit();
-    // Create window.
-    int size[2] = {800,600};
-    GLFWwindow* window = glfwCreateWindow(size[0], size[1], "Projet Sephiroth", NULL, NULL);
-    glfwSetWindowUserPointer(window, size);
-    glfwSetWindowSizeCallback(window, [](GLFWwindow* window, int x, int y) {
-        int* size = (int*)glfwGetWindowUserPointer(window);
-        size[0] = x; size[1] = y;
-    });
-
-
-    glfwMakeContextCurrent(window);
-
-    glEnable(GL_DEPTH_TEST);
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
-
-        // Setup OpenGL for new frame.
-        glViewport(0, 0, size[0], size[1]);
-        glClearColor(0.3, 0.3, 0.3, 1);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
-        glBegin(GL_TRIANGLES);
-        glColor3f(1, 0, 0);
-        glVertex3f(0.5, 0.5, 0.2);
-        glVertex3f(0.5, 0, 0.2);
-        glVertex3f(0, 0, 0.2);
-        glColor3f(1, 1, 0);
-        glVertex3f(1, 1, 0.1);
-        glVertex3f(1, 0, 0.1);
-        glVertex3f(0, 0, 0.1);
-        glEnd();
-        glFlush();
-
-        glfwSwapBuffers(window);
-    }
-}
-
-#else
 #include <iostream>
 
 #include "Graphics.hpp"
@@ -119,4 +77,3 @@ int main() {
     return 0;
 }
 
-#endif

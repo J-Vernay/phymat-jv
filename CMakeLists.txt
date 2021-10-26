@@ -15,17 +15,6 @@ include_directories(glfw/include ${OPENGL_INCLUDE_DIRS})
 link_libraries(glfw ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES})
 link_libraries(imgui)
 
-add_executable(phymat-jv
-    # All source files here
-    src/main.cpp
-    src/Vector.hpp
-    src/Vector.cpp
-    src/Graphics.hpp
-    src/Graphics.cpp
-    src/Particle.hpp
-    src/Particle.cpp
-    src/Integrator.hpp
-    src/Integrator.cpp
-    src/Spawner.cpp
-    src/Spawner.hpp
-)
+file(GLOB_RECURSE PHYMAT_SRC CONFIGURE_DEPENDS src/*.cpp src/*.hpp)
+
+add_executable(phymat-jv ${PHYMAT_SRC})

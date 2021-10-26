@@ -34,7 +34,8 @@ class Particle {
         int getType();
 
         void resetAccumulationForces(); //To reset the forces applied to the particle
-	void integrate(float time);
+	    void integrate(float time);
+
         //Overload of operators
         friend ostream& operator<<(ostream& os, const Particle&);
 };

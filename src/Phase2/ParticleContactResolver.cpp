@@ -24,8 +24,8 @@ void ParticleContactResolver::resolveContact(vector<ParticleContact> contacts, f
                     vs = newVs;
                 }
             }
-            if(i >= 0){
-                contacts[i].resolve(frameDuration);
+            if(idx >= 0){
+                contacts[idx].resolve(frameDuration);
             }
             usedIteration++;
         }   

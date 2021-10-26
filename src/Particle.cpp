@@ -81,6 +81,16 @@ int Particle::getType(){
     return type;
 }
 
+
+void Particle::resetAccumulationForces() {//To reset the forces applied to the particle
+    this->accumulationOfForces = Vector3(0, 0, 0);
+}
+void Particle::integrate(float time) {
+    position = (position + velocity * time + acceleration * time * time / 2);
+    velocity = velocity + acceleration * time;
+}
+
+
 //Overload of << 
 ostream& operator<<(ostream& os, const Particle& P){
     os << "======== Particle ========\n" << "Mass : " << 1/P.inverseMass << "\nPosition : \n" << P.position << "\nVelocity : \n" << P.velocity << "\nAcceleration :\n" << P.acceleration << "\nDamping : " << P.damping << endl;

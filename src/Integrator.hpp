@@ -6,8 +6,8 @@
 #include "Vector.hpp"
 #include "Particle.hpp"
 //#include "./Phase 2/RegisterForce.hpp" NOT USED
-#include "./Phase 2/GravityGenerator.hpp"
-#include "./Phase 2/ParticleForceGenerator.hpp"
+#include "./Phase2/GravityGenerator.hpp"
+#include "./Phase2/ParticleForceGenerator.hpp"
 
 #include "ExceptionsForIntegrator.hpp"
 

@@ -1,10 +1,10 @@
 #pragma once
 
-
-
 #include "../Particle.hpp"
 #include "../Vector.hpp"
-#include "ParticleContactResolver.hpp"
+
+// Forward declaration to prevent cyclic dependency between include files.
+class ParticleContactResolver;
 
 class ParticleContact
 {
@@ -12,7 +12,7 @@ private:
     Particle* particle[2];
     float restitution;
     Vector3 normale;
-    friend ParticleContactResolver;
+    friend class ParticleContactResolver;
 
     
 
