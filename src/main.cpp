@@ -19,14 +19,20 @@ int main() {
     Spawner spawner(world);
     ParticleRenderer particleRenderer;
 
+
     // Implementing ground as a big sphere.
     Particle ground(+INFINITY, Vector3(0,0,-1000), Vector3(0.5, 0.8, 0.5), 1000, 0);
     world.particleList.insert(&ground);
 
+    Particle obstacle1(+INFINITY, Vector3(-4, 2, 0), Vector3(0.1, 0.6, 0.1), 1.5, 0);
+    world.particleList.insert(&obstacle1);
+    Particle obstacle3(+INFINITY, Vector3(-7, -1, 0), Vector3(0.1, 0.6, 0.1), 2, 0);
+    world.particleList.insert(&obstacle3);
+
     //Particle p(10, Vector3(0,0,3), {}, 0.2, 1);
     //world.particleList.insert(&p);
 
-    Blob b(world, Vector3{0,0,0}, 2, 20, 1);
+    Blob b(world, Vector3{0,0,0}, 2, 10, 0.1);
 
     // Disable use of configuration file.
     ImGui::GetIO().IniFilename = nullptr;
@@ -42,6 +48,8 @@ int main() {
         vector<ParticleContact> contacts;
         b.addInternalContacts(contacts);
         b.addExternalContacts(contacts, &ground, 0);
+        b.addExternalContacts(contacts, &obstacle1, 0);
+        b.addExternalContacts(contacts, &obstacle3, 0);
         world.resolveContacts(contacts);
 
         // Start drawing for this frame.
@@ -77,7 +85,7 @@ int main() {
         ImGui::SetNextWindowPos({ 400,50 }, ImGuiCond_Once);
         ImGui::SetNextWindowSize({ 250,100 }, ImGuiCond_Once);
         if (ImGui::Begin("Control blob")) {
-            ImGui::SliderFloat2("Applied force", blob_velocity, -1000, 1000);
+            ImGui::SliderFloat2("Applied force", blob_velocity, -500, 500);
             if (ImGui::Button("Reset force"))
                 blob_velocity[0] = 0, blob_velocity[1] = 0;
         }
