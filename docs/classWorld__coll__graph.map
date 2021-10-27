@@ -1,8 +1,8 @@
 <map id="World" name="World">
-<area shape="rect" id="node1" title=" " alt="" coords="243,520,395,685"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,277,72,355"/>
-<area shape="rect" id="node3" title=" " alt="" coords="96,270,309,362"/>
-<area shape="rect" id="node4" title=" " alt="" coords="334,277,538,355"/>
-<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="562,175,715,457"/>
+<area shape="rect" id="node1" title=" " alt="" coords="243,535,395,700"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,285,72,362"/>
+<area shape="rect" id="node3" title=" " alt="" coords="96,277,309,369"/>
+<area shape="rect" id="node4" title=" " alt="" coords="334,285,538,362"/>
+<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="562,175,715,472"/>
 <area shape="rect" id="node6" title=" " alt="" coords="613,5,664,83"/>
 </map>

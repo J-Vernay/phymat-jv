@@ -1,6 +1,6 @@
 #include "ParticleContact.hpp"
 
-ParticleContact::ParticleContact(Particle* a, Particle* b, float restit, Vector3 normal)
+ParticleContact::ParticleContact(Particle* a, Particle* b, float restit, Vector3 normal, float penetration)
 {
     restitution = restit;
     normale = normal / normal.norm();
@@ -13,15 +13,7 @@ ParticleContact::ParticleContact(Particle* a, Particle* b, float restit, Vector3
     Vector3 posB=particle[1]->getPosition();
     float RB = particle[1]->getRadius();
 
-    float distance = (posA - posB) * normale; // Center to center distance
-    float raysSum = RA + RB; // Distance if the spheres are touching each other with no penetration
-    
-    if (distance >= raysSum) { // No penetration at all
-        penetration = 0;
-    }
-    else { 
-        penetration = (raysSum - distance) ; // Penetration distance
-    }
+    this->penetration = penetration;
 }
 
 ParticleContact::~ParticleContact()
@@ -61,8 +53,8 @@ void ParticleContact::resolveVelocity(float frameDuration) const {
         float impuls = totalmass*(vs2 - vs1);
         Vector3 impulsVec = impuls*normale;
         //update velocities for both particles
-        particle[0]->setVelocity(particle[0]->getVelocity() + impulsVec*particle[0]->getInverseMass());
-        particle[1]->setVelocity(particle[1]->getVelocity() - impulsVec*particle[1]->getInverseMass());
+        particle[0]->setVelocity(particle[0]->getVelocity() + impulsVec*particle[0]->getInverseMass()*frameDuration);
+        particle[1]->setVelocity(particle[1]->getVelocity() - impulsVec*particle[1]->getInverseMass()*frameDuration);
     }
 }
 
@@ -82,5 +74,17 @@ optional<ParticleContact> ParticleContact::fromCollision(Particle *a, Particle *
     float sumradius = a->getRadius() + b->getRadius();
     if (sumradius * sumradius <= posdiff.squareNorm())
         return {}; // No contact
-    return ParticleContact(a, b, restitution, posdiff);
+    return ParticleContact(a, b, restitution, posdiff, sumradius - posdiff.norm());
+}
+
+optional<ParticleContact> ParticleContact::fromCord(Particle *a, Particle *b, float cordlength, float restitution) {
+    /// NOT WORKING
+    Vector3 posdiff = a->getPosition() - b->getPosition();
+    float sumradius = a->getRadius() + b->getRadius();
+    if (posdiff.squareNorm() < sumradius * sumradius) // collision
+        return ParticleContact(a, b, restitution, posdiff, sumradius - posdiff.norm());
+    else if (posdiff.squareNorm() > cordlength * cordlength)
+        return ParticleContact(a, b, restitution, -posdiff, posdiff.norm() - cordlength);
+    else
+        return {};
 }
