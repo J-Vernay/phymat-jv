@@ -34,7 +34,7 @@ void FlotationForceGenerator::updateForces(float duration){
         particle->accumulationOfForces += volume * densityEnvironment * Vector3(0, 0, 1);// * gravity
     }
     else { //partially submerged
-        float submertionPercentage = abs(particle->getPosition().getz() - heightEnvironment - volume * 3/4 * 1/PI);
+        float submertionPercentage = abs(particle->getPosition().getz() - heightEnvironment - particle->getRadius());
         particle->accumulationOfForces += submertionPercentage * volume * densityEnvironment * Vector3(0, 0, 1);// * gravity
     }
 }
