@@ -1,7 +1,7 @@
 <map id="FlotationForceGenerator" name="FlotationForceGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="123,364,303,391"/>
-<area shape="rect" id="node2" href="$classParticleForceGenerator.html" title=" " alt="" coords="5,275,176,301"/>
-<area shape="rect" id="node3" title=" " alt="" coords="344,5,395,32"/>
-<area shape="rect" id="node4" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="334,275,405,301"/>
-<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="477,133,547,159"/>
+<area shape="rect" id="node1" title=" " alt="" coords="111,880,316,1075"/>
+<area shape="rect" id="node2" href="$classParticleForceGenerator.html" title=" " alt="" coords="5,652,176,729"/>
+<area shape="rect" id="node3" title=" " alt="" coords="349,5,400,83"/>
+<area shape="rect" id="node4" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="269,564,480,817"/>
+<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="487,175,641,457"/>
 </map>

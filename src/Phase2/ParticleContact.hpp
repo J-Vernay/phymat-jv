@@ -3,6 +3,8 @@
 #include "../Particle.hpp"
 #include "../Vector.hpp"
 
+#include <optional>
+
 // Forward declaration to prevent cyclic dependency between include files.
 class ParticleContactResolver;
 
@@ -15,11 +17,15 @@ private:
     float penetration;
     friend class ParticleContactResolver;
 
-    
-
 public:
-    ParticleContact(Particle*[], float, Vector3);
+    /// Constructs a particle contact.
+    ParticleContact(Particle* a, Particle* b, float restit, Vector3 normal);
+    /// Destructor.
     ~ParticleContact();
+
+    /// Create a particle contact from two colliding particles.
+    /// If the two particles are not colliding, return `std::nullopt`.
+    static optional<ParticleContact> fromCollision(Particle* a, Particle* b, float restitution);
 
     void resolve(float) const;
     float vsCalculation() const;

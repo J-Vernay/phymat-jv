@@ -1,4 +1,5 @@
 #include "World.hpp"
+#include "Phase2/ParticleForceGenerator.hpp"
 #include "Phase2/GravityGenerator.hpp"
 
 //Constructor
@@ -7,8 +8,6 @@ World::World() {
     gravity = Vector3(0,0,-10);
     deltaTime = 1/60.f;
 }
-
-
 
 //Setters
 void World::setGravity(Vector3 newGravity){
@@ -26,24 +25,25 @@ void World::setFrameRate(double newFrameRate){
 }
 
 void World::integrate() {
-    // Initialize all particles, and apply gravity.
-    for(auto* p : particleList) {
-        p->resetAccumulationForces();
-        if (p->getInverseMass() != 0)
-            GravityGenerator(p).updateForces(deltaTime);
-    }
     // Apply all registed forces to their respective particles.
-    for(auto* force : registerOfForces) {
+    for(ParticleForceGenerator* force : registerOfForces) {
         force->updateForces(deltaTime); 
     }
     // Update acceleration, velocity and position according to accumulated forces.
     for (auto* p : particleList) {
+        // Include gravity now for all particles with finite mass.
+        if (p->getInverseMass() != 0)
+            GravityGenerator(p).updateForces(deltaTime);
         p->integrate(deltaTime);
+    }
+    // Clean all particles.
+    for(auto* p : particleList) {
+        p->resetAccumulationForces();
     }
 }
 
 
-void World::resolveContacts(std::vector<ParticleContact*> contacts) {
+void World::resolveContacts(std::vector<ParticleContact> contacts) {
     if(contacts.size() > 0){
         int iteration = contacts.size()*2;
         int usedIteration = 0;
@@ -51,14 +51,14 @@ void World::resolveContacts(std::vector<ParticleContact*> contacts) {
             float vs = 0;
             int idx = -1;
             for(int i = 0; i < contacts.size(); i++){
-                float newVs = contacts[i]->vsCalculation();
+                float newVs = contacts[i].vsCalculation();
                 if(newVs < vs){
                     idx = i;
                     vs = newVs;
                 }
             }
             if(idx >= 0){
-                contacts[idx]->resolve(deltaTime);
+                contacts[idx].resolve(deltaTime);
                 contacts.erase(contacts.begin() + idx);
             }
             usedIteration++;

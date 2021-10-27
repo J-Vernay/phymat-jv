@@ -80,11 +80,13 @@ Collaboration diagram for Window:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWindow__coll__graph.png" border="0" usemap="#aWindow_coll__map" alt="Collaboration graph"/></div>
 <map name="aWindow_coll__map" id="aWindow_coll__map">
-<area shape="rect" title="Class responsible for GLFW, OpenGL and ImGui management." alt="" coords="81,109,155,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,127,32"/>
-<area shape="rect" title=" " alt="" coords="151,5,189,32"/>
+<area shape="rect" title="Class responsible for GLFW, OpenGL and ImGui management." alt="" coords="105,344,235,553"/>
+<area shape="rect" title=" " alt="" coords="5,189,127,267"/>
+<area shape="rect" title=" " alt="" coords="151,189,189,267"/>
+<area shape="rect" href="structControls.html" title="Represents keyboard game control." alt="" coords="220,189,296,267"/>
+<area shape="rect" title=" " alt="" coords="233,5,283,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,11 +113,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac364d01115b87f2b53af634111a98ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08c360aa2a2fe06bbf42cd2890743dde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a08c360aa2a2fe06bbf42cd2890743dde">should_close</a> () const noexcept</td></tr>
 <tr class="separator:a08c360aa2a2fe06bbf42cd2890743dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab79035ad7f58acde3dc1825ab651ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structControls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a1ab79035ad7f58acde3dc1825ab651ff">getControls</a> () const</td></tr>
+<tr class="separator:a1ab79035ad7f58acde3dc1825ab651ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad46f7d2b73772b479eaac49b267c2141"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ad46f7d2b73772b479eaac49b267c2141">_window</a></td></tr>
 <tr class="separator:ad46f7d2b73772b479eaac49b267c2141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5444a82e2018d2be1b8a0f5eb196a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structControls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac5444a82e2018d2be1b8a0f5eb196a8f">_controls</a></td></tr>
+<tr class="separator:ac5444a82e2018d2be1b8a0f5eb196a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb1784c461502a1708d6ff8157f6ffd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aeb1784c461502a1708d6ff8157f6ffd7">_width</a></td></tr>
 <tr class="separator:aeb1784c461502a1708d6ff8157f6ffd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa68001bc905c217d9a82bbcced22b585"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aa68001bc905c217d9a82bbcced22b585">_height</a></td></tr>
@@ -305,6 +311,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a1ab79035ad7f58acde3dc1825ab651ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab79035ad7f58acde3dc1825ab651ff">&#9670;&nbsp;</a></span>getControls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structControls.html">Controls</a> Window::getControls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a08c360aa2a2fe06bbf42cd2890743dde"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08c360aa2a2fe06bbf42cd2890743dde">&#9670;&nbsp;</a></span>should_close()</h2>
 
@@ -377,6 +408,28 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac5444a82e2018d2be1b8a0f5eb196a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5444a82e2018d2be1b8a0f5eb196a8f">&#9670;&nbsp;</a></span>_controls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structControls.html">Controls</a> Window::_controls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa68001bc905c217d9a82bbcced22b585"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa68001bc905c217d9a82bbcced22b585">&#9670;&nbsp;</a></span>_height</h2>
 

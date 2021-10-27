@@ -27,9 +27,11 @@ class Vector3 {
         friend ostream& operator<<(ostream& os, const Vector3&);
 
         //Check if well placed
-        Vector3 vectorialProduct(Vector3);
-        float scalarProduct(Vector3);
-        float norm();
+        Vector3 vectorialProduct(Vector3) const;
+        float scalarProduct(Vector3) const;
+        float norm() const;
+
+        float squareNorm() const { return scalarProduct(*this); }
 
     private:
         float x;

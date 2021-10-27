@@ -24,6 +24,11 @@ public:
     /// Get center particle so you can apply forces or get position.
     Particle& center() { return _particles.front(); }
 
+    vector<Particle>& particles() { return _particles; }
+
+    void addInternalContacts(vector<ParticleContact>& contacts);
+    void addExternalContacts(vector<ParticleContact>& contacts, Particle* other, float restitution);
+
 private:
     /// World in which particles are added.
     World& _world;

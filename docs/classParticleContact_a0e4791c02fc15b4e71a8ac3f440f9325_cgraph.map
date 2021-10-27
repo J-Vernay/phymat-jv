@@ -1,6 +1,7 @@
 <map id="ParticleContact::resolveVelocity" name="ParticleContact::resolveVelocity">
-<area shape="rect" id="node1" title=" " alt="" coords="5,49,181,90"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,74,181,115"/>
 <area shape="rect" id="node2" href="$classParticle.html#a0760ad1578d005316711fffffb775ccc" title="Get inverse of mass." alt="" coords="247,5,428,32"/>
-<area shape="rect" id="node3" href="$classParticle.html#ad8ec6922c0a184710f3a150704185415" title="Set velocity." alt="" coords="262,56,413,83"/>
-<area shape="rect" id="node4" href="$classParticleContact.html#a689235322b0242aa9a6317ed66f66b7e" title=" " alt="" coords="229,107,445,133"/>
+<area shape="rect" id="node3" href="$classParticle.html#a51d14711889c8967e19e66787c2291ec" title="Get mass." alt="" coords="271,56,404,83"/>
+<area shape="rect" id="node4" href="$classParticle.html#ad8ec6922c0a184710f3a150704185415" title="Set velocity." alt="" coords="262,107,413,133"/>
+<area shape="rect" id="node5" href="$classParticleContact.html#a689235322b0242aa9a6317ed66f66b7e" title=" " alt="" coords="229,157,445,184"/>
 </map>

@@ -80,16 +80,16 @@ ostream& operator<<(ostream& os, const Vector3& v){
 
 
 //Useful Methods
-Vector3 Vector3::vectorialProduct(Vector3 v){
+Vector3 Vector3::vectorialProduct(Vector3 v) const {
     return Vector3(y*v.getz()-z*v.gety(), z*v.getx()-x*v.getz(), x*v.gety()-y*v.getx());
 }
 
-float Vector3::scalarProduct(Vector3 v){
+float Vector3::scalarProduct(Vector3 v) const {
     return x*v.getx() + y*v.gety() + z*v.getz();
 }
 
-float Vector3::norm(){
-    return sqrt(scalarProduct(*this));
+float Vector3::norm() const {
+    return sqrt(squareNorm());
 }
 
 //Other useful methods

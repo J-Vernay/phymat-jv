@@ -1,5 +1,7 @@
 <map id="Window" name="Window">
-<area shape="rect" id="node1" title="Class responsible for GLFW, OpenGL and ImGui management." alt="" coords="81,109,155,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,127,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="151,5,189,32"/>
+<area shape="rect" id="node1" title="Class responsible for GLFW, OpenGL and ImGui management." alt="" coords="105,344,235,553"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,189,127,267"/>
+<area shape="rect" id="node3" title=" " alt="" coords="151,189,189,267"/>
+<area shape="rect" id="node4" href="$structControls.html" title="Represents keyboard game control." alt="" coords="220,189,296,267"/>
+<area shape="rect" id="node5" title=" " alt="" coords="233,5,283,83"/>
 </map>

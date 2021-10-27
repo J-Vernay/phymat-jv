@@ -1,6 +1,6 @@
 <map id="ParticleContactGenerator" name="ParticleContactGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,214,32"/>
-<area shape="rect" id="node2" href="$classParticleLink.html" title=" " alt="" coords="73,80,170,107"/>
-<area shape="rect" id="node3" href="$classParticleCable.html" title=" " alt="" coords="5,155,112,181"/>
-<area shape="rect" id="node4" href="$classParticleRod.html" title=" " alt="" coords="137,155,231,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="45,5,231,83"/>
+<area shape="rect" id="node2" href="$classParticleLink.html" title=" " alt="" coords="69,131,207,208"/>
+<area shape="rect" id="node3" href="$classParticleCable.html" title=" " alt="" coords="5,256,127,348"/>
+<area shape="rect" id="node4" href="$classParticleRod.html" title=" " alt="" coords="151,263,272,341"/>
 </map>

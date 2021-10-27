@@ -7,6 +7,10 @@
 
 #include "Particle.hpp"
 
+/// Represents keyboard game control.
+struct Controls {
+    bool left = false, up = false, right = false, down = false;
+};
 
 /// Class responsible for GLFW, OpenGL and ImGui management.
 class Window {
@@ -29,9 +33,12 @@ public:
     std::pair<int, int> size() const { return { _width, _height }; }
 
     bool should_close() const noexcept { return glfwWindowShouldClose(_window); }
+
+    Controls getControls() const { return _controls; }
     
 private:
     GLFWwindow* _window;
+    Controls _controls;
     int _width, _height;
 };
 

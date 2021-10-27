@@ -4,32 +4,12 @@
 #include <iostream>
 
 #include "Graphics.hpp"
+#include "Phase2/ParticleContact.hpp"
 #include "Spawner.hpp"
 #include "World.hpp"
 #include "Blob.hpp"
+#include "imgui.h"
 
-void draw_floor() {
-    const int FloorSize = 20;
-    // Draw actual floor.
-    glBegin(GL_TRIANGLE_FAN);
-    glColor3f(0.5, 0.8, 0.5);
-    glVertex3f(-FloorSize, -FloorSize, 0);
-    glVertex3f(-FloorSize, +FloorSize, 0);
-    glVertex3f(+FloorSize, +FloorSize, 0);
-    glVertex3f(+FloorSize, -FloorSize, 0);
-    glEnd();
-
-    // Draw grid.
-    glBegin(GL_LINES);
-    glColor3f(0.2, 0.6, 0.2);
-    for (int i = -FloorSize; i <= FloorSize; ++i) {
-        glVertex3f(-FloorSize, i, 0.01);
-        glVertex3f(+FloorSize, i, 0.01);
-        glVertex3f(i, -FloorSize, 0.01);
-        glVertex3f(i, +FloorSize, 0.01);
-    }
-    glEnd();
-}
 
 int main() {
 
@@ -39,16 +19,30 @@ int main() {
     Spawner spawner(world);
     ParticleRenderer particleRenderer;
 
-    Blob b(world, Vector3{0,0,0.2}, 1, 20, +INFINITY);
+    // Implementing ground as a big sphere.
+    Particle ground(+INFINITY, Vector3(0,0,-1000), Vector3(0.5, 0.8, 0.5), 1000, 0);
+    world.particleList.insert(&ground);
+
+    //Particle p(10, Vector3(0,0,3), {}, 0.2, 1);
+    //world.particleList.insert(&p);
+
+    Blob b(world, Vector3{0,0,0}, 2, 20, 1);
 
     // Disable use of configuration file.
     ImGui::GetIO().IniFilename = nullptr;
 
+    
+    float blob_velocity[2] { 0, 0 };
+
     // Main loop.
     while (!window.should_close()) {
-        spawner.update(glfwGetTime()); 
+        b.center().accumulationOfForces += Vector3(blob_velocity[0], blob_velocity[1], 0);
         world.integrate();
 
+        vector<ParticleContact> contacts;
+        b.addInternalContacts(contacts);
+        b.addExternalContacts(contacts, &ground, 0);
+        world.resolveContacts(contacts);
 
         // Start drawing for this frame.
         glClearColor(0.3, 0.7, 0.9, 1);
@@ -57,8 +51,8 @@ int main() {
 
         // World drawings.
         use_camera_gl(window,camera);
-        draw_floor();
 
+        // Draw springs for debug.
         for (auto* f : world.registerOfForces) {
             if (auto* spring = dynamic_cast<SpringForceGenerator*>(f)) {
                 auto [pA,pB] = spring->getParticles();
@@ -79,6 +73,16 @@ int main() {
         window.begin_ui();
         ask_camera_ui(camera);
         spawner.ask_ui();
+
+        ImGui::SetNextWindowPos({ 400,50 }, ImGuiCond_Once);
+        ImGui::SetNextWindowSize({ 250,100 }, ImGuiCond_Once);
+        if (ImGui::Begin("Control blob")) {
+            ImGui::SliderFloat2("Applied force", blob_velocity, -1000, 1000);
+            if (ImGui::Button("Reset force"))
+                blob_velocity[0] = 0, blob_velocity[1] = 0;
+        }
+        ImGui::End();
+
         window.end_ui();
 
         // Finalizes GUI and show drawings to screen.

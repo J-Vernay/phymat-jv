@@ -1,7 +1,10 @@
 <map id="Particle::getRadius" name="Particle::getRadius">
-<area shape="rect" id="node1" title="Get radius." alt="" coords="344,64,487,91"/>
-<area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="117,5,287,32"/>
-<area shape="rect" id="node4" href="$classFlotationForceGenerator.html#a1ecebdc58aff644d17e690910aa69cba" title=" " alt="" coords="108,57,296,98"/>
-<area shape="rect" id="node5" href="$classParticleContact.html#ab80f5cffe6c67abcfd20d6aab04c2dea" title=" " alt="" coords="114,122,290,163"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Get radius." alt="" coords="747,93,889,120"/>
+<area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="520,5,689,32"/>
+<area shape="rect" id="node4" href="$classFlotationForceGenerator.html#a1ecebdc58aff644d17e690910aa69cba" title=" " alt="" coords="511,57,699,98"/>
+<area shape="rect" id="node5" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="248,152,463,179"/>
+<area shape="rect" id="node8" href="$classParticleContact.html#a52a8d8085cc6157164121af7a42b3b36" title="Constructs a particle contact." alt="" coords="517,174,693,215"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="328,5,383,32"/>
+<area shape="rect" id="node6" href="$classBlob.html#a13dbf4fc8236042fdefba994b3fd762a" title=" " alt="" coords="5,127,200,153"/>
+<area shape="rect" id="node7" href="$classBlob.html#a4c2de9a40b39f71832d57f40a5dfaf56" title=" " alt="" coords="7,177,198,204"/>
 </map>

@@ -1,6 +1,5 @@
 <map id="Particle::getInverseMass" name="Particle::getInverseMass">
-<area shape="rect" id="node1" title="Get inverse of mass." alt="" coords="453,46,635,73"/>
-<area shape="rect" id="node2" href="$classParticleContact.html#ad599acdf510b8b7d0ee2df3c444f665d" title=" " alt="" coords="229,5,405,47"/>
-<area shape="rect" id="node4" href="$classParticleContact.html#a0e4791c02fc15b4e71a8ac3f440f9325" title=" " alt="" coords="229,71,405,112"/>
-<area shape="rect" id="node3" href="$classParticleContact.html#a80cb57974d82d2cd378a3733a540d6b3" title=" " alt="" coords="5,46,181,73"/>
+<area shape="rect" id="node1" title="Get inverse of mass." alt="" coords="453,13,635,39"/>
+<area shape="rect" id="node2" href="$classParticleContact.html#a0e4791c02fc15b4e71a8ac3f440f9325" title=" " alt="" coords="229,5,405,47"/>
+<area shape="rect" id="node3" href="$classParticleContact.html#a80cb57974d82d2cd378a3733a540d6b3" title=" " alt="" coords="5,13,181,39"/>
 </map>

@@ -18,9 +18,11 @@ SpringForceGenerator::SpringForceGenerator(Particle *particleA, Particle *partic
 
 //Update the force accumulator of the particle by adding the force associated to the spring
 void SpringForceGenerator::updateForces(float duration){
-    float length = (particleA->getPosition() - particleB->getPosition()).norm(); //length of the spring
-    particleA->accumulationOfForces += this->elasticity * (this->relaxedLength - length) * Vector3(0, 0, 1); //applied on z component
-    particleB->accumulationOfForces += -this->elasticity * (this->relaxedLength - length) * Vector3(0, 0, 1); //applied on z component
+    Vector3 direction = (particleA->getPosition() - particleB->getPosition());
+    float length = direction.norm(); //length of the spring
+    Vector3 normal = direction / length;
+    particleA->accumulationOfForces += this->elasticity * (this->relaxedLength - length) * normal;
+    particleB->accumulationOfForces += -this->elasticity * (this->relaxedLength - length) * normal;
 }
 
 //Getter for elasticity

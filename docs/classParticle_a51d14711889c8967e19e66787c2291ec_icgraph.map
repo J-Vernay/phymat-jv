@@ -1,6 +1,9 @@
 <map id="Particle::getMass" name="Particle::getMass">
-<area shape="rect" id="node1" title="Get mass." alt="" coords="519,13,652,39"/>
-<area shape="rect" id="node2" href="$classGravityGenerator.html#a806d2076a6d9091cba81fe335854d539" title=" " alt="" coords="283,5,471,47"/>
-<area shape="rect" id="node3" href="$classWorld.html#a4b7bda799ba842fa079d3d21cd965762" title=" " alt="" coords="108,13,235,39"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node1" title="Get mass." alt="" coords="568,78,701,105"/>
+<area shape="rect" id="node2" href="$classParticleContact.html#ad599acdf510b8b7d0ee2df3c444f665d" title=" " alt="" coords="338,5,514,47"/>
+<area shape="rect" id="node4" href="$classParticleContact.html#a0e4791c02fc15b4e71a8ac3f440f9325" title=" " alt="" coords="338,71,514,112"/>
+<area shape="rect" id="node5" href="$classGravityGenerator.html#a806d2076a6d9091cba81fe335854d539" title=" " alt="" coords="332,136,520,177"/>
+<area shape="rect" id="node3" href="$classParticleContact.html#a80cb57974d82d2cd378a3733a540d6b3" title=" " alt="" coords="108,46,284,73"/>
+<area shape="rect" id="node6" href="$classWorld.html#a4b7bda799ba842fa079d3d21cd965762" title=" " alt="" coords="133,143,259,170"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,143,60,170"/>
 </map>

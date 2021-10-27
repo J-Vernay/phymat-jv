@@ -48,12 +48,15 @@ public:
 
     /// Main function to apply all forces to all particles
     /// and move them according to them.
+    /// Clean all particle force accumulators after integration.
+    /// You may add custom force to particles accumulators between
+    /// two invocations of this function.
     /// No collisions detection is done at this point.
     void integrate();
 
     /// Resolve given contacts between particles.
     /// You are responsible to detect collisions between particles.
-    void resolveContacts(std::vector<ParticleContact*> contacts);
+    void resolveContacts(std::vector<ParticleContact>  contacts);
 
     /// Output textual representation of Integrator.
     friend ostream& operator<<(ostream& os, const World&);

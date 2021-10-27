@@ -1,8 +1,10 @@
 <map id="norm" name="norm">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,61,83"/>
-<area shape="rect" id="node2" href="$classVector3.html#a086030e0473de303c58d43d6d1f5c98c" title=" " alt="" coords="109,56,223,83"/>
-<area shape="rect" id="node3" href="$classVector3.html#abf87eeaad0b10f2b09042187591876e3" title=" " alt="" coords="271,56,437,83"/>
-<area shape="rect" id="node4" href="$classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="485,5,593,32"/>
-<area shape="rect" id="node5" href="$classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="485,56,593,83"/>
-<area shape="rect" id="node6" href="$classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="486,107,593,133"/>
+<area shape="rect" id="node2" href="$classVector3.html#ac171792c1aaacb29b0c6a6707f7cd335" title=" " alt="" coords="109,56,223,83"/>
+<area shape="rect" id="node3" href="$classVector3.html#aaf15cd97e5f599919109abc75872573e" title=" " alt="" coords="271,56,429,83"/>
+<area shape="rect" id="node4" href="$Vector_8hpp.html#a19a2aaea3051011372c67d7eab689255" title=" " alt="" coords="477,56,588,83"/>
+<area shape="rect" id="node5" href="$classVector3.html#a944f2e887ae0ccb4139f7f9cddcbacaf" title=" " alt="" coords="636,56,803,83"/>
+<area shape="rect" id="node6" href="$classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="851,5,959,32"/>
+<area shape="rect" id="node7" href="$classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="851,56,959,83"/>
+<area shape="rect" id="node8" href="$classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="851,107,958,133"/>
 </map>

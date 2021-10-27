@@ -1,12 +1,12 @@
 <map id="Spawner" name="Spawner">
-<area shape="rect" id="node1" title="Class responsible for creating new particles in the world." alt="" coords="346,347,425,373"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,257,152,284"/>
-<area shape="rect" id="node3" title=" " alt="" coords="227,131,293,158"/>
-<area shape="rect" id="node8" href="$classWorld.html" title=" " alt="" coords="384,257,443,284"/>
-<area shape="rect" id="node4" title=" " alt="" coords="185,5,236,32"/>
-<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="783,131,854,158"/>
-<area shape="rect" id="node6" title=" " alt="" coords="467,257,517,284"/>
-<area shape="rect" id="node7" title=" " alt="" coords="541,257,683,284"/>
-<area shape="rect" id="node9" title=" " alt="" coords="317,124,531,165"/>
-<area shape="rect" id="node10" title=" " alt="" coords="555,131,759,158"/>
+<area shape="rect" id="node1" title="Class responsible for creating new particles in the world." alt="" coords="385,777,530,899"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,593,152,671"/>
+<area shape="rect" id="node3" title=" " alt="" coords="229,277,296,355"/>
+<area shape="rect" id="node8" href="$classWorld.html" title=" " alt="" coords="381,549,533,715"/>
+<area shape="rect" id="node4" title=" " alt="" coords="188,5,239,83"/>
+<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="786,175,939,457"/>
+<area shape="rect" id="node6" title=" " alt="" coords="557,593,608,671"/>
+<area shape="rect" id="node7" title=" " alt="" coords="632,593,773,671"/>
+<area shape="rect" id="node9" title=" " alt="" coords="320,270,533,362"/>
+<area shape="rect" id="node10" title=" " alt="" coords="558,277,762,355"/>
 </map>

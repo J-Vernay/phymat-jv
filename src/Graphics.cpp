@@ -1,13 +1,16 @@
 
 #include "Graphics.hpp"
 
+#include "GLFW/glfw3.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl2.h"
 
 #include <GL/gl.h>
 #include <stdexcept>
 
-Window::Window() {
+Window::Window() :
+    _controls{}
+{
     if (!glfwInit())
         throw std::runtime_error("Could not initialize GLFW");
 
@@ -36,6 +39,15 @@ Window::Window() {
         Window* w = (Window*)glfwGetWindowUserPointer(window);
         w->_width = x;
         w->_height = y;
+    });
+    glfwSetKeyCallback(_window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+        Window* w = (Window*)glfwGetWindowUserPointer(window);
+        switch (scancode) {
+        case GLFW_KEY_UP:    w->_controls.up    = (action != GLFW_RELEASE); return;
+        case GLFW_KEY_LEFT:  w->_controls.left  = (action != GLFW_RELEASE); return;
+        case GLFW_KEY_RIGHT: w->_controls.right = (action != GLFW_RELEASE); return;
+        case GLFW_KEY_DOWN:  w->_controls.down  = (action != GLFW_RELEASE); return;
+        }
     });
 }
 
