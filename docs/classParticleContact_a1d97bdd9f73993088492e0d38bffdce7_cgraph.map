@@ -1,13 +1,13 @@
 <map id="ParticleContact::fromCollision" name="ParticleContact::fromCollision">
-<area shape="rect" id="node1" title=" " alt="" coords="5,88,220,115"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,100,220,127"/>
 <area shape="rect" id="node2" href="$classParticle.html#a889225014a4821e28590358d0b522c49" title="Get position." alt="" coords="492,5,643,32"/>
-<area shape="rect" id="node3" href="$classParticle.html#af89fe5aefd4e8e7b38cf1aae2230ddd5" title="Get radius." alt="" coords="496,113,639,140"/>
-<area shape="rect" id="node4" href="$classParticleContact.html#a52a8d8085cc6157164121af7a42b3b36" title="Constructs a particle contact." alt="" coords="268,51,444,93"/>
-<area shape="rect" id="node6" href="$classVector3.html#aaf15cd97e5f599919109abc75872573e" title=" " alt="" coords="691,117,849,144"/>
-<area shape="rect" id="node5" href="$classVector3.html#ac171792c1aaacb29b0c6a6707f7cd335" title=" " alt="" coords="511,61,624,88"/>
-<area shape="rect" id="node7" href="$Vector_8hpp.html#a19a2aaea3051011372c67d7eab689255" title=" " alt="" coords="897,117,1008,144"/>
-<area shape="rect" id="node8" href="$classVector3.html#a944f2e887ae0ccb4139f7f9cddcbacaf" title=" " alt="" coords="1056,117,1223,144"/>
-<area shape="rect" id="node9" href="$classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="1271,67,1379,93"/>
-<area shape="rect" id="node10" href="$classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="1271,117,1379,144"/>
-<area shape="rect" id="node11" href="$classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="1271,168,1378,195"/>
+<area shape="rect" id="node3" href="$classParticle.html#af89fe5aefd4e8e7b38cf1aae2230ddd5" title="Get radius." alt="" coords="496,85,639,112"/>
+<area shape="rect" id="node4" href="$classVector3.html#ac171792c1aaacb29b0c6a6707f7cd335" title=" " alt="" coords="511,159,624,185"/>
+<area shape="rect" id="node5" href="$classVector3.html#aaf15cd97e5f599919109abc75872573e" title=" " alt="" coords="691,184,849,211"/>
+<area shape="rect" id="node11" href="$classParticleContact.html#a0d9e3d779e80c830f89cb485ae1c28a5" title="Constructs a particle contact." alt="" coords="268,93,444,134"/>
+<area shape="rect" id="node6" href="$Vector_8hpp.html#a19a2aaea3051011372c67d7eab689255" title=" " alt="" coords="897,184,1008,211"/>
+<area shape="rect" id="node7" href="$classVector3.html#a944f2e887ae0ccb4139f7f9cddcbacaf" title=" " alt="" coords="1056,184,1223,211"/>
+<area shape="rect" id="node8" href="$classVector3.html#a597210530c73ac69a32240f541c3c2e8" title=" " alt="" coords="1271,133,1379,160"/>
+<area shape="rect" id="node9" href="$classVector3.html#ad58bd7ef8cc30e7f8d72f4901dc16914" title=" " alt="" coords="1271,184,1379,211"/>
+<area shape="rect" id="node10" href="$classVector3.html#a2a38297a22d2e4069cb1bc6ded2b434e" title=" " alt="" coords="1271,235,1378,261"/>
 </map>

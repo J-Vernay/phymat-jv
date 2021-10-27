@@ -26,6 +26,9 @@ float Vector3::getz(){
     return z;
 }
 
+Vector3 Vector3::operator-() const {
+    return Vector3(-x, -y, -z);
+}
 
 //Operator overload
 Vector3 Vector3::operator+(const Vector3 v){

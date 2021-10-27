@@ -18,6 +18,7 @@ class Vector3 {
         float getz();
 
         //Operator overload
+        Vector3 operator-() const;
         Vector3 operator+(const Vector3);
         Vector3& operator+=(const Vector3);
         Vector3 operator-(const Vector3);

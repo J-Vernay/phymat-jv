@@ -1,10 +1,12 @@
 <map id="Particle::getRadius" name="Particle::getRadius">
-<area shape="rect" id="node1" title="Get radius." alt="" coords="747,93,889,120"/>
+<area shape="rect" id="node1" title="Get radius." alt="" coords="747,152,889,179"/>
 <area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="520,5,689,32"/>
 <area shape="rect" id="node4" href="$classFlotationForceGenerator.html#a1ecebdc58aff644d17e690910aa69cba" title=" " alt="" coords="511,57,699,98"/>
-<area shape="rect" id="node5" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="248,152,463,179"/>
-<area shape="rect" id="node8" href="$classParticleContact.html#a52a8d8085cc6157164121af7a42b3b36" title="Constructs a particle contact." alt="" coords="517,174,693,215"/>
+<area shape="rect" id="node5" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="248,155,463,181"/>
+<area shape="rect" id="node7" href="$classParticleContact.html#a680fc7520f12796a69f40e19cac25395" title=" " alt="" coords="261,209,450,236"/>
+<area shape="rect" id="node9" href="$classParticleContact.html#a0d9e3d779e80c830f89cb485ae1c28a5" title="Constructs a particle contact." alt="" coords="517,174,693,215"/>
+<area shape="rect" id="node10" href="$classFlotationForceGenerator.html#aac9174560934257d03e340fd75bfd69e" title=" " alt="" coords="515,291,695,333"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="328,5,383,32"/>
-<area shape="rect" id="node6" href="$classBlob.html#a13dbf4fc8236042fdefba994b3fd762a" title=" " alt="" coords="5,127,200,153"/>
-<area shape="rect" id="node7" href="$classBlob.html#a4c2de9a40b39f71832d57f40a5dfaf56" title=" " alt="" coords="7,177,198,204"/>
+<area shape="rect" id="node6" href="$classBlob.html#a13dbf4fc8236042fdefba994b3fd762a" title=" " alt="" coords="5,155,200,181"/>
+<area shape="rect" id="node8" href="$classBlob.html#a4c2de9a40b39f71832d57f40a5dfaf56" title=" " alt="" coords="7,209,198,236"/>
 </map>
