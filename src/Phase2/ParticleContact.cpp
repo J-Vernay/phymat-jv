@@ -53,8 +53,8 @@ void ParticleContact::resolveVelocity(float frameDuration) const {
         float impuls = totalmass*(vs2 - vs1);
         Vector3 impulsVec = impuls*normale;
         //update velocities for both particles
-        particle[0]->setVelocity(particle[0]->getVelocity() + impulsVec*particle[0]->getInverseMass());
-        particle[1]->setVelocity(particle[1]->getVelocity() - impulsVec*particle[1]->getInverseMass());
+        particle[0]->setVelocity(particle[0]->getVelocity() + impulsVec*particle[0]->getInverseMass()*frameDuration);
+        particle[1]->setVelocity(particle[1]->getVelocity() - impulsVec*particle[1]->getInverseMass()*frameDuration);
     }
 }
 
