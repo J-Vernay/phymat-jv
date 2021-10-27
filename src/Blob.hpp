@@ -29,6 +29,10 @@ public:
     void addInternalContacts(vector<ParticleContact>& contacts);
     void addExternalContacts(vector<ParticleContact>& contacts, Particle* other, float restitution);
 
+    //reset the position of the particles
+    void spawnBlob(Vector3 centerpos, float radius, int slices, float mass);
+    void reset(Vector3 centerpos, float radius, int slices, float mass);
+
 private:
     /// World in which particles are added.
     World& _world;

@@ -32,17 +32,17 @@ int main() {
     //Particle p(10, Vector3(0,0,3), {}, 0.2, 1);
     //world.particleList.insert(&p);
 
-    Blob b(world, Vector3{0,0,0}, 2, 10, 0.1);
+    Blob b(world, Vector3{0,0,0}, 2, 10, 1);
 
     // Disable use of configuration file.
     ImGui::GetIO().IniFilename = nullptr;
 
     
-    float blob_velocity[2] { 0, 0 };
+    float blob_velocity[3] { 0, 0, 0 };
 
     // Main loop.
     while (!window.should_close()) {
-        b.center().accumulationOfForces += Vector3(blob_velocity[0], blob_velocity[1], 0);
+        b.center().accumulationOfForces += Vector3(blob_velocity[0], blob_velocity[1], blob_velocity[2]);
         world.integrate();
 
         vector<ParticleContact> contacts;
@@ -61,6 +61,7 @@ int main() {
         use_camera_gl(window,camera);
 
         // Draw springs for debug.
+        glColor3f(0.3, 0.7, 0.3);
         for (auto* f : world.registerOfForces) {
             if (auto* spring = dynamic_cast<SpringForceGenerator*>(f)) {
                 auto [pA,pB] = spring->getParticles();
@@ -85,9 +86,11 @@ int main() {
         ImGui::SetNextWindowPos({ 400,50 }, ImGuiCond_Once);
         ImGui::SetNextWindowSize({ 250,100 }, ImGuiCond_Once);
         if (ImGui::Begin("Control blob")) {
-            ImGui::SliderFloat2("Applied force", blob_velocity, -500, 500);
+            ImGui::SliderFloat3("Applied force", blob_velocity, -1000, 1000);
             if (ImGui::Button("Reset force"))
-                blob_velocity[0] = 0, blob_velocity[1] = 0;
+                blob_velocity[0] = 0, blob_velocity[1] = 0, blob_velocity[2] = 0;
+            if(ImGui::Button("Reset Blob"))
+                b.reset(Vector3{0,0,0}, 2, 10, 1);
         }
         ImGui::End();
 
