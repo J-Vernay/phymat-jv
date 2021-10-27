@@ -5,6 +5,7 @@
 
 #include "Graphics.hpp"
 #include "Phase2/ParticleContact.hpp"
+#include "Phase2/BungeeCordForceGenerator.hpp"
 #include "Spawner.hpp"
 #include "World.hpp"
 #include "Blob.hpp"
@@ -64,6 +65,7 @@ int main() {
         glColor3f(0.3, 0.7, 0.3);
         for (auto* f : world.registerOfForces) {
             if (auto* spring = dynamic_cast<SpringForceGenerator*>(f)) {
+            //if (auto* spring = dynamic_cast<BungeeCordForceGenerator*>(f)) { //FOR THE DEMO
                 auto [pA,pB] = spring->getParticles();
                 Vector3 posA = pA->getPosition(), posB = pB->getPosition();
                 glBegin(GL_LINES);
