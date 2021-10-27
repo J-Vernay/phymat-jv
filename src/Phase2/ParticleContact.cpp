@@ -35,11 +35,12 @@ float ParticleContact::vsCalculation() const {
     return ((particle[0]->getVelocity() - particle[1]->getVelocity())*normale);
 }
 
-//TO DO stationnary particle problem
+//Update velocity when the contact is resolved
 void ParticleContact::resolveVelocity(float frameDuration) const {
     //vs' = -C * vs
     float vs1 = vsCalculation(), vs2 = -restitution*vs1;
     
+    //If mass is infinity, the object doesn't move
     bool is_static_a = particle[0]->getInverseMass() == 0;
     bool is_static_b = particle[1]->getInverseMass() == 0;
 
@@ -69,6 +70,7 @@ void ParticleContact::resolveInterpenetration() const {
     particle[1]->setPosition(particle[1]->getPosition()-(penetration*(1-factor_a))*normale);
 }
 
+//create a contact if particles interpenetrate
 optional<ParticleContact> ParticleContact::fromCollision(Particle *a, Particle *b, float restitution) {
     Vector3 posdiff = a->getPosition() - b->getPosition();
     float sumradius = a->getRadius() + b->getRadius();
@@ -77,8 +79,8 @@ optional<ParticleContact> ParticleContact::fromCollision(Particle *a, Particle *
     return ParticleContact(a, b, restitution, posdiff, sumradius - posdiff.norm());
 }
 
+//create a cable contact
 optional<ParticleContact> ParticleContact::fromCord(Particle *a, Particle *b, float cordlength, float restitution) {
-    /// NOT WORKING
     Vector3 posdiff = a->getPosition() - b->getPosition();
     float sumradius = a->getRadius() + b->getRadius();
     if (posdiff.squareNorm() < sumradius * sumradius) // collision

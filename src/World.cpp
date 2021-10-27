@@ -42,9 +42,10 @@ void World::integrate() {
     }
 }
 
-
+//Resolve all contacts in a contact list
 void World::resolveContacts(std::vector<ParticleContact> contacts) {
     if(contacts.size() > 0){
+        //iteration goes up to 2 * init number of iteration, then, contacts are considered resolved
         int iteration = contacts.size()*2;
         int usedIteration = 0;
         while(usedIteration <= iteration){
@@ -52,11 +53,14 @@ void World::resolveContacts(std::vector<ParticleContact> contacts) {
             int idx = -1;
             for(int i = 0; i < contacts.size(); i++){
                 float newVs = contacts[i].vsCalculation();
+                //the first contact resolved is the one that particles get close the fastest
+                //finds the first contact to resolve and store its ID
                 if(newVs < vs){
                     idx = i;
                     vs = newVs;
                 }
             }
+            //if there is a contact to resolve, then resolve it
             if(idx >= 0){
                 contacts[idx].resolve(deltaTime);
                 contacts.erase(contacts.begin() + idx);
