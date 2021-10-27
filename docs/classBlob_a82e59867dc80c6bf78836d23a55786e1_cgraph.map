@@ -1,0 +1,4 @@
+<map id="Blob::spawnBlob" name="Blob::spawnBlob">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$classBlob.html#a8de0753ee636012125937459218762b6" title="Get center particle so you can apply forces or get position." alt="" coords="184,5,284,32"/>
+</map>

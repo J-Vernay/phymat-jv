@@ -1,0 +1,6 @@
+<map id="Blob::reset" name="Blob::reset">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,97,57"/>
+<area shape="rect" id="node2" href="$classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="151,5,239,32"/>
+<area shape="rect" id="node4" href="$classBlob.html#a8a8d34c9112cb907fdffcb5dbd2dd244" title="Destructor, which removes particles and forces from world." alt="" coords="145,56,244,83"/>
+<area shape="rect" id="node3" href="$classBlob.html#a8de0753ee636012125937459218762b6" title="Get center particle so you can apply forces or get position." alt="" coords="292,5,392,32"/>
+</map>
