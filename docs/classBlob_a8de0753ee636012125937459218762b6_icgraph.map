@@ -1,5 +1,7 @@
 <map id="Blob::center" name="Blob::center">
-<area shape="rect" id="node1" title="Get center particle so you can apply forces or get position." alt="" coords="141,31,241,57"/>
-<area shape="rect" id="node2" href="$classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="5,5,93,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="22,56,77,83"/>
+<area shape="rect" id="node1" title="Get center particle so you can apply forces or get position." alt="" coords="324,56,424,83"/>
+<area shape="rect" id="node2" href="$classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="167,5,255,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="183,56,238,83"/>
+<area shape="rect" id="node5" href="$classBlob.html#a82e59867dc80c6bf78836d23a55786e1" title=" " alt="" coords="145,107,276,133"/>
+<area shape="rect" id="node3" href="$classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c" title=" " alt="" coords="5,5,97,32"/>
 </map>

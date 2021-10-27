@@ -77,7 +77,7 @@ Collaboration diagram for Blob:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBlob__coll__graph.png" border="0" usemap="#aBlob_coll__map" alt="Collaboration graph"/></div>
 <map name="aBlob_coll__map" id="aBlob_coll__map">
-<area shape="rect" title=" " alt="" coords="243,763,426,913"/>
+<area shape="rect" title=" " alt="" coords="243,763,426,943"/>
 <area shape="rect" title=" " alt="" coords="5,579,240,656"/>
 <area shape="rect" title=" " alt="" coords="264,579,405,656"/>
 <area shape="rect" href="classWorld.html" title=" " alt="" coords="429,535,581,700"/>
@@ -105,6 +105,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c2de9a40b39f71832d57f40a5dfaf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13dbf4fc8236042fdefba994b3fd762a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlob.html#a13dbf4fc8236042fdefba994b3fd762a">addExternalContacts</a> (vector&lt; <a class="el" href="classParticleContact.html">ParticleContact</a> &gt; &amp;contacts, <a class="el" href="classParticle.html">Particle</a> *other, float restitution)</td></tr>
 <tr class="separator:a13dbf4fc8236042fdefba994b3fd762a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e59867dc80c6bf78836d23a55786e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlob.html#a82e59867dc80c6bf78836d23a55786e1">spawnBlob</a> (<a class="el" href="classVector3.html">Vector3</a> centerpos, float radius, int slices, float mass)</td></tr>
+<tr class="separator:a82e59867dc80c6bf78836d23a55786e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87de632ea6fcce848f05a0b3cbb660c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c">reset</a> (<a class="el" href="classVector3.html">Vector3</a> centerpos, float radius, int slices, float mass)</td></tr>
+<tr class="separator:ab87de632ea6fcce848f05a0b3cbb660c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -183,6 +187,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classBlob.html#a8de0753ee636012125937459218762b6" title="Get center particle so you can apply forces or get position." alt="" coords="141,5,241,32"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlob_a96ae9e85e7abde8b68d62318bedea43c_icgraph.png" border="0" usemap="#aclassBlob_a96ae9e85e7abde8b68d62318bedea43c_icgraph" alt=""/></div>
+<map name="aclassBlob_a96ae9e85e7abde8b68d62318bedea43c_icgraph" id="aclassBlob_a96ae9e85e7abde8b68d62318bedea43c_icgraph">
+<area shape="rect" title=" " alt="" coords="145,5,233,32"/>
+<area shape="rect" href="classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c" title=" " alt="" coords="5,5,97,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -202,6 +215,15 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Destructor, which removes particles and forces from world. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlob_a8a8d34c9112cb907fdffcb5dbd2dd244_icgraph.png" border="0" usemap="#aclassBlob_a8a8d34c9112cb907fdffcb5dbd2dd244_icgraph" alt=""/></div>
+<map name="aclassBlob_a8a8d34c9112cb907fdffcb5dbd2dd244_icgraph" id="aclassBlob_a8a8d34c9112cb907fdffcb5dbd2dd244_icgraph">
+<area shape="rect" title="Destructor, which removes particles and forces from world." alt="" coords="145,5,244,32"/>
+<area shape="rect" href="classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c" title=" " alt="" coords="5,5,97,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -325,9 +347,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBlob_a8de0753ee636012125937459218762b6_icgraph.png" border="0" usemap="#aclassBlob_a8de0753ee636012125937459218762b6_icgraph" alt=""/></div>
 <map name="aclassBlob_a8de0753ee636012125937459218762b6_icgraph" id="aclassBlob_a8de0753ee636012125937459218762b6_icgraph">
-<area shape="rect" title="Get center particle so you can apply forces or get position." alt="" coords="141,31,241,57"/>
-<area shape="rect" href="classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="5,5,93,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="22,56,77,83"/>
+<area shape="rect" title="Get center particle so you can apply forces or get position." alt="" coords="324,56,424,83"/>
+<area shape="rect" href="classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="167,5,255,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="183,56,238,83"/>
+<area shape="rect" href="classBlob.html#a82e59867dc80c6bf78836d23a55786e1" title=" " alt="" coords="145,107,276,133"/>
+<area shape="rect" href="classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c" title=" " alt="" coords="5,5,97,32"/>
 </map>
 </div>
 
@@ -355,6 +379,106 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab87de632ea6fcce848f05a0b3cbb660c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87de632ea6fcce848f05a0b3cbb660c">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Blob::reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>centerpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlob_ab87de632ea6fcce848f05a0b3cbb660c_cgraph.png" border="0" usemap="#aclassBlob_ab87de632ea6fcce848f05a0b3cbb660c_cgraph" alt=""/></div>
+<map name="aclassBlob_ab87de632ea6fcce848f05a0b3cbb660c_cgraph" id="aclassBlob_ab87de632ea6fcce848f05a0b3cbb660c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,97,57"/>
+<area shape="rect" href="classBlob.html#a96ae9e85e7abde8b68d62318bedea43c" title=" " alt="" coords="151,5,239,32"/>
+<area shape="rect" href="classBlob.html#a8a8d34c9112cb907fdffcb5dbd2dd244" title="Destructor, which removes particles and forces from world." alt="" coords="145,56,244,83"/>
+<area shape="rect" href="classBlob.html#a8de0753ee636012125937459218762b6" title="Get center particle so you can apply forces or get position." alt="" coords="292,5,392,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a82e59867dc80c6bf78836d23a55786e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e59867dc80c6bf78836d23a55786e1">&#9670;&nbsp;</a></span>spawnBlob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Blob::spawnBlob </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>centerpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlob_a82e59867dc80c6bf78836d23a55786e1_cgraph.png" border="0" usemap="#aclassBlob_a82e59867dc80c6bf78836d23a55786e1_cgraph" alt=""/></div>
+<map name="aclassBlob_a82e59867dc80c6bf78836d23a55786e1_cgraph" id="aclassBlob_a82e59867dc80c6bf78836d23a55786e1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="classBlob.html#a8de0753ee636012125937459218762b6" title="Get center particle so you can apply forces or get position." alt="" coords="184,5,284,32"/>
+</map>
+</div>
 
 </div>
 </div>
