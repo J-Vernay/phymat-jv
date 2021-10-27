@@ -67,16 +67,14 @@ Blob::Blob(World& world, Vector3 centerpos, float radius, int slices, float mass
 
 
 void Blob::addInternalContacts(vector<ParticleContact>& contacts) {
-    // NOT WORKING
-    return;
-    
-    for (auto& f : _springs) {
-        auto [p1,p2] = f.getParticles();
-        auto contact = ParticleContact::fromCord(p1, p2, f.getRelaxedLength(), 0);
-        if (contact)
-            contacts.push_back(*contact);
+
+    for (int i = 0; i < _particles.size() - 1; ++i) {
+        for (int j = i + 1; j < _particles.size(); ++j) {
+            auto contact = ParticleContact::fromCollision(&_particles[i], &_particles[j], 1);
+            if (contact)
+                contacts.push_back(*contact);
+        }
     }
-    
 }
 
 void Blob::addExternalContacts(vector<ParticleContact>& contacts, Particle* other, float restitution) {

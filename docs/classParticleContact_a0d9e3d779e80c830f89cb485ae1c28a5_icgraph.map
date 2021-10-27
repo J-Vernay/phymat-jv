@@ -1,7 +1,7 @@
 <map id="ParticleContact::ParticleContact" name="ParticleContact::ParticleContact">
-<area shape="rect" id="node1" title="Constructs a particle contact." alt="" coords="511,23,687,65"/>
-<area shape="rect" id="node2" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="248,5,463,32"/>
-<area shape="rect" id="node4" href="$classParticleContact.html#a680fc7520f12796a69f40e19cac25395" title=" " alt="" coords="261,56,450,83"/>
+<area shape="rect" id="node1" title="Constructs a particle contact." alt="" coords="511,49,687,90"/>
+<area shape="rect" id="node2" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="248,31,463,57"/>
+<area shape="rect" id="node5" href="$classParticleContact.html#a680fc7520f12796a69f40e19cac25395" title=" " alt="" coords="261,81,450,108"/>
 <area shape="rect" id="node3" href="$classBlob.html#a13dbf4fc8236042fdefba994b3fd762a" title=" " alt="" coords="5,5,200,32"/>
-<area shape="rect" id="node5" href="$classBlob.html#a4c2de9a40b39f71832d57f40a5dfaf56" title=" " alt="" coords="7,56,198,83"/>
+<area shape="rect" id="node4" href="$classBlob.html#a4c2de9a40b39f71832d57f40a5dfaf56" title=" " alt="" coords="7,56,198,83"/>
 </map>
