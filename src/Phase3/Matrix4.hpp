@@ -3,7 +3,6 @@
 #include "Matrix3.hpp"
 #include "../Vector.hpp"
 
-#include "Quaternion.hpp"
 
 using namespace std;
 
@@ -31,9 +30,15 @@ public:
     Matrix4 operator*(Matrix4);
     //Vector3 operator*(Vector3);
 
-    Quaternion toQuaternion();
     Matrix3 getMatrix3();
     Vector3 getVector3();
+
+    Vector3 applyOnPt(Vector3);
+    Vector3 applyOnVec(Vector3);
+
 };
+
+Vector3 applyMatrixOnPt(Matrix4,Vector3);
+Vector3 applyMatrixOnVec(Matrix4,Vector3);
 
 

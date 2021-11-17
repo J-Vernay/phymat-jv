@@ -106,6 +106,36 @@ Vector3 Matrix4::getVector3(){
     return vct;
 }
 
-//Quaternion Matrix4::toQuaternion(){
+//Multiplication with Vec3 as Vec4. Last element set to 1
+Vector3 Matrix4::applyOnPt(Vector3 vec){
+    float x = elements[0]*vec.getx()+elements[1]*vec.gety()+elements[2]*vec.getz()+elements[3];
+    float y = elements[4]*vec.getx()+elements[5]*vec.gety()+elements[6]*vec.getz()+elements[7];
+    float z = elements[8]*vec.getx()+elements[9]*vec.gety()+elements[10]*vec.getz()+elements[11];
+    Vector3 newVec(x,y,z);
+    return newVec;
+}
 
-//}
+Vector3 applyMatrixOnPt(Matrix4 mtx,Vector3 vec){
+    float x = mtx.getElement(0)*vec.getx()+mtx.getElement(1)*vec.gety()+mtx.getElement(2)*vec.getz()+mtx.getElement(3);
+    float y = mtx.getElement(4)*vec.getx()+mtx.getElement(5)*vec.gety()+mtx.getElement(6)*vec.getz()+mtx.getElement(7);
+    float z = mtx.getElement(8)*vec.getx()+mtx.getElement(9)*vec.gety()+mtx.getElement(10)*vec.getz()+mtx.getElement(11);
+    Vector3 newVec(x,y,z);
+    return newVec;
+}
+
+//Multiplication with Vec3 as Vec4. Last element set to 0
+Vector3 Matrix4::applyOnVec(Vector3 vec){
+    float x = elements[0]*vec.getx()+elements[1]*vec.gety()+elements[2]*vec.getz();
+    float y = elements[4]*vec.getx()+elements[5]*vec.gety()+elements[6]*vec.getz();
+    float z = elements[8]*vec.getx()+elements[9]*vec.gety()+elements[10]*vec.getz();
+    Vector3 newVec(x,y,z);
+    return newVec;
+}
+
+Vector3 applyMatrixOnVec(Matrix4 mtx,Vector3 vec){
+    float x = mtx.getElement(0)*vec.getx()+mtx.getElement(1)*vec.gety()+mtx.getElement(2)*vec.getz();
+    float y = mtx.getElement(4)*vec.getx()+mtx.getElement(5)*vec.gety()+mtx.getElement(6)*vec.getz();
+    float z = mtx.getElement(8)*vec.getx()+mtx.getElement(9)*vec.gety()+mtx.getElement(10)*vec.getz();
+    Vector3 newVec(x,y,z);
+    return newVec;
+}
