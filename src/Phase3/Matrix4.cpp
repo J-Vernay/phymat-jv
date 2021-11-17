@@ -3,14 +3,14 @@
 
 
 Matrix4::Matrix4(){
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         elements[i]= 0;
     }
 }
 
 Matrix4::Matrix4(float newMatrix[]){
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         elements[i]= newMatrix[i];
     }
@@ -67,7 +67,7 @@ float Matrix4::getElement(int idx){
 
 Matrix4 Matrix4::operator+(Matrix4 mtx){
     Matrix4 newMtx;
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         newMtx.setElement(elements[i]+mtx.getElement(i), i);
     }
@@ -76,7 +76,7 @@ Matrix4 Matrix4::operator+(Matrix4 mtx){
 
 Matrix4 Matrix4::operator-(Matrix4 mtx){
     Matrix4 newMtx;
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         newMtx.setElement(elements[i]-mtx.getElement(i), i);
     }
