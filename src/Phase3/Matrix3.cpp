@@ -2,7 +2,7 @@
 
 Matrix3::Matrix3()
 {
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         elements[i]= 0;
     }
@@ -10,7 +10,7 @@ Matrix3::Matrix3()
 }
 
 Matrix3::Matrix3(float newMatrix[]){
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         elements[i]= newMatrix[i];
     }
@@ -110,7 +110,7 @@ Matrix3 Matrix3::getInverseMatrix(){
 
 Matrix3 Matrix3::operator+(Matrix3 mtx){
     Matrix3 newMtx;
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         newMtx.setElement(elements[i]+mtx.getElement(i), i);
     }
@@ -120,7 +120,7 @@ Matrix3 Matrix3::operator+(Matrix3 mtx){
 
 Matrix3 Matrix3::operator-(Matrix3 mtx){
     Matrix3 newMtx;
-    for (int i = 0; i < size(elements); i++)
+    for (int i = 0; i < sizeof(elements); i++)
     {
         newMtx.setElement(elements[i]-mtx.getElement(i), i);
     }
