@@ -1,22 +1,16 @@
 #pragma once
 
 #include "../Particle.hpp"
+#include "Quaternion.hpp"
+#include "Matrix3.hpp"
 
 class RigidBody
 {
 private:
     Particle massCenter;
-    /// 1 / mass of the particle, 0 for infinite mass = static object.  
-    float inverseMass;
-    /// Damping used for this particle: amount of velocity kept at each frame, simulating the friction.
-    float damping;
-    /// Position of the particle.
-    Vector3 position;
-    /// Velocity of the particle.
-    Vector3 velocity;
-    /// Orientation of the particle.
+    /// Orientation of the object.
     Quaternion orientation;
-    /// Rotation of the particle.
+    /// Rotation of the object.
     Vector3 rotation;
     /// To do the conversion BodySpace to WorldSpace
     Vector3 transformMatrix;
@@ -29,14 +23,6 @@ public:
     /// Setters and getters of the private attributes
     void setMassCenter(Particle);
     Particle getMassCenter();
-    void setInverseMass(float);
-    float getInverseMass();
-    void setDamping(float);
-    float getDamping();
-    void setPosition(Vector3);
-    Vector3 getPosition();
-    void setVelocity(Vector3);
-    Vector3 getVelocity();
     void setOrientation(Quaternion);
     Quaternion getOrientation();
     void setRotation(Vector3);

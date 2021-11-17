@@ -12,38 +12,6 @@ Particle RigidBody::getMassCenter() {
 	return massCenter;
 };
 
-void RigidBody::setInverseMass(float mass) {
-	this->inverseMass = mass;
-};
-
-float RigidBody::getInverseMass() {
-	return inverseMass;
-};
-
-void RigidBody::setDamping(float dampingCoeff) {
-	this->damping = dampingCoeff;
-};
-
-float RigidBody::getDamping() {
-	return damping;
-};
-
-void RigidBody::setPosition(Vector3 objectPosition) {
-	this->position = objectPosition;
-};
-
-Vector3 RigidBody::getPosition() {
-	return position;
-};
-
-void RigidBody::setVelocity(Vector3 objectVelocity) {
-	this->velocity = objectVelocity;
-};
-
-Vector3 RigidBody::getVelocity() {
-	return velocity;
-};
-
 void RigidBody::setOrientation(Quaternion objectOrientation) {
 	this->orientation = objectOrientation;
 };
