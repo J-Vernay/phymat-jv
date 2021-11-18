@@ -72,18 +72,22 @@ void Matrix3::transposeMatrix(){
 }
 
 Matrix3 Matrix3::getTransposeMatrix(){
-    Matrix3 transposed(elements);
+    Matrix3 transposed = *this;
     transposed.transposeMatrix();
     return transposed;
 }
 
 void Matrix3::inverseMatrix(){
+    
     float determinant = det();
+    //std::cout<<determinant<<std::endl;
     if(determinant == 0){
         cout<<"matrice non inversible"<<endl;
     }
     else{
-        Matrix3 transposed = getTransposeMatrix();
+        
+        Matrix3 transposed = this->getTransposeMatrix();
+        //std::cout<<"oui"<<std::endl;
         elements[0] = (transposed.getElement(4)*transposed.getElement(8)-transposed.getElement(7)*transposed.getElement(5))/determinant;
         elements[1] = -(transposed.getElement(3)*transposed.getElement(8)-transposed.getElement(6)*transposed.getElement(5))/determinant;
         elements[2] = (transposed.getElement(3)*transposed.getElement(7)-transposed.getElement(6)*transposed.getElement(4))/determinant;
@@ -97,7 +101,7 @@ void Matrix3::inverseMatrix(){
 }
 
 Matrix3 Matrix3::getInverseMatrix(){
-    Matrix3 inversed(elements);
+    Matrix3 inversed = *(this);
     if(inversed.det() == 0){
         cout<<"matrice non inversible"<<endl;
     }
@@ -105,7 +109,7 @@ Matrix3 Matrix3::getInverseMatrix(){
         inversed.inverseMatrix();
         return inversed;
     }
-    return NULL;
+    //return NULL;
 }
 
 Matrix3 Matrix3::operator+(Matrix3 mtx){

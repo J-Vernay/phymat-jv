@@ -20,7 +20,7 @@ public:
     Matrix4();
     Matrix4(float[]);
     Matrix4(float,float,float,float,float,float,float,float,float,float,float,float);
-    Matrix4(Matrix3, Vector3);
+    Matrix4(Matrix3, Vector3) ;
     
     void setElement(float, int);
     float getElement(int);
