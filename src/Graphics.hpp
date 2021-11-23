@@ -64,6 +64,8 @@ public:
 
     void draw(Particle const& p);
 
+    void draw(Vector3 pos, Vector3 color, float radius);
+
 private:
     GLUquadric* _quadric;
 };

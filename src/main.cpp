@@ -51,7 +51,7 @@ int main() {
             particleRenderer.draw(*p);
         }
 
-        spawner.draw();
+        spawner.draw(particleRenderer);
 
         // GUI drawings.
         window.begin_ui();

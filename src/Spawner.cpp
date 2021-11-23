@@ -30,7 +30,6 @@ void Spawner::ask_ui() {
         ImGui::SliderFloat("Damping", &_damp, 0, 1);
         ImGui::SliderFloat("Damping angulaire", &_angdamp, 0, 1);
         ImGui::SliderFloat3("Vélocité", (float*)&_velocity, -10, 10, "%.1fm/s");
-        ImGui::SliderFloat("Délai entre points", &_delay_s, 0, 1);
         if (ImGui::Button("Créer"))
             spawn_star();
     }
@@ -46,7 +45,7 @@ void Spawner::update(double current_time) {
     // Should we store the current position of mass center?
     if (current_time > _next_time) {
         _positions.push_back(pos);
-        _next_time = current_time + _delay_s;
+        _next_time = current_time + 0.1;
     }
     if (pos.getz() < -5) {
         _world.rigidbodyList.erase(&*_star);
@@ -54,7 +53,10 @@ void Spawner::update(double current_time) {
     }
 }
 
-void Spawner::draw() {
+void Spawner::draw(ParticleRenderer& particleRenderer) const {
     if (_star)
         _star->draw();
+    for (auto& pos : _positions) {
+        particleRenderer.draw(pos, Vector3(0.9, 0.4, 0.1), 0.1);
+    }
 }

@@ -29,7 +29,7 @@ static GLubyte _starIndices[] = {
     25,26,27,  25,27,28,  25,28,29,  25,29,26, // Face Y+
 };
 
-void Star::draw() {
+void Star::draw() const {
     glPushMatrix();
     auto p = getMassCenter();
     glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());

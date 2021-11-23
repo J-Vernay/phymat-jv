@@ -1,10 +1,11 @@
 <map id="Particle::getRadius" name="Particle::getRadius">
-<area shape="rect" id="node1" title="Get radius." alt="" coords="504,152,647,179"/>
-<area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="277,5,447,32"/>
-<area shape="rect" id="node4" href="$classFlotationForceGenerator.html#a1ecebdc58aff644d17e690910aa69cba" title=" " alt="" coords="268,57,456,98"/>
-<area shape="rect" id="node5" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="5,155,220,181"/>
-<area shape="rect" id="node6" href="$classParticleContact.html#a680fc7520f12796a69f40e19cac25395" title=" " alt="" coords="18,209,207,236"/>
-<area shape="rect" id="node7" href="$classParticleContact.html#a0d9e3d779e80c830f89cb485ae1c28a5" title="Constructs a particle contact." alt="" coords="274,174,450,215"/>
-<area shape="rect" id="node8" href="$classFlotationForceGenerator.html#aac9174560934257d03e340fd75bfd69e" title=" " alt="" coords="272,291,452,333"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="85,5,140,32"/>
+<area shape="rect" id="node1" title="Get radius." alt="" coords="607,177,749,204"/>
+<area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="380,31,549,57"/>
+<area shape="rect" id="node5" href="$classFlotationForceGenerator.html#a1ecebdc58aff644d17e690910aa69cba" title=" " alt="" coords="371,82,559,123"/>
+<area shape="rect" id="node6" href="$classParticleContact.html#a1d97bdd9f73993088492e0d38bffdce7" title=" " alt="" coords="108,180,323,207"/>
+<area shape="rect" id="node7" href="$classParticleContact.html#a680fc7520f12796a69f40e19cac25395" title=" " alt="" coords="121,235,310,261"/>
+<area shape="rect" id="node8" href="$classParticleContact.html#a0d9e3d779e80c830f89cb485ae1c28a5" title="Constructs a particle contact." alt="" coords="377,199,553,241"/>
+<area shape="rect" id="node9" href="$classFlotationForceGenerator.html#aac9174560934257d03e340fd75bfd69e" title=" " alt="" coords="375,317,555,358"/>
+<area shape="rect" id="node3" href="$classSpawner.html#a45942aadb8adf32a6723271f8b761607" title="Draw the star and the positions of center of mass." alt="" coords="156,5,275,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
 </map>

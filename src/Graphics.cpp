@@ -150,10 +150,13 @@ ParticleRenderer::~ParticleRenderer() {
 
 // Method to draw a specific kind of projectile
 void ParticleRenderer::draw(Particle const& p) {
+    draw(p.getPosition(), p.getColor(), p.getRadius());
+}
+
+void ParticleRenderer::draw(Vector3 pos, Vector3 color, float radius) {
     glPushMatrix();
-    glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
-    Vector3 color = p.getColor();
+    glTranslatef(pos.getx(),pos.gety(),pos.getz());
     glColor3f(color.getx(), color.gety(), color.getz());
-    gluSphere(_quadric, p.getRadius(), 100, 100);
+    gluSphere(_quadric, radius, 100, 100);
     glPopMatrix();
 }

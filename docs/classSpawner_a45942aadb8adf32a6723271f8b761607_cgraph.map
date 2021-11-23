@@ -1,0 +1,7 @@
+<map id="Spawner::draw" name="Spawner::draw">
+<area shape="rect" id="node1" title="Draw the star and the positions of center of mass." alt="" coords="5,56,124,83"/>
+<area shape="rect" id="node2" href="$classParticleRenderer.html#aa83ee0dd295cfd8673aaceb8de881e5c" title=" " alt="" coords="172,56,341,83"/>
+<area shape="rect" id="node3" href="$classParticle.html#a72ad0acaca6c9310123777004252ac6b" title="Get color." alt="" coords="398,5,531,32"/>
+<area shape="rect" id="node4" href="$classParticle.html#a889225014a4821e28590358d0b522c49" title="Get position." alt="" coords="389,56,540,83"/>
+<area shape="rect" id="node5" href="$classParticle.html#af89fe5aefd4e8e7b38cf1aae2230ddd5" title="Get radius." alt="" coords="393,107,536,133"/>
+</map>

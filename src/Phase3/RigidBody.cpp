@@ -12,7 +12,12 @@ void RigidBody::setMassCenter(Particle massCenterParticle) {
 	this->massCenter = massCenterParticle;
 };
 
+
 Particle& RigidBody::getMassCenter() {
+	return massCenter;
+};
+
+Particle const& RigidBody::getMassCenter() const {
 	return massCenter;
 };
 
@@ -20,7 +25,7 @@ void RigidBody::setOrientation(Quaternion objectOrientation) {
 	this->orientation = objectOrientation;
 };
 
-Quaternion RigidBody::getOrientation() {
+Quaternion RigidBody::getOrientation() const {
 	return orientation;
 };
 
@@ -28,7 +33,7 @@ void RigidBody::setRotation(Vector3 objectRotation) {
 	this->rotation = objectRotation;
 };
 
-Vector3 RigidBody::getRotation() {
+Vector3 RigidBody::getRotation() const {
 	return rotation;
 };
 
@@ -36,7 +41,7 @@ void RigidBody::setTransformMatrix(Matrix4 matrixBodyToWorld) {
 	this->transformMatrix = matrixBodyToWorld;
 };
 
-Matrix4 RigidBody::getTransformMatrix() {
+Matrix4 RigidBody::getTransformMatrix() const {
 	return transformMatrix;
 };
 
@@ -44,7 +49,7 @@ void RigidBody::setInvertInertiaTensor(Matrix3 invertInertia) {
 	this->invertInertiaTensor = invertInertia;
 };
 
-Matrix3 RigidBody::getInvertInertiaTensor() {
+Matrix3 RigidBody::getInvertInertiaTensor() const {
 	return invertInertiaTensor;
 };
 
@@ -52,7 +57,7 @@ void RigidBody::setAngularDamping(float angularDampingCoeff) {
 	this->angularDamping = angularDampingCoeff;
 };
 
-float RigidBody::getAngularDamping() {
+float RigidBody::getAngularDamping() const {
 	return angularDamping;
 };
 

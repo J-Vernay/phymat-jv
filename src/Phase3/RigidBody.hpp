@@ -25,16 +25,17 @@ public:
     /// Setters and getters of the private attributes
     void setMassCenter(Particle);
     Particle& getMassCenter();
+    Particle const& getMassCenter() const;
     void setOrientation(Quaternion);
-    Quaternion getOrientation();
+    Quaternion getOrientation() const;
     void setRotation(Vector3);
-    Vector3 getRotation();
+    Vector3 getRotation() const;
     void setTransformMatrix(Matrix4);
-    Matrix4 getTransformMatrix();
+    Matrix4 getTransformMatrix() const;
     void setInvertInertiaTensor(Matrix3);
-    Matrix3 getInvertInertiaTensor();
+    Matrix3 getInvertInertiaTensor() const;
     void setAngularDamping(float);
-    float getAngularDamping();
+    float getAngularDamping() const;
     /// Method to calculate the transformMatrix
     void calculateDerivedDatas();
     /// Accumulator of forces for the current frame

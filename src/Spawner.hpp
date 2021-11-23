@@ -3,6 +3,7 @@
 #include "Vector.hpp"
 #include "Phase3/Star.hpp"
 #include "World.hpp"
+#include "Graphics.hpp"
 #include <array>
 #include <optional>
 
@@ -22,7 +23,7 @@ public:
     void update(double current_time);
 
     /// Draw the star and the positions of center of mass.
-    void draw();
+    void draw(ParticleRenderer& particleRenderer) const;
 
 private:
     World& _world;        ///< World to spawn star in.
@@ -30,7 +31,6 @@ private:
     vector<Vector3> _positions; ///< Positions of center of mass.
 
     double _next_time = 0; ///< Next time to add a position.
-    float _delay_s = 1;    ///< Time between storing positions of center of mass.
 
     float   _mass = 10;          ///< Mass of the star to be spawned.
     float   _damp = 1;           ///< Damping of the star to be spawned.
