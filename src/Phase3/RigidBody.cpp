@@ -100,7 +100,7 @@ void RigidBody::clearAccumulators() {
 }
 
 void RigidBody::integrate(float time) {
-	// Integrate mass center.
+	// Integrate mass center (linear acceleration/velocity).
 	massCenter.integrate(time);
 	
 	// Update orientation
