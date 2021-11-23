@@ -45,7 +45,6 @@ class Quaternion
         Quaternion operator+(Quaternion other); // Addition
         Quaternion operator-(Quaternion other); //Soustraction
         Quaternion operator*(Quaternion other); //Multiplication
-        Quaternion operator*(const float k); //Multiplication
         // Quaternion operator^(int); //Exponentiation
 
 };

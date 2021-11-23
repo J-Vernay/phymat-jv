@@ -87,7 +87,7 @@
 
     //Normalise le quaternion
     void Quaternion::normalize(){
-        *this = this->operator*(1/getNorm());
+        *this = *this * (1/getNorm());
     }
     
     //Overload of operators :
@@ -101,10 +101,6 @@
 
     Quaternion Quaternion::operator*(Quaternion other){
         return Quaternion(this->w*other.getW() - this->x*other.getX() - this->y*other.getY() - this->z*other.getZ(), this->w*other.getX() + this->x*other.getW() + this->y*other.getZ() - this->z*other.getY(), this->w*other.getY() + this->y*other.getW() + this->z*other.getX() - this->x*other.getZ(), this->w*other.getZ() + this->z*other.getW() + this->x*other.getY() - this->y*other.getX());
-    } //Multiplication
-
-    Quaternion Quaternion::operator*(const float k){
-        return Quaternion(k * this->w, k * this->x, k * this->y, k * this->z);
     } //Multiplication
 
 /*,,

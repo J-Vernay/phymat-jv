@@ -18,6 +18,7 @@ void Spawner::spawn_star() {
     RigidBody rigidBody{massCenter, Matrix3::identity(), _angdamp};
     _star = Star{rigidBody};
     _world.rigidbodyList.insert(&*_star);
+    _star->addForceAtPoint({0, 0, 5000}, {0, 0, 2});
 }
 
 void Spawner::ask_ui() {

@@ -3,6 +3,8 @@
 RigidBody::RigidBody(Particle newMassCenter, Matrix3 newInertia, float newAngDamping) :
 	massCenter(newMassCenter)
 {
+	orientation = Quaternion{1,0,0,0};
+	transformMatrix = Matrix4::identity();
 	newInertia.inverseMatrix();
 	this->setInvertInertiaTensor(newInertia);
 	this->setAngularDamping(newAngDamping);
@@ -83,20 +85,18 @@ void RigidBody::calculateDerivedDatas() {
 	// Create the matrix bodyspace to worldspace
 	Matrix4 transform = Matrix4(M, position);
 	this->setTransformMatrix(transform);
-	Matrix3 invM = M.getInverseMatrix();
-	Matrix3 invertInertiaTensor = (M.operator*(invertInertiaTensor)).operator*(invM);
-	this->setInvertInertiaTensor(invertInertiaTensor);
+	globalInvertInertiaTensor = M * this->invertInertiaTensor * M.getInverseMatrix();
 }
 
 void RigidBody::addForceAtPoint(Vector3 force, Vector3 point) {
 	Vector3 massCenterPosition = massCenter.getPosition();
-	Vector3 pointCOM = massCenterPosition - point;
+	Vector3 pointCOM = point - massCenterPosition;
 	massCenter.accumulationOfForces += force;
-	accumulationOfTorques = accumulationOfTorques + point.vectorialProduct(force);
+	accumulationOfTorques += point.vectorialProduct(force);
 }
 
 void RigidBody::addForceAtBodyPoint(Vector3 force, Vector3 point) {
-	Vector3 pointWorld = transformMatrix.getMatrix3() * point;
+	Vector3 pointWorld = transformMatrix.applyOnPt(point);
 	this->addForceAtPoint(force, pointWorld);
 }
 
@@ -108,10 +108,12 @@ void RigidBody::clearAccumulators() {
 void RigidBody::integrate(float time) {
 	// Integrate mass center (linear acceleration/velocity).
 	massCenter.integrate(time);
-	Vector3 angularAcceleration = invertInertiaTensor.operator*(accumulationOfTorques);
-	Vector3 rotation = pow(angularDamping, time)*this->rotation + angularAcceleration * time;
+
+	Vector3 angularAcceleration = invertInertiaTensor * accumulationOfTorques;
+	rotation = pow(angularDamping, time) * rotation + angularAcceleration * time;
 	Quaternion rotationQuaternion = Quaternion(0,rotation);
-	Quaternion orientation = operator*((operator*(rotationQuaternion.operator*(orientation),time)),0.5);
+	orientation = orientation + 0.5f * rotationQuaternion * orientation * time;
+
 	// Calculate the transform matrix
 	calculateDerivedDatas();
 	// Clear the accumulators of forces and torques

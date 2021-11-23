@@ -17,6 +17,9 @@ private:
  */
     float elements[12];
 public:
+
+    static Matrix4 identity() { return Matrix4{1,0,0,0,0,1,0,0,0,0,1,0}; }
+
     Matrix4();
     Matrix4(float[]);
     Matrix4(float,float,float,float,float,float,float,float,float,float,float,float);

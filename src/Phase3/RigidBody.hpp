@@ -17,6 +17,8 @@ private:
     Matrix4 transformMatrix;
     /// Inertia momentum of the object
     Matrix3 invertInertiaTensor;
+    /// Inertia in world space.
+    Matrix3 globalInvertInertiaTensor;
     /// Amount of angular velocity kept at each frame, simulating the friction.
     float angularDamping;
 public:
