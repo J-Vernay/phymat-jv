@@ -21,6 +21,8 @@ private:
     Matrix3 globalInvertInertiaTensor;
     /// Amount of angular velocity kept at each frame, simulating the friction.
     float angularDamping;
+    /// Accumulator of torques for the current frame
+    Vector3 accumulationOfTorques;
 public:
     /// Constructor
     RigidBody(Particle,Matrix3,float);
@@ -40,10 +42,6 @@ public:
     float getAngularDamping() const;
     /// Method to calculate the transformMatrix
     void calculateDerivedDatas();
-    /// Accumulator of forces for the current frame
-    Vector3 accumulationOfForces;
-    /// Accumulator of torques for the current frame
-    Vector3 accumulationOfTorques;
     /// To apply some force to some point
     void addForceAtPoint(Vector3, Vector3);
     /// To apply some force to some point depending on the object position

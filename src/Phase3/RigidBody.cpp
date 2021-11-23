@@ -111,7 +111,7 @@ void RigidBody::integrate(float time) {
 
 	Vector3 angularAcceleration = invertInertiaTensor * accumulationOfTorques;
 	rotation = pow(angularDamping, time) * rotation + angularAcceleration * time;
-	Quaternion rotationQuaternion = Quaternion(0,rotation);
+	Quaternion rotationQuaternion = Quaternion(0, rotation);
 	orientation = orientation + 0.5f * rotationQuaternion * orientation * time;
 
 	// Calculate the transform matrix

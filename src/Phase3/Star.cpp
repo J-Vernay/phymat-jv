@@ -34,6 +34,7 @@ void Star::draw() const {
     auto p = getMassCenter();
     glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
     auto q = getOrientation();
+    q.normalize();
     auto angle = acos(q.getW());
     auto axis = q.getImaginaryNumbers();
     glRotatef(angle, axis.getx(), axis.gety(), axis.getz());
