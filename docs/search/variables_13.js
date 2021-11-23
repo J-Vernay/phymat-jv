@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_417',['y',['../classVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13',1,'Vector3']]]
+  ['w_527',['w',['../classQuaternion.html#aa44a65ab99e36f6ab8771030eed8a7ad',1,'Quaternion']]]
 ];

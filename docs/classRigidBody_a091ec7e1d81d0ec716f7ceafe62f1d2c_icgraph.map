@@ -1,0 +1,4 @@
+<map id="RigidBody::addForceAtPoint" name="RigidBody::addForceAtPoint">
+<area shape="rect" id="node1" title="To apply some force to some point." alt="" coords="255,13,456,39"/>
+<area shape="rect" id="node2" href="$classRigidBody.html#a188f8d550b7c44fa1b5d479aca018081" title="To apply some force to some point depending on the object position." alt="" coords="5,5,207,47"/>
+</map>

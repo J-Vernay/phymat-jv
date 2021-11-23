@@ -22,10 +22,6 @@ class Particle {
         float radius;
 
     public:
-        /// Virtual destructor to enable polymorphism in this class hierarchy,
-        /// allowing for instance dynamic_cast .
-        virtual ~Particle() {}
-
         /// Accumulator of forces for the current frame, which is modified
         /// by force generators each frame.
         Vector3 accumulationOfForces;

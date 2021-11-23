@@ -1,8 +1,8 @@
 <map id="ParticleRod" name="ParticleRod">
-<area shape="rect" id="node1" title=" " alt="" coords="351,1021,472,1099"/>
-<area shape="rect" id="node2" href="$classParticleLink.html" title=" " alt="" coords="252,895,389,972"/>
-<area shape="rect" id="node3" href="$classParticleContactGenerator.html" title=" " alt="" coords="5,667,191,744"/>
-<area shape="rect" id="node4" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="215,579,426,832"/>
+<area shape="rect" id="node1" title=" " alt="" coords="351,1007,472,1084"/>
+<area shape="rect" id="node2" href="$classParticleLink.html" title=" " alt="" coords="252,880,389,957"/>
+<area shape="rect" id="node3" href="$classParticleContactGenerator.html" title=" " alt="" coords="5,659,191,737"/>
+<area shape="rect" id="node4" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="215,579,426,817"/>
 <area shape="rect" id="node5" title=" " alt="" coords="362,5,413,83"/>
 <area shape="rect" id="node6" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="311,175,464,472"/>
 </map>

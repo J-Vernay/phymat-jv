@@ -47,7 +47,7 @@ struct Camera {
     float target[3] = {0,0,0}; ///< Where the camera is looking at.
     float distance = 10;       ///< How far is the camera from the target.
     float fieldOfView = 70;    ///< Field of view in degrees.
-    float angle[2] = {0,80};   ///< Horizontal and vertical angles in degrees.
+    float angle[2] = {0,30};   ///< Horizontal and vertical angles in degrees.
 };
 
 /// Shows the ImGui UI for controlling camera.

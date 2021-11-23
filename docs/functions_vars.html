@@ -65,8 +65,8 @@ $(function() {
 &#160;
 
 <h3><a id="index__5F"></a>- _ -</h3><ul>
-<li>_autofire
-: <a class="el" href="classSpawner.html#a230b667adc226f423732d61c39db278e">Spawner</a>
+<li>_angdamp
+: <a class="el" href="classSpawner.html#a4dc011fed88821ae74916053fee9357b">Spawner</a>
 </li>
 <li>_controls
 : <a class="el" href="classWindow.html#ac5444a82e2018d2be1b8a0f5eb196a8f">Window</a>
@@ -80,24 +80,20 @@ $(function() {
 <li>_height
 : <a class="el" href="classWindow.html#aa68001bc905c217d9a82bbcced22b585">Window</a>
 </li>
-<li>_integrator
-: <a class="el" href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">Spawner</a>
-</li>
 <li>_mass
 : <a class="el" href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">Spawner</a>
 </li>
 <li>_next_time
 : <a class="el" href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">Spawner</a>
 </li>
-<li>_particles
-: <a class="el" href="classBlob.html#a3ddf3729b3c3a8c2eb923c183f71d13f">Blob</a>
-, <a class="el" href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">Spawner</a>
+<li>_positions
+: <a class="el" href="classSpawner.html#a854082f1e7a90c3123217ddbbe536979">Spawner</a>
 </li>
 <li>_quadric
 : <a class="el" href="classParticleRenderer.html#ae36a9df019cc6028281258252688f9b8">ParticleRenderer</a>
 </li>
-<li>_springs
-: <a class="el" href="classBlob.html#a25a4197ab775225fd91a57c786644845">Blob</a>
+<li>_star
+: <a class="el" href="classSpawner.html#ae2ad1ad0e350ea54e809db1f298e73aa">Spawner</a>
 </li>
 <li>_velocity
 : <a class="el" href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">Spawner</a>
@@ -109,7 +105,7 @@ $(function() {
 : <a class="el" href="classWindow.html#ad46f7d2b73772b479eaac49b267c2141">Window</a>
 </li>
 <li>_world
-: <a class="el" href="classBlob.html#adb0e72e1fe1fe545abe26aaca78c1778">Blob</a>
+: <a class="el" href="classSpawner.html#a9392fd15a8bea1faacd1d36c0ae79916">Spawner</a>
 </li>
 </ul>
 
@@ -117,9 +113,16 @@ $(function() {
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>accumulationOfForces
 : <a class="el" href="classParticle.html#aad065af6f2e7d35330139df0751c9605">Particle</a>
+, <a class="el" href="classRigidBody.html#a522d7b083b41c054292ea5e678aadf80">RigidBody</a>
+</li>
+<li>accumulationOfTorques
+: <a class="el" href="classRigidBody.html#a35c3e10644434c0e0bab96f13946f8ce">RigidBody</a>
 </li>
 <li>angle
 : <a class="el" href="structCamera.html#a02990c2c581654a5dc12c281fc829c28">Camera</a>
+</li>
+<li>angularDamping
+: <a class="el" href="classRigidBody.html#a7f8bb8c01043a5c67e4e5add2fbd25ad">RigidBody</a>
 </li>
 </ul>
 
@@ -155,6 +158,10 @@ $(function() {
 : <a class="el" href="classBungeeCordForceGenerator.html#a0959ad3233346b36d5b16e24b89326e8">BungeeCordForceGenerator</a>
 , <a class="el" href="classSpringForceGenerator.html#aaa7b74265b7fc9bc0c1623aa188e25f7">SpringForceGenerator</a>
 </li>
+<li>elements
+: <a class="el" href="classMatrix3.html#a9fc2785e2e8cc57c3a866c09c3bbc8be">Matrix3</a>
+, <a class="el" href="classMatrix4.html#a0def2a5eda2ebaf07eaa7ff90425b2ad">Matrix4</a>
+</li>
 </ul>
 
 
@@ -184,6 +191,9 @@ $(function() {
 <li>inverseMass
 : <a class="el" href="classParticle.html#a6b8cd31d41129765d7e6daa895188a88">Particle</a>
 </li>
+<li>invertInertiaTensor
+: <a class="el" href="classRigidBody.html#a136b3590f172e51f5f31fc8222857417">RigidBody</a>
+</li>
 </ul>
 
 
@@ -208,14 +218,14 @@ $(function() {
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>massCenter
+: <a class="el" href="classRigidBody.html#a4d2d3e8b6b35b8df0cbd8c5d0bb3a726">RigidBody</a>
+</li>
 <li>maxDepth
 : <a class="el" href="classFlotationForceGenerator.html#aaa350acc6fc1c1ff02bb45f2d531a29e">FlotationForceGenerator</a>
 </li>
 <li>maxLength
 : <a class="el" href="classParticleCable.html#a38d141cd3276f7812a86f7c443745ce5">ParticleCable</a>
-</li>
-<li>MaxParticles
-: <a class="el" href="classSpawner.html#acb1a37a2f5a9328c9e7476762ba660c5">Spawner</a>
 </li>
 </ul>
 
@@ -223,6 +233,13 @@ $(function() {
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>normale
 : <a class="el" href="classParticleContact.html#a1efa4c975919b4722af7b5b416a31fb9">ParticleContact</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>orientation
+: <a class="el" href="classRigidBody.html#abe4963daa5ceff22cb7fed5fc0116001">RigidBody</a>
 </li>
 </ul>
 
@@ -273,12 +290,21 @@ $(function() {
 <li>right
 : <a class="el" href="structControls.html#af95393ff95178a80fa85f64a8a4bded3">Controls</a>
 </li>
+<li>rigidbodyList
+: <a class="el" href="classWorld.html#aaaa8da30c3c88335a6609c60963111ef">World</a>
+</li>
+<li>rotation
+: <a class="el" href="classRigidBody.html#a8549cad23411c5846bf91d08a2b31e80">RigidBody</a>
+</li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>target
 : <a class="el" href="structCamera.html#ab0079c202a689fb29eabec3502b78311">Camera</a>
+</li>
+<li>transformMatrix
+: <a class="el" href="classRigidBody.html#a71aed919af049d0f7ef557f232602c8c">RigidBody</a>
 </li>
 </ul>
 
@@ -300,23 +326,33 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>w
+: <a class="el" href="classQuaternion.html#aa44a65ab99e36f6ab8771030eed8a7ad">Quaternion</a>
+</li>
+</ul>
+
+
 <h3><a id="index_x"></a>- x -</h3><ul>
 <li>x
-: <a class="el" href="classVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">Vector3</a>
+: <a class="el" href="classQuaternion.html#a8b80f191a3155cc0158d2b4f4d50b2cb">Quaternion</a>
+, <a class="el" href="classVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">Vector3</a>
 </li>
 </ul>
 
 
 <h3><a id="index_y"></a>- y -</h3><ul>
 <li>y
-: <a class="el" href="classVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">Vector3</a>
+: <a class="el" href="classQuaternion.html#a3bd3f270462944423611f44e19d2511b">Quaternion</a>
+, <a class="el" href="classVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">Vector3</a>
 </li>
 </ul>
 
 
 <h3><a id="index_z"></a>- z -</h3><ul>
 <li>z
-: <a class="el" href="classVector3.html#aa8c9461eb24bd2c364258078811a3e9d">Vector3</a>
+: <a class="el" href="classQuaternion.html#a625cb732d8ff3083e7852b86b736ab29">Quaternion</a>
+, <a class="el" href="classVector3.html#aa8c9461eb24bd2c364258078811a3e9d">Vector3</a>
 </li>
 </ul>
 </div><!-- contents -->

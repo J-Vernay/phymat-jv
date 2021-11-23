@@ -154,6 +154,6 @@ void ParticleRenderer::draw(Particle const& p) {
     glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
     Vector3 color = p.getColor();
     glColor3f(color.getx(), color.gety(), color.getz());
-    gluSphere(_quadric, p.getRadius(), 20, 20);
+    gluSphere(_quadric, p.getRadius(), 100, 100);
     glPopMatrix();
 }

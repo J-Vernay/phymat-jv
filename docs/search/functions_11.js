@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7eblob_360',['~Blob',['../classBlob.html#a8a8d34c9112cb907fdffcb5dbd2dd244',1,'Blob']]],
-  ['_7eparticle_361',['~Particle',['../classParticle.html#a058b1abe765620e5c5bad2aad654e6bc',1,'Particle']]],
-  ['_7eparticlecontact_362',['~ParticleContact',['../classParticleContact.html#a584513dc30aad490602e74198a836a27',1,'ParticleContact']]],
-  ['_7eparticlerenderer_363',['~ParticleRenderer',['../classParticleRenderer.html#a281be31ad850fead012460fb6675db98',1,'ParticleRenderer']]],
-  ['_7ewindow_364',['~Window',['../classWindow.html#ae6b4e3e731f32506a8ae77790b08584e',1,'Window']]]
+  ['vector3_460',['Vector3',['../classVector3.html#a0f49191f7e001e7f7ae1cb49522118b4',1,'Vector3::Vector3()'],['../classVector3.html#ac7fb9f2ec401ed999218d0fa828365d4',1,'Vector3::Vector3(float, float, float)']]],
+  ['vectorialproduct_461',['vectorialProduct',['../classVector3.html#aaf4d0467e1eadab989cfdb129cbc5d69',1,'Vector3::vectorialProduct()'],['../Vector_8cpp.html#ad86e796865f23bab67e02d639af21140',1,'vectorialProduct(Vector3 v1, Vector3 v2):&#160;Vector.cpp'],['../Vector_8hpp.html#a4b2300dc5454f99d4fc87f7d0956289f',1,'vectorialProduct(Vector3, Vector3):&#160;Vector.cpp']]],
+  ['vscalculation_462',['vsCalculation',['../classParticleContact.html#a689235322b0242aa9a6317ed66f66b7e',1,'ParticleContact']]]
 ];

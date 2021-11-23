@@ -24,7 +24,7 @@ public:
     RigidBody(Particle,Matrix3,float);
     /// Setters and getters of the private attributes
     void setMassCenter(Particle);
-    Particle getMassCenter();
+    Particle& getMassCenter();
     void setOrientation(Quaternion);
     Quaternion getOrientation();
     void setRotation(Vector3);

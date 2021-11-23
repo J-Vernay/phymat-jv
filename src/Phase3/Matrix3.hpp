@@ -10,6 +10,10 @@ private:
     float elements[9];
 
 public:
+    static Matrix3 identity() {
+        return Matrix3(1, 0, 0, 0, 1, 0, 0, 0, 1);
+    }
+
     Matrix3();
     Matrix3(float[]);
     Matrix3(float,float,float,float,float,float,float,float,float);

@@ -4,14 +4,20 @@
 #include <algorithm>
 #include <bits/ranges_algo.h>
 
-void Spawner::spawn_particle() {
-    if (_particles.size() >= MaxParticles)
-        return; /// Cannot spawn particle, already full.
-    
+void Spawner::spawn_star() {
+    _positions.resize(0);
+
+    if (_star) {
+        _world.rigidbodyList.erase(&*_star);
+        _star = {};
+    }
+
     // Initial position is (0,0,2).
-    _particles.push_back(Particle(_mass, Vector3(0,0,2), /*color*/{}, /*radius*/0.5f, _damp));
-    _particles.back().setVelocity(_velocity);
-    _integrator.particleList.insert(&_particles.back());
+    Particle massCenter{_mass, Vector3(0, 0, 2), Vector3(0.6, 0.1, 0.1), 1, _damp};
+    massCenter.setVelocity(_velocity);
+    RigidBody rigidBody{massCenter, Matrix3::identity(), _angdamp};
+    _star = Star{rigidBody};
+    _world.rigidbodyList.insert(&*_star);
 }
 
 void Spawner::ask_ui() {
@@ -22,29 +28,33 @@ void Spawner::ask_ui() {
 
         ImGui::SliderFloat("Masse", &_mass, 0.1, 100, "%.1fkg");
         ImGui::SliderFloat("Damping", &_damp, 0, 1);
+        ImGui::SliderFloat("Damping angulaire", &_angdamp, 0, 1);
         ImGui::SliderFloat3("Vélocité", (float*)&_velocity, -10, 10, "%.1fm/s");
+        ImGui::SliderFloat("Délai entre points", &_delay_s, 0, 1);
         if (ImGui::Button("Créer"))
-            spawn_particle();
-        
-        ImGui::SliderFloat("Délai auto", &_delay_s, 0.1, 2, "%.2f secondes");
-        ImGui::Checkbox("Auto-créer", &_autofire);
-
+            spawn_star();
     }
     ImGui::End();
 }
 
+
 void Spawner::update(double current_time) {
-    // Should we spawn a new bullet?
-    if (_autofire && current_time > _next_time) {
-        spawn_particle();
+    
+    if (!_star) return;
+
+    auto pos = _star->getMassCenter().getPosition();
+    // Should we store the current position of mass center?
+    if (current_time > _next_time) {
+        _positions.push_back(pos);
         _next_time = current_time + _delay_s;
     }
-    // Remove particles which are deep below ground.
-    auto new_end = std::remove_if(_particles.begin(), _particles.end(), [](Particle const& p) {
-        return p.getPosition().getz() < -5;
-    });
-    for (auto it = new_end; it != _particles.end(); ++it) {
-        _integrator.particleList.erase(&*it);
+    if (pos.getz() < -5) {
+        _world.rigidbodyList.erase(&*_star);
+        _star = {};
     }
-    _particles.erase(new_end, _particles.end());
+}
+
+void Spawner::draw() {
+    if (_star)
+        _star->draw();
 }

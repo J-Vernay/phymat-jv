@@ -3,6 +3,7 @@
 #include <vector>
 #include <math.h>
 
+#include "Phase3/RigidBody.hpp"
 #include "Vector.hpp"
 #include "Particle.hpp"
 #include "Phase2/GravityGenerator.hpp"
@@ -26,12 +27,15 @@ private:
     double deltaTime;
 public:
 
-    /// List of all particles managed by the Integrator.
+    /// List of all particles managed in the World.
     /// Public because the user has the responsibility to keep it updated with the system.
     unordered_set<Particle*> particleList;
-    /// List of all force generators managed by the Integrator.
+    /// List of all force generators managed in the World.
     /// Public because the user has the responsibility to keep it updated with the system.
     unordered_set<ParticleForceGenerator*> registerOfForces;
+    /// List of all rigid bodies managed in the World.
+    /// Public because the user has the responsibility to keep it updated with the system.
+    unordered_set<RigidBody*> rigidbodyList;
 
     /// Constructs an empty Integrator (with no particles and no force generators).
     World();

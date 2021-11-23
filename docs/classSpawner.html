@@ -65,14 +65,13 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classSpawner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Spawner Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class responsible for creating new particles in the world.  
+<p>Class responsible for creating a star in the world.  
  <a href="classSpawner.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Spawner_8hpp_source.html">Spawner.hpp</a>&gt;</code></p>
@@ -81,71 +80,72 @@ Collaboration diagram for Spawner:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawner__coll__graph.png" border="0" usemap="#aSpawner_coll__map" alt="Collaboration graph"/></div>
 <map name="aSpawner_coll__map" id="aSpawner_coll__map">
-<area shape="rect" title="Class responsible for creating new particles in the world." alt="" coords="385,792,530,913"/>
-<area shape="rect" title=" " alt="" coords="5,608,152,685"/>
-<area shape="rect" title=" " alt="" coords="229,285,296,362"/>
-<area shape="rect" href="classWorld.html" title=" " alt="" coords="381,564,533,729"/>
-<area shape="rect" title=" " alt="" coords="188,5,239,83"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="786,175,939,472"/>
-<area shape="rect" title=" " alt="" coords="557,608,608,685"/>
-<area shape="rect" title=" " alt="" coords="632,608,773,685"/>
-<area shape="rect" title=" " alt="" coords="320,277,533,369"/>
-<area shape="rect" title=" " alt="" coords="558,285,762,362"/>
+<area shape="rect" title="Class responsible for creating a star in the world." alt="" coords="739,807,860,943"/>
+<area shape="rect" title=" " alt="" coords="57,285,124,362"/>
+<area shape="rect" href="classWorld.html" title=" " alt="" coords="464,579,616,744"/>
+<area shape="rect" title=" " alt="" coords="16,5,66,83"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="860,175,1014,472"/>
+<area shape="rect" title=" " alt="" coords="938,623,1080,700"/>
+<area shape="rect" title=" " alt="" coords="1105,623,1236,700"/>
+<area shape="rect" title=" " alt="" coords="622,277,836,369"/>
+<area shape="rect" title=" " alt="" coords="147,285,370,362"/>
+<area shape="rect" title=" " alt="" coords="394,285,598,362"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af3843ed062c40f17531ee89326acb882"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#af3843ed062c40f17531ee89326acb882">Spawner</a> (<a class="el" href="classWorld.html">World</a> &amp;integrator)</td></tr>
-<tr class="memdesc:af3843ed062c40f17531ee89326acb882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spawner to spawn particles in given integrator.  <a href="classSpawner.html#af3843ed062c40f17531ee89326acb882">More...</a><br /></td></tr>
-<tr class="separator:af3843ed062c40f17531ee89326acb882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d0d5c188904285fd1320ba445f6e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20">spawn_particle</a> ()</td></tr>
-<tr class="memdesc:ac8d0d5c188904285fd1320ba445f6e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a particle according to user choices.  <a href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20">More...</a><br /></td></tr>
-<tr class="separator:ac8d0d5c188904285fd1320ba445f6e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a02838a6ba5eb22555dad4f265dbd27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a8a02838a6ba5eb22555dad4f265dbd27">Spawner</a> (<a class="el" href="classWorld.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a8a02838a6ba5eb22555dad4f265dbd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spawner to spawn a star in given integrator.  <a href="classSpawner.html#a8a02838a6ba5eb22555dad4f265dbd27">More...</a><br /></td></tr>
+<tr class="separator:a8a02838a6ba5eb22555dad4f265dbd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05da6d78b7acb594f1b5674a1ac12f77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a05da6d78b7acb594f1b5674a1ac12f77">spawn_star</a> ()</td></tr>
+<tr class="memdesc:a05da6d78b7acb594f1b5674a1ac12f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a star according to user choices.  <a href="classSpawner.html#a05da6d78b7acb594f1b5674a1ac12f77">More...</a><br /></td></tr>
+<tr class="separator:a05da6d78b7acb594f1b5674a1ac12f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafe107dcff01c2d8655d6607f0dc361d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d">ask_ui</a> ()</td></tr>
-<tr class="memdesc:aafe107dcff01c2d8655d6607f0dc361d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prompt a ImGui UI to let user choose the particle properties.  <a href="classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d">More...</a><br /></td></tr>
+<tr class="memdesc:aafe107dcff01c2d8655d6607f0dc361d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prompt a ImGui UI to let user choose the star properties.  <a href="classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d">More...</a><br /></td></tr>
 <tr class="separator:aafe107dcff01c2d8655d6607f0dc361d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945f0550c27a3edcb2e81a6c7bc2a181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a945f0550c27a3edcb2e81a6c7bc2a181">update</a> (double current_time)</td></tr>
-<tr class="memdesc:a945f0550c27a3edcb2e81a6c7bc2a181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a particle should spawn now.  <a href="classSpawner.html#a945f0550c27a3edcb2e81a6c7bc2a181">More...</a><br /></td></tr>
+<tr class="memdesc:a945f0550c27a3edcb2e81a6c7bc2a181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the spawner, eventually adding new position of center of mass, and despawn star if negative Z.  <a href="classSpawner.html#a945f0550c27a3edcb2e81a6c7bc2a181">More...</a><br /></td></tr>
 <tr class="separator:a945f0550c27a3edcb2e81a6c7bc2a181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1b9ff39ebc428e201cb6232840ac8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a9f1b9ff39ebc428e201cb6232840ac8c">draw</a> ()</td></tr>
+<tr class="memdesc:a9f1b9ff39ebc428e201cb6232840ac8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the star and the positions of center of mass.  <a href="classSpawner.html#a9f1b9ff39ebc428e201cb6232840ac8c">More...</a><br /></td></tr>
+<tr class="separator:a9f1b9ff39ebc428e201cb6232840ac8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2d8a91d4f147af90b56d544da0e5eabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">_integrator</a></td></tr>
-<tr class="memdesc:a2d8a91d4f147af90b56d544da0e5eabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrator to spawn particles in.  <a href="classSpawner.html#a2d8a91d4f147af90b56d544da0e5eabd">More...</a><br /></td></tr>
-<tr class="separator:a2d8a91d4f147af90b56d544da0e5eabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4046c557ebb84aa8195a24eac41f2e1"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classParticle.html">Particle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">_particles</a></td></tr>
-<tr class="memdesc:ac4046c557ebb84aa8195a24eac41f2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">All living particles spawned.  <a href="classSpawner.html#ac4046c557ebb84aa8195a24eac41f2e1">More...</a><br /></td></tr>
-<tr class="separator:ac4046c557ebb84aa8195a24eac41f2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9392fd15a8bea1faacd1d36c0ae79916"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a9392fd15a8bea1faacd1d36c0ae79916">_world</a></td></tr>
+<tr class="memdesc:a9392fd15a8bea1faacd1d36c0ae79916"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWorld.html">World</a> to spawn star in.  <a href="classSpawner.html#a9392fd15a8bea1faacd1d36c0ae79916">More...</a><br /></td></tr>
+<tr class="separator:a9392fd15a8bea1faacd1d36c0ae79916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ad1ad0e350ea54e809db1f298e73aa"><td class="memItemLeft" align="right" valign="top">optional&lt; <a class="el" href="classStar.html">Star</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ae2ad1ad0e350ea54e809db1f298e73aa">_star</a></td></tr>
+<tr class="memdesc:ae2ad1ad0e350ea54e809db1f298e73aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStar.html">Star</a> being shot, or NULL if star has despawned.  <a href="classSpawner.html#ae2ad1ad0e350ea54e809db1f298e73aa">More...</a><br /></td></tr>
+<tr class="separator:ae2ad1ad0e350ea54e809db1f298e73aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854082f1e7a90c3123217ddbbe536979"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a854082f1e7a90c3123217ddbbe536979">_positions</a></td></tr>
+<tr class="memdesc:a854082f1e7a90c3123217ddbbe536979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions of center of mass.  <a href="classSpawner.html#a854082f1e7a90c3123217ddbbe536979">More...</a><br /></td></tr>
+<tr class="separator:a854082f1e7a90c3123217ddbbe536979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34db0ac8586d2cc291c95e0f05637920"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">_next_time</a> = 0</td></tr>
-<tr class="memdesc:a34db0ac8586d2cc291c95e0f05637920"><td class="mdescLeft">&#160;</td><td class="mdescRight">When to spawn next particle.  <a href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">More...</a><br /></td></tr>
+<tr class="memdesc:a34db0ac8586d2cc291c95e0f05637920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next time to add a position.  <a href="classSpawner.html#a34db0ac8586d2cc291c95e0f05637920">More...</a><br /></td></tr>
 <tr class="separator:a34db0ac8586d2cc291c95e0f05637920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a230b667adc226f423732d61c39db278e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a230b667adc226f423732d61c39db278e">_autofire</a> = false</td></tr>
-<tr class="memdesc:a230b667adc226f423732d61c39db278e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should particles be spawned without user action.  <a href="classSpawner.html#a230b667adc226f423732d61c39db278e">More...</a><br /></td></tr>
-<tr class="separator:a230b667adc226f423732d61c39db278e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">_delay_s</a> = 0.3</td></tr>
-<tr class="memdesc:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay between consecutive particles.  <a href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">More...</a><br /></td></tr>
+<tr class="memitem:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">_delay_s</a> = 1</td></tr>
+<tr class="memdesc:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time between storing positions of center of mass.  <a href="classSpawner.html#a3b74b042fd4bf55961d3c7c3e73dbdfb">More...</a><br /></td></tr>
 <tr class="separator:a3b74b042fd4bf55961d3c7c3e73dbdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c04755763c4afb751af602d76be14d9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">_mass</a> = 10</td></tr>
-<tr class="memdesc:a7c04755763c4afb751af602d76be14d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass of the particle to be spawned.  <a href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">More...</a><br /></td></tr>
+<tr class="memdesc:a7c04755763c4afb751af602d76be14d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass of the star to be spawned.  <a href="classSpawner.html#a7c04755763c4afb751af602d76be14d9">More...</a><br /></td></tr>
 <tr class="separator:a7c04755763c4afb751af602d76be14d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7d750fd0863d870dbeb90f5d629a8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#ace7d750fd0863d870dbeb90f5d629a8b">_damp</a> = 1</td></tr>
-<tr class="memdesc:ace7d750fd0863d870dbeb90f5d629a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Damping of the particle to be spawned.  <a href="classSpawner.html#ace7d750fd0863d870dbeb90f5d629a8b">More...</a><br /></td></tr>
+<tr class="memdesc:ace7d750fd0863d870dbeb90f5d629a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Damping of the star to be spawned.  <a href="classSpawner.html#ace7d750fd0863d870dbeb90f5d629a8b">More...</a><br /></td></tr>
 <tr class="separator:ace7d750fd0863d870dbeb90f5d629a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc011fed88821ae74916053fee9357b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a4dc011fed88821ae74916053fee9357b">_angdamp</a> = 1</td></tr>
+<tr class="memdesc:a4dc011fed88821ae74916053fee9357b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular damping of the star to be spawned.  <a href="classSpawner.html#a4dc011fed88821ae74916053fee9357b">More...</a><br /></td></tr>
+<tr class="separator:a4dc011fed88821ae74916053fee9357b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">_velocity</a> = {0,0,0}</td></tr>
-<tr class="memdesc:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity of the particle to be spawned.  <a href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">More...</a><br /></td></tr>
+<tr class="memdesc:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity of the star to be spawned.  <a href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">More...</a><br /></td></tr>
 <tr class="separator:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:acb1a37a2f5a9328c9e7476762ba660c5"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#acb1a37a2f5a9328c9e7476762ba660c5">MaxParticles</a> = 100</td></tr>
-<tr class="separator:acb1a37a2f5a9328c9e7476762ba660c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class responsible for creating new particles in the world. </p>
+<div class="textblock"><p>Class responsible for creating a star in the world. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af3843ed062c40f17531ee89326acb882"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3843ed062c40f17531ee89326acb882">&#9670;&nbsp;</a></span>Spawner()</h2>
+<a id="a8a02838a6ba5eb22555dad4f265dbd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a02838a6ba5eb22555dad4f265dbd27">&#9670;&nbsp;</a></span>Spawner()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +157,7 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">Spawner::Spawner </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td>
-          <td class="paramname"><em>integrator</em></td><td>)</td>
+          <td class="paramname"><em>world</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -168,7 +168,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a spawner to spawn particles in given integrator. </p>
+<p>Constructs a spawner to spawn a star in given integrator. </p>
 
 </div>
 </div>
@@ -188,14 +188,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prompt a ImGui UI to let user choose the particle properties. </p>
+<p>Prompt a ImGui UI to let user choose the star properties. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph.png" border="0" usemap="#aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph" alt=""/></div>
 <map name="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph" id="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_cgraph">
-<area shape="rect" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="5,5,133,32"/>
-<area shape="rect" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="181,5,365,32"/>
+<area shape="rect" title="Prompt a ImGui UI to let user choose the star properties." alt="" coords="5,5,133,32"/>
+<area shape="rect" href="classSpawner.html#a05da6d78b7acb594f1b5674a1ac12f77" title="Spawn a star according to user choices." alt="" coords="181,5,341,32"/>
+<area shape="rect" href="classMatrix3.html#a04566c871ac6fdac29b8015bafa3d273" title=" " alt="" coords="389,5,520,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -203,21 +204,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawner_aafe107dcff01c2d8655d6607f0dc361d_icgraph.png" border="0" usemap="#aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_icgraph" alt=""/></div>
 <map name="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_icgraph" id="aclassSpawner_aafe107dcff01c2d8655d6607f0dc361d_icgraph">
-<area shape="rect" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="108,5,236,32"/>
+<area shape="rect" title="Prompt a ImGui UI to let user choose the star properties." alt="" coords="108,5,236,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac8d0d5c188904285fd1320ba445f6e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8d0d5c188904285fd1320ba445f6e20">&#9670;&nbsp;</a></span>spawn_particle()</h2>
+<a id="a9f1b9ff39ebc428e201cb6232840ac8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1b9ff39ebc428e201cb6232840ac8c">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Spawner::spawn_particle </td>
+          <td class="memname">void Spawner::draw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -225,16 +226,51 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Spawn a particle according to user choices. </p>
-<p>Cannot spawn particle, already full.</p>
+<p>Draw the star and the positions of center of mass. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSpawner_ac8d0d5c188904285fd1320ba445f6e20_icgraph.png" border="0" usemap="#aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_icgraph" alt=""/></div>
-<map name="aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_icgraph" id="aclassSpawner_ac8d0d5c188904285fd1320ba445f6e20_icgraph">
-<area shape="rect" title="Spawn a particle according to user choices." alt="" coords="287,31,471,57"/>
-<area shape="rect" href="classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d" title="Prompt a ImGui UI to let user choose the particle properties." alt="" coords="109,5,237,32"/>
-<area shape="rect" href="classSpawner.html#a945f0550c27a3edcb2e81a6c7bc2a181" title="Check if a particle should spawn now." alt="" coords="108,56,239,83"/>
+<div class="center"><img src="classSpawner_a9f1b9ff39ebc428e201cb6232840ac8c_icgraph.png" border="0" usemap="#aclassSpawner_a9f1b9ff39ebc428e201cb6232840ac8c_icgraph" alt=""/></div>
+<map name="aclassSpawner_a9f1b9ff39ebc428e201cb6232840ac8c_icgraph" id="aclassSpawner_a9f1b9ff39ebc428e201cb6232840ac8c_icgraph">
+<area shape="rect" title="Draw the star and the positions of center of mass." alt="" coords="108,5,227,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05da6d78b7acb594f1b5674a1ac12f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05da6d78b7acb594f1b5674a1ac12f77">&#9670;&nbsp;</a></span>spawn_star()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spawner::spawn_star </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spawn a star according to user choices. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSpawner_a05da6d78b7acb594f1b5674a1ac12f77_cgraph.png" border="0" usemap="#aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_cgraph" alt=""/></div>
+<map name="aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_cgraph" id="aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_cgraph">
+<area shape="rect" title="Spawn a star according to user choices." alt="" coords="5,5,165,32"/>
+<area shape="rect" href="classMatrix3.html#a04566c871ac6fdac29b8015bafa3d273" title=" " alt="" coords="213,5,344,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSpawner_a05da6d78b7acb594f1b5674a1ac12f77_icgraph.png" border="0" usemap="#aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_icgraph" alt=""/></div>
+<map name="aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_icgraph" id="aclassSpawner_a05da6d78b7acb594f1b5674a1ac12f77_icgraph">
+<area shape="rect" title="Spawn a star according to user choices." alt="" coords="284,5,444,32"/>
+<area shape="rect" href="classSpawner.html#aafe107dcff01c2d8655d6607f0dc361d" title="Prompt a ImGui UI to let user choose the star properties." alt="" coords="108,5,236,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -257,22 +293,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Check if a particle should spawn now. </p>
+<p>Update the spawner, eventually adding new position of center of mass, and despawn star if negative Z. </p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph.png" border="0" usemap="#aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph" alt=""/></div>
-<map name="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph" id="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_cgraph">
-<area shape="rect" title="Check if a particle should spawn now." alt="" coords="5,5,136,32"/>
-<area shape="rect" href="classSpawner.html#ac8d0d5c188904285fd1320ba445f6e20" title="Spawn a particle according to user choices." alt="" coords="184,5,368,32"/>
+<div class="center"><img src="classSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_icgraph.png" border="0" usemap="#aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_icgraph" alt=""/></div>
+<map name="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_icgraph" id="aclassSpawner_a945f0550c27a3edcb2e81a6c7bc2a181_icgraph">
+<area shape="rect" title="Update the spawner, eventually adding new position of center of mass, and despawn star if negative Z." alt="" coords="108,5,239,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a230b667adc226f423732d61c39db278e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a230b667adc226f423732d61c39db278e">&#9670;&nbsp;</a></span>_autofire</h2>
+<a id="a4dc011fed88821ae74916053fee9357b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc011fed88821ae74916053fee9357b">&#9670;&nbsp;</a></span>_angdamp</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +317,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Spawner::_autofire = false</td>
+          <td class="memname">float Spawner::_angdamp = 1</td>
         </tr>
       </table>
   </td>
@@ -291,7 +327,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Should particles be spawned without user action. </p>
+<p>Angular damping of the star to be spawned. </p>
 
 </div>
 </div>
@@ -315,7 +351,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Damping of the particle to be spawned. </p>
+<p>Damping of the star to be spawned. </p>
 
 </div>
 </div>
@@ -329,7 +365,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Spawner::_delay_s = 0.3</td>
+          <td class="memname">float Spawner::_delay_s = 1</td>
         </tr>
       </table>
   </td>
@@ -339,31 +375,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Delay between consecutive particles. </p>
-
-</div>
-</div>
-<a id="a2d8a91d4f147af90b56d544da0e5eabd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d8a91d4f147af90b56d544da0e5eabd">&#9670;&nbsp;</a></span>_integrator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classWorld.html">World</a>&amp; Spawner::_integrator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Integrator to spawn particles in. </p>
+<p>Time between storing positions of center of mass. </p>
 
 </div>
 </div>
@@ -387,7 +399,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Mass of the particle to be spawned. </p>
+<p>Mass of the star to be spawned. </p>
 
 </div>
 </div>
@@ -411,12 +423,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>When to spawn next particle. </p>
+<p>Next time to add a position. </p>
 
 </div>
 </div>
-<a id="ac4046c557ebb84aa8195a24eac41f2e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4046c557ebb84aa8195a24eac41f2e1">&#9670;&nbsp;</a></span>_particles</h2>
+<a id="a854082f1e7a90c3123217ddbbe536979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854082f1e7a90c3123217ddbbe536979">&#9670;&nbsp;</a></span>_positions</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +437,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;<a class="el" href="classParticle.html">Particle</a>&gt; Spawner::_particles</td>
+          <td class="memname">vector&lt;<a class="el" href="classVector3.html">Vector3</a>&gt; Spawner::_positions</td>
         </tr>
       </table>
   </td>
@@ -435,7 +447,31 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>All living particles spawned. </p>
+<p>Positions of center of mass. </p>
+
+</div>
+</div>
+<a id="ae2ad1ad0e350ea54e809db1f298e73aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ad1ad0e350ea54e809db1f298e73aa">&#9670;&nbsp;</a></span>_star</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">optional&lt;<a class="el" href="classStar.html">Star</a>&gt; Spawner::_star</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classStar.html">Star</a> being shot, or NULL if star has despawned. </p>
 
 </div>
 </div>
@@ -459,12 +495,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Velocity of the particle to be spawned. </p>
+<p>Velocity of the star to be spawned. </p>
 
 </div>
 </div>
-<a id="acb1a37a2f5a9328c9e7476762ba660c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb1a37a2f5a9328c9e7476762ba660c5">&#9670;&nbsp;</a></span>MaxParticles</h2>
+<a id="a9392fd15a8bea1faacd1d36c0ae79916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9392fd15a8bea1faacd1d36c0ae79916">&#9670;&nbsp;</a></span>_world</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,16 +509,17 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int Spawner::MaxParticles = 100</td>
+          <td class="memname"><a class="el" href="classWorld.html">World</a>&amp; Spawner::_world</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Max particles in system. Important to ensure '_particles' never grows after constructor, which would cause reallocation and pointer invalidation. </p>
+
+<p><a class="el" href="classWorld.html">World</a> to spawn star in. </p>
 
 </div>
 </div>

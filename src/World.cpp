@@ -35,10 +35,18 @@ void World::integrate() {
         if (p->getInverseMass() != 0)
             GravityGenerator(p).updateForces(deltaTime);
         p->integrate(deltaTime);
-    }
-    // Clean all particles.
-    for(auto* p : particleList) {
+        // Clear accumulation.
         p->resetAccumulationForces();
+    }
+    // Do the same for rigid bodies.
+    for (auto* rb : rigidbodyList) {
+        // Include gravity now for all particles with finite mass.
+        auto& p = rb->getMassCenter();
+        if (p.getInverseMass() != 0)
+            GravityGenerator(&p).updateForces(deltaTime);
+        rb->integrate(deltaTime);
+        // Clear accumulation.
+        rb->clearAccumulators();
     }
 }
 

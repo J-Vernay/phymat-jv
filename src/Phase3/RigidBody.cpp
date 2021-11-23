@@ -1,7 +1,8 @@
 #include "RigidBody.hpp"
 
-RigidBody::RigidBody(Particle newMassCenter, Matrix3 newInertia, float newAngDamping){
-	this->setMassCenter(newMassCenter);
+RigidBody::RigidBody(Particle newMassCenter, Matrix3 newInertia, float newAngDamping) :
+	massCenter(newMassCenter)
+{
 	newInertia.inverseMatrix();
 	this->setInvertInertiaTensor(newInertia);
 	this->setAngularDamping(newAngDamping);
@@ -11,7 +12,7 @@ void RigidBody::setMassCenter(Particle massCenterParticle) {
 	this->massCenter = massCenterParticle;
 };
 
-Particle RigidBody::getMassCenter() {
+Particle& RigidBody::getMassCenter() {
 	return massCenter;
 };
 
@@ -73,7 +74,6 @@ void RigidBody::calculateDerivedDatas() {
 	double i = 1 - 2 * (x * x + y * y);
 	Matrix3 M = Matrix3(a, b, c, d, e, f, g, h, i);
 	// Collect the position of the mass center
-	Particle massCenter = this->getMassCenter();
 	Vector3 position = massCenter.getPosition();
 	// Create the matrix bodyspace to worldspace
 	Matrix4 transform = Matrix4(M, position);
@@ -85,7 +85,7 @@ void RigidBody::calculateDerivedDatas() {
 void RigidBody::addForceAtPoint(Vector3 force, Vector3 point) {
 	Vector3 massCenterPosition = massCenter.getPosition();
 	Vector3 pointCOM = massCenterPosition - point;
-	accumulationOfForces = accumulationOfForces + force;
+	massCenter.accumulationOfForces += force;
 	accumulationOfTorques = accumulationOfTorques + point.vectorialProduct(force);
 }
 
@@ -95,22 +95,14 @@ void RigidBody::addForceAtBodyPoint(Vector3 force, Vector3 point) {
 }
 
 void RigidBody::clearAccumulators() {
-	accumulationOfForces = Vector3(0, 0, 0);
+	massCenter.resetAccumulationForces();
 	accumulationOfTorques = Vector3(0, 0, 0);
 }
 
 void RigidBody::integrate(float time) {
-	// Calculate the accelerations
-	Vector3 linearAcceleration = accumulationOfForces * massCenter.getInverseMass();
-	Vector3 angularAcceleration = invertInertiaTensor * accumulationOfTorques;
-	// Update the velocities
-	massCenter.setVelocity(massCenter.getVelocity() + linearAcceleration * time);
-
-	// Add the drag to the velocities
-
-
-	// Update the position
-
+	// Integrate mass center.
+	massCenter.integrate(time);
+	
 	// Update orientation
 
 	// Calculate the transform matrix

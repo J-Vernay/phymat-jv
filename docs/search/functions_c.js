@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['reset_324',['reset',['../classBlob.html#ab87de632ea6fcce848f05a0b3cbb660c',1,'Blob']]],
-  ['resetaccumulationforces_325',['resetAccumulationForces',['../classParticle.html#a3363688f45c23760c8b676f958c7cabd',1,'Particle']]],
-  ['resolve_326',['resolve',['../classParticleContact.html#a80cb57974d82d2cd378a3733a540d6b3',1,'ParticleContact']]],
-  ['resolvecontacts_327',['resolveContacts',['../classWorld.html#a2919eda1b09f10243e27c774a2fadb9d',1,'World']]],
-  ['resolveinterpenetration_328',['resolveInterpenetration',['../classParticleContact.html#ad599acdf510b8b7d0ee2df3c444f665d',1,'ParticleContact']]],
-  ['resolvevelocity_329',['resolveVelocity',['../classParticleContact.html#a0e4791c02fc15b4e71a8ac3f440f9325',1,'ParticleContact']]]
+  ['quaternion_418',['Quaternion',['../classQuaternion.html#abcc01358aada56ea5f0db4da18aaf77d',1,'Quaternion::Quaternion()'],['../classQuaternion.html#ab13d6ced50c96438115b30cb91fc7d6c',1,'Quaternion::Quaternion(float w, float x, float y, float z)'],['../classQuaternion.html#af6998dfc864ecdd5580ce99e65479ba8',1,'Quaternion::Quaternion(float w, Vector3 imaginaryNumbers)']]],
+  ['quaternionintomatrix_419',['quaternionIntoMatrix',['../classQuaternion.html#a1cc27b13282704d32cc43272750ba9e7',1,'Quaternion']]]
 ];

@@ -1,0 +1,4 @@
+<map id="Spawner::spawn_star" name="Spawner::spawn_star">
+<area shape="rect" id="node1" title="Spawn a star according to user choices." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$classMatrix3.html#a04566c871ac6fdac29b8015bafa3d273" title=" " alt="" coords="213,5,344,32"/>
+</map>

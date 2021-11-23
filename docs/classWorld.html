@@ -79,12 +79,13 @@ Collaboration diagram for World:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWorld__coll__graph.png" border="0" usemap="#aWorld_coll__map" alt="Collaboration graph"/></div>
 <map name="aWorld_coll__map" id="aWorld_coll__map">
-<area shape="rect" title=" " alt="" coords="243,535,395,700"/>
+<area shape="rect" title=" " alt="" coords="369,535,521,700"/>
 <area shape="rect" title=" " alt="" coords="5,285,72,362"/>
 <area shape="rect" title=" " alt="" coords="96,277,309,369"/>
-<area shape="rect" title=" " alt="" coords="334,285,538,362"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="562,175,715,472"/>
-<area shape="rect" title=" " alt="" coords="613,5,664,83"/>
+<area shape="rect" title=" " alt="" coords="334,285,557,362"/>
+<area shape="rect" title=" " alt="" coords="581,285,785,362"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="809,175,962,472"/>
+<area shape="rect" title=" " alt="" coords="860,5,911,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -116,6 +117,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa856f9511d8376b2a76f5848db4823a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92a3d3ba08a9b7a36607b0b9ea8ec9e"><td class="memItemLeft" align="right" valign="top">unordered_set&lt; <a class="el" href="classParticleForceGenerator.html">ParticleForceGenerator</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#af92a3d3ba08a9b7a36607b0b9ea8ec9e">registerOfForces</a></td></tr>
 <tr class="separator:af92a3d3ba08a9b7a36607b0b9ea8ec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa8da30c3c88335a6609c60963111ef"><td class="memItemLeft" align="right" valign="top">unordered_set&lt; <a class="el" href="classRigidBody.html">RigidBody</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWorld.html#aaaa8da30c3c88335a6609c60963111ef">rigidbodyList</a></td></tr>
+<tr class="separator:aaaa8da30c3c88335a6609c60963111ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -262,15 +265,6 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <p>Resolve given contacts between particles. You are responsible to detect collisions between particles. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWorld_a2919eda1b09f10243e27c774a2fadb9d_icgraph.png" border="0" usemap="#aclassWorld_a2919eda1b09f10243e27c774a2fadb9d_icgraph" alt=""/></div>
-<map name="aclassWorld_a2919eda1b09f10243e27c774a2fadb9d_icgraph" id="aclassWorld_a2919eda1b09f10243e27c774a2fadb9d_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,280,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -413,7 +407,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>List of all particles managed by the Integrator. Public because the user has the responsibility to keep it updated with the system. </p>
+<p>List of all particles managed in the <a class="el" href="classWorld.html">World</a>. Public because the user has the responsibility to keep it updated with the system. </p>
 
 </div>
 </div>
@@ -428,7 +422,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>List of all force generators managed by the Integrator. Public because the user has the responsibility to keep it updated with the system. </p>
+<p>List of all force generators managed in the <a class="el" href="classWorld.html">World</a>. Public because the user has the responsibility to keep it updated with the system. </p>
+
+</div>
+</div>
+<a id="aaaa8da30c3c88335a6609c60963111ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa8da30c3c88335a6609c60963111ef">&#9670;&nbsp;</a></span>rigidbodyList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_set&lt;<a class="el" href="classRigidBody.html">RigidBody</a>*&gt; World::rigidbodyList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of all rigid bodies managed in the <a class="el" href="classWorld.html">World</a>. Public because the user has the responsibility to keep it updated with the system. </p>
 
 </div>
 </div>
