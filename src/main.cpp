@@ -1,5 +1,3 @@
-
-#include <GL/gl.h>
 #include <cmath>
 #include <iostream>
 
@@ -12,6 +10,7 @@
 #include "World.hpp"
 #include "imgui.h"
 
+#include <GL/gl.h>
 
 int main() {
 

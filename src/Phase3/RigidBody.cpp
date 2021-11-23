@@ -83,8 +83,9 @@ void RigidBody::calculateDerivedDatas() {
 	// Create the matrix bodyspace to worldspace
 	Matrix4 transform = Matrix4(M, position);
 	this->setTransformMatrix(transform);
-
-
+	Matrix3 invM = M.getInverseMatrix();
+	Matrix3 invertInertiaTensor = (M.operator*(invertInertiaTensor)).operator*(invM);
+	this->setInvertInertiaTensor(invertInertiaTensor);
 }
 
 void RigidBody::addForceAtPoint(Vector3 force, Vector3 point) {
@@ -107,9 +108,10 @@ void RigidBody::clearAccumulators() {
 void RigidBody::integrate(float time) {
 	// Integrate mass center (linear acceleration/velocity).
 	massCenter.integrate(time);
-	
-	// Update orientation
-
+	Vector3 angularAcceleration = invertInertiaTensor.operator*(accumulationOfTorques);
+	Vector3 rotation = pow(angularDamping, time)*this->rotation + angularAcceleration * time;
+	Quaternion rotationQuaternion = Quaternion(0,rotation);
+	Quaternion orientation = operator*((operator*(rotationQuaternion.operator*(orientation),time)),0.5);
 	// Calculate the transform matrix
 	calculateDerivedDatas();
 	// Clear the accumulators of forces and torques

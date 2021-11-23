@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES
+#include <cmath>
 
 #include "Graphics.hpp"
 
@@ -85,10 +87,6 @@ Window::~Window() noexcept {
     glfwDestroyWindow(_window);
     glfwTerminate();
 }
-
-
-
-#include <cmath>
 
 // Trigonometric functions working in degrees.
 float cosd(float deg) { return std::cos(deg * (M_PI / 180)); }

@@ -11,7 +11,7 @@ private:
     Particle massCenter;
     /// Orientation of the object.
     Quaternion orientation;
-    /// Rotation of the object.
+    /// Rotation of the object ie angular velocity.
     Vector3 rotation;
     /// To do the conversion BodySpace to WorldSpace
     Matrix4 transformMatrix;
