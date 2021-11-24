@@ -87,7 +87,9 @@
 
     //Normalise le quaternion
     void Quaternion::normalize(){
-        *this = *this * (1/getNorm());
+        if(getNorm() != 0){
+            *this = *this * (1/getNorm());
+        }
     }
     
     //Overload of operators :

@@ -71,22 +71,8 @@ void RigidBody::calculateDerivedDatas() {
 		this->orientation = Quaternion(cos(angle/2), sin(angle/2) * angularPosition / angle);
 	else
 		this->orientation = Quaternion(1, 0, 0, 0);
-	// Collect the data in the quaternion
-	double w = this->orientation.getW();
-	double x = this->orientation.getX();
-	double y = this->orientation.getY();
-	double z = this->orientation.getZ();
-	// Create the new data for the orientation matrix
-	double a = 1 - 2 * (y * y + z * z);
-	double b = 2 * (x * y + z * w);
-	double c = 2 * (x * y - y * w);
-	double d = 2 * (x * y - z * w);
-	double e = 1 - 2 * (x * x + z * z);
-	double f = 2 * (y * z + x * w);
-	double g = 2 * (x * z + y * w);
-	double h = 2 * (y * z - x * w);
-	double i = 1 - 2 * (x * x + y * y);
-	Matrix3 M = Matrix3(a, b, c, d, e, f, g, h, i);
+	
+	Matrix3 M = this->orientation.quaternionIntoMatrix();
 	// Collect the position of the mass center
 	Vector3 position = massCenter.getPosition();
 	// Create the matrix bodyspace to worldspace
@@ -122,6 +108,7 @@ Vector3 RigidBody::getAngularPosition() const {
 
 void RigidBody::integrate(float time) {
 	// Integrate mass center (linear acceleration/velocity).
+
 	massCenter.integrate(time);
 
 	Vector3 angularAcceleration = invertInertiaTensor * accumulationOfTorques;

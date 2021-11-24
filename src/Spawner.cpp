@@ -14,7 +14,17 @@ void Spawner::spawn_star() {
 
     // Initial position is (0,0,2).
     Particle massCenter{_mass, Vector3(0, 0, 2), Vector3(0.6, 0.1, 0.1), 1, _damp};
-    RigidBody rigidBody{massCenter, Matrix3::identity(), _angdamp};
+    /**
+     * @brief 
+     * Matrice d'inertie pour une etoile
+     *   x 0 0
+     *   0 y 0
+     *   0 0 z
+     *  avec x = y = z
+     * car l'etoile a une masse uniformément répartie selon les 3 axes.
+     * dans nos calcules, on mutltiplie l'identité par la mass de l'objet et sa hauteur dans la direction de l'axe en question
+     */
+    RigidBody rigidBody{massCenter, Matrix3(_mass*0.5,0,0,0,_mass*0.5,0,0,0,_mass*0.5), _angdamp};
     _star = Star{rigidBody};
     _world.rigidbodyList.insert(&*_star);
     _star->addForceAtBodyPoint(_force, _applyPos);
