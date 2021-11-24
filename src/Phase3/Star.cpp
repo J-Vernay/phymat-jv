@@ -33,12 +33,11 @@ void Star::draw() const {
     glPushMatrix();
     auto p = getMassCenter();
     glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
-    auto q = getOrientation();
-    q.normalize();
-    auto angle = acos(q.getW());
-    auto axis = q.getImaginaryNumbers();
-    glRotatef(angle, axis.getx(), axis.gety(), axis.getz());
 
+    auto angPos = getAngularPosition();
+    auto angle = angPos.norm();
+    glRotatef(angle, angPos.getx(), angPos.gety(), angPos.getz());
+    
     auto scale = p.getRadius() / _extrusion;
     glScalef(scale, scale, scale);
 

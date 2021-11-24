@@ -1,5 +1,5 @@
 <map id="Star::draw" name="Star::draw">
 <area shape="rect" id="node1" title="Draw the star at its position with its orientation." alt="" coords="5,31,93,57"/>
-<area shape="rect" id="node2" href="$classRigidBody.html#af1aa58df6abce69d474a56dc78e9f5c9" title=" " alt="" coords="141,5,335,32"/>
-<area shape="rect" id="node3" href="$classRigidBody.html#a4066e39aeddcab9446673691369ba5f0" title=" " alt="" coords="143,56,333,83"/>
+<area shape="rect" id="node2" href="$classRigidBody.html#ac05266613a85c48d86608a9dcd6e3939" title=" " alt="" coords="141,5,360,32"/>
+<area shape="rect" id="node3" href="$classRigidBody.html#af1aa58df6abce69d474a56dc78e9f5c9" title=" " alt="" coords="154,56,347,83"/>
 </map>

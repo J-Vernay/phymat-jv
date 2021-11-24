@@ -1,10 +1,11 @@
 <map id="RigidBody::RigidBody" name="RigidBody::RigidBody">
-<area shape="rect" id="node1" title="Constructor." alt="" coords="5,107,167,133"/>
-<area shape="rect" id="node2" href="$classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="241,56,412,83"/>
-<area shape="rect" id="node7" href="$classRigidBody.html#ab7fb91662df8737f8ef40b50601eba35" title=" " alt="" coords="215,107,439,133"/>
-<area shape="rect" id="node8" href="$classRigidBody.html#a07280f198f9396e785445a7516daf55d" title=" " alt="" coords="229,158,424,199"/>
-<area shape="rect" id="node3" href="$classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="540,5,641,32"/>
-<area shape="rect" id="node4" href="$classMatrix3.html#ab3c89d26b3aaf9a8c483dbb25de4b9cd" title=" " alt="" coords="513,56,668,83"/>
-<area shape="rect" id="node5" href="$classMatrix3.html#a48c225c5fa8aeb863c967531124edda2" title=" " alt="" coords="487,107,695,133"/>
-<area shape="rect" id="node6" href="$classMatrix3.html#ac7ee9492350dfcbdb04c6e204ab14786" title=" " alt="" coords="743,107,929,133"/>
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,81,167,108"/>
+<area shape="rect" id="node2" href="$classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc" title=" " alt="" coords="261,5,392,32"/>
+<area shape="rect" id="node3" href="$classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="241,56,412,83"/>
+<area shape="rect" id="node8" href="$classRigidBody.html#ab7fb91662df8737f8ef40b50601eba35" title=" " alt="" coords="215,107,439,133"/>
+<area shape="rect" id="node9" href="$classRigidBody.html#a07280f198f9396e785445a7516daf55d" title=" " alt="" coords="229,158,424,199"/>
+<area shape="rect" id="node4" href="$classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="540,5,641,32"/>
+<area shape="rect" id="node5" href="$classMatrix3.html#ab3c89d26b3aaf9a8c483dbb25de4b9cd" title=" " alt="" coords="513,56,668,83"/>
+<area shape="rect" id="node6" href="$classMatrix3.html#a48c225c5fa8aeb863c967531124edda2" title=" " alt="" coords="487,107,695,133"/>
+<area shape="rect" id="node7" href="$classMatrix3.html#ac7ee9492350dfcbdb04c6e204ab14786" title=" " alt="" coords="743,107,929,133"/>
 </map>

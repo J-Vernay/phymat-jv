@@ -83,36 +83,40 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classMatrix4.html#a0def2a5eda2ebaf07eaa7ff90425b2ad">   18</a></span>&#160;    <span class="keywordtype">float</span> elements[12];</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<span class="keywordtype">float</span>[]);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<a class="code" href="classMatrix3.html">Matrix3</a>, <a class="code" href="classVector3.html">Vector3</a>) ;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setElement(<span class="keywordtype">float</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> getElement(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> operator+(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> operator-(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classMatrix4.html#af0d247bb99676e430f8dcd61fa16f717">   30</a></span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> <a class="code" href="classMatrix4.html#af0d247bb99676e430f8dcd61fa16f717">operator*</a>(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Vector3 operator*(Vector3);</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classMatrix3.html">Matrix3</a> getMatrix3();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getVector3();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc">   21</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classMatrix4.html">Matrix4</a> <a class="code" href="classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc">identity</a>() { <span class="keywordflow">return</span> <a class="code" href="classMatrix4.html">Matrix4</a>{1,0,0,0,0,1,0,0,0,0,1,0}; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<span class="keywordtype">float</span>[]);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a>(<a class="code" href="classMatrix3.html">Matrix3</a>, <a class="code" href="classVector3.html">Vector3</a>) ;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> setElement(<span class="keywordtype">float</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> getElement(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> operator+(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> operator-(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMatrix4.html#af0d247bb99676e430f8dcd61fa16f717">   33</a></span>&#160;    <a class="code" href="classMatrix4.html">Matrix4</a> <a class="code" href="classMatrix4.html#af0d247bb99676e430f8dcd61fa16f717">operator*</a>(<a class="code" href="classMatrix4.html">Matrix4</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Vector3 operator*(Vector3);</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> applyOnPt(<a class="code" href="classVector3.html">Vector3</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> applyOnVec(<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classMatrix3.html">Matrix3</a> getMatrix3();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getVector3();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="classVector3.html">Vector3</a> <a class="code" href="Matrix4_8hpp.html#adbe7da75ad3d0d2cd5e6925dd076dc3b">applyMatrixOnPt</a>(<a class="code" href="classMatrix4.html">Matrix4</a>,<a class="code" href="classVector3.html">Vector3</a>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="classVector3.html">Vector3</a> <a class="code" href="Matrix4_8hpp.html#a0459a18519de2beda32a68408d070d79">applyMatrixOnVec</a>(<a class="code" href="classMatrix4.html">Matrix4</a>,<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> applyOnPt(<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> applyOnVec(<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="classVector3.html">Vector3</a> <a class="code" href="Matrix4_8hpp.html#adbe7da75ad3d0d2cd5e6925dd076dc3b">applyMatrixOnPt</a>(<a class="code" href="classMatrix4.html">Matrix4</a>,<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="classVector3.html">Vector3</a> <a class="code" href="Matrix4_8hpp.html#a0459a18519de2beda32a68408d070d79">applyMatrixOnVec</a>(<a class="code" href="classMatrix4.html">Matrix4</a>,<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="ttc" id="aMatrix3_8hpp_html"><div class="ttname"><a href="Matrix3_8hpp.html">Matrix3.hpp</a></div></div>
 <div class="ttc" id="aMatrix4_8hpp_html_a0459a18519de2beda32a68408d070d79"><div class="ttname"><a href="Matrix4_8hpp.html#a0459a18519de2beda32a68408d070d79">applyMatrixOnVec</a></div><div class="ttdeci">Vector3 applyMatrixOnVec(Matrix4, Vector3)</div><div class="ttdef"><b>Definition:</b> Matrix4.cpp:135</div></div>
 <div class="ttc" id="aMatrix4_8hpp_html_adbe7da75ad3d0d2cd5e6925dd076dc3b"><div class="ttname"><a href="Matrix4_8hpp.html#adbe7da75ad3d0d2cd5e6925dd076dc3b">applyMatrixOnPt</a></div><div class="ttdeci">Vector3 applyMatrixOnPt(Matrix4, Vector3)</div><div class="ttdef"><b>Definition:</b> Matrix4.cpp:118</div></div>
 <div class="ttc" id="aclassMatrix3_html"><div class="ttname"><a href="classMatrix3.html">Matrix3</a></div><div class="ttdef"><b>Definition:</b> Matrix3.hpp:8</div></div>
 <div class="ttc" id="aclassMatrix4_html"><div class="ttname"><a href="classMatrix4.html">Matrix4</a></div><div class="ttdef"><b>Definition:</b> Matrix4.hpp:10</div></div>
+<div class="ttc" id="aclassMatrix4_html_a0c654df277b5478f8fb20aedf3c7a0fc"><div class="ttname"><a href="classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc">Matrix4::identity</a></div><div class="ttdeci">static Matrix4 identity()</div><div class="ttdef"><b>Definition:</b> Matrix4.hpp:21</div></div>
 <div class="ttc" id="aclassMatrix4_html_af0d247bb99676e430f8dcd61fa16f717"><div class="ttname"><a href="classMatrix4.html#af0d247bb99676e430f8dcd61fa16f717">Matrix4::operator*</a></div><div class="ttdeci">Matrix4 operator*(Matrix4)</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">Class representing a 3D vector with utility methods and operator overloading.</div><div class="ttdef"><b>Definition:</b> Vector.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -14,15 +14,15 @@ Vector3::Vector3(float a, float b, float c){
 }
 
 //Getters
-float Vector3::getx(){
+float Vector3::getx() const {
     return x;
 }
 
-float Vector3::gety(){
+float Vector3::gety() const {
     return y;
 }
 
-float Vector3::getz(){
+float Vector3::getz() const {
     return z;
 }
 

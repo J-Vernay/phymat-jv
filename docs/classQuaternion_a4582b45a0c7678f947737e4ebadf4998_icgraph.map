@@ -1,12 +1,11 @@
 <map id="Quaternion::getY" name="Quaternion::getY">
-<area shape="rect" id="node1" title=" " alt="" coords="473,187,604,214"/>
-<area shape="rect" id="node2" href="$classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="220,5,425,47"/>
-<area shape="rect" id="node4" href="$classQuaternion.html#a807bdf795fe2ae2ac352e767d650d3a2" title=" " alt="" coords="228,71,417,112"/>
-<area shape="rect" id="node5" href="$Quaternion_8cpp.html#a3c1529f9ba18c392d5aa441b11f39b9d" title=" " alt="" coords="281,137,365,163"/>
-<area shape="rect" id="node6" href="$classQuaternion.html#adb261cb110e65301804410db54a4be1b" title=" " alt="" coords="241,187,405,214"/>
-<area shape="rect" id="node8" href="$classQuaternion.html#a9bd3903ac14bdc042cd9de366a09e50d" title=" " alt="" coords="239,238,407,265"/>
-<area shape="rect" id="node9" href="$classQuaternion.html#a4e872e9259efa7852fcaa3f884a2c3b7" title=" " alt="" coords="241,289,404,315"/>
-<area shape="rect" id="node10" href="$Quaternion_8cpp.html#a88a55a01c960d0cc9805849e18cdf1eb" title=" " alt="" coords="273,339,372,366"/>
-<area shape="rect" id="node3" href="$classRigidBody.html#a5798e9b75e1c3994e009290afd22335e" title="Integrate the state of the RigidBody." alt="" coords="11,13,166,39"/>
-<area shape="rect" id="node7" href="$classQuaternion.html#a48e6bafb249c895ed25f29dc9170e11e" title=" " alt="" coords="5,187,172,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="461,187,592,214"/>
+<area shape="rect" id="node2" href="$classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="208,5,413,47"/>
+<area shape="rect" id="node4" href="$classQuaternion.html#a807bdf795fe2ae2ac352e767d650d3a2" title=" " alt="" coords="216,71,405,112"/>
+<area shape="rect" id="node5" href="$Quaternion_8cpp.html#a3c1529f9ba18c392d5aa441b11f39b9d" title=" " alt="" coords="269,137,353,163"/>
+<area shape="rect" id="node6" href="$classQuaternion.html#adb261cb110e65301804410db54a4be1b" title=" " alt="" coords="229,187,393,214"/>
+<area shape="rect" id="node7" href="$classQuaternion.html#a9bd3903ac14bdc042cd9de366a09e50d" title=" " alt="" coords="227,238,395,265"/>
+<area shape="rect" id="node8" href="$classQuaternion.html#a4e872e9259efa7852fcaa3f884a2c3b7" title=" " alt="" coords="229,289,392,315"/>
+<area shape="rect" id="node9" href="$Quaternion_8cpp.html#a88a55a01c960d0cc9805849e18cdf1eb" title=" " alt="" coords="261,339,360,366"/>
+<area shape="rect" id="node3" href="$classRigidBody.html#a5798e9b75e1c3994e009290afd22335e" title="Integrate the state of the RigidBody." alt="" coords="5,13,160,39"/>
 </map>

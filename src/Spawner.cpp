@@ -14,11 +14,10 @@ void Spawner::spawn_star() {
 
     // Initial position is (0,0,2).
     Particle massCenter{_mass, Vector3(0, 0, 2), Vector3(0.6, 0.1, 0.1), 1, _damp};
-    massCenter.setVelocity(_velocity);
     RigidBody rigidBody{massCenter, Matrix3::identity(), _angdamp};
     _star = Star{rigidBody};
     _world.rigidbodyList.insert(&*_star);
-    _star->addForceAtPoint({0, 0, 5000}, {0, 2, 2});
+    _star->addForceAtBodyPoint(_force, _applyPos);
 }
 
 void Spawner::ask_ui() {
@@ -30,7 +29,8 @@ void Spawner::ask_ui() {
         ImGui::SliderFloat("Masse", &_mass, 0.1, 100, "%.1fkg");
         ImGui::SliderFloat("Damping", &_damp, 0, 1);
         ImGui::SliderFloat("Damping angulaire", &_angdamp, 0, 1);
-        ImGui::SliderFloat3("Vélocité", (float*)&_velocity, -10, 10, "%.1fm/s");
+        ImGui::SliderFloat3("Force", (float*)&_force, -10'000, 10'000, "%.1fm/s");
+        ImGui::SliderFloat3("Point d'application (local)", (float*)&_applyPos, -5, 5, "%.1fm/s");
         if (ImGui::Button("Créer"))
             spawn_star();
     }

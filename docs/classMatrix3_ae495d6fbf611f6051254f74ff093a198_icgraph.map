@@ -1,0 +1,5 @@
+<map id="Matrix3::getInverseMatrix" name="Matrix3::getInverseMatrix">
+<area shape="rect" id="node1" title=" " alt="" coords="461,13,652,39"/>
+<area shape="rect" id="node2" href="$classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="208,5,413,47"/>
+<area shape="rect" id="node3" href="$classRigidBody.html#a5798e9b75e1c3994e009290afd22335e" title="Integrate the state of the RigidBody." alt="" coords="5,13,160,39"/>
+</map>

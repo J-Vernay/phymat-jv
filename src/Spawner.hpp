@@ -35,5 +35,6 @@ private:
     float   _mass = 10;          ///< Mass of the star to be spawned.
     float   _damp = 1;           ///< Damping of the star to be spawned.
     float   _angdamp = 1;        ///< Angular damping of the star to be spawned.
-    Vector3 _velocity = {0,0,0}; ///< Velocity of the star to be spawned.
+    Vector3 _force = { 0, 0, 5'000 }; ///< Initial force at construction.
+    Vector3 _applyPos = { 0, 1, 0 };  ///< Position of initial force.
 };

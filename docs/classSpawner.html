@@ -85,8 +85,8 @@ Collaboration diagram for Spawner:</div>
 <area shape="rect" href="classWorld.html" title=" " alt="" coords="460,564,612,729"/>
 <area shape="rect" title=" " alt="" coords="12,5,63,83"/>
 <area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="857,175,1010,472"/>
-<area shape="rect" title=" " alt="" coords="934,608,1077,685"/>
-<area shape="rect" title=" " alt="" coords="1101,608,1232,685"/>
+<area shape="rect" title=" " alt="" coords="941,608,1083,685"/>
+<area shape="rect" title=" " alt="" coords="1108,608,1239,685"/>
 <area shape="rect" title=" " alt="" coords="619,277,832,369"/>
 <area shape="rect" title=" " alt="" coords="143,285,366,362"/>
 <area shape="rect" title=" " alt="" coords="390,285,594,362"/>
@@ -134,9 +134,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a4dc011fed88821ae74916053fee9357b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a4dc011fed88821ae74916053fee9357b">_angdamp</a> = 1</td></tr>
 <tr class="memdesc:a4dc011fed88821ae74916053fee9357b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular damping of the star to be spawned.  <a href="classSpawner.html#a4dc011fed88821ae74916053fee9357b">More...</a><br /></td></tr>
 <tr class="separator:a4dc011fed88821ae74916053fee9357b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">_velocity</a> = {0,0,0}</td></tr>
-<tr class="memdesc:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity of the star to be spawned.  <a href="classSpawner.html#a801afeff6d903f21bcdbc31d1d94ef7d">More...</a><br /></td></tr>
-<tr class="separator:a801afeff6d903f21bcdbc31d1d94ef7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0022039c3268687e0df974a8c4dc31ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a0022039c3268687e0df974a8c4dc31ea">_force</a> = { 0, 0, 5'000 }</td></tr>
+<tr class="memdesc:a0022039c3268687e0df974a8c4dc31ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial force at construction.  <a href="classSpawner.html#a0022039c3268687e0df974a8c4dc31ea">More...</a><br /></td></tr>
+<tr class="separator:a0022039c3268687e0df974a8c4dc31ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4f6b9b49fbc6274073b23422b55fd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawner.html#a5b4f6b9b49fbc6274073b23422b55fd4">_applyPos</a> = { 0, 1, 0 }</td></tr>
+<tr class="memdesc:a5b4f6b9b49fbc6274073b23422b55fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of initial force.  <a href="classSpawner.html#a5b4f6b9b49fbc6274073b23422b55fd4">More...</a><br /></td></tr>
+<tr class="separator:a5b4f6b9b49fbc6274073b23422b55fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for creating a star in the world. </p>
@@ -341,6 +344,30 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a5b4f6b9b49fbc6274073b23422b55fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4f6b9b49fbc6274073b23422b55fd4">&#9670;&nbsp;</a></span>_applyPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Spawner::_applyPos = { 0, 1, 0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Position of initial force. </p>
+
+</div>
+</div>
 <a id="ace7d750fd0863d870dbeb90f5d629a8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace7d750fd0863d870dbeb90f5d629a8b">&#9670;&nbsp;</a></span>_damp</h2>
 
@@ -362,6 +389,30 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Damping of the star to be spawned. </p>
+
+</div>
+</div>
+<a id="a0022039c3268687e0df974a8c4dc31ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0022039c3268687e0df974a8c4dc31ea">&#9670;&nbsp;</a></span>_force</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Spawner::_force = { 0, 0, 5'000 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initial force at construction. </p>
 
 </div>
 </div>
@@ -458,30 +509,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p><a class="el" href="classStar.html">Star</a> being shot, or NULL if star has despawned. </p>
-
-</div>
-</div>
-<a id="a801afeff6d903f21bcdbc31d1d94ef7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801afeff6d903f21bcdbc31d1d94ef7d">&#9670;&nbsp;</a></span>_velocity</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Spawner::_velocity = {0,0,0}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Velocity of the star to be spawned. </p>
 
 </div>
 </div>

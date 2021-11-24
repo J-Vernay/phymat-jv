@@ -8,9 +8,12 @@
 class RigidBody
 {
 private:
+
     Particle massCenter;
-    /// Orientation of the object.
+    /// Orientation of the object (UNUSED).
     Quaternion orientation;
+    /// Angular position.
+    Vector3 angularPosition;
     /// Rotation of the object ie angular velocity.
     Vector3 rotation;
     /// To do the conversion BodySpace to WorldSpace
@@ -32,6 +35,8 @@ public:
     Particle const& getMassCenter() const;
     void setOrientation(Quaternion);
     Quaternion getOrientation() const;
+    void setAngularPosition(Vector3);
+    Vector3 getAngularPosition() const;
     void setRotation(Vector3);
     Vector3 getRotation() const;
     void setTransformMatrix(Matrix4);

@@ -13,9 +13,9 @@ class Vector3 {
         Vector3(float, float, float);
 
         //getters
-        float getx();
-        float gety();
-        float getz();
+        float getx() const;
+        float gety() const;
+        float getz() const;
 
         //Operator overload
         Vector3 operator-() const;
