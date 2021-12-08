@@ -10,7 +10,6 @@
 #include "World.hpp"
 #include "imgui.h"
 
-#include <GL/gl.h>
 
 int main() {
 

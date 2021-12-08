@@ -2,7 +2,6 @@
 #include "imgui.h"
 
 #include <algorithm>
-#include <bits/ranges_algo.h>
 
 void Spawner::spawn_star() {
     _positions.resize(0);

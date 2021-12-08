@@ -1,7 +1,6 @@
 #include "Star.hpp"
 
 #include "../Graphics.hpp"
-#include <GL/gl.h>
 
 static constexpr GLfloat _extrusion = 5;
 
