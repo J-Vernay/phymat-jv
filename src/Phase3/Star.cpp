@@ -1,7 +1,6 @@
 #include "Star.hpp"
 
 #include "../Graphics.hpp"
-#include <GL/gl.h>
 
 #include "../Phase4/Octree.hpp"
 

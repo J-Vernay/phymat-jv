@@ -1,7 +1,6 @@
 #pragma once
 #include "Vector.hpp"
 #include "ExceptionsForParticle.hpp"
-#include <GL/glu.h>
 
 using namespace std;
 
