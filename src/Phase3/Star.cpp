@@ -2,7 +2,9 @@
 
 #include "../Graphics.hpp"
 
-static constexpr GLfloat _extrusion = 5;
+#include "../Phase4/Octree.hpp"
+
+static constexpr GLfloat _extrusion = 1;
 
 static GLfloat _starVertices[30][3] = {
     // Face Z- (i = 0)
@@ -27,6 +29,16 @@ static GLubyte _starIndices[] = {
     20,21,22,  20,22,23,  20,23,24,  20,24,21, // Face Y-
     25,26,27,  25,27,28,  25,28,29,  25,29,26, // Face Y+
 };
+
+BoundingBox Star::getBoundingBox() const {
+    /// Making a cube of half-size R, with R the radius of the bounding sphere,
+    /// which is the biggest distance between a vertex and the center.
+    /// The "star" is always englobed in the bounding sphere,
+    /// so it is always englobed in the bounding box too.
+    constexpr float sqrt3 = 1.73205080757f;
+    float r = std::max(_extrusion, sqrt3);
+    return { getMassCenter().getPosition(), {r,r,r} };
+}
 
 void Star::draw() const {
     glPushMatrix();

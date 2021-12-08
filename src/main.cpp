@@ -13,9 +13,9 @@
 
 int main() {
 
+    World world;
     Window window;
     Camera camera;
-    World world;
     Spawner spawner(world);
     ParticleRenderer particleRenderer;
 
