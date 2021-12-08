@@ -1,11 +1,11 @@
 <map id="Vector3::Vector3" name="Vector3::Vector3">
 <area shape="rect" id="node1" title=" " alt="" coords="737,157,865,184"/>
-<area shape="rect" id="node2" href="$classVector3.html#a67fd9d02db1b76b214b4acd0666eddd3" title=" " alt="" coords="526,5,667,32"/>
-<area shape="rect" id="node3" href="$classVector3.html#a04ffa93ac1d2241e50046b0a390ae321" title=" " alt="" coords="524,56,669,83"/>
+<area shape="rect" id="node2" href="$classVector3.html#afa0e309edbbc011efe760a9bad07dd78" title=" " alt="" coords="526,5,667,32"/>
+<area shape="rect" id="node3" href="$classVector3.html#a389fc175016b21d3fbca5df34ea0ca2b" title=" " alt="" coords="524,56,669,83"/>
 <area shape="rect" id="node4" href="$classVector3.html#a6eeb6ebe7c7f696953a6ac2646cb8963" title=" " alt="" coords="519,107,675,133"/>
 <area shape="rect" id="node5" href="$classVector3.html#abf941de6e1724901c46d5e9e1448358f" title=" " alt="" coords="527,157,666,184"/>
-<area shape="rect" id="node6" href="$classVector3.html#a370ad993b25602258c528aca4f544627" title=" " alt="" coords="527,208,666,235"/>
-<area shape="rect" id="node7" href="$classVector3.html#ab2d6dc671f59e826e4e039fa6e47d90e" title=" " alt="" coords="524,259,669,285"/>
+<area shape="rect" id="node6" href="$classVector3.html#a6d39e98930b5071f052d2a7969317d5b" title=" " alt="" coords="527,208,666,235"/>
+<area shape="rect" id="node7" href="$classVector3.html#aeb3de4a2c3b4025fe7b840b1cc56829c" title=" " alt="" coords="524,259,669,285"/>
 <area shape="rect" id="node8" href="$classVector3.html#aaf4d0467e1eadab989cfdb129cbc5d69" title=" " alt="" coords="504,309,689,336"/>
 <area shape="rect" id="node9" href="$classRigidBody.html#a091ec7e1d81d0ec716f7ceafe62f1d2c" title="To apply some force to some point." alt="" coords="255,309,456,336"/>
 <area shape="rect" id="node10" href="$classRigidBody.html#a188f8d550b7c44fa1b5d479aca018081" title="To apply some force to some point depending on the object position." alt="" coords="5,302,207,343"/>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stbi_5fuc_515',['stbi_uc',['../stb__image_8h.html#a28eb51a1512ce382ee50f20e1d04d50d',1,'stb_image.h']]],
-  ['stbi_5fus_516',['stbi_us',['../stb__image_8h.html#a648037d4c55689328ba08c8f5d293df2',1,'stb_image.h']]]
+  ['childbodies_643',['ChildBodies',['../structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63',1,'Octree::Node']]],
+  ['childnodes_644',['ChildNodes',['../structOctree_1_1Node.html#ad3fc09d980fe1dbbe950656644b9d33b',1,'Octree::Node']]]
 ];

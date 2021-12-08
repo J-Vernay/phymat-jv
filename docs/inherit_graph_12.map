@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSpawner.html" title="Class responsible for creating a star in the world." alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node1" href="$classParticleContactGenerator.html" title=" " alt="" coords="5,31,191,57"/>
+<area shape="rect" id="node2" href="$classParticleLink.html" title=" " alt="" coords="239,31,336,57"/>
+<area shape="rect" id="node3" href="$classParticleCable.html" title=" " alt="" coords="384,5,491,32"/>
+<area shape="rect" id="node4" href="$classParticleRod.html" title=" " alt="" coords="390,56,485,83"/>
 </map>

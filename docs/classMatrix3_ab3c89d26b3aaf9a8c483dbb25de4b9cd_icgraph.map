@@ -1,12 +1,8 @@
 <map id="Matrix3::getElement" name="Matrix3::getElement">
-<area shape="rect" id="node1" title=" " alt="" coords="919,139,1073,166"/>
-<area shape="rect" id="node2" href="$classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="700,38,871,65"/>
-<area shape="rect" id="node7" href="$classMatrix4.html#a25fc2a783b7032a23f0be153863f377f" title=" " alt="" coords="720,89,851,115"/>
-<area shape="rect" id="node8" href="$classMatrix3.html#afdab2ef7e433072b74c803623d5e19db" title=" " alt="" coords="714,139,857,166"/>
-<area shape="rect" id="node9" href="$classMatrix3.html#a2ff1b7eab39dd118458f9bec7d867c25" title=" " alt="" coords="712,190,859,217"/>
-<area shape="rect" id="node10" href="$classMatrix3.html#a41476f83cac0a0c5850a0a057b06034e" title=" " alt="" coords="715,241,855,267"/>
-<area shape="rect" id="node3" href="$classMatrix3.html#ae495d6fbf611f6051254f74ff093a198" title=" " alt="" coords="461,13,652,39"/>
-<area shape="rect" id="node6" href="$classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219" title="Constructor." alt="" coords="476,63,637,90"/>
-<area shape="rect" id="node4" href="$classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="208,5,413,47"/>
-<area shape="rect" id="node5" href="$classRigidBody.html#a5798e9b75e1c3994e009290afd22335e" title="Integrate the state of the RigidBody." alt="" coords="5,13,160,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,107,355,133"/>
+<area shape="rect" id="node2" href="$classMatrix4.html#a25fc2a783b7032a23f0be153863f377f" title=" " alt="" coords="13,5,144,32"/>
+<area shape="rect" id="node3" href="$classMatrix3.html#afdab2ef7e433072b74c803623d5e19db" title=" " alt="" coords="7,56,150,83"/>
+<area shape="rect" id="node4" href="$classMatrix3.html#a2ff1b7eab39dd118458f9bec7d867c25" title=" " alt="" coords="5,107,152,133"/>
+<area shape="rect" id="node5" href="$classMatrix3.html#a41476f83cac0a0c5850a0a057b06034e" title=" " alt="" coords="9,157,149,184"/>
+<area shape="rect" id="node6" href="$Matrix3_8cpp.html#a3f3b2f220706e5e3649c8a6a58776c5f" title=" " alt="" coords="29,208,128,235"/>
 </map>

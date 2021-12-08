@@ -1,0 +1,4 @@
+<map id="Octree::getPotentialCollisions" name="Octree::getPotentialCollisions">
+<area shape="rect" id="node1" title="Returns all potential collisions found in the octree." alt="" coords="5,13,220,39"/>
+<area shape="rect" id="node2" href="$structOctree_1_1Node.html#a94f3b3d00a3b6bd8b4a468cc51ddea89" title="Retrieves potential collisions, when bounding boxes intersect." alt="" coords="268,5,465,47"/>
+</map>

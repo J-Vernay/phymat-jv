@@ -58,7 +58,7 @@ void Matrix4::setElement(float value, int idx){
 float Matrix4::getElement(int idx){
     if(idx > 11 || idx < 0){
         cout << "indice incorrect" << endl;
-        return NULL;
+        return {};
     }
     else{
         return elements[idx];

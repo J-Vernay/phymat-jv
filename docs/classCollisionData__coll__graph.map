@@ -1,0 +1,7 @@
+<map id="CollisionData" name="CollisionData">
+<area shape="rect" id="node1" title=" " alt="" coords="9,777,203,913"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,593,44,671"/>
+<area shape="rect" id="node3" href="$classContact.html" title=" " alt="" coords="105,549,272,715"/>
+<area shape="rect" id="node4" title=" " alt="" coords="127,5,178,83"/>
+<area shape="rect" id="node5" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="241,175,395,472"/>
+</map>

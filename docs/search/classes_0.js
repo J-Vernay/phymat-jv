@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bungeecordforcegenerator_264',['BungeeCordForceGenerator',['../classBungeeCordForceGenerator.html',1,'']]]
+  ['boundingbox_315',['BoundingBox',['../structBoundingBox.html',1,'']]],
+  ['bungeecordforcegenerator_316',['BungeeCordForceGenerator',['../classBungeeCordForceGenerator.html',1,'']]]
 ];

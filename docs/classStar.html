@@ -76,8 +76,8 @@ Inheritance diagram for Star:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStar__inherit__graph.png" border="0" usemap="#aStar_inherit__map" alt="Inheritance graph"/></div>
 <map name="aStar_inherit__map" id="aStar_inherit__map">
-<area shape="rect" title=" " alt="" coords="63,541,142,633"/>
-<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="5,5,200,493"/>
+<area shape="rect" title=" " alt="" coords="25,571,180,707"/>
+<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="5,5,200,523"/>
 </map>
 </div>
 <div class="dynheader">
@@ -85,28 +85,36 @@ Collaboration diagram for Star:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStar__coll__graph.png" border="0" usemap="#aStar_coll__map" alt="Collaboration graph"/></div>
 <map name="aStar_coll__map" id="aStar_coll__map">
-<area shape="rect" title=" " alt="" coords="376,1627,455,1719"/>
-<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="318,1207,513,1577"/>
-<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="188,496,363,779"/>
-<area shape="rect" title=" " alt="" coords="452,5,502,83"/>
-<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="370,503,494,771"/>
-<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="486,803,679,1144"/>
-<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="704,854,914,1093"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="704,175,858,472"/>
+<area shape="rect" title=" " alt="" coords="337,1671,491,1807"/>
+<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="317,1207,511,1621"/>
+<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="187,496,361,779"/>
+<area shape="rect" title=" " alt="" coords="450,5,501,83"/>
+<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="368,503,492,771"/>
+<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="484,803,677,1144"/>
+<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="702,854,913,1093"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="703,175,856,472"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1b236fd889919395d61231f6be381349"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#a1b236fd889919395d61231f6be381349">Star</a> (<a class="el" href="classRigidBody.html">RigidBody</a> const &amp;rigidbody)</td></tr>
-<tr class="separator:a1b236fd889919395d61231f6be381349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2290224d61c5c8b0a86534820dc550d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#aa2290224d61c5c8b0a86534820dc550d">Star</a> (<a class="el" href="classParticle.html">Particle</a> const &amp;mass_center, <a class="el" href="classMatrix3.html">Matrix3</a> inertia, float angdamping)</td></tr>
+<tr class="separator:aa2290224d61c5c8b0a86534820dc550d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93e93304393dd591ad7b07e24249b6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#ac93e93304393dd591ad7b07e24249b6f">~Star</a> () override</td></tr>
+<tr class="separator:ac93e93304393dd591ad7b07e24249b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870509012b9309889897571f665f089d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBoundingBox.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#a870509012b9309889897571f665f089d">getBoundingBox</a> () const override</td></tr>
+<tr class="separator:a870509012b9309889897571f665f089d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6caa3139614274593f708819672ac988"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#a6caa3139614274593f708819672ac988">getPoints</a> () const override</td></tr>
+<tr class="separator:a6caa3139614274593f708819672ac988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1972f2b59e04b9c0afd424fc8965c014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStar.html#a1972f2b59e04b9c0afd424fc8965c014">draw</a> () const</td></tr>
 <tr class="memdesc:a1972f2b59e04b9c0afd424fc8965c014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the star at its position with its orientation.  <a href="classStar.html#a1972f2b59e04b9c0afd424fc8965c014">More...</a><br /></td></tr>
 <tr class="separator:a1972f2b59e04b9c0afd424fc8965c014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classRigidBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRigidBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRigidBody.html">RigidBody</a></td></tr>
-<tr class="memitem:a57205e0b2e6635acc9180bbcd3cbd219 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219">RigidBody</a> (<a class="el" href="classParticle.html">Particle</a>, <a class="el" href="classMatrix3.html">Matrix3</a>, float)</td></tr>
-<tr class="memdesc:a57205e0b2e6635acc9180bbcd3cbd219 inherit pub_methods_classRigidBody"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219">More...</a><br /></td></tr>
-<tr class="separator:a57205e0b2e6635acc9180bbcd3cbd219 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">RigidBody</a> (<a class="el" href="classParticle.html">Particle</a> const &amp;, <a class="el" href="classMatrix3.html">Matrix3</a>, float)</td></tr>
+<tr class="memdesc:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">More...</a><br /></td></tr>
+<tr class="separator:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada738c85556c1ffeb046d5ffcc5b20db inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#ada738c85556c1ffeb046d5ffcc5b20db">~RigidBody</a> ()</td></tr>
+<tr class="separator:ada738c85556c1ffeb046d5ffcc5b20db inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a92422b61a92c7e9529f206759a5932 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a0a92422b61a92c7e9529f206759a5932">setMassCenter</a> (<a class="el" href="classParticle.html">Particle</a>)</td></tr>
 <tr class="memdesc:a0a92422b61a92c7e9529f206759a5932 inherit pub_methods_classRigidBody"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setters and getters of the private attributes.  <a href="classRigidBody.html#a0a92422b61a92c7e9529f206759a5932">More...</a><br /></td></tr>
 <tr class="separator:a0a92422b61a92c7e9529f206759a5932 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,8 +162,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5798e9b75e1c3994e009290afd22335e inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1b236fd889919395d61231f6be381349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b236fd889919395d61231f6be381349">&#9670;&nbsp;</a></span>Star()</h2>
+<a id="aa2290224d61c5c8b0a86534820dc550d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2290224d61c5c8b0a86534820dc550d">&#9670;&nbsp;</a></span>Star()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,14 +174,55 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Star::Star </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classRigidBody.html">RigidBody</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rigidbody</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classParticle.html">Particle</a> const &amp;&#160;</td>
+          <td class="paramname"><em>mass_center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classMatrix3.html">Matrix3</a>&#160;</td>
+          <td class="paramname"><em>inertia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angdamping</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac93e93304393dd591ad7b07e24249b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93e93304393dd591ad7b07e24249b6f">&#9670;&nbsp;</a></span>~Star()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Star::~Star </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -203,10 +252,65 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classStar_a1972f2b59e04b9c0afd424fc8965c014_cgraph.png" border="0" usemap="#aclassStar_a1972f2b59e04b9c0afd424fc8965c014_cgraph" alt=""/></div>
 <map name="aclassStar_a1972f2b59e04b9c0afd424fc8965c014_cgraph" id="aclassStar_a1972f2b59e04b9c0afd424fc8965c014_cgraph">
 <area shape="rect" title="Draw the star at its position with its orientation." alt="" coords="5,31,93,57"/>
-<area shape="rect" href="classRigidBody.html#ac05266613a85c48d86608a9dcd6e3939" title=" " alt="" coords="141,5,360,32"/>
-<area shape="rect" href="classRigidBody.html#af1aa58df6abce69d474a56dc78e9f5c9" title=" " alt="" coords="154,56,347,83"/>
+<area shape="rect" href="classRigidBody.html#af1aa58df6abce69d474a56dc78e9f5c9" title=" " alt="" coords="141,5,335,32"/>
+<area shape="rect" href="classRigidBody.html#a4066e39aeddcab9446673691369ba5f0" title=" " alt="" coords="143,56,333,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a870509012b9309889897571f665f089d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870509012b9309889897571f665f089d">&#9670;&nbsp;</a></span>getBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBoundingBox.html">BoundingBox</a> Star::getBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Making a cube of half-size R, with R the radius of the bounding sphere, which is the biggest distance between a vertex and the center. The "star" is always englobed in the bounding sphere, so it is always englobed in the bounding box too.</p>
+
+<p>Implements <a class="el" href="classRigidBody.html#a02b145e1af68a030b4544847bbd66938">RigidBody</a>.</p>
+
+</div>
+</div>
+<a id="a6caa3139614274593f708819672ac988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caa3139614274593f708819672ac988">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt; Star::getPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRigidBody.html#aba89735b7b1a70b73bbdc3d20e481e50">RigidBody</a>.</p>
 
 </div>
 </div>

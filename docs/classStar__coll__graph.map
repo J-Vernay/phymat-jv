@@ -1,10 +1,10 @@
 <map id="Star" name="Star">
-<area shape="rect" id="node1" title=" " alt="" coords="376,1627,455,1719"/>
-<area shape="rect" id="node2" href="$classRigidBody.html" title=" " alt="" coords="318,1207,513,1577"/>
-<area shape="rect" id="node3" href="$classMatrix3.html" title=" " alt="" coords="188,496,363,779"/>
-<area shape="rect" id="node4" title=" " alt="" coords="452,5,502,83"/>
-<area shape="rect" id="node5" href="$classMatrix4.html" title=" " alt="" coords="370,503,494,771"/>
-<area shape="rect" id="node6" href="$classQuaternion.html" title=" " alt="" coords="486,803,679,1144"/>
-<area shape="rect" id="node7" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="704,854,914,1093"/>
-<area shape="rect" id="node8" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="704,175,858,472"/>
+<area shape="rect" id="node1" title=" " alt="" coords="337,1671,491,1807"/>
+<area shape="rect" id="node2" href="$classRigidBody.html" title=" " alt="" coords="317,1207,511,1621"/>
+<area shape="rect" id="node3" href="$classMatrix3.html" title=" " alt="" coords="187,496,361,779"/>
+<area shape="rect" id="node4" title=" " alt="" coords="450,5,501,83"/>
+<area shape="rect" id="node5" href="$classMatrix4.html" title=" " alt="" coords="368,503,492,771"/>
+<area shape="rect" id="node6" href="$classQuaternion.html" title=" " alt="" coords="484,803,677,1144"/>
+<area shape="rect" id="node7" href="$classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="702,854,913,1093"/>
+<area shape="rect" id="node8" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="703,175,856,472"/>
 </map>

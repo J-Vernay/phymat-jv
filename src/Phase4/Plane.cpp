@@ -1,5 +1,6 @@
 #include "Plane.h"
 
+/*
 Plane::Plane(Vector3 newNormale) {
 	normale = newNormale;
 	offset = 0.0;
@@ -25,3 +26,5 @@ float Plane::getOffset() {
 void Plane::setOffset(float newOffset) {
 	offset = newOffset;
 };
+
+*/

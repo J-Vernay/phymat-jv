@@ -104,6 +104,7 @@ Matrix3 Matrix3::getInverseMatrix(){
     Matrix3 inversed = *(this);
     if(inversed.det() == 0){
         cout<<"matrice non inversible"<<endl;
+        return {};
     }
     else{
         inversed.inverseMatrix();

@@ -1,4 +1,5 @@
 <map id="RigidBody" name="RigidBody">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,200,493"/>
-<area shape="rect" id="node2" href="$classStar.html" title=" " alt="" coords="63,541,142,633"/>
+<area shape="rect" id="node1" title=" " alt="" coords="51,5,246,523"/>
+<area shape="rect" id="node2" href="$classPlane.html" title=" " alt="" coords="5,571,129,736"/>
+<area shape="rect" id="node3" href="$classStar.html" title=" " alt="" coords="154,585,309,721"/>
 </map>

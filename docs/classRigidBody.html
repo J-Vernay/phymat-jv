@@ -67,7 +67,7 @@ $(function() {
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classRigidBody-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RigidBody Class Reference</div>  </div>
+<div class="title">RigidBody Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -77,8 +77,9 @@ Inheritance diagram for RigidBody:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRigidBody__inherit__graph.png" border="0" usemap="#aRigidBody_inherit__map" alt="Inheritance graph"/></div>
 <map name="aRigidBody_inherit__map" id="aRigidBody_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,200,493"/>
-<area shape="rect" href="classStar.html" title=" " alt="" coords="63,541,142,633"/>
+<area shape="rect" title=" " alt="" coords="51,5,246,523"/>
+<area shape="rect" href="classPlane.html" title=" " alt="" coords="5,571,129,736"/>
+<area shape="rect" href="classStar.html" title=" " alt="" coords="154,585,309,721"/>
 </map>
 </div>
 <div class="dynheader">
@@ -86,21 +87,27 @@ Collaboration diagram for RigidBody:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRigidBody__coll__graph.png" border="0" usemap="#aRigidBody_coll__map" alt="Collaboration graph"/></div>
 <map name="aRigidBody_coll__map" id="aRigidBody_coll__map">
-<area shape="rect" title=" " alt="" coords="318,1207,513,1577"/>
-<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="188,496,363,779"/>
-<area shape="rect" title=" " alt="" coords="452,5,502,83"/>
-<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="370,503,494,771"/>
-<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="486,803,679,1144"/>
-<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="704,854,914,1093"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="704,175,858,472"/>
+<area shape="rect" title=" " alt="" coords="317,1207,511,1621"/>
+<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="187,496,361,779"/>
+<area shape="rect" title=" " alt="" coords="450,5,501,83"/>
+<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="368,503,492,771"/>
+<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="484,803,677,1144"/>
+<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="702,854,913,1093"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="703,175,856,472"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a57205e0b2e6635acc9180bbcd3cbd219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219">RigidBody</a> (<a class="el" href="classParticle.html">Particle</a>, <a class="el" href="classMatrix3.html">Matrix3</a>, float)</td></tr>
-<tr class="memdesc:a57205e0b2e6635acc9180bbcd3cbd219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219">More...</a><br /></td></tr>
-<tr class="separator:a57205e0b2e6635acc9180bbcd3cbd219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f2f98dae382160ce73f4ce6b8e49e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">RigidBody</a> (<a class="el" href="classParticle.html">Particle</a> const &amp;, <a class="el" href="classMatrix3.html">Matrix3</a>, float)</td></tr>
+<tr class="memdesc:a93f2f98dae382160ce73f4ce6b8e49e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">More...</a><br /></td></tr>
+<tr class="separator:a93f2f98dae382160ce73f4ce6b8e49e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b145e1af68a030b4544847bbd66938"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structBoundingBox.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a02b145e1af68a030b4544847bbd66938">getBoundingBox</a> () const =0</td></tr>
+<tr class="separator:a02b145e1af68a030b4544847bbd66938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba89735b7b1a70b73bbdc3d20e481e50"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#aba89735b7b1a70b73bbdc3d20e481e50">getPoints</a> () const =0</td></tr>
+<tr class="separator:aba89735b7b1a70b73bbdc3d20e481e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada738c85556c1ffeb046d5ffcc5b20db"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#ada738c85556c1ffeb046d5ffcc5b20db">~RigidBody</a> ()</td></tr>
+<tr class="separator:ada738c85556c1ffeb046d5ffcc5b20db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a92422b61a92c7e9529f206759a5932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a0a92422b61a92c7e9529f206759a5932">setMassCenter</a> (<a class="el" href="classParticle.html">Particle</a>)</td></tr>
 <tr class="memdesc:a0a92422b61a92c7e9529f206759a5932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setters and getters of the private attributes.  <a href="classRigidBody.html#a0a92422b61a92c7e9529f206759a5932">More...</a><br /></td></tr>
 <tr class="separator:a0a92422b61a92c7e9529f206759a5932"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,11 +161,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:abe4963daa5ceff22cb7fed5fc0116001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQuaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#abe4963daa5ceff22cb7fed5fc0116001">orientation</a></td></tr>
 <tr class="memdesc:abe4963daa5ceff22cb7fed5fc0116001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orientation of the object (UNUSED).  <a href="classRigidBody.html#abe4963daa5ceff22cb7fed5fc0116001">More...</a><br /></td></tr>
 <tr class="separator:abe4963daa5ceff22cb7fed5fc0116001"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe765731893e776808c00486e3796be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a1fe765731893e776808c00486e3796be">angularPosition</a></td></tr>
-<tr class="memdesc:a1fe765731893e776808c00486e3796be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular position.  <a href="classRigidBody.html#a1fe765731893e776808c00486e3796be">More...</a><br /></td></tr>
-<tr class="separator:a1fe765731893e776808c00486e3796be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8549cad23411c5846bf91d08a2b31e80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a8549cad23411c5846bf91d08a2b31e80">rotation</a></td></tr>
-<tr class="memdesc:a8549cad23411c5846bf91d08a2b31e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation of the object ie angular velocity.  <a href="classRigidBody.html#a8549cad23411c5846bf91d08a2b31e80">More...</a><br /></td></tr>
+<tr class="memdesc:a8549cad23411c5846bf91d08a2b31e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular position.  <a href="classRigidBody.html#a8549cad23411c5846bf91d08a2b31e80">More...</a><br /></td></tr>
 <tr class="separator:a8549cad23411c5846bf91d08a2b31e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71aed919af049d0f7ef557f232602c8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a71aed919af049d0f7ef557f232602c8c">transformMatrix</a></td></tr>
 <tr class="memdesc:a71aed919af049d0f7ef557f232602c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To do the conversion BodySpace to WorldSpace.  <a href="classRigidBody.html#a71aed919af049d0f7ef557f232602c8c">More...</a><br /></td></tr>
@@ -177,8 +181,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a35c3e10644434c0e0bab96f13946f8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a57205e0b2e6635acc9180bbcd3cbd219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57205e0b2e6635acc9180bbcd3cbd219">&#9670;&nbsp;</a></span>RigidBody()</h2>
+<a id="a93f2f98dae382160ce73f4ce6b8e49e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f2f98dae382160ce73f4ce6b8e49e3">&#9670;&nbsp;</a></span>RigidBody()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +190,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">RigidBody::RigidBody </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classParticle.html">Particle</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classParticle.html">Particle</a> const &amp;&#160;</td>
           <td class="paramname"><em>newMassCenter</em>, </td>
         </tr>
         <tr>
@@ -213,19 +217,42 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classRigidBody_a57205e0b2e6635acc9180bbcd3cbd219_cgraph.png" border="0" usemap="#aclassRigidBody_a57205e0b2e6635acc9180bbcd3cbd219_cgraph" alt=""/></div>
-<map name="aclassRigidBody_a57205e0b2e6635acc9180bbcd3cbd219_cgraph" id="aclassRigidBody_a57205e0b2e6635acc9180bbcd3cbd219_cgraph">
-<area shape="rect" title="Constructor." alt="" coords="5,81,167,108"/>
-<area shape="rect" href="classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc" title=" " alt="" coords="261,5,392,32"/>
-<area shape="rect" href="classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="241,56,412,83"/>
-<area shape="rect" href="classRigidBody.html#ab7fb91662df8737f8ef40b50601eba35" title=" " alt="" coords="215,107,439,133"/>
-<area shape="rect" href="classRigidBody.html#a07280f198f9396e785445a7516daf55d" title=" " alt="" coords="229,158,424,199"/>
-<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="540,5,641,32"/>
-<area shape="rect" href="classMatrix3.html#ab3c89d26b3aaf9a8c483dbb25de4b9cd" title=" " alt="" coords="513,56,668,83"/>
-<area shape="rect" href="classMatrix3.html#a48c225c5fa8aeb863c967531124edda2" title=" " alt="" coords="487,107,695,133"/>
-<area shape="rect" href="classMatrix3.html#ac7ee9492350dfcbdb04c6e204ab14786" title=" " alt="" coords="743,107,929,133"/>
+<div class="center"><img src="classRigidBody_a93f2f98dae382160ce73f4ce6b8e49e3_cgraph.png" border="0" usemap="#aclassRigidBody_a93f2f98dae382160ce73f4ce6b8e49e3_cgraph" alt=""/></div>
+<map name="aclassRigidBody_a93f2f98dae382160ce73f4ce6b8e49e3_cgraph" id="aclassRigidBody_a93f2f98dae382160ce73f4ce6b8e49e3_cgraph">
+<area shape="rect" title="Constructor." alt="" coords="5,107,167,133"/>
+<area shape="rect" href="classMatrix3.html#ae495d6fbf611f6051254f74ff093a198" title=" " alt="" coords="231,31,422,57"/>
+<area shape="rect" href="classMatrix4.html#a0c654df277b5478f8fb20aedf3c7a0fc" title=" " alt="" coords="261,81,392,108"/>
+<area shape="rect" href="classRigidBody.html#ab7fb91662df8737f8ef40b50601eba35" title=" " alt="" coords="215,132,439,159"/>
+<area shape="rect" href="classRigidBody.html#a07280f198f9396e785445a7516daf55d" title=" " alt="" coords="229,183,424,225"/>
+<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="521,5,623,32"/>
+<area shape="rect" href="classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="487,56,657,83"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ada738c85556c1ffeb046d5ffcc5b20db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada738c85556c1ffeb046d5ffcc5b20db">&#9670;&nbsp;</a></span>~RigidBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RigidBody::~RigidBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -350,26 +377,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRigidBody_a2fd27720f51faa38d0bea0ae46cf7e47_cgraph.png" border="0" usemap="#aclassRigidBody_a2fd27720f51faa38d0bea0ae46cf7e47_cgraph" alt=""/></div>
 <map name="aclassRigidBody_a2fd27720f51faa38d0bea0ae46cf7e47_cgraph" id="aclassRigidBody_a2fd27720f51faa38d0bea0ae46cf7e47_cgraph">
-<area shape="rect" title="Method to calculate the transformMatrix." alt="" coords="5,201,211,242"/>
+<area shape="rect" title="Method to calculate the transformMatrix." alt="" coords="5,103,211,145"/>
 <area shape="rect" href="classMatrix3.html#ae495d6fbf611f6051254f74ff093a198" title=" " alt="" coords="275,31,465,57"/>
 <area shape="rect" href="classParticle.html#a889225014a4821e28590358d0b522c49" title="Get position." alt="" coords="295,81,445,108"/>
-<area shape="rect" href="classQuaternion.html#a945428056d27d9984b6afa6090ee5b7b" title=" " alt="" coords="302,132,438,159"/>
-<area shape="rect" href="classQuaternion.html#a9614343e217fe84527ec799ae28a1564" title=" " alt="" coords="304,183,436,209"/>
-<area shape="rect" href="classQuaternion.html#a4582b45a0c7678f947737e4ebadf4998" title=" " alt="" coords="305,233,435,260"/>
-<area shape="rect" href="classQuaternion.html#a1435cef67d9c2ab0a17f36f3ae02c3fd" title=" " alt="" coords="304,284,436,311"/>
-<area shape="rect" href="classVector3.html#ac171792c1aaacb29b0c6a6707f7cd335" title=" " alt="" coords="313,335,427,361"/>
-<area shape="rect" href="classRigidBody.html#a7e9a5a3ff8b1a8349825736df6066c4f" title=" " alt="" coords="259,385,481,412"/>
-<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="801,5,903,32"/>
+<area shape="rect" href="classQuaternion.html#a1cc27b13282704d32cc43272750ba9e7" title=" " alt="" coords="271,133,469,174"/>
+<area shape="rect" href="classRigidBody.html#a7e9a5a3ff8b1a8349825736df6066c4f" title=" " alt="" coords="259,199,481,225"/>
+<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="564,5,665,32"/>
 <area shape="rect" href="classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="529,56,700,83"/>
-<area shape="rect" href="classMatrix3.html#ab3c89d26b3aaf9a8c483dbb25de4b9cd" title=" " alt="" coords="775,56,929,83"/>
-<area shape="rect" href="classMatrix3.html#a48c225c5fa8aeb863c967531124edda2" title=" " alt="" coords="748,107,956,133"/>
-<area shape="rect" href="classMatrix3.html#ac7ee9492350dfcbdb04c6e204ab14786" title=" " alt="" coords="1004,107,1191,133"/>
-<area shape="rect" href="classVector3.html#aaf15cd97e5f599919109abc75872573e" title=" " alt="" coords="535,335,694,361"/>
-<area shape="rect" href="Vector_8hpp.html#a19a2aaea3051011372c67d7eab689255" title=" " alt="" coords="797,335,907,361"/>
-<area shape="rect" href="classVector3.html#a944f2e887ae0ccb4139f7f9cddcbacaf" title=" " alt="" coords="1014,335,1181,361"/>
-<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="1239,284,1347,311"/>
-<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="1239,335,1347,361"/>
-<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="1239,385,1346,412"/>
 </map>
 </div>
 <div class="dynheader">
@@ -450,15 +464,33 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classRigidBody_ac05266613a85c48d86608a9dcd6e3939_icgraph.png" border="0" usemap="#aclassRigidBody_ac05266613a85c48d86608a9dcd6e3939_icgraph" alt=""/></div>
-<map name="aclassRigidBody_ac05266613a85c48d86608a9dcd6e3939_icgraph" id="aclassRigidBody_ac05266613a85c48d86608a9dcd6e3939_icgraph">
-<area shape="rect" title=" " alt="" coords="141,5,360,32"/>
-<area shape="rect" href="classStar.html#a1972f2b59e04b9c0afd424fc8965c014" title="Draw the star at its position with its orientation." alt="" coords="5,5,93,32"/>
-</map>
+
 </div>
+</div>
+<a id="a02b145e1af68a030b4544847bbd66938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b145e1af68a030b4544847bbd66938">&#9670;&nbsp;</a></span>getBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structBoundingBox.html">BoundingBox</a> RigidBody::getBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classStar.html#a870509012b9309889897571f665f089d">Star</a>.</p>
 
 </div>
 </div>
@@ -536,6 +568,42 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRigidBody_a4066e39aeddcab9446673691369ba5f0_icgraph.png" border="0" usemap="#aclassRigidBody_a4066e39aeddcab9446673691369ba5f0_icgraph" alt=""/></div>
+<map name="aclassRigidBody_a4066e39aeddcab9446673691369ba5f0_icgraph" id="aclassRigidBody_a4066e39aeddcab9446673691369ba5f0_icgraph">
+<area shape="rect" title=" " alt="" coords="141,5,331,32"/>
+<area shape="rect" href="classStar.html#a1972f2b59e04b9c0afd424fc8965c014" title="Draw the star at its position with its orientation." alt="" coords="5,5,93,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aba89735b7b1a70b73bbdc3d20e481e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba89735b7b1a70b73bbdc3d20e481e50">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual vector&lt;<a class="el" href="classVector3.html">Vector3</a>&gt; RigidBody::getPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classStar.html#a6caa3139614274593f708819672ac988">Star</a>.</p>
 
 </div>
 </div>
@@ -595,30 +663,19 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRigidBody_a5798e9b75e1c3994e009290afd22335e_cgraph.png" border="0" usemap="#aclassRigidBody_a5798e9b75e1c3994e009290afd22335e_cgraph" alt=""/></div>
 <map name="aclassRigidBody_a5798e9b75e1c3994e009290afd22335e_cgraph" id="aclassRigidBody_a5798e9b75e1c3994e009290afd22335e_cgraph">
-<area shape="rect" title="Integrate the state of the RigidBody." alt="" coords="5,368,160,395"/>
-<area shape="rect" href="classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="213,226,419,267"/>
-<area shape="rect" href="classRigidBody.html#af4ea7799a0cdd5644e34eaef0c1ee0a1" title=" " alt="" coords="208,368,424,395"/>
-<area shape="rect" href="classParticle.html#a97cc470324450f781d1a0268f576c6ee" title="Integrate the state of the particle, deriving its acceleration from the accumulated forces." alt="" coords="247,419,385,445"/>
+<area shape="rect" title="Integrate the state of the RigidBody." alt="" coords="5,261,160,288"/>
+<area shape="rect" href="classRigidBody.html#a2fd27720f51faa38d0bea0ae46cf7e47" title="Method to calculate the transformMatrix." alt="" coords="213,133,419,174"/>
+<area shape="rect" href="classRigidBody.html#af4ea7799a0cdd5644e34eaef0c1ee0a1" title=" " alt="" coords="208,236,424,263"/>
+<area shape="rect" href="classParticle.html#a97cc470324450f781d1a0268f576c6ee" title="Integrate the state of the particle, deriving its acceleration from the accumulated forces." alt="" coords="247,287,385,313"/>
+<area shape="rect" href="classQuaternion.html#a48e6bafb249c895ed25f29dc9170e11e" title=" " alt="" coords="233,337,399,364"/>
 <area shape="rect" href="classMatrix3.html#ae495d6fbf611f6051254f74ff093a198" title=" " alt="" coords="488,31,679,57"/>
 <area shape="rect" href="classParticle.html#a889225014a4821e28590358d0b522c49" title="Get position." alt="" coords="508,81,659,108"/>
-<area shape="rect" href="classQuaternion.html#a945428056d27d9984b6afa6090ee5b7b" title=" " alt="" coords="515,132,651,159"/>
-<area shape="rect" href="classQuaternion.html#a9614343e217fe84527ec799ae28a1564" title=" " alt="" coords="517,183,649,209"/>
-<area shape="rect" href="classQuaternion.html#a4582b45a0c7678f947737e4ebadf4998" title=" " alt="" coords="518,233,649,260"/>
-<area shape="rect" href="classQuaternion.html#a1435cef67d9c2ab0a17f36f3ae02c3fd" title=" " alt="" coords="517,284,649,311"/>
-<area shape="rect" href="classVector3.html#ac171792c1aaacb29b0c6a6707f7cd335" title=" " alt="" coords="527,335,640,361"/>
-<area shape="rect" href="classRigidBody.html#a7e9a5a3ff8b1a8349825736df6066c4f" title=" " alt="" coords="472,385,695,412"/>
-<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="1015,5,1116,32"/>
+<area shape="rect" href="classQuaternion.html#a1cc27b13282704d32cc43272750ba9e7" title=" " alt="" coords="485,133,682,174"/>
+<area shape="rect" href="classRigidBody.html#a7e9a5a3ff8b1a8349825736df6066c4f" title=" " alt="" coords="472,199,695,225"/>
+<area shape="rect" href="classMatrix3.html#a6f02ab765bf86194141e81f09f5cb155" title=" " alt="" coords="777,5,879,32"/>
 <area shape="rect" href="classMatrix3.html#a9bbe543b5dcd7d0ac5177b15dd12eb70" title=" " alt="" coords="743,56,913,83"/>
-<area shape="rect" href="classMatrix3.html#ab3c89d26b3aaf9a8c483dbb25de4b9cd" title=" " alt="" coords="988,56,1143,83"/>
-<area shape="rect" href="classMatrix3.html#a48c225c5fa8aeb863c967531124edda2" title=" " alt="" coords="961,107,1169,133"/>
-<area shape="rect" href="classMatrix3.html#ac7ee9492350dfcbdb04c6e204ab14786" title=" " alt="" coords="1217,107,1404,133"/>
-<area shape="rect" href="classVector3.html#aaf15cd97e5f599919109abc75872573e" title=" " alt="" coords="749,335,907,361"/>
-<area shape="rect" href="Vector_8hpp.html#a19a2aaea3051011372c67d7eab689255" title=" " alt="" coords="1010,335,1121,361"/>
-<area shape="rect" href="classVector3.html#a944f2e887ae0ccb4139f7f9cddcbacaf" title=" " alt="" coords="1227,335,1394,361"/>
-<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="1452,284,1560,311"/>
-<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="1452,335,1560,361"/>
-<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="1453,385,1559,412"/>
-<area shape="rect" href="classParticle.html#a3363688f45c23760c8b676f958c7cabd" title="Reset the accumulation forces to zero, should be called at beginning of each frame." alt="" coords="483,437,683,478"/>
+<area shape="rect" href="classParticle.html#a3363688f45c23760c8b676f958c7cabd" title="Reset the accumulation forces to zero, should be called at beginning of each frame." alt="" coords="483,250,683,291"/>
+<area shape="rect" href="classQuaternion.html#a0490d3ba1bad54b58c62693ee51df30f" title=" " alt="" coords="504,337,663,364"/>
 </map>
 </div>
 
@@ -645,7 +702,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classRigidBody_ab7fb91662df8737f8ef40b50601eba35_icgraph.png" border="0" usemap="#aclassRigidBody_ab7fb91662df8737f8ef40b50601eba35_icgraph" alt=""/></div>
 <map name="aclassRigidBody_ab7fb91662df8737f8ef40b50601eba35_icgraph" id="aclassRigidBody_ab7fb91662df8737f8ef40b50601eba35_icgraph">
 <area shape="rect" title=" " alt="" coords="215,5,439,32"/>
-<area shape="rect" href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219" title="Constructor." alt="" coords="5,5,167,32"/>
+<area shape="rect" href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3" title="Constructor." alt="" coords="5,5,167,32"/>
 </map>
 </div>
 
@@ -661,7 +718,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">void RigidBody::setAngularPosition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -690,7 +747,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classRigidBody_a07280f198f9396e785445a7516daf55d_icgraph.png" border="0" usemap="#aclassRigidBody_a07280f198f9396e785445a7516daf55d_icgraph" alt=""/></div>
 <map name="aclassRigidBody_a07280f198f9396e785445a7516daf55d_icgraph" id="aclassRigidBody_a07280f198f9396e785445a7516daf55d_icgraph">
 <area shape="rect" title=" " alt="" coords="215,5,409,47"/>
-<area shape="rect" href="classRigidBody.html#a57205e0b2e6635acc9180bbcd3cbd219" title="Constructor." alt="" coords="5,13,167,39"/>
+<area shape="rect" href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3" title="Constructor." alt="" coords="5,13,167,39"/>
 </map>
 </div>
 
@@ -829,30 +886,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1fe765731893e776808c00486e3796be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fe765731893e776808c00486e3796be">&#9670;&nbsp;</a></span>angularPosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> RigidBody::angularPosition</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Angular position. </p>
-
-</div>
-</div>
 <a id="ac081476acb615a9502645df21c75287c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac081476acb615a9502645df21c75287c">&#9670;&nbsp;</a></span>globalInvertInertiaTensor</h2>
 
@@ -967,6 +1000,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Angular position. </p>
 <p>Rotation of the object ie angular velocity. </p>
 
 </div>
