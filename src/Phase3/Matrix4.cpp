@@ -3,14 +3,14 @@
 
 
 Matrix4::Matrix4(){
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         elements[i]= 0;
     }
 }
 
 Matrix4::Matrix4(float newMatrix[]){
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         elements[i]= newMatrix[i];
     }

@@ -1,6 +1,6 @@
 #include "RigidBody.hpp"
 
-RigidBody::RigidBody(Particle newMassCenter, Matrix3 newInertia, float newAngDamping) :
+RigidBody::RigidBody(Particle const& newMassCenter, Matrix3 newInertia, float newAngDamping) :
 	massCenter(newMassCenter)
 {
 	/*angularPosition = Vector3(0,0,0);		//old without quaternion

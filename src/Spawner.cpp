@@ -2,14 +2,13 @@
 #include "imgui.h"
 
 #include <algorithm>
-#include <bits/ranges_algo.h>
 
 void Spawner::spawn_star() {
     _positions.resize(0);
 
     if (_star) {
         _world.rigidbodyList.erase(&*_star);
-        _star = {};
+        _star.reset();
     }
 
     // Initial position is (0,0,2).
@@ -24,8 +23,8 @@ void Spawner::spawn_star() {
      * car l'etoile a une masse uniformément répartie selon les 3 axes.
      * dans nos calcules, on mutltiplie l'identité par la mass de l'objet et sa hauteur dans la direction de l'axe en question
      */
-    RigidBody rigidBody{massCenter, Matrix3(_mass*0.5,0,0,0,_mass*0.5,0,0,0,_mass*0.5), _angdamp};
-    _star = Star{rigidBody};
+    Matrix3 inertia(_mass*0.5,0,0,0,_mass*0.5,0,0,0,_mass*0.5);
+    _star.emplace(massCenter, Matrix3(_mass*0.5,0,0,0,_mass*0.5,0,0,0,_mass*0.5), _angdamp);
     _world.rigidbodyList.insert(&*_star);
     _star->addForceAtBodyPoint(_force, _applyPos);
 }
@@ -60,7 +59,7 @@ void Spawner::update(double current_time) {
     }
     if (pos.getz() < -5) {
         _world.rigidbodyList.erase(&*_star);
-        _star = {};
+        _star.reset();
     }
 }
 

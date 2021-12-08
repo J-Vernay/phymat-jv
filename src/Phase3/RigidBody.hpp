@@ -5,6 +5,8 @@
 #include "Matrix3.hpp"
 #include "Matrix4.hpp"
 
+#include "../Phase4/Octree.hpp"
+
 class RigidBody
 {
 private:
@@ -28,7 +30,11 @@ private:
     Vector3 accumulationOfTorques;
 public:
     /// Constructor
-    RigidBody(Particle,Matrix3,float);
+    RigidBody(Particle const&, Matrix3, float);
+
+    virtual BoundingBox getBoundingBox() const = 0;
+    virtual ~RigidBody() {}
+
     /// Setters and getters of the private attributes
     void setMassCenter(Particle);
     Particle& getMassCenter();

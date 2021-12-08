@@ -2,7 +2,7 @@
 
 Matrix3::Matrix3()
 {
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         elements[i]= 0;
     }
@@ -10,7 +10,7 @@ Matrix3::Matrix3()
 }
 
 Matrix3::Matrix3(float newMatrix[]){
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         elements[i]= newMatrix[i];
     }
@@ -40,7 +40,7 @@ void Matrix3::setElement(float value, int idx){
 float Matrix3::getElement(int idx){
     if(idx > 8 || idx < 0){
         cout << "indice incorrect" << endl;
-        return NULL;
+        return 0;
     }
     else{
         return elements[idx];
@@ -78,7 +78,7 @@ Matrix3 Matrix3::getTransposeMatrix(){
 }
 
 void Matrix3::inverseMatrix(){
-    
+    /*
     float determinant = det();
     //std::cout<<determinant<<std::endl;
     if(determinant == 0){
@@ -97,7 +97,7 @@ void Matrix3::inverseMatrix(){
         elements[6] = (transposed.getElement(1)*transposed.getElement(5)-transposed.getElement(4)*transposed.getElement(2))/determinant;
         elements[7] = -(transposed.getElement(0)*transposed.getElement(5)-transposed.getElement(3)*transposed.getElement(2))/determinant;
         elements[8] = (transposed.getElement(0)*transposed.getElement(4)-transposed.getElement(3)*transposed.getElement(1))/determinant;
-    }
+    }*/
 }
 
 Matrix3 Matrix3::getInverseMatrix(){
