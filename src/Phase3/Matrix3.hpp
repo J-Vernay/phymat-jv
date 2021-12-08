@@ -34,3 +34,5 @@ public:
     Vector3 operator*(Vector3);
 };
 
+
+ostream& operator<<(ostream& ,Matrix3&);

@@ -3,12 +3,19 @@
 RigidBody::RigidBody(Particle newMassCenter, Matrix3 newInertia, float newAngDamping) :
 	massCenter(newMassCenter)
 {
-	angularPosition = Vector3(0,0,0);
+	/*angularPosition = Vector3(0,0,0);		//old without quaternion
 
 	orientation = Quaternion{1,0,0,0};
 	transformMatrix = Matrix4::identity();
 	newInertia.inverseMatrix();
-	this->setInvertInertiaTensor(newInertia);
+	this->setInvertInertiaTensor(newInertia);*/
+
+	orientation = Quaternion{1,0,0,0};
+	transformMatrix = Matrix4::identity();
+	
+	this->setInvertInertiaTensor(newInertia.getInverseMatrix());
+	globalInvertInertiaTensor = invertInertiaTensor;
+
 	this->setAngularDamping(newAngDamping);
 }
 
@@ -65,7 +72,7 @@ float RigidBody::getAngularDamping() const {
 	return angularDamping;
 };
 
-void RigidBody::calculateDerivedDatas() {
+/*void RigidBody::calculateDerivedDatas() {			//old without quaternion
 	float angle = angularPosition.norm();
 	if (angle != 0)
 		this->orientation = Quaternion(cos(angle/2), sin(angle/2) * angularPosition / angle);
@@ -79,6 +86,22 @@ void RigidBody::calculateDerivedDatas() {
 	Matrix4 transform = Matrix4(M, position);
 	this->setTransformMatrix(transform);
 	globalInvertInertiaTensor = M * this->invertInertiaTensor * M.getInverseMatrix();
+}*/
+
+void RigidBody::calculateDerivedDatas() {
+	// Collect the data in the quaternion
+	// Create the new data for the orientation matrix
+	Matrix3 M = this->orientation.quaternionIntoMatrix();
+
+	//cout << M<< endl;
+	// Collect the position of the mass center
+	Vector3 position = massCenter.getPosition();
+	// Create the matrix bodyspace to worldspace
+	Matrix4 transform = Matrix4(M, position);
+	this->setTransformMatrix(transform);
+	Matrix3 tmp = (M * invertInertiaTensor * M.getInverseMatrix());
+	
+	globalInvertInertiaTensor = tmp;
 }
 
 void RigidBody::addForceAtPoint(Vector3 force, Vector3 point) {
@@ -98,14 +121,16 @@ void RigidBody::clearAccumulators() {
 	accumulationOfTorques = Vector3(0, 0, 0);
 }
 
+/*
 void RigidBody::setAngularPosition(Vector3 v) {
 	angularPosition = v;
 }
 
 Vector3 RigidBody::getAngularPosition() const {
 	return angularPosition;
-}
+}*/
 
+/*	//old without quaternion
 void RigidBody::integrate(float time) {
 	// Integrate mass center (linear acceleration/velocity).
 
@@ -117,6 +142,24 @@ void RigidBody::integrate(float time) {
 
 	//Quaternion rotationQuaternion = Quaternion(0, rotation);
 	//orientation = orientation * 0.5f * rotationQuaternion * orientation * time;
+
+	// Calculate the transform matrix
+	calculateDerivedDatas();
+	// Clear the accumulators of forces and torques
+	clearAccumulators();
+}*/
+
+void RigidBody::integrate(float time) {
+	
+	// Integrate mass center (linear acceleration/velocity).
+	massCenter.integrate(time);
+	Vector3 angularAcceleration = invertInertiaTensor * accumulationOfTorques;
+	rotation = pow(angularDamping, time) * rotation + angularAcceleration * time;
+	Quaternion rotationQuaternion = Quaternion(0, rotation);
+
+	//rotationQuaternion.normalize();
+	orientation = orientation + 0.5f * rotationQuaternion * orientation * time;
+	orientation.normalize();
 
 	// Calculate the transform matrix
 	calculateDerivedDatas();

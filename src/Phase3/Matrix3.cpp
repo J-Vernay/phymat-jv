@@ -158,7 +158,12 @@ Vector3 Matrix3::operator*(Vector3 vct){
     return newVct;
 }
 
-
+ostream& operator<<(ostream& os, Matrix3& mtx){
+    for(int i = 0; i<3;i++){
+        os << mtx.getElement(i*3+0) << " " << mtx.getElement(i*3+1) << " " << mtx.getElement(i*3+2) << endl;
+    }
+    return os;
+}
 
 
 

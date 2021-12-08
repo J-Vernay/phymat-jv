@@ -41,6 +41,9 @@ public:
 
 };
 
+
+
+ostream& operator<<(ostream& ,Matrix4&);
 Vector3 applyMatrixOnPt(Matrix4,Vector3);
 Vector3 applyMatrixOnVec(Matrix4,Vector3);
 

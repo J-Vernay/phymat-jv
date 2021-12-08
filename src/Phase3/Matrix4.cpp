@@ -139,3 +139,10 @@ Vector3 applyMatrixOnVec(Matrix4 mtx,Vector3 vec){
     Vector3 newVec(x,y,z);
     return newVec;
 }
+
+ostream& operator<<(ostream& os, Matrix4& mtx){
+    for(int i = 0; i<3;i++){
+        os << mtx.getElement(i*4+0) << " " << mtx.getElement(i*4+1) << " " << mtx.getElement(i*4+2) << " " << mtx.getElement(i*4+3) << endl;
+    }
+    return os;
+}

@@ -13,7 +13,7 @@ private:
     /// Orientation of the object (UNUSED).
     Quaternion orientation;
     /// Angular position.
-    Vector3 angularPosition;
+    //Vector3 angularPosition;
     /// Rotation of the object ie angular velocity.
     Vector3 rotation;
     /// To do the conversion BodySpace to WorldSpace

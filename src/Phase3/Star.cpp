@@ -34,9 +34,15 @@ void Star::draw() const {
     auto p = getMassCenter();
     glTranslatef(p.getPosition().getx(),p.getPosition().gety(),p.getPosition().getz());
 
-    auto angPos = getAngularPosition();
+    /*auto angPos = getAngularPosition();       //old without quaternion
     auto angle = angPos.norm();
-    glRotatef(angle, angPos.getx(), angPos.gety(), angPos.getz());
+    glRotatef(angle, angPos.getx(), angPos.gety(), angPos.getz());*/
+
+    auto q = getOrientation();
+    q.normalize();
+    auto angle = acos(q.getW())*180/3.14;
+    auto axis = q.getImaginaryNumbers();
+    glRotatef(angle, asin(axis.getx())*180/3.14, asin(axis.gety())*180/3.14, asin(axis.getz())*180/3.14);
     
     auto scale = p.getRadius() / _extrusion;
     glScalef(scale, scale, scale);
