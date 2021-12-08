@@ -1,6 +1,5 @@
 #pragma once
 #include "Contact.h"
-#include "Primitive.h"
 
 using namespace std;
 
