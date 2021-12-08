@@ -114,7 +114,7 @@ Matrix3 Matrix3::getInverseMatrix(){
 
 Matrix3 Matrix3::operator+(Matrix3 mtx){
     Matrix3 newMtx;
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         newMtx.setElement(elements[i]+mtx.getElement(i), i);
     }
@@ -124,7 +124,7 @@ Matrix3 Matrix3::operator+(Matrix3 mtx){
 
 Matrix3 Matrix3::operator-(Matrix3 mtx){
     Matrix3 newMtx;
-    for (int i = 0; i < sizeof(elements); i++)
+    for (int i = 0; i < std::size(elements); i++)
     {
         newMtx.setElement(elements[i]-mtx.getElement(i), i);
     }
