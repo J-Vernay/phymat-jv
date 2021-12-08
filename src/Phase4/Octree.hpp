@@ -14,6 +14,7 @@ struct BoundingBox {
   Vector3 pos;
   Vector3 half_size;
   bool overlapsWith(BoundingBox const &other) const;
+  BoundingBox subdivision(int x, int y, int z) const;
 };
 
 class Octree {
@@ -32,8 +33,8 @@ private:
     BoundingBox bbox;
     /// A node is referring either to its child nodes, or to the rigid bodies it
     /// include.
-    using ChildNodes = std::vector<Node>;
     using ChildBodies = std::vector<RigidBody*>;
+    using ChildNodes = std::vector<Node>;
     std::variant<ChildBodies, ChildNodes> children;
 
     /// Adds a child to the node, eventually splitting the stored rigidbodies in

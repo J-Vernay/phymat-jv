@@ -9,6 +9,7 @@ public:
     ~Star() override {}
 
     BoundingBox getBoundingBox() const override;
+    std::vector<Vector3> getPoints() const override;
 
     /// Draw the star at its position with its orientation.
     void draw() const;

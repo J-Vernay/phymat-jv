@@ -19,12 +19,12 @@ class Vector3 {
 
         //Operator overload
         Vector3 operator-() const;
-        Vector3 operator+(const Vector3);
+        Vector3 operator+(const Vector3) const;
         Vector3& operator+=(const Vector3);
-        Vector3 operator-(const Vector3);
-        Vector3 operator*(const float);
-        Vector3 operator/(const float);
-        Vector3 operator^(Vector3);
+        Vector3 operator-(const Vector3) const;
+        Vector3 operator*(const float) const;
+        Vector3 operator/(const float) const;
+        Vector3 operator^(Vector3) const;
         friend ostream& operator<<(ostream& os, const Vector3&);
 
         //Check if well placed

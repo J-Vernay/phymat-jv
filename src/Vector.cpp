@@ -31,20 +31,20 @@ Vector3 Vector3::operator-() const {
 }
 
 //Operator overload
-Vector3 Vector3::operator+(const Vector3 v){
+Vector3 Vector3::operator+(const Vector3 v) const {
     return Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
 }
 
 //Operator overload
-Vector3& Vector3::operator+=(const Vector3 v){
+Vector3& Vector3::operator+=(const Vector3 v) {
     return *this = Vector3(this->x+v.x,this->y+v.y,this->z+v.z);
 }
 
-Vector3 Vector3::operator-(const Vector3 v){
+Vector3 Vector3::operator-(const Vector3 v) const {
     return Vector3(this->x-v.x,this->y-v.y,this->z-v.z);  
 }
 
-Vector3 Vector3::operator*(const float k){
+Vector3 Vector3::operator*(const float k) const {
     return Vector3(this->x*k,this->y*k,this->z*k);
 }
 
@@ -56,7 +56,7 @@ float operator*(Vector3 v1, Vector3 v2){
     return scalarProduct(v1,v2);
 }
 
-Vector3 Vector3::operator/(const float k){
+Vector3 Vector3::operator/(const float k) const {
     if(k == 0){
         throw ExceptionDivideByNullScalar();
     }
@@ -65,7 +65,7 @@ Vector3 Vector3::operator/(const float k){
     }
 }
 
-Vector3 Vector3::operator^(Vector3 v){
+Vector3 Vector3::operator^(Vector3 v) const {
    return Vector3(y*v.getz()-z*v.gety(), z*v.getx()-x*v.getz(), x*v.gety()-y*v.getx());
 }
 

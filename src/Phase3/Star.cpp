@@ -41,6 +41,14 @@ BoundingBox Star::getBoundingBox() const {
     return { getMassCenter().getPosition(), {r,r,r} };
 }
 
+std::vector<Vector3> Star::getPoints() const {
+    std::vector<Vector3> points;
+    points.reserve(std::size(_starVertices));
+    for (auto [x,y,z] : _starVertices)
+        points.emplace_back(x,y,z);
+    return points;
+}
+
 void Star::draw() const {
     glPushMatrix();
     auto p = getMassCenter();

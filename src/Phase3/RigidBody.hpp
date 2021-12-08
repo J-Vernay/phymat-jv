@@ -33,6 +33,7 @@ public:
     RigidBody(Particle const&, Matrix3, float);
 
     virtual BoundingBox getBoundingBox() const = 0;
+    virtual vector<Vector3> getPoints() const = 0;
     virtual ~RigidBody() {}
 
     /// Setters and getters of the private attributes
