@@ -10,6 +10,7 @@ private :
 	float penetration;
 public :
 	Contact(Vector3, Vector3, float);
+	Contact();
 
 	Vector3 getContactPoint();
 	void setContactPoint(Vector3);

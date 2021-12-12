@@ -1,6 +1,8 @@
 #include "World.hpp"
 #include "Phase2/ParticleForceGenerator.hpp"
 #include "Phase2/GravityGenerator.hpp"
+#include "Phase4/Octree.hpp"
+#include "Phase4/Plane.h"
 
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps
@@ -76,6 +78,56 @@ void World::resolveContacts(std::vector<ParticleContact> contacts) {
             usedIteration++;
         }   
     }
+}
+
+// Generate the contacts from potential contact from the broading phase :
+void World::generateContacts(std::vector<PotentialCollision*> potentialCollisions){
+    //Go through every potential collision
+    //WHere a potential collision is a pair of rigidBody
+    for(auto* potentialCollision : potentialCollisions){
+        Plane * plane; //Wall 
+        RigidBody * rigidBody; //Rigid body (here star)
+        float distanceBetweenTheRigidBodies = 0.0f;
+        
+        //If the first rigid body is the wall
+        if(plane = dynamic_cast<Plane*>(potentialCollision->first)){
+            rigidBody = potentialCollision->second;
+        }
+        //If the second rigid body is the Wall
+        else if(plane = dynamic_cast<Plane*>(potentialCollision->second)){
+            rigidBody = potentialCollision->first;
+
+        }
+        else { //If there is no wall 
+            //Two rigid body are in collisions
+            //No need to implement this for the demo 
+            //Here to complete
+        }
+
+        for(auto point : rigidBody->getPoints()){//Go through all the points
+            distanceBetweenTheRigidBodies = getDistanceFromTheWall(plane, point); //Test the distance between the wall and the rigidbody
+            if(distanceBetweenTheRigidBodies < 0){ //If there is a contact => the absolute distance is the interpenetration
+                //Add the contact to the contact list :
+                Contact contact = Contact();
+                contact.setContactNormal(plane->getNormale());  //the normal is the same than the plane
+                contact.setContactPoint(point); //the point is the point tested
+                contact.setPenetration(abs(distanceBetweenTheRigidBodies)); //Interpenetration is the absolute distance
+                this->contactList.insert(&contact); //Add the correct contact
+            }
+            
+        }
+    }
+}
+
+//Measure the distance between a point and a wall, 
+//if the distance is positiv : there is no contact between the rigidBody and the plane,
+//if the distance is negativ the is a contact and the distance is the interpenetration
+float World::getDistanceFromTheWall(Plane * plane, Vector3 point){
+    Vector3 normale = plane->getNormale();
+    float offset = plane->getOffset();
+
+    //n.p + d => distance between the plane and the rigidBody
+    return normale.scalarProduct(point) + offset;
 }
 
 

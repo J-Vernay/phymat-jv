@@ -1,4 +1,11 @@
+
 #include "Contact.h"
+
+Contact::Contact(){
+	contactPoint = Vector3(0, 0, 0);
+	contactNormal = Vector3(0, 0, 0);
+	penetration = 0;
+}
 
 Contact::Contact(Vector3 newContactPoint, Vector3 newContactNormal, float newPenetration) {
 	contactPoint = newContactPoint;

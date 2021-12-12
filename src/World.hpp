@@ -9,6 +9,9 @@
 #include "Phase2/GravityGenerator.hpp"
 #include "Phase2/ParticleForceGenerator.hpp"
 #include "Phase2/ParticleContact.hpp"
+#include "Phase4/Octree.hpp"
+#include "Phase4/Contact.h"
+#include "Phase4/Plane.h"
 
 #include "ExceptionsForWorld.hpp"
 
@@ -36,6 +39,9 @@ public:
     /// List of all rigid bodies managed in the World.
     /// Public because the user has the responsibility to keep it updated with the system.
     unordered_set<RigidBody*> rigidbodyList;
+    /// List of all contacts of rigidbodies managed in the World
+    /// Public because the user has the responsibility to keep it updated with the system.
+    unordered_set<Contact*> contactList;
 
     /// Constructs an empty Integrator (with no particles and no force generators).
     World();
@@ -64,4 +70,12 @@ public:
 
     /// Output textual representation of Integrator.
     friend ostream& operator<<(ostream& os, const World&);
+
+    //Fill the list of contact after testing all potential collision (due to broad phase)
+    void generateContacts(std::vector<PotentialCollision*> potentialCollisions);
+
+    //Measure the distance between a point and a wall, 
+    //if the distance is positiv : there is no contact between the rigidBody and the plane,
+    //if the distance is negativ the is a contact and the distance is the interpenetration
+    float getDistanceFromTheWall(Plane * plane, Vector3 point);
 };
