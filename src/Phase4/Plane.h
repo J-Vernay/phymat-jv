@@ -17,4 +17,9 @@ class Plane : public RigidBody{
 		float getOffset();
 		void setOffset(float);
 
+		~Plane() override {}
+
+    	BoundingBox getBoundingBox() const override {};
+    	std::vector<Vector3> getPoints() const override {};
+
 };

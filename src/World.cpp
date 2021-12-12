@@ -127,7 +127,7 @@ float World::getDistanceFromTheWall(Plane * plane, Vector3 point){
     float offset = plane->getOffset();
 
     //n.p + d => distance between the plane and the rigidBody
-    return normale.scalarProduct(point) + offset;
+    return (normale/normale.norm())*point + offset;
 }
 
 
