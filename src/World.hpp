@@ -11,7 +11,7 @@
 #include "Phase2/ParticleContact.hpp"
 #include "Phase4/Octree.hpp"
 #include "Phase4/Contact.h"
-#include "Phase4/Plane.h"
+#include "Phase4/Plane.hpp"
 
 #include "ExceptionsForWorld.hpp"
 

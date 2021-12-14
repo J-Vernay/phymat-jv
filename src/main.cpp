@@ -6,6 +6,7 @@
 #include "Phase2/BungeeCordForceGenerator.hpp"
 #include "Phase3/RigidBody.hpp"
 #include "Phase3/Star.hpp"
+#include "Phase4/Plane.hpp"
 #include "Spawner.hpp"
 #include "World.hpp"
 #include "imgui.h"
@@ -19,14 +20,22 @@ int main() {
     Spawner spawner(world);
     ParticleRenderer particleRenderer;
 
-    // Implementing ground as a big sphere.
-    Particle ground(+INFINITY, Vector3(0,0,-1000), Vector3(0.5, 0.8, 0.5), 1000, 0);
-    world.particleList.insert(&ground);
+    Particle wallbase(+INFINITY, {}, {}, {}, {});
+    Vector3 wallcolor{0.3, 0.5, 0.3};
+    float offset = 10;
+    float size = 10;
 
-    Particle obstacle1(+INFINITY, Vector3(-4, 2, 0), Vector3(0.1, 0.6, 0.1), 1.5, 0);
-    world.particleList.insert(&obstacle1);
-    Particle obstacle3(+INFINITY, Vector3(-7, -1, 0), Vector3(0.1, 0.6, 0.1), 2, 0);
-    world.particleList.insert(&obstacle3);
+    Plane planes[] {
+        {wallbase, Matrix3::identity(), 0, Plane::Xm, offset, size, {0.5, 0.2, 0.2}},
+        {wallbase, Matrix3::identity(), 0, Plane::Xp, offset, size, {0.5, 0.2, 0.2}},
+        {wallbase, Matrix3::identity(), 0, Plane::Ym, offset, size, {0.2, 0.5, 0.2}},
+        {wallbase, Matrix3::identity(), 0, Plane::Yp, offset, size, {0.2, 0.5, 0.2}},
+        {wallbase, Matrix3::identity(), 0, Plane::Zm, offset, size, {0.2, 0.2, 0.5}},
+        {wallbase, Matrix3::identity(), 0, Plane::Zp, offset, size, {0.2, 0.2, 0.5}},
+    };
+
+    for (auto& plane : planes)
+        world.rigidbodyList.insert(&plane);
     
     // Disable use of configuration file.
     ImGui::GetIO().IniFilename = nullptr;
@@ -50,6 +59,11 @@ int main() {
         }
 
         spawner.draw(particleRenderer);
+
+        for (Plane const& plane : planes) {
+            plane.draw();
+        }
+
 
         // GUI drawings.
         window.begin_ui();

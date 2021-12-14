@@ -2,7 +2,6 @@
 #include "Phase2/ParticleForceGenerator.hpp"
 #include "Phase2/GravityGenerator.hpp"
 #include "Phase4/Octree.hpp"
-#include "Phase4/Plane.h"
 
 //Constructor
 //Default : gravity = 10, particleList empty, frameRate = 60 fps

@@ -1,25 +1,25 @@
-#include "Plane.h"
+#include "Plane.hpp"
+#include "Octree.hpp"
+#include "../Graphics.hpp"
+#include <GL/gl.h>
 
-Plane::Plane(Particle const& mass_center, Matrix3 inertia, float angdamping, Vector3 newNormale) : RigidBody(mass_center, inertia, angdamping){
+Vector3 Plane::getNormale() const {
+	switch(normale) {
+	case Normale::Xm: return {-1, 0, 0};
+	case Normale::Xp: return {+1, 0, 0};
+	case Normale::Ym: return {0, -1, 0};
+	case Normale::Yp: return {0, +1, 0};
+	case Normale::Zm: return {0, 0, -1};
+	case Normale::Zp: return {0, 0, +1};
+	default: return {0, 0, 0};
+	}
+}
 
+void Plane::setNormale(Normale newNormale) {
 	normale = newNormale;
-	offset = 0.0;
 }
 
-Plane::Plane(Particle const& mass_center, Matrix3 inertia, float angdamping, Vector3 newNormale, float newOffset)  : RigidBody(mass_center, inertia, angdamping){
-	normale = newNormale;
-	offset = newOffset;
-}
-
-Vector3 Plane::getNormale() {
-	return normale;
-}
-
-void Plane::setNormale(Vector3 newNormale) {
-	normale = newNormale;
-}
-
-float Plane::getOffset() {
+float Plane::getOffset() const {
 	return offset;
 }
 
@@ -27,3 +27,38 @@ void Plane::setOffset(float newOffset) {
 	offset = newOffset;
 }
 
+BoundingBox Plane::getBoundingBox() const {
+	Vector3 center = getNormale() * offset;
+	Vector3 halfsize = (Vector3{1,1,1}-getNormale()) * size;
+	return {center, halfsize};
+}
+
+void Plane::draw() const {
+    glPushMatrix();
+	Vector3 pos = getNormale() * offset;
+	glTranslatef(pos.getx(), pos.gety(), pos.getz());
+    glColor3f(color.getx(), color.gety(), color.getz());
+	glBegin(GL_TRIANGLE_FAN);
+	switch (normale) {
+	case Normale::Xm: case Normale::Xp:
+		glVertex3f(0, -size, -size);
+		glVertex3f(0, -size, size);
+		glVertex3f(0, size, size);
+		glVertex3f(0, size, -size);
+		break;
+	case Normale::Ym: case Normale::Yp:
+		glVertex3f(-size, 0, -size);
+		glVertex3f(-size, 0, size);
+		glVertex3f(size, 0, size);
+		glVertex3f(size, 0, -size);
+		break;
+	case Normale::Zm: case Normale::Zp:
+		glVertex3f(-size, -size, 0);
+		glVertex3f(-size, size, 0);
+		glVertex3f(size, size, 0);
+		glVertex3f(size, -size, 0);
+		break;
+	}
+	glEnd();
+	glPopMatrix();
+}
