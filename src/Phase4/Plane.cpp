@@ -28,8 +28,13 @@ void Plane::setOffset(float newOffset) {
 }
 
 BoundingBox Plane::getBoundingBox() const {
-	Vector3 center = getNormale() * offset;
-	Vector3 halfsize = (Vector3{1,1,1}-getNormale()) * size;
+	Vector3 normale = getNormale();
+	Vector3 center = normale * offset;
+	Vector3 halfsize = {
+		(normale.getx() == 0) * size + 0.1f,
+		(normale.gety() == 0) * size + 0.1f,
+		(normale.getz() == 0) * size + 0.1f,
+	};
 	return {center, halfsize};
 }
 

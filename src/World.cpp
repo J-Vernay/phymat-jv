@@ -49,6 +49,9 @@ void World::integrate() {
         // Clear accumulation.
         rb->clearAccumulators();
     }
+    /// Constructs an octree.
+    Octree octree{rigidbodyList};
+    generateContacts(octree.getPotentialCollisions());
 }
 
 //Resolve all contacts in a contact list
@@ -80,28 +83,30 @@ void World::resolveContacts(std::vector<ParticleContact> contacts) {
 }
 
 // Generate the contacts from potential contact from the broading phase :
-void World::generateContacts(std::vector<PotentialCollision*> potentialCollisions){
+void World::generateContacts(std::vector<PotentialCollision> potentialCollisions){    
     //Go through every potential collision
     //WHere a potential collision is a pair of rigidBody
-    for(auto* potentialCollision : potentialCollisions){
-        Plane * plane; //Wall 
-        RigidBody * rigidBody; //Rigid body (here star)
-        float distanceBetweenTheRigidBodies = 0.0f;
-        
-        //If the first rigid body is the wall
-        if(plane = dynamic_cast<Plane*>(potentialCollision->first)){
-            rigidBody = potentialCollision->second;
-        }
-        //If the second rigid body is the Wall
-        else if(plane = dynamic_cast<Plane*>(potentialCollision->second)){
-            rigidBody = potentialCollision->first;
+    for(auto& potentialCollision : potentialCollisions){
+        Plane* planeA = dynamic_cast<Plane*>(potentialCollision.first); 
+        Plane* planeB = dynamic_cast<Plane*>(potentialCollision.second);
 
+        Plane* plane = nullptr;
+        RigidBody* rigidBody = nullptr;
+        if (planeA && !planeB) {
+            rigidBody = potentialCollision.second;
+            plane = planeA;
+        } else if (planeB && !planeA) {
+            rigidBody = potentialCollision.first;
+            plane = planeB;
+        } else {
+            // Either two planes (nothing to do) or two rigidbodies (not implemented).
+            // Do nothing.
+            continue;
         }
-        else { //If there is no wall 
-            //Two rigid body are in collisions
-            //No need to implement this for the demo 
-            //Here to complete
-        }
+
+        float distanceBetweenTheRigidBodies = 0.0f;
+
+        cout << "Potential collision between plane and object!\n";
 
         for(auto point : rigidBody->getPoints()){//Go through all the points
             distanceBetweenTheRigidBodies = getDistanceFromTheWall(plane, point); //Test the distance between the wall and the rigidbody

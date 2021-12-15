@@ -7,6 +7,7 @@ class RigidBody;
 
 #include <variant>
 #include <vector>
+#include <unordered_set>
 
 using PotentialCollision = std::pair<RigidBody *, RigidBody *>;
 
@@ -18,11 +19,12 @@ struct BoundingBox {
 };
 
 class Octree {
-  static constexpr int SubdivisionThreshold = 2;
+  static constexpr int SubdivisionThreshold = 3;
+  static constexpr int MaxRecursion = 2;
 
 public:
   /// Builds an octree with the given rigid bodies.
-  Octree(std::vector<RigidBody *> rigid_bodies);
+  Octree(std::unordered_set<RigidBody *> rigid_bodies);
   /// Returns all potential collisions found in the octree.
   std::vector<PotentialCollision> getPotentialCollisions() const;
 
@@ -35,11 +37,11 @@ private:
     /// include.
     using ChildBodies = std::vector<RigidBody*>;
     using ChildNodes = std::vector<Node>;
-    std::variant<ChildBodies, ChildNodes> children;
+    std::variant<ChildBodies, ChildNodes> children = ChildBodies{};
 
     /// Adds a child to the node, eventually splitting the stored rigidbodies in
     /// sub-nodes.
-    void insertChild(BoundingBox const &child_bbox, RigidBody *child_ptr);
+    void insertChild(BoundingBox const &child_bbox, RigidBody *child_ptr, int recursion_count = 0);
     /// Retrieves potential collisions, when bounding boxes intersect.
     void findPotentialCollisions(std::vector<PotentialCollision> &collisions) const;
   };

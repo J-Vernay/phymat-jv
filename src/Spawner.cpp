@@ -57,7 +57,7 @@ void Spawner::update(double current_time) {
         _positions.push_back(pos);
         _next_time = current_time + 0.1;
     }
-    if (pos.getz() < -5) {
+    if (pos.getz() < -30) {
         _world.rigidbodyList.erase(&*_star);
         _star.reset();
     }

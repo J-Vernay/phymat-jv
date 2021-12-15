@@ -1,5 +1,7 @@
 #include "Octree.hpp"
 #include "../Phase3/RigidBody.hpp"
+#include "Plane.hpp"
+#include <algorithm>
 
 bool BoundingBox::overlapsWith(BoundingBox const &other) const {
     Vector3 minA = pos - half_size, maxA = pos + half_size,
@@ -18,8 +20,10 @@ BoundingBox BoundingBox::subdivision(int x, int y, int z) const {
     return BoundingBox{newpos, half_size / 2};
 }
 
-Octree::Octree(std::vector<RigidBody*> rigid_bodies) {
-    float xmin, xmax, ymin, ymax, zmin, zmax;
+Octree::Octree(std::unordered_set<RigidBody*> rigid_bodies) {
+    float xmin = +INFINITY, xmax = -INFINITY,
+          ymin = +INFINITY, ymax = -INFINITY,
+          zmin = +INFINITY, zmax = -INFINITY;
     for (RigidBody* body : rigid_bodies) {
         BoundingBox bbox = body->getBoundingBox();
         Vector3 minpos = bbox.pos - bbox.half_size;
@@ -44,41 +48,55 @@ Octree::Octree(std::vector<RigidBody*> rigid_bodies) {
 std::vector<PotentialCollision> Octree::getPotentialCollisions() const {
     std::vector<PotentialCollision> collisions;
     root.findPotentialCollisions(collisions);
+    /// Removing duplicates.
+    std::sort(collisions.begin(), collisions.end());
+    collisions.erase(std::unique(collisions.begin(), collisions.end()), collisions.end());
     return collisions;
 }
 
-void Octree::Node::insertChild(BoundingBox const &child_bbox, RigidBody *child_ptr) {
+void Octree::Node::insertChild(BoundingBox const &child_bbox, RigidBody *child_ptr, int recursion_count) {
     if (auto* bodies_ptr = std::get_if<ChildBodies>(&children)) {
-        if (bodies_ptr->size() < SubdivisionThreshold) {
+        // The node is currently storing bodies. Have we enough space
+        // for storing another body?
+        if (bodies_ptr->size() < SubdivisionThreshold || recursion_count >= MaxRecursion) {
+            // If yes, add it.
             bodies_ptr->push_back(child_ptr);
             return;
-        }
-        // We need to split the node into 8 children nodes.
-        ChildBodies bodies = std::move(*bodies_ptr);
-        children = ChildNodes{
-            { bbox.subdivision(-1, -1, -1) },
-            { bbox.subdivision(-1, -1,  1) },
-            { bbox.subdivision(-1,  1, -1) },
-            { bbox.subdivision(-1,  1,  1) },
-            { bbox.subdivision( 1, -1, -1) },
-            { bbox.subdivision( 1, -1,  1) },
-            { bbox.subdivision( 1,  1, -1) },
-            { bbox.subdivision( 1,  1,  1) },
-        };
-        ChildNodes& nodes = std::get<ChildNodes>(children);
-
-        for (RigidBody* child : bodies) {
-            BoundingBox child_bbox = child->getBoundingBox();
-            for (Node& node : nodes)
-                if (child_bbox.overlapsWith(node.bbox))
-                    node.insertChild(child_bbox, child);
+        } else {
+            // Else, the current node needs to be split and will now store
+            // multiple sub-nodes.
+            // First, create the subdivisions, initialized with empty ChildBodies.
+            ChildNodes subnodes = {
+                { bbox.subdivision(-1, -1, -1) },
+                { bbox.subdivision(-1, -1,  1) },
+                { bbox.subdivision(-1,  1, -1) },
+                { bbox.subdivision(-1,  1,  1) },
+                { bbox.subdivision( 1, -1, -1) },
+                { bbox.subdivision( 1, -1,  1) },
+                { bbox.subdivision( 1,  1, -1) },
+                { bbox.subdivision( 1,  1,  1) },
+            };
+            // Then, populate them with the current child bodies + the new child.
+            for (Node& subnode : subnodes) {
+                for (RigidBody* rb : *bodies_ptr) {
+                    BoundingBox rb_bbox = rb->getBoundingBox();
+                    if (subnode.bbox.overlapsWith(rb_bbox)) {
+                        subnode.insertChild(rb_bbox, rb, 0);
+                    }
+                }
+                if (subnode.bbox.overlapsWith(child_bbox))
+                    subnode.insertChild(child_bbox, child_ptr, recursion_count+1);
+            }
+            // Finally, store the subnodes in the current node.
+            children = std::move(subnodes);
+        } 
+    } else {
+        // We already store subnodes, add the child to the subnodes.
+        for (Node& subnode : std::get<ChildNodes>(children)) {
+            if (subnode.bbox.overlapsWith(child_bbox))
+                subnode.insertChild(child_bbox, child_ptr, recursion_count+1);
         }
     }
-
-    ChildNodes& nodes = std::get<ChildNodes>(children);
-    for (Node& node : nodes)
-        if (child_bbox.overlapsWith(node.bbox))
-            node.insertChild(child_bbox, child_ptr);
 }
 
 void Octree::Node::findPotentialCollisions(std::vector<PotentialCollision> &collisions) const {
