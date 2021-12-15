@@ -97,8 +97,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a237efdedceca2a82c639c7c3389a5539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a237efdedceca2a82c639c7c3389a5539">insertChild</a> (<a class="el" href="structBoundingBox.html">BoundingBox</a> const &amp;child_bbox, <a class="el" href="classRigidBody.html">RigidBody</a> *child_ptr)</td></tr>
-<tr class="separator:a237efdedceca2a82c639c7c3389a5539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509d523b92abdbc29b162798d55487c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a509d523b92abdbc29b162798d55487c9">insertChild</a> (<a class="el" href="structBoundingBox.html">BoundingBox</a> const &amp;child_bbox, <a class="el" href="classRigidBody.html">RigidBody</a> *child_ptr, int recursion_count=0)</td></tr>
+<tr class="separator:a509d523b92abdbc29b162798d55487c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f3b3d00a3b6bd8b4a468cc51ddea89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a94f3b3d00a3b6bd8b4a468cc51ddea89">findPotentialCollisions</a> (std::vector&lt; <a class="el" href="Octree_8hpp.html#ad675781b6c1e7d2906aff1dbf5044f83">PotentialCollision</a> &gt; &amp;collisions) const</td></tr>
 <tr class="memdesc:a94f3b3d00a3b6bd8b4a468cc51ddea89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves potential collisions, when bounding boxes intersect.  <a href="structOctree_1_1Node.html#a94f3b3d00a3b6bd8b4a468cc51ddea89">More...</a><br /></td></tr>
 <tr class="separator:a94f3b3d00a3b6bd8b4a468cc51ddea89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7c74d95704a7d41584cd19d6d61527c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBoundingBox.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a7c74d95704a7d41584cd19d6d61527c6">bbox</a></td></tr>
 <tr class="separator:a7c74d95704a7d41584cd19d6d61527c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ad5b585a9cd6a45c99340f5b8fc3a5"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>, <a class="el" href="structOctree_1_1Node.html#ad3fc09d980fe1dbbe950656644b9d33b">ChildNodes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a62ad5b585a9cd6a45c99340f5b8fc3a5">children</a></td></tr>
+<tr class="memitem:a62ad5b585a9cd6a45c99340f5b8fc3a5"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>, <a class="el" href="structOctree_1_1Node.html#ad3fc09d980fe1dbbe950656644b9d33b">ChildNodes</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structOctree_1_1Node.html#a62ad5b585a9cd6a45c99340f5b8fc3a5">children</a> = <a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>{}</td></tr>
 <tr class="separator:a62ad5b585a9cd6a45c99340f5b8fc3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -170,8 +170,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a237efdedceca2a82c639c7c3389a5539"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a237efdedceca2a82c639c7c3389a5539">&#9670;&nbsp;</a></span>insertChild()</h2>
+<a id="a509d523b92abdbc29b162798d55487c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509d523b92abdbc29b162798d55487c9">&#9670;&nbsp;</a></span>insertChild()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +186,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRigidBody.html">RigidBody</a> *&#160;</td>
-          <td class="paramname"><em>child_ptr</em>&#160;</td>
+          <td class="paramname"><em>child_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>recursion_count</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,23 +205,22 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_cgraph.png" border="0" usemap="#astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_cgraph" alt=""/></div>
-<map name="astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_cgraph" id="astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_cgraph">
+<div class="center"><img src="structOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_cgraph.png" border="0" usemap="#astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_cgraph" alt=""/></div>
+<map name="astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_cgraph" id="astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,191,83"/>
-<area shape="rect" href="structBoundingBox.html#a19df749597a6cf83e77d7117d6cbc701" title=" " alt="" coords="239,31,441,57"/>
-<area shape="rect" href="structBoundingBox.html#a811f5795e863897cfe2b17b31fc27a5a" title=" " alt="" coords="245,81,435,108"/>
-<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="489,5,597,32"/>
-<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="489,56,597,83"/>
-<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="490,107,597,133"/>
+<area shape="rect" href="structBoundingBox.html#a811f5795e863897cfe2b17b31fc27a5a" title=" " alt="" coords="239,56,429,83"/>
+<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="477,5,585,32"/>
+<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="477,56,585,83"/>
+<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="478,107,585,133"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_icgraph.png" border="0" usemap="#astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_icgraph" alt=""/></div>
-<map name="astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_icgraph" id="astructOctree_1_1Node_a237efdedceca2a82c639c7c3389a5539_icgraph">
+<div class="center"><img src="structOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_icgraph.png" border="0" usemap="#astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_icgraph" alt=""/></div>
+<map name="astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_icgraph" id="astructOctree_1_1Node_a509d523b92abdbc29b162798d55487c9_icgraph">
 <area shape="rect" title=" " alt="" coords="169,5,355,32"/>
-<area shape="rect" href="classOctree.html#ae6e54913d17679b4b202d3ca7a9e0a47" title="Builds an octree with the given rigid bodies." alt="" coords="5,5,121,32"/>
+<area shape="rect" href="classOctree.html#ae6650edb9c809c4ca2fdb39a03affa9d" title="Builds an octree with the given rigid bodies." alt="" coords="5,5,121,32"/>
 </map>
 </div>
 
@@ -244,7 +249,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::variant&lt;<a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>, <a class="el" href="structOctree_1_1Node.html#ad3fc09d980fe1dbbe950656644b9d33b">ChildNodes</a>&gt; Octree::Node::children</td>
+          <td class="memname">std::variant&lt;<a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>, <a class="el" href="structOctree_1_1Node.html#ad3fc09d980fe1dbbe950656644b9d33b">ChildNodes</a>&gt; Octree::Node::children = <a class="el" href="structOctree_1_1Node.html#a8c0f2e664e550b64d9b9f99442c15a63">ChildBodies</a>{}</td>
         </tr>
       </table>
 </div><div class="memdoc">

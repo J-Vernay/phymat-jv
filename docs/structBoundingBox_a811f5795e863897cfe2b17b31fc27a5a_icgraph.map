@@ -1,5 +1,5 @@
 <map id="BoundingBox::subdivision" name="BoundingBox::subdivision">
 <area shape="rect" id="node1" title=" " alt="" coords="403,5,593,32"/>
-<area shape="rect" id="node2" href="$structOctree_1_1Node.html#a237efdedceca2a82c639c7c3389a5539" title=" " alt="" coords="169,5,355,32"/>
-<area shape="rect" id="node3" href="$classOctree.html#ae6e54913d17679b4b202d3ca7a9e0a47" title="Builds an octree with the given rigid bodies." alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node2" href="$structOctree_1_1Node.html#a509d523b92abdbc29b162798d55487c9" title=" " alt="" coords="169,5,355,32"/>
+<area shape="rect" id="node3" href="$classOctree.html#ae6650edb9c809c4ca2fdb39a03affa9d" title="Builds an octree with the given rigid bodies." alt="" coords="5,5,121,32"/>
 </map>

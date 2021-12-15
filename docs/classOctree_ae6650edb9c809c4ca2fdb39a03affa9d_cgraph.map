@@ -1,0 +1,8 @@
+<map id="Octree::Octree" name="Octree::Octree">
+<area shape="rect" id="node1" title="Builds an octree with the given rigid bodies." alt="" coords="5,66,121,93"/>
+<area shape="rect" id="node2" href="$classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="641,15,749,42"/>
+<area shape="rect" id="node3" href="$classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="641,91,749,118"/>
+<area shape="rect" id="node4" href="$classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="642,142,749,169"/>
+<area shape="rect" id="node5" href="$structOctree_1_1Node.html#a509d523b92abdbc29b162798d55487c9" title=" " alt="" coords="169,41,355,67"/>
+<area shape="rect" id="node6" href="$structBoundingBox.html#a811f5795e863897cfe2b17b31fc27a5a" title=" " alt="" coords="403,41,593,67"/>
+</map>

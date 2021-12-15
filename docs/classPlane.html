@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classPlane-members.html">List of all members</a>  </div>
@@ -71,13 +72,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="Plane_8h_source.html">Plane.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Plane_8hpp_source.html">Plane.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Plane:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlane__inherit__graph.png" border="0" usemap="#aPlane_inherit__map" alt="Inheritance graph"/></div>
 <map name="aPlane_inherit__map" id="aPlane_inherit__map">
-<area shape="rect" title=" " alt="" coords="41,571,165,736"/>
+<area shape="rect" title=" " alt="" coords="25,571,180,809"/>
 <area shape="rect" href="classRigidBody.html" title=" " alt="" coords="5,5,200,523"/>
 </map>
 </div>
@@ -86,39 +87,58 @@ Collaboration diagram for Plane:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlane__coll__graph.png" border="0" usemap="#aPlane_coll__map" alt="Collaboration graph"/></div>
 <map name="aPlane_coll__map" id="aPlane_coll__map">
-<area shape="rect" title=" " alt="" coords="555,1671,679,1821"/>
-<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="520,1207,715,1621"/>
-<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="870,496,1045,779"/>
-<area shape="rect" title=" " alt="" coords="669,5,720,83"/>
-<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="495,503,619,771"/>
-<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="733,803,926,1144"/>
-<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="72,854,283,1093"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="163,175,317,472"/>
+<area shape="rect" title=" " alt="" coords="1100,1684,1254,1879"/>
+<area shape="rect" href="classRigidBody.html" title=" " alt="" coords="634,1207,829,1621"/>
+<area shape="rect" href="classMatrix3.html" title=" " alt="" coords="446,496,620,779"/>
+<area shape="rect" title=" " alt="" coords="634,5,685,83"/>
+<area shape="rect" href="classMatrix4.html" title=" " alt="" coords="6,503,130,771"/>
+<area shape="rect" href="classQuaternion.html" title=" " alt="" coords="188,803,382,1144"/>
+<area shape="rect" href="classParticle.html" title="Class representing a single particle of the world (mass + point)." alt="" coords="626,854,837,1093"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="791,175,944,472"/>
+<area shape="rect" title=" " alt="" coords="1312,1375,1391,1453"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a05c64d33969371f22ff00d54dcdc42a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a> { <br />
+&#160;&#160;<a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8abc7743f277505c909c58445d7976633f">Xm</a>
+, <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8ae7cf7766edb0748f9d528a9dd3c727f4">Xp</a>
+, <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8a76f4fdcfe7192e47d52d109613dfdc3f">Ym</a>
+, <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8a3e3f2ec095fd41ead19ccac017523395">Yp</a>
+, <br />
+&#160;&#160;<a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8ad23578939ebfc1ecf4b8a612c278b978">Zm</a>
+, <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8a3edffb5e394f9fe9d2b9df939f86a7ec">Zp</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a05c64d33969371f22ff00d54dcdc42a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal of the plane.  <a href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">More...</a><br /></td></tr>
+<tr class="separator:a05c64d33969371f22ff00d54dcdc42a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac8249f98d26db8edabb7358a7c83ddd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#ac8249f98d26db8edabb7358a7c83ddd7">Plane</a> (<a class="el" href="classVector3.html">Vector3</a>)</td></tr>
-<tr class="separator:ac8249f98d26db8edabb7358a7c83ddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65e86b510f4093d5a55b50a7519249e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#ad65e86b510f4093d5a55b50a7519249e">Plane</a> (<a class="el" href="classVector3.html">Vector3</a>, float)</td></tr>
-<tr class="separator:ad65e86b510f4093d5a55b50a7519249e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61aa80348341d0f2a75b06ed5d9e252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#aa61aa80348341d0f2a75b06ed5d9e252">getNormale</a> ()</td></tr>
-<tr class="separator:aa61aa80348341d0f2a75b06ed5d9e252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ab6b9a1f793abb006ca345067f68040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a0ab6b9a1f793abb006ca345067f68040">setNormale</a> (<a class="el" href="classVector3.html">Vector3</a>)</td></tr>
-<tr class="separator:a0ab6b9a1f793abb006ca345067f68040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e7412e0cd73eb1ef8019c8e741f667a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a9e7412e0cd73eb1ef8019c8e741f667a">getOffset</a> ()</td></tr>
-<tr class="separator:a9e7412e0cd73eb1ef8019c8e741f667a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05252bd68034e293c92491c3487cd0f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a05252bd68034e293c92491c3487cd0f8">Plane</a> (<a class="el" href="classParticle.html">Particle</a> const &amp;mass_center, <a class="el" href="classMatrix3.html">Matrix3</a> inertia, float angdamping, <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a> <a class="el" href="classPlane.html#a1e304d3ce3d607ccb166c5015c62bd1d">normale</a>, float <a class="el" href="classPlane.html#a720fc1a6e6c36618b06c29e89f3121da">offset</a>, float <a class="el" href="classPlane.html#a6a9e991ca05d1f2aa8d98f82fe754295">size</a>, <a class="el" href="classVector3.html">Vector3</a> <a class="el" href="classPlane.html#a9994f7a221c73e9a76d186bf0cdc4434">color</a>)</td></tr>
+<tr class="separator:a05252bd68034e293c92491c3487cd0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25507e0b8b291261d3e34048831959c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a25507e0b8b291261d3e34048831959c4">getNormale</a> () const</td></tr>
+<tr class="separator:a25507e0b8b291261d3e34048831959c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a685624e63ed85c0efc241848f5943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#ae0a685624e63ed85c0efc241848f5943">setNormale</a> (<a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a>)</td></tr>
+<tr class="separator:ae0a685624e63ed85c0efc241848f5943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e90c89f8d3c1aad00105af29709ede9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a7e90c89f8d3c1aad00105af29709ede9">getOffset</a> () const</td></tr>
+<tr class="separator:a7e90c89f8d3c1aad00105af29709ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa745e43e4456009d427528e4000d914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#aaa745e43e4456009d427528e4000d914">setOffset</a> (float)</td></tr>
 <tr class="separator:aaa745e43e4456009d427528e4000d914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d4b5c4a32418ea376f9bb84c9e586b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a82d4b5c4a32418ea376f9bb84c9e586b">~Plane</a> () override</td></tr>
+<tr class="separator:a82d4b5c4a32418ea376f9bb84c9e586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1aa3bbbbb31998fa9ddf1e2d00a157a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#ac1aa3bbbbb31998fa9ddf1e2d00a157a">draw</a> () const</td></tr>
+<tr class="memdesc:ac1aa3bbbbb31998fa9ddf1e2d00a157a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the <a class="el" href="classPlane.html">Plane</a>.  <a href="classPlane.html#ac1aa3bbbbb31998fa9ddf1e2d00a157a">More...</a><br /></td></tr>
+<tr class="separator:ac1aa3bbbbb31998fa9ddf1e2d00a157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b66cd9a3ec361c633563a6b2fa4793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBoundingBox.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#ad4b66cd9a3ec361c633563a6b2fa4793">getBoundingBox</a> () const override</td></tr>
+<tr class="separator:ad4b66cd9a3ec361c633563a6b2fa4793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2618d0063f46cf6c7b356978888113f3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a2618d0063f46cf6c7b356978888113f3">getPoints</a> () const override</td></tr>
+<tr class="separator:a2618d0063f46cf6c7b356978888113f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classRigidBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRigidBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRigidBody.html">RigidBody</a></td></tr>
 <tr class="memitem:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">RigidBody</a> (<a class="el" href="classParticle.html">Particle</a> const &amp;, <a class="el" href="classMatrix3.html">Matrix3</a>, float)</td></tr>
 <tr class="memdesc:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classRigidBody.html#a93f2f98dae382160ce73f4ce6b8e49e3">More...</a><br /></td></tr>
 <tr class="separator:a93f2f98dae382160ce73f4ce6b8e49e3 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b145e1af68a030b4544847bbd66938 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structBoundingBox.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a02b145e1af68a030b4544847bbd66938">getBoundingBox</a> () const =0</td></tr>
-<tr class="separator:a02b145e1af68a030b4544847bbd66938 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba89735b7b1a70b73bbdc3d20e481e50 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="classVector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#aba89735b7b1a70b73bbdc3d20e481e50">getPoints</a> () const =0</td></tr>
-<tr class="separator:aba89735b7b1a70b73bbdc3d20e481e50 inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada738c85556c1ffeb046d5ffcc5b20db inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#ada738c85556c1ffeb046d5ffcc5b20db">~RigidBody</a> ()</td></tr>
 <tr class="separator:ada738c85556c1ffeb046d5ffcc5b20db inherit pub_methods_classRigidBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a92422b61a92c7e9529f206759a5932 inherit pub_methods_classRigidBody"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRigidBody.html#a0a92422b61a92c7e9529f206759a5932">setMassCenter</a> (<a class="el" href="classParticle.html">Particle</a>)</td></tr>
@@ -169,47 +189,97 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a90d4b050be09cc01ae0a2d76f28de13a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a90d4b050be09cc01ae0a2d76f28de13a">normale</a></td></tr>
-<tr class="separator:a90d4b050be09cc01ae0a2d76f28de13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e304d3ce3d607ccb166c5015c62bd1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a1e304d3ce3d607ccb166c5015c62bd1d">normale</a></td></tr>
+<tr class="memdesc:a1e304d3ce3d607ccb166c5015c62bd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of the 6 axis-aligned normales.  <a href="classPlane.html#a1e304d3ce3d607ccb166c5015c62bd1d">More...</a><br /></td></tr>
+<tr class="separator:a1e304d3ce3d607ccb166c5015c62bd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a720fc1a6e6c36618b06c29e89f3121da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a720fc1a6e6c36618b06c29e89f3121da">offset</a></td></tr>
+<tr class="memdesc:a720fc1a6e6c36618b06c29e89f3121da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from origin to the plane. Center of plane is Normale*distance.  <a href="classPlane.html#a720fc1a6e6c36618b06c29e89f3121da">More...</a><br /></td></tr>
 <tr class="separator:a720fc1a6e6c36618b06c29e89f3121da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9e991ca05d1f2aa8d98f82fe754295"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a6a9e991ca05d1f2aa8d98f82fe754295">size</a></td></tr>
+<tr class="memdesc:a6a9e991ca05d1f2aa8d98f82fe754295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of the square used for bounding box and to render the plane.  <a href="classPlane.html#a6a9e991ca05d1f2aa8d98f82fe754295">More...</a><br /></td></tr>
+<tr class="separator:a6a9e991ca05d1f2aa8d98f82fe754295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9994f7a221c73e9a76d186bf0cdc4434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlane.html#a9994f7a221c73e9a76d186bf0cdc4434">color</a></td></tr>
+<tr class="memdesc:a9994f7a221c73e9a76d186bf0cdc4434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color used for rendering.  <a href="classPlane.html#a9994f7a221c73e9a76d186bf0cdc4434">More...</a><br /></td></tr>
+<tr class="separator:a9994f7a221c73e9a76d186bf0cdc4434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac8249f98d26db8edabb7358a7c83ddd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8249f98d26db8edabb7358a7c83ddd7">&#9670;&nbsp;</a></span>Plane() <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a finite plane. Only the axis-aligned normales are supported, ensuring bounding box is appropriate and does not need special computation. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a05c64d33969371f22ff00d54dcdc42a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c64d33969371f22ff00d54dcdc42a8">&#9670;&nbsp;</a></span>Normale</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Plane::Plane </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">enum <a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Plane::Normale</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Normal of the plane. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8abc7743f277505c909c58445d7976633f"></a>Xm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8ae7cf7766edb0748f9d528a9dd3c727f4"></a>Xp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8a76f4fdcfe7192e47d52d109613dfdc3f"></a>Ym&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8a3e3f2ec095fd41ead19ccac017523395"></a>Yp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8ad23578939ebfc1ecf4b8a612c278b978"></a>Zm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05c64d33969371f22ff00d54dcdc42a8a3edffb5e394f9fe9d2b9df939f86a7ec"></a>Zp&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
 </div>
 </div>
-<a id="ad65e86b510f4093d5a55b50a7519249e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad65e86b510f4093d5a55b50a7519249e">&#9670;&nbsp;</a></span>Plane() <span class="overload">[2/2]</span></h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a05252bd68034e293c92491c3487cd0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05252bd68034e293c92491c3487cd0f8">&#9670;&nbsp;</a></span>Plane()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Plane::Plane </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype"><a class="el" href="classParticle.html">Particle</a> const &amp;&#160;</td>
+          <td class="paramname"><em>mass_center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMatrix3.html">Matrix3</a>&#160;</td>
+          <td class="paramname"><em>inertia</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>angdamping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a>&#160;</td>
+          <td class="paramname"><em>normale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,13 +287,110 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82d4b5c4a32418ea376f9bb84c9e586b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d4b5c4a32418ea376f9bb84c9e586b">&#9670;&nbsp;</a></span>~Plane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane::~Plane </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa61aa80348341d0f2a75b06ed5d9e252"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61aa80348341d0f2a75b06ed5d9e252">&#9670;&nbsp;</a></span>getNormale()</h2>
+<a id="ac1aa3bbbbb31998fa9ddf1e2d00a157a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1aa3bbbbb31998fa9ddf1e2d00a157a">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plane::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the <a class="el" href="classPlane.html">Plane</a>. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPlane_ac1aa3bbbbb31998fa9ddf1e2d00a157a_cgraph.png" border="0" usemap="#aclassPlane_ac1aa3bbbbb31998fa9ddf1e2d00a157a_cgraph" alt=""/></div>
+<map name="aclassPlane_ac1aa3bbbbb31998fa9ddf1e2d00a157a_cgraph" id="aclassPlane_ac1aa3bbbbb31998fa9ddf1e2d00a157a_cgraph">
+<area shape="rect" title="Draw the Plane." alt="" coords="5,81,104,108"/>
+<area shape="rect" href="classPlane.html#a25507e0b8b291261d3e34048831959c4" title=" " alt="" coords="152,5,295,32"/>
+<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="169,56,277,83"/>
+<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="169,107,277,133"/>
+<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="170,157,277,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad4b66cd9a3ec361c633563a6b2fa4793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b66cd9a3ec361c633563a6b2fa4793">&#9670;&nbsp;</a></span>getBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBoundingBox.html">BoundingBox</a> Plane::getBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRigidBody.html#a02b145e1af68a030b4544847bbd66938">RigidBody</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPlane_ad4b66cd9a3ec361c633563a6b2fa4793_cgraph.png" border="0" usemap="#aclassPlane_ad4b66cd9a3ec361c633563a6b2fa4793_cgraph" alt=""/></div>
+<map name="aclassPlane_ad4b66cd9a3ec361c633563a6b2fa4793_cgraph" id="aclassPlane_ad4b66cd9a3ec361c633563a6b2fa4793_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,179,32"/>
+<area shape="rect" href="classPlane.html#a25507e0b8b291261d3e34048831959c4" title=" " alt="" coords="227,5,369,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25507e0b8b291261d3e34048831959c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25507e0b8b291261d3e34048831959c4">&#9670;&nbsp;</a></span>getNormale()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,15 +399,29 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Plane::getNormale </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPlane_a25507e0b8b291261d3e34048831959c4_icgraph.png" border="0" usemap="#aclassPlane_a25507e0b8b291261d3e34048831959c4_icgraph" alt=""/></div>
+<map name="aclassPlane_a25507e0b8b291261d3e34048831959c4_icgraph" id="aclassPlane_a25507e0b8b291261d3e34048831959c4_icgraph">
+<area shape="rect" title=" " alt="" coords="792,81,935,108"/>
+<area shape="rect" href="classPlane.html#ac1aa3bbbbb31998fa9ddf1e2d00a157a" title="Draw the Plane." alt="" coords="579,5,678,32"/>
+<area shape="rect" href="classWorld.html#a57c32c0d6cb223f40d8e3d36c511840b" title=" " alt="" coords="283,107,465,133"/>
+<area shape="rect" href="classPlane.html#ad4b66cd9a3ec361c633563a6b2fa4793" title=" " alt="" coords="542,107,715,133"/>
+<area shape="rect" href="classWorld.html#a604ab1ac69ebee8b2ace0fc1f97441e3" title=" " alt="" coords="513,157,744,184"/>
+<area shape="rect" href="classWorld.html#a4b7bda799ba842fa079d3d21cd965762" title=" " alt="" coords="108,107,235,133"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,60,133"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a9e7412e0cd73eb1ef8019c8e741f667a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e7412e0cd73eb1ef8019c8e741f667a">&#9670;&nbsp;</a></span>getOffset()</h2>
+<a id="a7e90c89f8d3c1aad00105af29709ede9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e90c89f8d3c1aad00105af29709ede9">&#9670;&nbsp;</a></span>getOffset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,15 +430,54 @@ Private Attributes</h2></td></tr>
           <td class="memname">float Plane::getOffset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPlane_a7e90c89f8d3c1aad00105af29709ede9_icgraph.png" border="0" usemap="#aclassPlane_a7e90c89f8d3c1aad00105af29709ede9_icgraph" alt=""/></div>
+<map name="aclassPlane_a7e90c89f8d3c1aad00105af29709ede9_icgraph" id="aclassPlane_a7e90c89f8d3c1aad00105af29709ede9_icgraph">
+<area shape="rect" title=" " alt="" coords="792,5,919,32"/>
+<area shape="rect" href="classWorld.html#a604ab1ac69ebee8b2ace0fc1f97441e3" title=" " alt="" coords="513,5,744,32"/>
+<area shape="rect" href="classWorld.html#a57c32c0d6cb223f40d8e3d36c511840b" title=" " alt="" coords="283,5,465,32"/>
+<area shape="rect" href="classWorld.html#a4b7bda799ba842fa079d3d21cd965762" title=" " alt="" coords="108,5,235,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a0ab6b9a1f793abb006ca345067f68040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab6b9a1f793abb006ca345067f68040">&#9670;&nbsp;</a></span>setNormale()</h2>
+<a id="a2618d0063f46cf6c7b356978888113f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2618d0063f46cf6c7b356978888113f3">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classVector3.html">Vector3</a>&gt; Plane::getPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRigidBody.html#aba89735b7b1a70b73bbdc3d20e481e50">RigidBody</a>.</p>
+
+</div>
+</div>
+<a id="ae0a685624e63ed85c0efc241848f5943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a685624e63ed85c0efc241848f5943">&#9670;&nbsp;</a></span>setNormale()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,8 +485,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Plane::setNormale </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a>&#160;</td>
+          <td class="paramname"><em>newNormale</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -284,7 +504,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">void Plane::setOffset </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>newOffset</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -293,8 +513,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a90d4b050be09cc01ae0a2d76f28de13a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90d4b050be09cc01ae0a2d76f28de13a">&#9670;&nbsp;</a></span>normale</h2>
+<a id="a9994f7a221c73e9a76d186bf0cdc4434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9994f7a221c73e9a76d186bf0cdc4434">&#9670;&nbsp;</a></span>color</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +523,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Plane::normale</td>
+          <td class="memname"><a class="el" href="classVector3.html">Vector3</a> Plane::color</td>
         </tr>
       </table>
   </td>
@@ -312,6 +532,32 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Color used for rendering. </p>
+
+</div>
+</div>
+<a id="a1e304d3ce3d607ccb166c5015c62bd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e304d3ce3d607ccb166c5015c62bd1d">&#9670;&nbsp;</a></span>normale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPlane.html#a05c64d33969371f22ff00d54dcdc42a8">Normale</a> Plane::normale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>One of the 6 axis-aligned normales. </p>
 
 </div>
 </div>
@@ -335,10 +581,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Distance from origin to the plane. Center of plane is Normale*distance. </p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Phase4/<a class="el" href="Plane_8h_source.html">Plane.h</a></li>
+<a id="a6a9e991ca05d1f2aa8d98f82fe754295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9e991ca05d1f2aa8d98f82fe754295">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Plane::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Radius of the square used for bounding box and to render the plane. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Phase4/<a class="el" href="Plane_8hpp_source.html">Plane.hpp</a></li>
+<li>src/Phase4/<a class="el" href="Plane_8cpp.html">Plane.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

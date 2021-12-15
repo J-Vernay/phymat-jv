@@ -1,5 +1,13 @@
 <map id="World::integrate" name="World::integrate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,132,39"/>
-<area shape="rect" id="node2" href="$classGravityGenerator.html#a806d2076a6d9091cba81fe335854d539" title=" " alt="" coords="180,5,368,47"/>
-<area shape="rect" id="node3" href="$classParticle.html#a51d14711889c8967e19e66787c2291ec" title="Get mass." alt="" coords="416,13,549,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,233,132,260"/>
+<area shape="rect" id="node2" href="$classWorld.html#a57c32c0d6cb223f40d8e3d36c511840b" title=" " alt="" coords="183,157,365,184"/>
+<area shape="rect" id="node10" href="$classGravityGenerator.html#a806d2076a6d9091cba81fe335854d539" title=" " alt="" coords="180,255,368,297"/>
+<area shape="rect" id="node3" href="$classWorld.html#a604ab1ac69ebee8b2ace0fc1f97441e3" title=" " alt="" coords="416,56,647,83"/>
+<area shape="rect" id="node4" href="$classPlane.html#a25507e0b8b291261d3e34048831959c4" title=" " alt="" coords="695,5,837,32"/>
+<area shape="rect" id="node6" href="$classRigidBody.html#aba89735b7b1a70b73bbdc3d20e481e50" title=" " alt="" coords="453,107,609,133"/>
+<area shape="rect" id="node7" href="$classContact.html#a9ee3a5e71549042cba2b6b7267748024" title=" " alt="" coords="432,157,631,184"/>
+<area shape="rect" id="node8" href="$classContact.html#a39db0bde68857f9278191131450940d5" title=" " alt="" coords="440,208,623,235"/>
+<area shape="rect" id="node9" href="$classContact.html#a224e7dd2e5997bea0feeba7274b0b63a" title=" " alt="" coords="444,259,619,285"/>
+<area shape="rect" id="node5" href="$classPlane.html#a7e90c89f8d3c1aad00105af29709ede9" title=" " alt="" coords="703,56,829,83"/>
+<area shape="rect" id="node11" href="$classParticle.html#a51d14711889c8967e19e66787c2291ec" title="Get mass." alt="" coords="465,309,598,336"/>
 </map>

@@ -79,13 +79,13 @@ Collaboration diagram for Octree:</div>
 <div class="dyncontent">
 <div class="center"><img src="classOctree__coll__graph.png" border="0" usemap="#aOctree_coll__map" alt="Collaboration graph"/></div>
 <map name="aOctree_coll__map" id="aOctree_coll__map">
-<area shape="rect" title=" " alt="" coords="19,859,209,951"/>
+<area shape="rect" title=" " alt="" coords="18,873,207,965"/>
 <area shape="rect" title=" " alt="" coords="5,711,44,789"/>
-<area shape="rect" href="structOctree_1_1Node.html" title=" " alt="" coords="109,704,301,796"/>
-<area shape="rect" title=" " alt="" coords="55,549,219,641"/>
-<area shape="rect" href="structBoundingBox.html" title=" " alt="" coords="243,549,377,641"/>
-<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="233,175,387,472"/>
-<area shape="rect" title=" " alt="" coords="285,5,335,83"/>
+<area shape="rect" href="structOctree_1_1Node.html" title=" " alt="" coords="105,704,297,796"/>
+<area shape="rect" title=" " alt="" coords="51,549,215,641"/>
+<area shape="rect" href="structBoundingBox.html" title=" " alt="" coords="239,549,373,641"/>
+<area shape="rect" href="classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="229,175,383,472"/>
+<area shape="rect" title=" " alt="" coords="281,5,331,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -96,9 +96,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6e54913d17679b4b202d3ca7a9e0a47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#ae6e54913d17679b4b202d3ca7a9e0a47">Octree</a> (std::vector&lt; <a class="el" href="classRigidBody.html">RigidBody</a> * &gt; rigid_bodies)</td></tr>
-<tr class="memdesc:ae6e54913d17679b4b202d3ca7a9e0a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an octree with the given rigid bodies.  <a href="classOctree.html#ae6e54913d17679b4b202d3ca7a9e0a47">More...</a><br /></td></tr>
-<tr class="separator:ae6e54913d17679b4b202d3ca7a9e0a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6650edb9c809c4ca2fdb39a03affa9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#ae6650edb9c809c4ca2fdb39a03affa9d">Octree</a> (std::unordered_set&lt; <a class="el" href="classRigidBody.html">RigidBody</a> * &gt; rigid_bodies)</td></tr>
+<tr class="memdesc:ae6650edb9c809c4ca2fdb39a03affa9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an octree with the given rigid bodies.  <a href="classOctree.html#ae6650edb9c809c4ca2fdb39a03affa9d">More...</a><br /></td></tr>
+<tr class="separator:ae6650edb9c809c4ca2fdb39a03affa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2da98ea0b8d4bc19f8be454df9354a9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="Octree_8hpp.html#ad675781b6c1e7d2906aff1dbf5044f83">PotentialCollision</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#ad2da98ea0b8d4bc19f8be454df9354a9">getPotentialCollisions</a> () const</td></tr>
 <tr class="memdesc:ad2da98ea0b8d4bc19f8be454df9354a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all potential collisions found in the octree.  <a href="classOctree.html#ad2da98ea0b8d4bc19f8be454df9354a9">More...</a><br /></td></tr>
 <tr class="separator:ad2da98ea0b8d4bc19f8be454df9354a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,12 +110,14 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:a864ed1aa413910c669c16a33a1f1d6d9"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#a864ed1aa413910c669c16a33a1f1d6d9">SubdivisionThreshold</a> = 2</td></tr>
+<tr class="memitem:a864ed1aa413910c669c16a33a1f1d6d9"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#a864ed1aa413910c669c16a33a1f1d6d9">SubdivisionThreshold</a> = 3</td></tr>
 <tr class="separator:a864ed1aa413910c669c16a33a1f1d6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3748bec912812cd383a7e25e0b860a17"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOctree.html#a3748bec912812cd383a7e25e0b860a17">MaxRecursion</a> = 2</td></tr>
+<tr class="separator:a3748bec912812cd383a7e25e0b860a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae6e54913d17679b4b202d3ca7a9e0a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6e54913d17679b4b202d3ca7a9e0a47">&#9670;&nbsp;</a></span>Octree()</h2>
+<a id="ae6650edb9c809c4ca2fdb39a03affa9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6650edb9c809c4ca2fdb39a03affa9d">&#9670;&nbsp;</a></span>Octree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +125,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Octree::Octree </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classRigidBody.html">RigidBody</a> * &gt;&#160;</td>
+          <td class="paramtype">std::unordered_set&lt; <a class="el" href="classRigidBody.html">RigidBody</a> * &gt;&#160;</td>
           <td class="paramname"><em>rigid_bodies</em></td><td>)</td>
           <td></td>
         </tr>
@@ -134,15 +136,14 @@ Static Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classOctree_ae6e54913d17679b4b202d3ca7a9e0a47_cgraph.png" border="0" usemap="#aclassOctree_ae6e54913d17679b4b202d3ca7a9e0a47_cgraph" alt=""/></div>
-<map name="aclassOctree_ae6e54913d17679b4b202d3ca7a9e0a47_cgraph" id="aclassOctree_ae6e54913d17679b4b202d3ca7a9e0a47_cgraph">
-<area shape="rect" title="Builds an octree with the given rigid bodies." alt="" coords="5,105,121,132"/>
-<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="653,29,761,56"/>
-<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="653,80,761,107"/>
-<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="654,131,761,157"/>
-<area shape="rect" href="structOctree_1_1Node.html#a237efdedceca2a82c639c7c3389a5539" title=" " alt="" coords="169,80,355,107"/>
-<area shape="rect" href="structBoundingBox.html#a19df749597a6cf83e77d7117d6cbc701" title=" " alt="" coords="403,29,605,56"/>
-<area shape="rect" href="structBoundingBox.html#a811f5795e863897cfe2b17b31fc27a5a" title=" " alt="" coords="409,80,599,107"/>
+<div class="center"><img src="classOctree_ae6650edb9c809c4ca2fdb39a03affa9d_cgraph.png" border="0" usemap="#aclassOctree_ae6650edb9c809c4ca2fdb39a03affa9d_cgraph" alt=""/></div>
+<map name="aclassOctree_ae6650edb9c809c4ca2fdb39a03affa9d_cgraph" id="aclassOctree_ae6650edb9c809c4ca2fdb39a03affa9d_cgraph">
+<area shape="rect" title="Builds an octree with the given rigid bodies." alt="" coords="5,66,121,93"/>
+<area shape="rect" href="classVector3.html#a730d5e0ccf045386ef8d7780f44bfaa0" title=" " alt="" coords="641,15,749,42"/>
+<area shape="rect" href="classVector3.html#ad7b50377d15c308e792b689e14279c84" title=" " alt="" coords="641,91,749,118"/>
+<area shape="rect" href="classVector3.html#ad807feebc2cf7c64a63770c3038a54e8" title=" " alt="" coords="642,142,749,169"/>
+<area shape="rect" href="structOctree_1_1Node.html#a509d523b92abdbc29b162798d55487c9" title=" " alt="" coords="169,41,355,67"/>
+<area shape="rect" href="structBoundingBox.html#a811f5795e863897cfe2b17b31fc27a5a" title=" " alt="" coords="403,41,593,67"/>
 </map>
 </div>
 
@@ -165,6 +166,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns all potential collisions found in the octree. </p>
+<p>Removing duplicates.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -178,6 +180,28 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3748bec912812cd383a7e25e0b860a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3748bec912812cd383a7e25e0b860a17">&#9670;&nbsp;</a></span>MaxRecursion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int Octree::MaxRecursion = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7163687484ee899055ad83bf4b355654"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7163687484ee899055ad83bf4b355654">&#9670;&nbsp;</a></span>root</h2>
 
@@ -210,7 +234,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int Octree::SubdivisionThreshold = 2</td>
+          <td class="memname">constexpr int Octree::SubdivisionThreshold = 3</td>
         </tr>
       </table>
   </td>

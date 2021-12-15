@@ -1,9 +1,9 @@
 <map id="Octree" name="Octree">
-<area shape="rect" id="node1" title=" " alt="" coords="19,859,209,951"/>
+<area shape="rect" id="node1" title=" " alt="" coords="18,873,207,965"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,711,44,789"/>
-<area shape="rect" id="node3" href="$structOctree_1_1Node.html" title=" " alt="" coords="109,704,301,796"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,549,219,641"/>
-<area shape="rect" id="node5" href="$structBoundingBox.html" title=" " alt="" coords="243,549,377,641"/>
-<area shape="rect" id="node6" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="233,175,387,472"/>
-<area shape="rect" id="node7" title=" " alt="" coords="285,5,335,83"/>
+<area shape="rect" id="node3" href="$structOctree_1_1Node.html" title=" " alt="" coords="105,704,297,796"/>
+<area shape="rect" id="node4" title=" " alt="" coords="51,549,215,641"/>
+<area shape="rect" id="node5" href="$structBoundingBox.html" title=" " alt="" coords="239,549,373,641"/>
+<area shape="rect" id="node6" href="$classVector3.html" title="Class representing a 3D vector with utility methods and operator overloading." alt="" coords="229,175,383,472"/>
+<area shape="rect" id="node7" title=" " alt="" coords="281,5,331,83"/>
 </map>

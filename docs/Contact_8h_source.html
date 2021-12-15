@@ -82,17 +82,24 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classContact.html#a8b1a92cf29b6f6d53e613ba70501611a">   10</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classContact.html#a8b1a92cf29b6f6d53e613ba70501611a">penetration</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;public :</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classContact.html">Contact</a>(<a class="code" href="classVector3.html">Vector3</a>, <a class="code" href="classVector3.html">Vector3</a>, <span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getContactPoint();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setContactPoint(<a class="code" href="classVector3.html">Vector3</a>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getContactNormal();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> setContactNormal(<a class="code" href="classVector3.html">Vector3</a>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span> getPenetration();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> setPenetration(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classContact.html">Contact</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getContactPoint();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> setContactPoint(<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> getContactNormal();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> setContactNormal(<a class="code" href="classVector3.html">Vector3</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">float</span> getPenetration();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> setPenetration(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classContact.html#aa5905df9b35a3a18f62b25190188afff">   22</a></span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classContact.html#aa5905df9b35a3a18f62b25190188afff">operator&lt;&lt;</a>(std::ostream&amp; os, <a class="code" href="classContact.html">Contact</a> <span class="keyword">const</span>&amp; contact) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;Contact{ pt=&quot;</span> &lt;&lt; contact.<a class="code" href="classContact.html#aebd49034735ed40226ffbda99c9af150">contactPoint</a> &lt;&lt; <span class="stringliteral">&quot; , nm=&quot;</span> &lt;&lt; contact.<a class="code" href="classContact.html#a3e9c4aa2827f05e2cfa2fd3ff2f8431a">contactNormal</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            &lt;&lt; <span class="stringliteral">&quot; , pene=&quot;</span> &lt;&lt; contact.<a class="code" href="classContact.html#a8b1a92cf29b6f6d53e613ba70501611a">penetration</a> &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
 <div class="ttc" id="aclassContact_html"><div class="ttname"><a href="classContact.html">Contact</a></div><div class="ttdef"><b>Definition:</b> Contact.h:6</div></div>
 <div class="ttc" id="aclassContact_html_a3e9c4aa2827f05e2cfa2fd3ff2f8431a"><div class="ttname"><a href="classContact.html#a3e9c4aa2827f05e2cfa2fd3ff2f8431a">Contact::contactNormal</a></div><div class="ttdeci">Vector3 contactNormal</div><div class="ttdef"><b>Definition:</b> Contact.h:9</div></div>
 <div class="ttc" id="aclassContact_html_a8b1a92cf29b6f6d53e613ba70501611a"><div class="ttname"><a href="classContact.html#a8b1a92cf29b6f6d53e613ba70501611a">Contact::penetration</a></div><div class="ttdeci">float penetration</div><div class="ttdef"><b>Definition:</b> Contact.h:10</div></div>
+<div class="ttc" id="aclassContact_html_aa5905df9b35a3a18f62b25190188afff"><div class="ttname"><a href="classContact.html#aa5905df9b35a3a18f62b25190188afff">Contact::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, Contact const &amp;contact)</div><div class="ttdef"><b>Definition:</b> Contact.h:22</div></div>
 <div class="ttc" id="aclassContact_html_aebd49034735ed40226ffbda99c9af150"><div class="ttname"><a href="classContact.html#aebd49034735ed40226ffbda99c9af150">Contact::contactPoint</a></div><div class="ttdeci">Vector3 contactPoint</div><div class="ttdef"><b>Definition:</b> Contact.h:8</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">Class representing a 3D vector with utility methods and operator overloading.</div><div class="ttdef"><b>Definition:</b> Vector.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
