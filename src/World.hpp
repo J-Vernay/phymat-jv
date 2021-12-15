@@ -72,7 +72,7 @@ public:
     friend ostream& operator<<(ostream& os, const World&);
 
     //Fill the list of contact after testing all potential collision (due to broad phase)
-    void generateContacts(std::vector<PotentialCollision> potentialCollisions);
+    std::vector<Contact> generateContacts(std::vector<PotentialCollision> potentialCollisions);
 
     //Measure the distance between a point and a wall, 
     //if the distance is positiv : there is no contact between the rigidBody and the plane,

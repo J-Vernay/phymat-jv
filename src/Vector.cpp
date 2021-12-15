@@ -77,8 +77,7 @@ Vector3 operator/(const double k, Vector3 v1){
 }
 
 ostream& operator<<(ostream& os, const Vector3& v){
-    os << "x : " << v.x << "\n" << "y : " << v.y << "\n" << "z : " << v.z << "\n";
-    return os;
+    return os << "{" << v.x << ", " << v.y << ", " << v.z << "}";
 }
 
 

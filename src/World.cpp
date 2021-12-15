@@ -83,7 +83,9 @@ void World::resolveContacts(std::vector<ParticleContact> contacts) {
 }
 
 // Generate the contacts from potential contact from the broading phase :
-void World::generateContacts(std::vector<PotentialCollision> potentialCollisions){    
+std::vector<Contact> World::generateContacts(std::vector<PotentialCollision> potentialCollisions){    
+    std::vector<Contact> contact_list;
+    
     //Go through every potential collision
     //WHere a potential collision is a pair of rigidBody
     for(auto& potentialCollision : potentialCollisions){
@@ -110,17 +112,19 @@ void World::generateContacts(std::vector<PotentialCollision> potentialCollisions
 
         for(auto point : rigidBody->getPoints()){//Go through all the points
             distanceBetweenTheRigidBodies = getDistanceFromTheWall(plane, point); //Test the distance between the wall and the rigidbody
-            if(distanceBetweenTheRigidBodies < 0){ //If there is a contact => the absolute distance is the interpenetration
+            if(distanceBetweenTheRigidBodies > 0){ //If there is a contact => the absolute distance is the interpenetration
                 //Add the contact to the contact list :
                 Contact contact = Contact();
                 contact.setContactNormal(plane->getNormale());  //the normal is the same than the plane
                 contact.setContactPoint(point); //the point is the point tested
                 contact.setPenetration(abs(distanceBetweenTheRigidBodies)); //Interpenetration is the absolute distance
-                this->contactList.insert(&contact); //Add the correct contact
+                contact_list.push_back(contact); //Add the correct contact
+                cout << contact << "\n";
+                break;
             }
-            
         }
     }
+    return contact_list;
 }
 
 //Measure the distance between a point and a wall, 
@@ -131,7 +135,7 @@ float World::getDistanceFromTheWall(Plane * plane, Vector3 point){
     float offset = plane->getOffset();
 
     //n.p + d => distance between the plane and the rigidBody
-    return (normale/normale.norm())*point + offset;
+    return normale*point - offset;
 }
 
 

@@ -18,4 +18,9 @@ public :
 	void setContactNormal(Vector3);
 	float getPenetration();
 	void setPenetration(float);
+
+	friend std::ostream& operator<<(std::ostream& os, Contact const& contact) {
+		return os << "Contact{ pt=" << contact.contactPoint << " , nm=" << contact.contactNormal
+			<< " , pene=" << contact.penetration << " }";
+	}
 };

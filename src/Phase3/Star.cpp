@@ -43,8 +43,11 @@ BoundingBox Star::getBoundingBox() const {
 std::vector<Vector3> Star::getPoints() const {
     std::vector<Vector3> points;
     points.reserve(std::size(_starVertices));
-    for (auto [x,y,z] : _starVertices)
-        points.emplace_back(x,y,z);
+    for (auto [x,y,z] : _starVertices) {
+        Vector3 local_pt{x,y,z};
+        Vector3 global_pt = getTransformMatrix().applyOnPt(local_pt);
+        points.emplace_back(global_pt);
+    }
     return points;
 }
 
